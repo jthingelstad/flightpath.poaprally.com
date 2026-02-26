@@ -14,48 +14,56 @@ layout: false
   <script src="https://tinylytics.app/embed/wzwsuAffTZQwyzBouNms.js" defer></script>
 </head>
 <body>
-  <header class="site-header">
-    <div class="header-content">
-      <h1>Flight Path</h1>
-      <p class="subtitle">POAP Airport Rally 2026</p>
+  <!-- Globe fills the entire viewport -->
+  <div id="globe-container"></div>
+  <div id="globe-tooltip" class="tooltip" style="display: none;"></div>
+
+  <!-- Top-left: branding -->
+  <div class="overlay-title">
+    <h1>Flight Path</h1>
+    <p class="subtitle">POAP Airport Rally 2026</p>
+  </div>
+
+  <!-- Top-right: stats -->
+  <div class="overlay-stats">
+    <span class="stat"><strong id="stat-airports">0</strong> airports</span>
+    <span class="stat"><strong id="stat-claims">0</strong> claims</span>
+    <span class="stat"><strong id="stat-travelers">0</strong> travelers</span>
+  </div>
+
+  <!-- Bottom: search & controls bar -->
+  <div class="overlay-controls">
+    <div class="search-group">
+      <input type="text" id="address-search" placeholder="Search address or ENS..." autocomplete="off">
+      <button id="clear-search" class="btn btn-secondary" style="display: none;">Clear</button>
     </div>
-  </header>
+    <div class="playback-group" id="playback-controls" style="display: none;">
+      <button id="play-btn" class="btn btn-primary">Play</button>
+      <label class="speed-label">
+        Speed
+        <input type="range" id="speed-slider" min="1" max="5" value="3">
+      </label>
+    </div>
+  </div>
 
-  <main>
-    <section class="globe-section">
-      <div id="globe-container"></div>
-      <div id="globe-tooltip" class="tooltip" style="display: none;"></div>
-    </section>
+  <!-- Right side: collapsible leaderboard panel -->
+  <button id="panel-toggle" class="panel-toggle" aria-label="Toggle leaderboard">
+    <span class="toggle-icon">&#9776;</span>
+    <span class="toggle-label">Leaderboard</span>
+  </button>
 
-    <section class="controls-section">
-      <div class="controls-bar">
-        <div class="search-group">
-          <input type="text" id="address-search" placeholder="Search address or ENS..." autocomplete="off">
-          <button id="clear-search" class="btn btn-secondary" style="display: none;">Clear</button>
-        </div>
-        <div class="playback-group" id="playback-controls" style="display: none;">
-          <button id="play-btn" class="btn btn-primary">Play</button>
-          <label class="speed-label">
-            Speed
-            <input type="range" id="speed-slider" min="1" max="5" value="3">
-          </label>
-        </div>
-        <div class="stats-summary">
-          <span class="stat"><strong id="stat-airports">0</strong> airports</span>
-          <span class="stat"><strong id="stat-claims">0</strong> claims</span>
-          <span class="stat"><strong id="stat-travelers">0</strong> travelers</span>
-        </div>
-      </div>
-    </section>
-
-    <section class="leaderboards-section">
+  <aside id="leaderboard-panel" class="leaderboard-panel">
+    <div class="panel-header">
       <div class="leaderboard-tabs">
         <button class="tab active" data-tab="airports">Airports</button>
         <button class="tab" data-tab="travelers">Travelers</button>
         <button class="tab" data-tab="regions">Regions</button>
       </div>
+      <button id="panel-close" class="panel-close" aria-label="Close panel">&times;</button>
+    </div>
 
-      <div class="leaderboard-panel active" id="panel-airports">
+    <div class="panel-body">
+      <div class="leaderboard-tab-panel active" id="panel-airports">
         <table class="leaderboard-table">
           <thead>
             <tr>
@@ -70,7 +78,7 @@ layout: false
         </table>
       </div>
 
-      <div class="leaderboard-panel" id="panel-travelers">
+      <div class="leaderboard-tab-panel" id="panel-travelers">
         <table class="leaderboard-table">
           <thead>
             <tr>
@@ -83,7 +91,7 @@ layout: false
         </table>
       </div>
 
-      <div class="leaderboard-panel" id="panel-regions">
+      <div class="leaderboard-tab-panel" id="panel-regions">
         <table class="leaderboard-table">
           <thead>
             <tr>
@@ -96,12 +104,12 @@ layout: false
           <tbody id="lb-regions"></tbody>
         </table>
       </div>
-    </section>
-  </main>
+    </div>
 
-  <footer class="site-footer">
-    <p>Built with <a href="https://poap.xyz" target="_blank" rel="noopener">POAP</a> data</p>
-  </footer>
+    <div class="panel-footer">
+      <a href="https://poap.xyz" target="_blank" rel="noopener">poap.xyz</a>
+    </div>
+  </aside>
 
   <script>
     // Inject data at build time — avoids extra fetch calls
