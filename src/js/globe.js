@@ -37,20 +37,37 @@
 
   const container = document.getElementById("globe-container");
 
+  const unclaimedAirports = AIRPORTS.filter((a) => a.claims === 0);
+  const claimedAirports = AIRPORTS.filter((a) => a.claims > 0);
+
   const globe = Globe()(container)
     .globeImageUrl("https://unpkg.com/three-globe/example/img/earth-night.jpg")
     .backgroundColor("#0a0a2e")
     .atmosphereColor("#8076FA")
     .atmosphereAltitude(0.2)
-    // Points — airport markers
+    // Points — airport markers (all airports)
     .pointsData(AIRPORTS)
     .pointLat((d) => d.lat)
     .pointLng((d) => d.lon)
-    .pointAltitude((d) => 0.01 + (d.claims / maxClaims()) * 0.06)
-    .pointRadius((d) => 0.3 + (d.claims / maxClaims()) * 0.7)
-    .pointColor(() => "#9289FF")
+    .pointAltitude((d) =>
+      d.claims === 0 ? 0.01 : 0.01 + (d.claims / maxClaims()) * 0.06
+    )
+    .pointRadius((d) =>
+      d.claims === 0 ? 0.35 : 0.3 + (d.claims / maxClaims()) * 0.7
+    )
+    .pointColor((d) => (d.claims === 0 ? "#F87588" : "#9289FF"))
     .pointLabel((d) => buildPointLabel(d))
     .onPointClick((d) => focusAirport(d))
+    // Rings — pulsing glow on unclaimed airports
+    .ringsData(unclaimedAirports)
+    .ringLat((d) => d.lat)
+    .ringLng((d) => d.lon)
+    .ringColor(() => (t) =>
+      `rgba(248, 117, 136, ${1 - t})`
+    )
+    .ringMaxRadius(2)
+    .ringPropagationSpeed(1)
+    .ringRepeatPeriod(2000)
     // Arcs — flight paths (initially empty)
     .arcsData([])
     .arcStartLat((d) => d.startLat)
@@ -100,14 +117,22 @@
   }
 
   function buildPointLabel(airport) {
+    const imageHtml = airport.image_url
+      ? `<img src="${airport.image_url}" style="width: 64px; height: 64px; border-radius: 50%; border: 2px solid #8076FA; display: block; margin: 0 auto 8px;">`
+      : "";
+    const claimText =
+      airport.claims === 0
+        ? '<span style="color: #F87588;">Not yet claimed</span>'
+        : `${airport.claims} claim${airport.claims !== 1 ? "s" : ""}`;
     return `
-      <div style="font-family: Rubik, sans-serif; font-size: 13px; line-height: 1.4; padding: 4px;">
+      <div style="font-family: Rubik, sans-serif; font-size: 13px; line-height: 1.4; padding: 6px; text-align: center; min-width: 120px;">
+        ${imageHtml}
         <div style="font-family: Comfortaa, sans-serif; font-weight: 700; color: #8076FA; font-size: 15px;">
           ${airport.code}
         </div>
         <div style="color: #e0e0e0;">${airport.name}</div>
         <div style="color: #aab0d0; font-size: 12px;">${airport.city}, ${airport.country}</div>
-        <div style="color: #aab0d0; font-size: 12px; margin-top: 2px;">${airport.claims} claim${airport.claims !== 1 ? "s" : ""}</div>
+        <div style="color: #aab0d0; font-size: 12px; margin-top: 4px;">${claimText}</div>
       </div>
     `;
   }
@@ -344,7 +369,11 @@
   // ------------------------------------------------------------------
 
   function renderStats() {
-    document.getElementById("stat-airports").textContent = AIRPORTS.length;
+    const claimedCount = AIRPORTS.filter((a) => a.claims > 0).length;
+    document.getElementById("stat-airports").textContent =
+      claimedCount < AIRPORTS.length
+        ? `${claimedCount}/${AIRPORTS.length}`
+        : AIRPORTS.length;
     document.getElementById("stat-claims").textContent = CLAIMS.length;
     document.getElementById("stat-travelers").textContent =
       LEADERBOARDS.addresses.length;
@@ -465,6 +494,15 @@
       .addEventListener("click", togglePlayback);
   }
 
+  function setupSpinToggle() {
+    const btn = document.getElementById("spin-toggle");
+    btn.addEventListener("click", () => {
+      const controls = globe.controls();
+      controls.autoRotate = !controls.autoRotate;
+      btn.textContent = controls.autoRotate ? "Pause Spin" : "Resume Spin";
+    });
+  }
+
   // ------------------------------------------------------------------
   // Init
   // ------------------------------------------------------------------
@@ -475,5 +513,6 @@
   setupPanel();
   setupSearch();
   setupPlayback();
+  setupSpinToggle();
   restoreFromURL();
 })();

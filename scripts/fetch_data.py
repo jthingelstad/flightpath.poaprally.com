@@ -37,6 +37,24 @@ REQUEST_DELAY = 0.25  # seconds between API calls
 
 AIRPORTS_DB = airportsdata.load("IATA")
 
+# Manual overrides for airports not in airportsdata (non-standard IATA codes)
+MANUAL_COORDS = {
+    "BSZ": {
+        "lat": 43.0613,
+        "lon": 74.4776,
+        "city": "Bishkek",
+        "country": "KG",
+        "name": "Manas International Airport",
+    },
+    "NMI": {
+        "lat": 18.5940,
+        "lon": 73.0413,
+        "city": "Navi Mumbai",
+        "country": "IN",
+        "name": "Navi Mumbai International Airport",
+    },
+}
+
 
 # ---------------------------------------------------------------------------
 # POAP API helpers
@@ -99,6 +117,14 @@ def fetch_event_poaps(event_id, token):
     return all_tokens
 
 
+def fetch_event_details(event_id, token):
+    """Fetch event details including image URL."""
+    url = f"{API_BASE}/events/id/{event_id}"
+    resp = requests.get(url, headers=api_headers(token), timeout=30)
+    resp.raise_for_status()
+    return resp.json()
+
+
 # ---------------------------------------------------------------------------
 # Data loading
 # ---------------------------------------------------------------------------
@@ -128,28 +154,71 @@ def load_airports_csv():
 
 
 def enrich_with_coordinates(airports):
-    """Add lat/lon from airportsdata package."""
+    """Add lat/lon from airportsdata package, with manual overrides."""
     for airport in airports:
-        info = AIRPORTS_DB.get(airport["code"])
-        if info:
-            airport["lat"] = info["lat"]
-            airport["lon"] = info["lon"]
-            airport["city"] = info["city"]
-            airport["country"] = info["country"]
-            airport["name"] = info["name"]
+        code = airport["code"]
+        if code in MANUAL_COORDS:
+            manual = MANUAL_COORDS[code]
+            airport["lat"] = manual["lat"]
+            airport["lon"] = manual["lon"]
+            airport["city"] = manual["city"]
+            airport["country"] = manual["country"]
+            airport["name"] = manual["name"]
         else:
-            print(f"  WARNING: No coordinate data for {airport['code']}")
-            airport["lat"] = 0
-            airport["lon"] = 0
-            airport["city"] = ""
-            airport["country"] = ""
-            airport["name"] = airport["title"]
+            info = AIRPORTS_DB.get(code)
+            if info:
+                airport["lat"] = info["lat"]
+                airport["lon"] = info["lon"]
+                airport["city"] = info["city"]
+                airport["country"] = info["country"]
+                airport["name"] = info["name"]
+            else:
+                print(f"  WARNING: No coordinate data for {code}")
+                airport["lat"] = 0
+                airport["lon"] = 0
+                airport["city"] = ""
+                airport["country"] = ""
+                airport["name"] = airport["title"]
     return airports
 
 
 # ---------------------------------------------------------------------------
 # Processing
 # ---------------------------------------------------------------------------
+
+
+def fetch_event_images(airports, token):
+    """Fetch event details and download images locally."""
+    img_dir = ROOT / "src" / "img" / "poaps"
+    img_dir.mkdir(parents=True, exist_ok=True)
+
+    for i, airport in enumerate(airports):
+        eid = airport["event_id"]
+        code = airport["code"]
+        print(f"  [{i + 1}/{len(airports)}] {code} (event {eid})...")
+        try:
+            details = fetch_event_details(eid, token)
+            remote_url = details.get("image_url", "")
+            if remote_url:
+                # Download image locally
+                ext = remote_url.rsplit(".", 1)[-1].split("?")[0] or "png"
+                filename = f"{code.lower()}.{ext}"
+                local_path = img_dir / filename
+                if not local_path.exists():
+                    img_resp = requests.get(remote_url, timeout=30)
+                    img_resp.raise_for_status()
+                    local_path.write_bytes(img_resp.content)
+                    print(f"    → downloaded {filename}")
+                else:
+                    print(f"    → {filename} (cached)")
+                airport["image_url"] = f"/img/poaps/{filename}"
+            else:
+                print(f"    → no image")
+                airport["image_url"] = ""
+        except Exception as e:
+            print(f"    WARNING: Could not fetch event image: {e}")
+            airport["image_url"] = ""
+        time.sleep(REQUEST_DELAY)
 
 
 def process_claims(airports, token):
@@ -215,7 +284,7 @@ def build_leaderboards(airports, claims):
         reverse=True,
     )
 
-    # Airport leaderboard: claim count per airport
+    # Airport leaderboard: all airports, sorted by claim count
     airport_map = {a["code"]: a for a in airports}
     airport_claims = defaultdict(int)
     for claim in claims:
@@ -224,17 +293,15 @@ def build_leaderboards(airports, claims):
     airport_leaderboard = sorted(
         [
             {
-                "code": code,
-                "name": airport_map[code].get("name", code),
-                "city": airport_map[code].get("city", ""),
-                "continent": airport_map[code].get("continent", ""),
-                "claims": count,
+                "code": a["code"],
+                "name": a.get("name", a["code"]),
+                "city": a.get("city", ""),
+                "continent": a.get("continent", ""),
+                "claims": airport_claims.get(a["code"], 0),
             }
-            for code, count in airport_claims.items()
-            if code in airport_map
+            for a in airports
         ],
-        key=lambda x: x["claims"],
-        reverse=True,
+        key=lambda x: (-x["claims"], x["code"]),
     )
 
     # Region leaderboard: total claims per continent
@@ -287,7 +354,10 @@ def main():
     token = get_access_token()
     print("   ✓ Token obtained")
 
-    print("4. Fetching claims...")
+    print("4. Fetching event details (images)...")
+    fetch_event_images(airports, token)
+
+    print("5. Fetching claims...")
     claims, claim_counts = process_claims(airports, token)
     print(f"   Total: {len(claims)} claims across {len(airports)} airports")
 
@@ -295,7 +365,7 @@ def main():
     for airport in airports:
         airport["claims"] = claim_counts.get(airport["code"], 0)
 
-    print("5. Building leaderboards...")
+    print("6. Building leaderboards...")
     leaderboards = build_leaderboards(airports, claims)
     print(
         f"   {len(leaderboards['addresses'])} addresses, "
@@ -303,7 +373,7 @@ def main():
         f"{len(leaderboards['regions'])} regions"
     )
 
-    print("6. Writing JSON files...")
+    print("7. Writing JSON files...")
     data_dir = ROOT / "_data"
     data_dir.mkdir(exist_ok=True)
 

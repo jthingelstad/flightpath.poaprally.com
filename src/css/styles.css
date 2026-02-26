@@ -266,6 +266,27 @@ a:hover {
   background: rgba(128, 118, 250, 0.15);
 }
 
+.btn-glass {
+  background: var(--glass-bg);
+  color: var(--glass-text-muted);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  font-size: 0.75rem;
+}
+.btn-glass:hover {
+  color: var(--glass-text);
+  border-color: var(--primary-light);
+  background: rgba(128, 118, 250, 0.2);
+}
+
+.overlay-globe-controls {
+  position: fixed;
+  bottom: 1.5rem;
+  left: 1.5rem;
+  z-index: 100;
+}
+
 /* ---- Panel toggle button (right edge) ---- */
 
 .panel-toggle {
