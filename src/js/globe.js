@@ -138,6 +138,7 @@
   }
 
   function focusAirport(airport) {
+    trackEvent("globe.airport-click", airport.code);
     globe.pointOfView(
       { lat: airport.lat, lng: airport.lon, altitude: 1.5 },
       1000
@@ -149,6 +150,18 @@
     return addr.slice(0, 6) + "..." + addr.slice(-4);
   }
 
+  function trackEvent(name, value) {
+    const el = document.getElementById("tinylytics-tracker");
+    if (!el) return;
+    el.setAttribute("data-tinylytics-event", name);
+    if (value) {
+      el.setAttribute("data-tinylytics-event-value", value);
+    } else {
+      el.removeAttribute("data-tinylytics-event-value");
+    }
+    el.click();
+  }
+
   // ------------------------------------------------------------------
   // Flight path animation
   // ------------------------------------------------------------------
@@ -156,6 +169,7 @@
   function selectAddress(address) {
     stopAnimation();
     state.selectedAddress = address;
+    trackEvent("traveler.select", truncateAddress(address));
 
     const claims = claimsByAddress[address];
     if (!claims || claims.length < 2) {
@@ -436,6 +450,7 @@
         );
 
         if (match) {
+          trackEvent("search.submit", match.ens || truncateAddress(match.address));
           selectAddress(match.address);
           input.value = match.ens || truncateAddress(match.address);
           clearBtn.style.display = "inline-flex";

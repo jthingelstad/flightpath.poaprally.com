@@ -11,7 +11,7 @@ layout: false
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;600;700&family=Rubik:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/styles.css">
-  <script src="https://tinylytics.app/embed/wzwsuAffTZQwyzBouNms.js" defer></script>
+  <script src="https://tinylytics.app/embed/wzwsuAffTZQwyzBouNms.js?events" defer></script>
 </head>
 <body>
   <!-- Globe fills the entire viewport -->
@@ -33,17 +33,17 @@ layout: false
 
   <!-- Bottom-left: globe controls -->
   <div class="overlay-globe-controls">
-    <button id="spin-toggle" class="btn btn-glass" aria-label="Pause rotation">Pause Spin</button>
+    <button id="spin-toggle" class="btn btn-glass" aria-label="Pause rotation" data-tinylytics-event="globe.spin-toggle">Pause Spin</button>
   </div>
 
   <!-- Bottom: search & controls bar -->
   <div class="overlay-controls">
     <div class="search-group">
       <input type="text" id="address-search" placeholder="Search address or ENS..." autocomplete="off">
-      <button id="clear-search" class="btn btn-secondary" style="display: none;">Clear</button>
+      <button id="clear-search" class="btn btn-secondary" style="display: none;" data-tinylytics-event="search.clear">Clear</button>
     </div>
     <div class="playback-group" id="playback-controls" style="display: none;">
-      <button id="play-btn" class="btn btn-primary">Play</button>
+      <button id="play-btn" class="btn btn-primary" data-tinylytics-event="playback.toggle">Play</button>
       <label class="speed-label">
         Speed
         <input type="range" id="speed-slider" min="1" max="5" value="3">
@@ -52,7 +52,7 @@ layout: false
   </div>
 
   <!-- Right side: collapsible leaderboard panel -->
-  <button id="panel-toggle" class="panel-toggle" aria-label="Toggle leaderboard">
+  <button id="panel-toggle" class="panel-toggle" aria-label="Toggle leaderboard" data-tinylytics-event="leaderboard.open">
     <span class="toggle-icon">&#9776;</span>
     <span class="toggle-label">Leaderboard</span>
   </button>
@@ -60,11 +60,11 @@ layout: false
   <aside id="leaderboard-panel" class="leaderboard-panel">
     <div class="panel-header">
       <div class="leaderboard-tabs">
-        <button class="tab active" data-tab="airports">Airports</button>
-        <button class="tab" data-tab="travelers">Travelers</button>
-        <button class="tab" data-tab="regions">Regions</button>
+        <button class="tab active" data-tab="airports" data-tinylytics-event="tab.airports">Airports</button>
+        <button class="tab" data-tab="travelers" data-tinylytics-event="tab.travelers">Travelers</button>
+        <button class="tab" data-tab="regions" data-tinylytics-event="tab.regions">Regions</button>
       </div>
-      <button id="panel-close" class="panel-close" aria-label="Close panel">&times;</button>
+      <button id="panel-close" class="panel-close" aria-label="Close panel" data-tinylytics-event="leaderboard.close">&times;</button>
     </div>
 
     <div class="panel-body">
@@ -112,9 +112,12 @@ layout: false
     </div>
 
     <div class="panel-footer">
-      <a href="https://poap.xyz" target="_blank" rel="noopener">poap.xyz</a>
+      <a href="https://poap.xyz" target="_blank" rel="noopener" data-tinylytics-event="link.poap-xyz">poap.xyz</a>
     </div>
   </aside>
+
+  <!-- Hidden element for JS-driven event tracking -->
+  <button id="tinylytics-tracker" aria-hidden="true" style="position:absolute;left:-9999px;"></button>
 
   <script>
     // Inject data at build time — avoids extra fetch calls
