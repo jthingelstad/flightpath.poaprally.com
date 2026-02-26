@@ -32,7 +32,7 @@
   );
 
   // ------------------------------------------------------------------
-  // Globe setup
+  // Globe setup (full viewport)
   // ------------------------------------------------------------------
 
   const container = document.getElementById("globe-container");
@@ -78,10 +78,10 @@
   globe.controls().autoRotate = true;
   globe.controls().autoRotateSpeed = 0.5;
 
-  // Handle resize
+  // Full-viewport sizing
   function handleResize() {
-    globe.width(container.clientWidth);
-    globe.height(container.clientHeight);
+    globe.width(window.innerWidth);
+    globe.height(window.innerHeight);
   }
   window.addEventListener("resize", handleResize);
   handleResize();
@@ -105,9 +105,9 @@
         <div style="font-family: Comfortaa, sans-serif; font-weight: 700; color: #8076FA; font-size: 15px;">
           ${airport.code}
         </div>
-        <div style="color: #4D5680;">${airport.name}</div>
-        <div style="color: #6873A4; font-size: 12px;">${airport.city}, ${airport.country}</div>
-        <div style="color: #6873A4; font-size: 12px; margin-top: 2px;">${airport.claims} claim${airport.claims !== 1 ? "s" : ""}</div>
+        <div style="color: #e0e0e0;">${airport.name}</div>
+        <div style="color: #aab0d0; font-size: 12px;">${airport.city}, ${airport.country}</div>
+        <div style="color: #aab0d0; font-size: 12px; margin-top: 2px;">${airport.claims} claim${airport.claims !== 1 ? "s" : ""}</div>
       </div>
     `;
   }
@@ -358,10 +358,30 @@
     document.querySelectorAll(".tab").forEach((tab) => {
       tab.addEventListener("click", () => {
         document.querySelectorAll(".tab").forEach((t) => t.classList.remove("active"));
-        document.querySelectorAll(".leaderboard-panel").forEach((p) => p.classList.remove("active"));
+        document.querySelectorAll(".leaderboard-tab-panel").forEach((p) => p.classList.remove("active"));
         tab.classList.add("active");
         document.getElementById(`panel-${tab.dataset.tab}`).classList.add("active");
       });
+    });
+  }
+
+  // ------------------------------------------------------------------
+  // Leaderboard panel toggle
+  // ------------------------------------------------------------------
+
+  function setupPanel() {
+    const panel = document.getElementById("leaderboard-panel");
+    const toggleBtn = document.getElementById("panel-toggle");
+    const closeBtn = document.getElementById("panel-close");
+
+    toggleBtn.addEventListener("click", () => {
+      panel.classList.add("open");
+      toggleBtn.classList.add("hidden");
+    });
+
+    closeBtn.addEventListener("click", () => {
+      panel.classList.remove("open");
+      toggleBtn.classList.remove("hidden");
     });
   }
 
@@ -391,7 +411,9 @@
           input.value = match.ens || truncateAddress(match.address);
           clearBtn.style.display = "inline-flex";
 
-          // Switch to travelers tab
+          // Open the panel and switch to travelers tab
+          document.getElementById("leaderboard-panel").classList.add("open");
+          document.getElementById("panel-toggle").classList.add("hidden");
           document.querySelector('[data-tab="travelers"]').click();
         }
       }
@@ -425,6 +447,10 @@
       document.getElementById("address-search").value =
         addrData?.ens || truncateAddress(address);
       document.getElementById("clear-search").style.display = "inline-flex";
+
+      // Open panel and show travelers
+      document.getElementById("leaderboard-panel").classList.add("open");
+      document.getElementById("panel-toggle").classList.add("hidden");
       document.querySelector('[data-tab="travelers"]').click();
     }
   }
@@ -446,6 +472,7 @@
   renderStats();
   renderLeaderboards();
   setupTabs();
+  setupPanel();
   setupSearch();
   setupPlayback();
   restoreFromURL();
