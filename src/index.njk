@@ -1,0 +1,115 @@
+---
+layout: false
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flight Path — POAP Airport Rally</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;600;700&family=Rubik:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css">
+  <script src="https://tinylytics.app/embed/wzwsuAffTZQwyzBouNms.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-content">
+      <h1>Flight Path</h1>
+      <p class="subtitle">POAP Airport Rally 2026</p>
+    </div>
+  </header>
+
+  <main>
+    <section class="globe-section">
+      <div id="globe-container"></div>
+      <div id="globe-tooltip" class="tooltip" style="display: none;"></div>
+    </section>
+
+    <section class="controls-section">
+      <div class="controls-bar">
+        <div class="search-group">
+          <input type="text" id="address-search" placeholder="Search address or ENS..." autocomplete="off">
+          <button id="clear-search" class="btn btn-secondary" style="display: none;">Clear</button>
+        </div>
+        <div class="playback-group" id="playback-controls" style="display: none;">
+          <button id="play-btn" class="btn btn-primary">Play</button>
+          <label class="speed-label">
+            Speed
+            <input type="range" id="speed-slider" min="1" max="5" value="3">
+          </label>
+        </div>
+        <div class="stats-summary">
+          <span class="stat"><strong id="stat-airports">0</strong> airports</span>
+          <span class="stat"><strong id="stat-claims">0</strong> claims</span>
+          <span class="stat"><strong id="stat-travelers">0</strong> travelers</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="leaderboards-section">
+      <div class="leaderboard-tabs">
+        <button class="tab active" data-tab="airports">Airports</button>
+        <button class="tab" data-tab="travelers">Travelers</button>
+        <button class="tab" data-tab="regions">Regions</button>
+      </div>
+
+      <div class="leaderboard-panel active" id="panel-airports">
+        <table class="leaderboard-table">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Airport</th>
+              <th>City</th>
+              <th>Region</th>
+              <th>Claims</th>
+            </tr>
+          </thead>
+          <tbody id="lb-airports"></tbody>
+        </table>
+      </div>
+
+      <div class="leaderboard-panel" id="panel-travelers">
+        <table class="leaderboard-table">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Address</th>
+              <th>Airports</th>
+            </tr>
+          </thead>
+          <tbody id="lb-travelers"></tbody>
+        </table>
+      </div>
+
+      <div class="leaderboard-panel" id="panel-regions">
+        <table class="leaderboard-table">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Region</th>
+              <th>Airports</th>
+              <th>Claims</th>
+            </tr>
+          </thead>
+          <tbody id="lb-regions"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Built with <a href="https://poap.xyz" target="_blank" rel="noopener">POAP</a> data</p>
+  </footer>
+
+  <script>
+    // Inject data at build time — avoids extra fetch calls
+    const AIRPORTS = {{ airports | dump | safe }};
+    const CLAIMS = {{ claims | dump | safe }};
+    const LEADERBOARDS = {{ leaderboards | dump | safe }};
+  </script>
+  <script src="https://unpkg.com/globe.gl"></script>
+  <script src="/js/globe.js"></script>
+</body>
+</html>
