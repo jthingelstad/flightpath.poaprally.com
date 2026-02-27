@@ -549,6 +549,22 @@
       ]
     },
     {
+      "address": "0xc38555a1afcd8394532caa11d0be60df166ec188",
+      "ens": "cbiux.onpoap.eth",
+      "airport_count": 1,
+      "airports": [
+        "CTG"
+      ]
+    },
+    {
+      "address": "0x971d1eeea92a0a4709caeeb487effbce4c1c9369",
+      "ens": "cryptozyzz.eth",
+      "airport_count": 1,
+      "airports": [
+        "CTG"
+      ]
+    },
+    {
       "address": "0xc1e5e3c0f3d6cb3aafd5b34c4ba93d235bbd5fd6",
       "ens": "thewolfofgamers.eth",
       "airport_count": 1,
@@ -836,6 +852,13 @@
       "claims": 7
     },
     {
+      "code": "CTG",
+      "name": "Rafael Nunez International Airport",
+      "city": "Cartagena",
+      "continent": "South America",
+      "claims": 6
+    },
+    {
       "code": "ORD",
       "name": "Chicago O'Hare International Airport",
       "city": "Chicago",
@@ -868,13 +891,6 @@
       "name": "Barcelona International Airport",
       "city": "Barcelona",
       "continent": "Europe",
-      "claims": 4
-    },
-    {
-      "code": "CTG",
-      "name": "Rafael Nunez International Airport",
-      "city": "Cartagena",
-      "continent": "South America",
       "claims": 4
     },
     {
@@ -1579,7 +1595,7 @@
     },
     {
       "continent": "South America",
-      "claims": 40,
+      "claims": 42,
       "airport_count": 11
     },
     {

@@ -216,6 +216,22 @@
     "token_id": ""
   },
   {
+    "address": "0xc38555a1afcd8394532caa11d0be60df166ec188",
+    "ens": "cbiux.onpoap.eth",
+    "airport": "CTG",
+    "event_id": 216421,
+    "created": "2026-02-26 15:21:30",
+    "token_id": ""
+  },
+  {
+    "address": "0x971d1eeea92a0a4709caeeb487effbce4c1c9369",
+    "ens": "cryptozyzz.eth",
+    "airport": "CTG",
+    "event_id": 216421,
+    "created": "2026-02-26 15:13:45",
+    "token_id": ""
+  },
+  {
     "address": "0x0ce522cad66fa4d6529b2db76e0a91d53296d58b",
     "ens": "ximemonclou.eth",
     "airport": "CTG",
