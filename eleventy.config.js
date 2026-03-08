@@ -5,6 +5,15 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/CNAME");
   eleventyConfig.addPassthroughCopy("src/.nojekyll");
 
+  eleventyConfig.addFilter("formatDate", (isoString) => {
+    const d = new Date(isoString);
+    return d.toLocaleDateString("en-US", {
+      month: "short",
+      day: "numeric",
+      year: "numeric",
+    });
+  });
+
   return {
     dir: {
       input: "src",

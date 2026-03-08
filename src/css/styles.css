@@ -285,6 +285,17 @@ a:hover {
   bottom: 1.5rem;
   left: 1.5rem;
   z-index: 100;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.35rem;
+}
+
+.last-updated {
+  font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.5);
+  font-family: "Rubik", sans-serif;
+  padding-left: 0.25rem;
 }
 
 /* ---- Panel toggle button (right edge) ---- */

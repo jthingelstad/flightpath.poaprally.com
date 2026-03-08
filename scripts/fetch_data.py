@@ -12,6 +12,7 @@ import os
 import sys
 import time
 from collections import defaultdict
+from datetime import datetime, timezone
 from pathlib import Path
 
 import airportsdata
@@ -388,6 +389,11 @@ def main():
     with open(data_dir / "leaderboards.json", "w") as f:
         json.dump(leaderboards, f, indent=2)
     print(f"   → _data/leaderboards.json")
+
+    meta = {"last_updated": datetime.now(timezone.utc).isoformat()}
+    with open(data_dir / "meta.json", "w") as f:
+        json.dump(meta, f, indent=2)
+    print(f"   → _data/meta.json ({meta['last_updated']})")
 
     print("\nDone!")
 
