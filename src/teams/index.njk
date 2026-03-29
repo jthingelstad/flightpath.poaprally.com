@@ -1,0 +1,38 @@
+---
+layout: layout.njk
+activeTab: teams
+pageTitle: Teams
+permalink: /teams/index.html
+---
+
+{%- set visibleTeams = teams.leaderboard | filterHiddenTeams -%}
+
+<div class="page-scroll">
+  <table class="board-table">
+    <thead>
+      <tr>
+        <th class="col-rank">#</th>
+        <th>Team</th>
+        <th class="col-num">Members</th>
+        <th class="col-num">Airports</th>
+        <th class="col-num">Score</th>
+      </tr>
+    </thead>
+    <tbody>
+      {%- for t in visibleTeams %}
+      <tr>
+        <td><span class="board-rank">{{ loop.index }}</span></td>
+        <td>
+          <a href="/teams/{{ t.id }}/">
+            <span class="board-team-name">{{ t.name }}</span>
+            <span class="board-badge board-badge--{{ t.type }}">{{ t.type | teamBadgeLabel }}</span>
+          </a>
+        </td>
+        <td class="col-num"><span class="board-value">{{ t.member_count }}</span></td>
+        <td class="col-num"><span class="board-value">{{ t.unique_airports }}</span></td>
+        <td class="col-num"><span class="board-value board-value--highlight">{{ t.total_claims }}</span></td>
+      </tr>
+      {%- endfor %}
+    </tbody>
+  </table>
+</div>

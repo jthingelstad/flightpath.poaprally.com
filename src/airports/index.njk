@@ -1,0 +1,64 @@
+---
+layout: layout.njk
+activeTab: airports
+pageTitle: Airports
+permalink: /airports/index.html
+extraScripts: |
+  <script src="/js/airport-filters.js"></script>
+---
+
+<div class="page-scroll">
+  <div class="airport-filters" id="airport-filters">
+    <button class="airport-filter-btn active" data-filter="all">All</button>
+    {%- for r in leaderboards.regions %}
+    <button class="airport-filter-btn" data-filter="{{ r.continent }}">{{ r.continent }}</button>
+    {%- endfor %}
+  </div>
+  <table class="board-table">
+    <thead>
+      <tr>
+        <th class="col-rank">#</th>
+        <th>Airport</th>
+        <th>City</th>
+        <th>Region</th>
+        <th class="col-num">Claims</th>
+      </tr>
+    </thead>
+    <tbody id="lb-airports">
+      {%- for a in leaderboards.airports %}
+      <tr data-continent="{{ a.continent }}">
+        <td><span class="board-rank">{{ loop.index }}</span></td>
+        <td>
+          {%- set ap = airports | findByCode(a.code) -%}
+          {%- if ap and ap.image_url %}
+          <img class="airport-poap-img" src="{{ ap.image_url }}" alt="{{ a.code }}">
+          {%- endif %}
+          <a href="/airports/{{ a.code | lower }}/">
+            <span class="board-airport-code">{{ a.code }}</span> {{ a.name }}
+          </a>
+        </td>
+        <td>{{ a.city }}</td>
+        <td><span class="board-continent">{{ a.continent }}</span></td>
+        <td class="col-num"><span class="board-value board-value--highlight">{{ a.claims }}</span></td>
+      </tr>
+      {%- endfor %}
+    </tbody>
+  </table>
+
+  <div class="home-section home-regions-section">
+    <div class="home-section-header">
+      <h2>By Region</h2>
+    </div>
+    <div class="home-regions">
+      {%- for r in leaderboards.regions %}
+        <div class="home-region-card">
+          <div class="home-region-name">{{ r.continent }}</div>
+          <div class="home-region-stats">
+            <strong>{{ r.airport_count }}</strong> airports &middot;
+            <strong>{{ r.claims }}</strong> claims
+          </div>
+        </div>
+      {%- endfor %}
+    </div>
+  </div>
+</div>

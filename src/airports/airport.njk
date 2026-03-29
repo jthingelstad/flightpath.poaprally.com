@@ -1,0 +1,48 @@
+---
+layout: layout.njk
+activeTab: airports
+pagination:
+  data: airports
+  size: 1
+  alias: airport
+permalink: /airports/{{ airport.code | lower }}/index.html
+eleventyComputed:
+  pageTitle: "{{ airport.code }} — {{ airport.name }}"
+---
+
+{%- set airportClaims = claims | claimsForAirport(airport.code) -%}
+
+<div class="page-scroll">
+  <a href="/airports/" class="board-back-btn">&larr; All Airports</a>
+
+  <div class="airport-detail-header">
+    {%- if airport.image_url %}
+    <img class="airport-detail-img" src="{{ airport.image_url }}" alt="{{ airport.code }}">
+    {%- endif %}
+    <div class="airport-detail-info">
+      <div class="airport-detail-code">{{ airport.code }}</div>
+      <div class="airport-detail-name">{{ airport.name }}</div>
+      <div class="airport-detail-location">{{ airport.city }}, {{ airport.country }} &middot; {{ airport.continent }}</div>
+      <div class="airport-detail-stats-row">
+        <div class="traveler-detail-stat"><strong>{{ airport.claims }}</strong> claims</div>
+        <div class="traveler-detail-stat"><strong>{{ airportClaims | countUnique("address") }}</strong> unique travelers</div>
+      </div>
+      <a href="/globe/?airport={{ airport.code }}" class="btn-view-globe">&#127758; View on Globe</a>
+    </div>
+  </div>
+
+  {%- if airportClaims | length > 0 %}
+  <div class="traveler-timeline-section">
+    <h3>Claims</h3>
+    {%- for c in airportClaims %}
+      <a class="traveler-timeline-row" href="/travelers/{{ c.address }}/">
+        <span class="traveler-timeline-date">{{ c.created | shortDate }}</span>
+        <span class="traveler-timeline-code">
+          {%- if c.ens %}{{ c.ens }}{% else %}{{ c.address | truncateAddress }}{% endif -%}
+        </span>
+        <span class="traveler-timeline-info"></span>
+      </a>
+    {%- endfor %}
+  </div>
+  {%- endif %}
+</div>

@@ -1,177 +1,137 @@
 ---
-layout: false
+layout: layout.njk
+activeTab: home
+pageTitle: Home
 ---
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Flight Path — POAP Airport Rally</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;600;700&family=Roboto+Mono:wght@400;500;700&family=Rubik:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/css/styles.css">
-  <script src="https://tinylytics.app/embed/wzwsuAffTZQwyzBouNms.js?events" defer></script>
-</head>
-<body>
 
-  <!-- ============================================================
-       Board View (default — full-page leaderboard)
-       ============================================================ -->
-  <div id="board-view" class="board-container">
-    <header class="board-header">
-      <div class="board-branding">
-        <h1 class="board-title">Flight Path</h1>
-        <span class="board-subtitle">POAP Airport Rally 2026</span>
-      </div>
-      <div class="board-stats">
-        <span class="board-stat"><strong id="stat-airports">0</strong> airports</span>
-        <span class="board-stat"><strong id="stat-claims">0</strong> claims</span>
-        <span class="board-stat"><strong id="stat-travelers">0</strong> travelers</span>
-      </div>
-    </header>
+{%- set claimedCount = airports | claimedAirports | length -%}
+{%- set totalAirports = airports | length -%}
+{%- set claimedCountries = airports | claimedAirports | countUnique("country") -%}
+{%- set pct = claimedCount | percentage(totalAirports) -%}
+{%- set remaining = totalAirports - claimedCount -%}
 
-    <nav class="board-tabs">
-      <button class="board-tab active" data-tab="teams" data-tinylytics-event="tab.teams">Teams</button>
-      <button class="board-tab" data-tab="travelers" data-tinylytics-event="tab.travelers">Travelers</button>
-      <button class="board-tab" data-tab="airports" data-tinylytics-event="tab.airports">Airports</button>
-      <button class="board-tab" data-tab="regions" data-tinylytics-event="tab.regions">Regions</button>
-    </nav>
+<div class="page-scroll">
 
-    <main class="board-content">
-      <!-- Teams tab -->
-      <div class="board-panel active" id="panel-teams">
-        <div id="teams-list">
-          <table class="board-table">
-            <thead>
-              <tr>
-                <th class="col-rank">#</th>
-                <th>Team</th>
-                <th class="col-num">Members</th>
-                <th class="col-num">Airports</th>
-                <th class="col-num">Score</th>
-              </tr>
-            </thead>
-            <tbody id="lb-teams"></tbody>
-          </table>
+  <div class="home-hero">
+    <div class="home-stat-card">
+      <div class="home-stat-value">{{ claimedCount }} / {{ totalAirports }}</div>
+      <div class="home-stat-label">airports claimed</div>
+    </div>
+    <div class="home-stat-card">
+      <div class="home-stat-value">{{ claims | length }}</div>
+      <div class="home-stat-label">total claims</div>
+    </div>
+    <div class="home-stat-card">
+      <div class="home-stat-value">{{ leaderboards.addresses | length }}</div>
+      <div class="home-stat-label">travelers</div>
+    </div>
+    <div class="home-stat-card">
+      <div class="home-stat-value">{{ claimedCountries }}</div>
+      <div class="home-stat-label">countries</div>
+    </div>
+  </div>
+
+  <div class="home-completion">
+    <div class="home-completion-bar">
+      <div class="home-completion-fill" style="width: {{ pct }}%"></div>
+    </div>
+    <div class="home-completion-text">{{ pct }}% of airports claimed — {{ remaining }} remaining</div>
+  </div>
+
+  <div class="home-columns">
+    <div class="home-column">
+      <div class="home-section">
+        <div class="home-section-header">
+          <h2>Recent Activity</h2>
         </div>
-        <div id="teams-detail" style="display: none;">
-          <button id="teams-back" class="board-back-btn" data-tinylytics-event="teams.back">&larr; All Teams</button>
-          <div id="team-header"></div>
-          <table class="board-table">
-            <thead>
-              <tr>
-                <th class="col-rank">#</th>
-                <th>Member</th>
-                <th class="col-num">Airports</th>
-              </tr>
-            </thead>
-            <tbody id="team-members"></tbody>
-          </table>
+        <div class="home-activity">
+          {%- for c in claims | sortByCreatedDesc | limit(12) %}
+            {%- set ap = airports | findByCode(c.airport) %}
+            <a class="home-activity-row" href="/travelers/{{ c.address }}/">
+              <span class="home-activity-date">{{ c.created | relativeDate }}</span>
+              <span class="home-activity-traveler">{{ c.ens or (c.address | truncateAddress) }}</span>
+              <span class="home-activity-arrow">&rarr;</span>
+              <span class="home-activity-airport">
+                <span class="home-activity-code">{{ c.airport }}</span>
+                <span class="home-activity-city">{{ ap.city if ap else "" }}</span>
+              </span>
+            </a>
+          {%- endfor %}
         </div>
       </div>
-
-      <!-- Travelers tab -->
-      <div class="board-panel" id="panel-travelers">
-        <div class="board-search">
-          <input type="text" id="address-search" placeholder="Search address or ENS..." autocomplete="off">
-          <button id="clear-search" class="board-search-clear" style="display: none;" data-tinylytics-event="search.clear">&times;</button>
+    </div>
+    <div class="home-column">
+      <div class="home-section">
+        <div class="home-section-header">
+          <h2>Top Travelers</h2>
+          <a class="home-see-all" href="/travelers/">See all</a>
         </div>
-        <table class="board-table">
+        <table class="board-table board-table--compact">
           <thead>
             <tr>
               <th class="col-rank">#</th>
-              <th>Address</th>
+              <th>Traveler</th>
               <th class="col-num">Airports</th>
             </tr>
           </thead>
-          <tbody id="lb-travelers"></tbody>
+          <tbody>
+            {%- for a in leaderboards.addresses | limit(5) %}
+            <tr>
+              <td><span class="board-rank">{{ loop.index }}</span></td>
+              <td><a href="/travelers/{{ a.address }}/">
+                {%- if a.ens %}<span class="board-ens">{{ a.ens }}</span>
+                {%- else %}<span class="board-address">{{ a.address | truncateAddress }}</span>{% endif -%}
+              </a></td>
+              <td class="col-num"><span class="board-value board-value--highlight">{{ a.airport_count }}</span></td>
+            </tr>
+            {%- endfor %}
+          </tbody>
         </table>
       </div>
-
-      <!-- Airports tab -->
-      <div class="board-panel" id="panel-airports">
-        <table class="board-table">
+      <div class="home-section">
+        <div class="home-section-header">
+          <h2>Top Airports</h2>
+          <a class="home-see-all" href="/airports/">See all</a>
+        </div>
+        <table class="board-table board-table--compact">
           <thead>
             <tr>
               <th class="col-rank">#</th>
               <th>Airport</th>
-              <th>City</th>
-              <th>Region</th>
               <th class="col-num">Claims</th>
             </tr>
           </thead>
-          <tbody id="lb-airports"></tbody>
-        </table>
-      </div>
-
-      <!-- Regions tab -->
-      <div class="board-panel" id="panel-regions">
-        <table class="board-table">
-          <thead>
+          <tbody>
+            {%- for a in leaderboards.airports | limit(5) %}
             <tr>
-              <th class="col-rank">#</th>
-              <th>Region</th>
-              <th class="col-num">Airports</th>
-              <th class="col-num">Claims</th>
+              <td><span class="board-rank">{{ loop.index }}</span></td>
+              <td><a href="/airports/{{ a.code | lower }}/">
+                <span class="board-airport-code">{{ a.code }}</span> {{ a.name }}
+              </a></td>
+              <td class="col-num"><span class="board-value board-value--highlight">{{ a.claims }}</span></td>
             </tr>
-          </thead>
-          <tbody id="lb-regions"></tbody>
+            {%- endfor %}
+          </tbody>
         </table>
       </div>
-    </main>
-
-    <footer class="board-footer">
-      <span class="board-updated">Updated {{ meta.last_updated | formatDate }}</span>
-      <button id="globe-open" class="board-globe-btn" data-tinylytics-event="globe.open">
-        <span class="globe-icon">&#127758;</span> View Globe
-      </button>
-      <a href="https://poap.xyz" target="_blank" rel="noopener" data-tinylytics-event="link.poap-xyz" class="board-link">poap.xyz</a>
-    </footer>
-  </div>
-
-  <!-- ============================================================
-       Globe View (hidden by default, lazy-loaded)
-       ============================================================ -->
-  <div id="globe-view" class="globe-view" style="display: none;">
-    <div id="globe-container"></div>
-    <div id="globe-tooltip" class="tooltip" style="display: none;"></div>
-
-    <div class="overlay-title">
-      <h1>Flight Path</h1>
-      <p class="subtitle">POAP Airport Rally 2026</p>
-    </div>
-
-    <div class="overlay-globe-controls">
-      <button id="globe-back" class="btn btn-glass" data-tinylytics-event="globe.close">&larr; Leaderboard</button>
-      <button id="spin-toggle" class="btn btn-glass" aria-label="Pause rotation" data-tinylytics-event="globe.spin-toggle">Pause Spin</button>
-    </div>
-
-    <div class="overlay-controls">
-      <div class="search-group">
-        <input type="text" id="globe-search" placeholder="Search address or ENS..." autocomplete="off">
-        <button id="globe-clear-search" class="btn btn-secondary" style="display: none;" data-tinylytics-event="search.clear">Clear</button>
-      </div>
-      <div class="playback-group" id="playback-controls" style="display: none;">
-        <button id="play-btn" class="btn btn-primary" data-tinylytics-event="playback.toggle">Play</button>
-        <label class="speed-label">
-          Speed
-          <input type="range" id="speed-slider" min="1" max="5" value="3">
-        </label>
-      </div>
     </div>
   </div>
 
-  <!-- Hidden element for JS-driven event tracking -->
-  <button id="tinylytics-tracker" aria-hidden="true" style="position:absolute;left:-9999px;"></button>
+  <div class="home-section home-regions-section">
+    <div class="home-section-header">
+      <h2>Regions</h2>
+    </div>
+    <div class="home-regions">
+      {%- for r in leaderboards.regions %}
+        <div class="home-region-card">
+          <div class="home-region-name">{{ r.continent }}</div>
+          <div class="home-region-stats">
+            <strong>{{ r.airport_count }}</strong> airports &middot;
+            <strong>{{ r.claims }}</strong> claims
+          </div>
+        </div>
+      {%- endfor %}
+    </div>
+  </div>
 
-  <script>
-    // Inject data at build time — avoids extra fetch calls
-    const AIRPORTS = {{ airports | dump | safe }};
-    const CLAIMS = {{ claims | dump | safe }};
-    const LEADERBOARDS = {{ leaderboards | dump | safe }};
-    const TEAMS = {{ teams | dump | safe }};
-  </script>
-  <script src="/js/app.js"></script>
-</body>
-</html>
+</div>

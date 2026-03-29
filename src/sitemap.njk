@@ -1,0 +1,50 @@
+---
+permalink: /sitemap.xml
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://flightpath.poaprally.com/</loc>
+    <lastmod>{{ meta.last_updated | formatDate }}</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://flightpath.poaprally.com/globe/</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://flightpath.poaprally.com/teams/</loc>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://flightpath.poaprally.com/travelers/</loc>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://flightpath.poaprally.com/airports/</loc>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://flightpath.poaprally.com/gauges/</loc>
+    <priority>0.7</priority>
+  </url>
+  {%- for t in teams.teams | filterHiddenTeams %}
+  <url>
+    <loc>https://flightpath.poaprally.com/teams/{{ t.id }}/</loc>
+    <priority>0.6</priority>
+  </url>
+  {%- endfor %}
+  {%- for a in leaderboards.addresses %}
+  <url>
+    <loc>https://flightpath.poaprally.com/travelers/{{ a.address }}/</loc>
+    <priority>0.5</priority>
+  </url>
+  {%- endfor %}
+  {%- for a in airports %}
+  <url>
+    <loc>https://flightpath.poaprally.com/airports/{{ a.code | lower }}/</loc>
+    <priority>0.6</priority>
+  </url>
+  {%- endfor %}
+</urlset>

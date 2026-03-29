@@ -1,0 +1,38 @@
+---
+layout: layout.njk
+activeTab: travelers
+pageTitle: Travelers
+permalink: /travelers/index.html
+extraScripts: |
+  <script src="/js/search.js"></script>
+---
+
+<div class="page-scroll">
+  <div class="board-search">
+    <input type="text" id="address-search" placeholder="Search address or ENS..." autocomplete="off">
+    <button id="clear-search" class="board-search-clear" style="display: none;">&times;</button>
+  </div>
+  <table class="board-table">
+    <thead>
+      <tr>
+        <th class="col-rank">#</th>
+        <th>Address</th>
+        <th class="col-num">Airports</th>
+      </tr>
+    </thead>
+    <tbody id="lb-travelers">
+      {%- for a in leaderboards.addresses %}
+      <tr data-ens="{{ a.ens | lower }}" data-address="{{ a.address | lower }}">
+        <td><span class="board-rank">{{ loop.index }}</span></td>
+        <td>
+          <a href="/travelers/{{ a.address }}/">
+            {%- if a.ens %}<span class="board-ens">{{ a.ens }}</span>
+            {%- else %}<span class="board-address">{{ a.address | truncateAddress }}</span>{% endif -%}
+          </a>
+        </td>
+        <td class="col-num"><span class="board-value board-value--highlight">{{ a.airport_count }}</span></td>
+      </tr>
+      {%- endfor %}
+    </tbody>
+  </table>
+</div>

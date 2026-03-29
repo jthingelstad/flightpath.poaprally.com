@@ -43,6 +43,66 @@
       ]
     },
     {
+      "id": "ens-on-poap",
+      "name": "On POAP",
+      "type": "ens_regex",
+      "description": "POAP wallets On POAP",
+      "members": [
+        {
+          "address": "0xdc40d73640f275004f54f82896032aff0ddee44d",
+          "ens": "rochilu.onpoap.eth",
+          "airport_count": 3
+        },
+        {
+          "address": "0xeab1bae68d4951dce7608e7af9ec62cb331a31c3",
+          "ens": "hello.onpoap.eth",
+          "airport_count": 3
+        },
+        {
+          "address": "0x87a48064f1e0feac80c87d0c5a005a0de8f17054",
+          "ens": "paz.onpoap.eth",
+          "airport_count": 2
+        },
+        {
+          "address": "0xec0a351ea0e5fde3200a60b47efd738ff223df2b",
+          "ens": "wairamoon.onpoap.eth",
+          "airport_count": 2
+        },
+        {
+          "address": "0x8d56294d17af68da9504dac253ae16c76eb6d9f5",
+          "ens": "cartegenaonchain.onpoap.eth",
+          "airport_count": 1
+        },
+        {
+          "address": "0xc0a59bb117d39019ecab6bfc83e72454d06621ac",
+          "ens": "accour.onpoap.eth",
+          "airport_count": 1
+        },
+        {
+          "address": "0xc38555a1afcd8394532caa11d0be60df166ec188",
+          "ens": "cbiux.onpoap.eth",
+          "airport_count": 1
+        }
+      ],
+      "member_count": 7,
+      "total_claims": 13,
+      "unique_airports": 12,
+      "airports": [
+        "AMS",
+        "BCN",
+        "BOG",
+        "CTG",
+        "EZE",
+        "FRA",
+        "LIM",
+        "LIS",
+        "MDE",
+        "MEX",
+        "PTY",
+        "ZRH"
+      ]
+    },
+    {
       "id": "auto-anon",
       "name": "Team Anon",
       "type": "anon",
@@ -2494,6 +2554,14 @@
       "member_count": 4,
       "total_claims": 17,
       "unique_airports": 9
+    },
+    {
+      "id": "ens-on-poap",
+      "name": "On POAP",
+      "type": "ens_regex",
+      "member_count": 7,
+      "total_claims": 13,
+      "unique_airports": 12
     },
     {
       "id": "home-aep",

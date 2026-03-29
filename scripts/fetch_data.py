@@ -2,14 +2,13 @@
 """
 Fetch POAP Airport Rally claim data and generate JSON for the static site.
 
-Reads airports.csv, fetches claims from the POAP API, enriches with
+Fetches airports from Airtable, claims from the POAP API, enriches with
 coordinates, computes teams and leaderboards, and outputs JSON files to _data/.
 
 Uses SQLite as a local cache/compute layer for incremental fetching and
-change detection. Team definitions are synced from Airtable.
+change detection. Team and airport definitions are managed in Airtable.
 """
 
-import csv
 import hashlib
 import json
 import os
@@ -21,7 +20,6 @@ from collections import defaultdict
 from datetime import datetime, timezone
 from pathlib import Path
 
-import airportsdata
 import requests
 from dotenv import load_dotenv
 
@@ -40,6 +38,7 @@ POAP_API_KEY = os.environ["POAP_API_KEY"]
 AIRTABLE_PAT = os.environ.get("AIRTABLE_PAT", "")
 AIRTABLE_BASE_ID = os.environ.get("AIRTABLE_BASE_ID", "")
 AIRTABLE_TEAMS_TABLE = os.environ.get("AIRTABLE_TEAMS_TABLE", "Teams")
+AIRTABLE_AIRPORTS_TABLE = os.environ.get("AIRTABLE_AIRPORTS_TABLE", "Airports")
 
 AUTH_URL = "https://auth.accounts.poap.xyz/oauth/token"
 API_BASE = "https://api.poap.tech"
@@ -49,25 +48,6 @@ REQUEST_DELAY = 0.25  # seconds between API calls
 HOLDER_REFRESH_DAYS = 7  # days between team event holder refreshes
 API_RETRIES = 3  # retries on transient failures
 
-AIRPORTS_DB = airportsdata.load("IATA")
-
-# Manual overrides for airports not in airportsdata (non-standard IATA codes)
-MANUAL_COORDS = {
-    "BSZ": {
-        "lat": 43.0613,
-        "lon": 74.4776,
-        "city": "Bishkek",
-        "country": "KG",
-        "name": "Manas International Airport",
-    },
-    "NMI": {
-        "lat": 18.5940,
-        "lon": 73.0413,
-        "city": "Navi Mumbai",
-        "country": "IN",
-        "name": "Navi Mumbai International Airport",
-    },
-}
 
 
 # ---------------------------------------------------------------------------
@@ -245,55 +225,47 @@ def fetch_event_details(event_id, token):
 # ---------------------------------------------------------------------------
 
 
-def load_airports_csv():
-    """Read airports.csv and return list of airport dicts."""
+def load_airports_from_airtable():
+    """Fetch airports from Airtable Airports table."""
+    if not AIRTABLE_PAT or not AIRTABLE_BASE_ID:
+        raise RuntimeError("Airtable credentials required for airports data")
+
+    url = f"https://api.airtable.com/v0/{AIRTABLE_BASE_ID}/{AIRTABLE_AIRPORTS_TABLE}"
+    headers = {"Authorization": f"Bearer {AIRTABLE_PAT}"}
     airports = []
-    with open(ROOT / "airports.csv", newline="", encoding="utf-8") as f:
-        reader = csv.reader(f)
-        next(reader)  # skip header
-        for row in reader:
-            if len(row) < 7:
+    offset = None
+
+    while True:
+        params = {}
+        if offset:
+            params["offset"] = offset
+        resp = requests.get(url, headers=headers, params=params, timeout=30)
+        resp.raise_for_status()
+        data = resp.json()
+
+        for record in data.get("records", []):
+            fields = record.get("fields", {})
+            code = fields.get("Airport Code", "").strip()
+            if not code or code == "PASS":
                 continue
-            code = row[5].strip()
-            if code == "PASS":
-                continue  # skip boarding pass entry
             airports.append(
                 {
-                    "event_id": int(row[0].strip()),
-                    "title": row[3].strip(),
+                    "event_id": int(fields.get("Drop ID", 0)),
+                    "title": fields.get("Title", ""),
                     "code": code,
-                    "continent": row[6].strip(),
+                    "continent": fields.get("Continent", ""),
+                    "lat": fields.get("Latitude", 0) or 0,
+                    "lon": fields.get("Longitude", 0) or 0,
+                    "city": fields.get("City", ""),
+                    "country": fields.get("Country", ""),
+                    "name": fields.get("Name", "") or fields.get("Title", ""),
                 }
             )
-    return airports
 
+        offset = data.get("offset")
+        if not offset:
+            break
 
-def enrich_with_coordinates(airports):
-    """Add lat/lon from airportsdata package, with manual overrides."""
-    for airport in airports:
-        code = airport["code"]
-        if code in MANUAL_COORDS:
-            manual = MANUAL_COORDS[code]
-            airport["lat"] = manual["lat"]
-            airport["lon"] = manual["lon"]
-            airport["city"] = manual["city"]
-            airport["country"] = manual["country"]
-            airport["name"] = manual["name"]
-        else:
-            info = AIRPORTS_DB.get(code)
-            if info:
-                airport["lat"] = info["lat"]
-                airport["lon"] = info["lon"]
-                airport["city"] = info["city"]
-                airport["country"] = info["country"]
-                airport["name"] = info["name"]
-            else:
-                print(f"  WARNING: No coordinate data for {code}")
-                airport["lat"] = 0
-                airport["lon"] = 0
-                airport["city"] = ""
-                airport["country"] = ""
-                airport["name"] = airport["title"]
     return airports
 
 
@@ -895,39 +867,36 @@ def main():
     db = init_db()
     print(f"   → {DB_PATH}")
 
-    print("2. Loading airports.csv...")
-    airports = load_airports_csv()
+    print("2. Loading airports from Airtable...")
+    airports = load_airports_from_airtable()
     print(f"   {len(airports)} airports loaded")
 
-    print("3. Enriching with coordinates...")
-    airports = enrich_with_coordinates(airports)
-
-    print("4. Upserting airports into SQLite...")
+    print("3. Upserting airports into SQLite...")
     upsert_airports(db, airports)
 
-    print("5. Authenticating with POAP API...")
+    print("4. Authenticating with POAP API...")
     token = get_access_token()
     print("   ✓ Token obtained")
 
-    print("6. Fetching event details (images)...")
+    print("5. Fetching event details (images)...")
     fetch_event_images(airports, token)
 
-    print("7. Fetching claims → SQLite...")
+    print("6. Fetching claims → SQLite...")
     total = process_claims(db, airports, token)
     claim_count = db.execute("SELECT COUNT(*) as cnt FROM claims").fetchone()["cnt"]
     print(f"   Total: {claim_count} claims in database")
 
-    print("8. Syncing team config from Airtable...")
+    print("7. Syncing team config from Airtable...")
     sync_team_config(db)
 
-    print("9. Fetching team event holders...")
+    print("8. Fetching team event holders...")
     fetch_team_event_holders(db, token)
 
-    print("10. Computing teams...")
+    print("9. Computing teams...")
     teams = compute_teams(db)
-    print(f"    {len(teams)} teams computed")
+    print(f"   {len(teams)} teams computed")
 
-    print("11. Exporting JSON files...")
+    print("10. Exporting JSON files...")
     changed = export_json(db, airports, teams)
 
     db.close()
