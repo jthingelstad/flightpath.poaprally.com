@@ -103,6 +103,633 @@
       ]
     },
     {
+      "id": "poap-ethdenver-2026",
+      "name": "ETHDenver 2026",
+      "type": "poap_holders",
+      "description": "",
+      "members": [
+        {
+          "address": "0x8f37ed67014c38d5ebe794daa878b55a62e3ac76",
+          "ens": "",
+          "airport_count": 11
+        },
+        {
+          "address": "0x4124cf34f56fa151e05c91ace550ada0dd5aabd7",
+          "ens": "isabel.eth",
+          "airport_count": 6
+        },
+        {
+          "address": "0x03f11c7a45ba8219c87f312eecb07287c2095302",
+          "ens": "0xtangle.eth",
+          "airport_count": 5
+        },
+        {
+          "address": "0x8f51dc0791cddddce08052fff939eb7cf0c17856",
+          "ens": "personal.0xj4an.eth",
+          "airport_count": 4
+        },
+        {
+          "address": "0xf6b6f07862a02c85628b3a9688beae07fea9c863",
+          "ens": "poap.eth",
+          "airport_count": 4
+        },
+        {
+          "address": "0x14fc0be8e90ab768226cccf952506ce00bde5029",
+          "ens": "gourm.eth",
+          "airport_count": 3
+        },
+        {
+          "address": "0x599abe13e88f1045e3aefe02a07f7bafc0c76b76",
+          "ens": "shufro.eth",
+          "airport_count": 3
+        },
+        {
+          "address": "0x5bd18902e2ea470c3dba572fde02b5ab236ddd76",
+          "ens": "stoczek.eth",
+          "airport_count": 3
+        },
+        {
+          "address": "0x8c775808fffbb99208452698bc619cf9d07d8b2e",
+          "ens": "arlequin.eth",
+          "airport_count": 3
+        },
+        {
+          "address": "0xacf4c2950107ef9b1c37faa1f9a866c8f0da88b9",
+          "ens": "jamescarnley.eth",
+          "airport_count": 3
+        },
+        {
+          "address": "0xb2069e806280f95f4bce4212bb067b18fbdcaefe",
+          "ens": "cardno.eth",
+          "airport_count": 3
+        },
+        {
+          "address": "0xbef65bf144bdea1667a74f14ad552c751ad4c056",
+          "ens": "victoctero.eth",
+          "airport_count": 3
+        },
+        {
+          "address": "0x4c5f4f9df7968b0db448526162114a04f3462bad",
+          "ens": "erebels.eth",
+          "airport_count": 2
+        },
+        {
+          "address": "0x9f000bfb33b0b63fce685b538b1a8af079b57d93",
+          "ens": "cryptobenthic\ud83d\udc20.eth",
+          "airport_count": 2
+        },
+        {
+          "address": "0xfe8e4f337b54c2afd370ae26675602c00bc8d702",
+          "ens": "armsves.poap.xyz",
+          "airport_count": 2
+        },
+        {
+          "address": "0x1df428833f2c9fb1ef098754e5d710432450d706",
+          "ens": "0xjoshua.eth",
+          "airport_count": 1
+        },
+        {
+          "address": "0x20139b8a173d83c1b59d9e27b23080622c4bd851",
+          "ens": "",
+          "airport_count": 1
+        },
+        {
+          "address": "0x2117bf88b4cb0186eaa87500a045fc998290e42a",
+          "ens": "gramajo.eth",
+          "airport_count": 1
+        },
+        {
+          "address": "0x3ab1530d7fd660262d25d53c8dd7f60b5a880181",
+          "ens": "seabiscuit747.eth",
+          "airport_count": 1
+        },
+        {
+          "address": "0x3f22f740d41518f5017b76eed3a63eb14d2e1b07",
+          "ens": "shutterblock.eth",
+          "airport_count": 1
+        },
+        {
+          "address": "0x5ffd23b1b0350debb17a2cb668929ac5f76d0e18",
+          "ens": "tekrox.eth",
+          "airport_count": 1
+        },
+        {
+          "address": "0x610d52cf8d359735a5388a8c4660168c7e029057",
+          "ens": "oppormir.eth",
+          "airport_count": 1
+        },
+        {
+          "address": "0x6d5f7beca81976fa363ffaa6d65171d66b5dee65",
+          "ens": "",
+          "airport_count": 1
+        },
+        {
+          "address": "0x7049747e615a1c5c22935d5790a664b7e65d9681",
+          "ens": "rcastag.eth",
+          "airport_count": 1
+        },
+        {
+          "address": "0x71e579ac071648fa272b991f3053f964afa85426",
+          "ens": "thecryptogoblin.eth",
+          "airport_count": 1
+        },
+        {
+          "address": "0x967d1e5c987f1ecdb27179bcb4153b2fd0167c92",
+          "ens": "lilbirdy.eth",
+          "airport_count": 1
+        },
+        {
+          "address": "0xb5d599680af005d0dfb726ff474a9f79f0aaad80",
+          "ens": "twc.poap.xyz",
+          "airport_count": 1
+        },
+        {
+          "address": "0xbe14b9950dc61642a084eab491fa516d8fe557e6",
+          "ens": "humpty.eth",
+          "airport_count": 1
+        },
+        {
+          "address": "0xbef9d99c3c0ef74c13ae4bf69fcd40e1ff7207b1",
+          "ens": "",
+          "airport_count": 1
+        },
+        {
+          "address": "0xf8afd3fb383a4822d2a6fe4c9e55273badfd861c",
+          "ens": "greyhound10.eth",
+          "airport_count": 1
+        }
+      ],
+      "member_count": 30,
+      "total_claims": 72,
+      "unique_airports": 34,
+      "airports": [
+        "AEP",
+        "ATH",
+        "ATL",
+        "AUS",
+        "CDG",
+        "CUN",
+        "DEN",
+        "DFW",
+        "EWR",
+        "EZE",
+        "FRA",
+        "HKG",
+        "HND",
+        "IAD",
+        "IAH",
+        "ICN",
+        "JFK",
+        "LAX",
+        "LGA",
+        "LHR",
+        "MDE",
+        "MIA",
+        "NCE",
+        "NRT",
+        "ORD",
+        "PTY",
+        "SAN",
+        "SIN",
+        "VIE",
+        "WAW",
+        "YUL",
+        "YVR",
+        "YYZ",
+        "ZRH"
+      ]
+    },
+    {
+      "id": "poap-ethmumbai-2026",
+      "name": "ETHMumbai 2026",
+      "type": "poap_holders",
+      "description": "",
+      "members": [
+        {
+          "address": "0xbd19a3f0a9cace18513a1e2863d648d13975cb30",
+          "ens": "didierkrux.eth",
+          "airport_count": 4
+        },
+        {
+          "address": "0x4df83971f6f1bfd8d33a2e79584bdfde75f4df60",
+          "ens": "salmanneedsajob.eth",
+          "airport_count": 3
+        },
+        {
+          "address": "0x0040daac32d83c78546ae36da42a496b28ab09e1",
+          "ens": "gaurang.eth",
+          "airport_count": 2
+        }
+      ],
+      "member_count": 3,
+      "total_claims": 9,
+      "unique_airports": 7,
+      "airports": [
+        "BKK",
+        "BLR",
+        "BOM",
+        "DXB",
+        "LIS",
+        "NCE",
+        "NMI"
+      ]
+    },
+    {
+      "id": "poap-we-ve-met-patricio",
+      "name": "We've Met Patricio",
+      "type": "poap_holders",
+      "description": "",
+      "members": [
+        {
+          "address": "0x03f11c7a45ba8219c87f312eecb07287c2095302",
+          "ens": "0xtangle.eth",
+          "airport_count": 5
+        },
+        {
+          "address": "0x895c5a67168ab29d5e8e96a55f933ad7c948c612",
+          "ens": "simone.dev",
+          "airport_count": 5
+        },
+        {
+          "address": "0x7d76020b5519176a2366d1b0b3b3ab2f9fe1d553",
+          "ens": "liszy.eth",
+          "airport_count": 4
+        },
+        {
+          "address": "0x8f51dc0791cddddce08052fff939eb7cf0c17856",
+          "ens": "personal.0xj4an.eth",
+          "airport_count": 4
+        },
+        {
+          "address": "0xbd19a3f0a9cace18513a1e2863d648d13975cb30",
+          "ens": "didierkrux.eth",
+          "airport_count": 4
+        },
+        {
+          "address": "0xf6b6f07862a02c85628b3a9688beae07fea9c863",
+          "ens": "poap.eth",
+          "airport_count": 4
+        },
+        {
+          "address": "0x14fc0be8e90ab768226cccf952506ce00bde5029",
+          "ens": "gourm.eth",
+          "airport_count": 3
+        },
+        {
+          "address": "0x56d389c4e07a48d429035532402301310b8143a0",
+          "ens": "colfax.eth",
+          "airport_count": 3
+        },
+        {
+          "address": "0x599abe13e88f1045e3aefe02a07f7bafc0c76b76",
+          "ens": "shufro.eth",
+          "airport_count": 3
+        },
+        {
+          "address": "0x914a7f893c3f7a7c0067fad1312c1bd630009159",
+          "ens": "\ud83e\udd87batman\ud83e\udd87.eth",
+          "airport_count": 3
+        },
+        {
+          "address": "0xb4db4bd641ff425235f75f46bdbf813855c1fc96",
+          "ens": "silkarg.eth",
+          "airport_count": 3
+        },
+        {
+          "address": "0xdc40d73640f275004f54f82896032aff0ddee44d",
+          "ens": "rochilu.onpoap.eth",
+          "airport_count": 3
+        },
+        {
+          "address": "0xeab1bae68d4951dce7608e7af9ec62cb331a31c3",
+          "ens": "hello.onpoap.eth",
+          "airport_count": 3
+        },
+        {
+          "address": "0x77e2e22055b915ba0244933e8459ba73f0571883",
+          "ens": "fabit.eth",
+          "airport_count": 2
+        },
+        {
+          "address": "0x87a48064f1e0feac80c87d0c5a005a0de8f17054",
+          "ens": "paz.onpoap.eth",
+          "airport_count": 2
+        },
+        {
+          "address": "0x8e484b34356111a9f642eff09b2635311600ad65",
+          "ens": "quilmes.eth",
+          "airport_count": 2
+        },
+        {
+          "address": "0x9f000bfb33b0b63fce685b538b1a8af079b57d93",
+          "ens": "cryptobenthic\ud83d\udc20.eth",
+          "airport_count": 2
+        },
+        {
+          "address": "0xac1c5131f0a85eafaa637a1ab342ed8e7771212d",
+          "ens": "",
+          "airport_count": 2
+        },
+        {
+          "address": "0xe46fbf16ce92ced16a5b4823856843af903fd97b",
+          "ens": "leo7c.eth",
+          "airport_count": 2
+        },
+        {
+          "address": "0x04c0cd38b8c203b14ef2b7b8d736d69b938aff71",
+          "ens": "nixorokish.eth",
+          "airport_count": 1
+        },
+        {
+          "address": "0x252eaf4e79410f7d67a3869585fc7b6336c825db",
+          "ens": "jonathanmeyer.eth",
+          "airport_count": 1
+        },
+        {
+          "address": "0x2f5040505477a46ba7049795ad95024da6720afa",
+          "ens": "ollo.eth",
+          "airport_count": 1
+        },
+        {
+          "address": "0x37ea434799b0ec581a073ed88e187cf4a22c5bce",
+          "ens": "",
+          "airport_count": 1
+        },
+        {
+          "address": "0x3ab1530d7fd660262d25d53c8dd7f60b5a880181",
+          "ens": "seabiscuit747.eth",
+          "airport_count": 1
+        },
+        {
+          "address": "0x3f22f740d41518f5017b76eed3a63eb14d2e1b07",
+          "ens": "shutterblock.eth",
+          "airport_count": 1
+        },
+        {
+          "address": "0x4ccc2acdd43811ce928cef7371fc95daf7418631",
+          "ens": "guide42.eth",
+          "airport_count": 1
+        },
+        {
+          "address": "0x6048e280905a57c1a9de35261f8774280191832b",
+          "ens": "glpecile.eth",
+          "airport_count": 1
+        },
+        {
+          "address": "0x971d1eeea92a0a4709caeeb487effbce4c1c9369",
+          "ens": "cryptozyzz.eth",
+          "airport_count": 1
+        },
+        {
+          "address": "0x9b29b5fc995b7f724f6fe0b0f78b78767d32dca4",
+          "ens": "ferostabio.eth",
+          "airport_count": 1
+        },
+        {
+          "address": "0xa775c775feb740d15da78d572a1caccbccc7a0f6",
+          "ens": "solyacuariana.eth",
+          "airport_count": 1
+        },
+        {
+          "address": "0xbd6f210a624a792e7d30a2f7591dc7abce2f3c48",
+          "ens": "jonk.eth",
+          "airport_count": 1
+        },
+        {
+          "address": "0xfa731c3f64bf97f528292b137faf0abb14da3b42",
+          "ens": "greywizard.eth",
+          "airport_count": 1
+        }
+      ],
+      "member_count": 32,
+      "total_claims": 72,
+      "unique_airports": 40,
+      "airports": [
+        "AEP",
+        "AMS",
+        "ATL",
+        "AUS",
+        "BCN",
+        "BOG",
+        "BOM",
+        "BOS",
+        "CDG",
+        "CGH",
+        "CTG",
+        "CUN",
+        "DEN",
+        "DXB",
+        "EWR",
+        "EZE",
+        "FRA",
+        "GIG",
+        "GRU",
+        "HKG",
+        "HND",
+        "IAH",
+        "ICN",
+        "JFK",
+        "LGA",
+        "LIM",
+        "LIS",
+        "MDE",
+        "MEX",
+        "MIA",
+        "MVD",
+        "NCE",
+        "NRT",
+        "ORD",
+        "PTY",
+        "SCL",
+        "SFO",
+        "VIE",
+        "YVR",
+        "ZRH"
+      ]
+    },
+    {
+      "id": "poap-ethdenver-2025",
+      "name": "ETHDenver 2025",
+      "type": "poap_holders",
+      "description": "",
+      "members": [
+        {
+          "address": "0x8f37ed67014c38d5ebe794daa878b55a62e3ac76",
+          "ens": "",
+          "airport_count": 11
+        },
+        {
+          "address": "0x03f11c7a45ba8219c87f312eecb07287c2095302",
+          "ens": "0xtangle.eth",
+          "airport_count": 5
+        },
+        {
+          "address": "0xf6b6f07862a02c85628b3a9688beae07fea9c863",
+          "ens": "poap.eth",
+          "airport_count": 4
+        },
+        {
+          "address": "0x14fc0be8e90ab768226cccf952506ce00bde5029",
+          "ens": "gourm.eth",
+          "airport_count": 3
+        },
+        {
+          "address": "0x599abe13e88f1045e3aefe02a07f7bafc0c76b76",
+          "ens": "shufro.eth",
+          "airport_count": 3
+        },
+        {
+          "address": "0x5bd18902e2ea470c3dba572fde02b5ab236ddd76",
+          "ens": "stoczek.eth",
+          "airport_count": 3
+        },
+        {
+          "address": "0x896c20da40c2a4df9b7c98b16a8d5a95129161a5",
+          "ens": "player1taco.eth",
+          "airport_count": 3
+        },
+        {
+          "address": "0x914a7f893c3f7a7c0067fad1312c1bd630009159",
+          "ens": "\ud83e\udd87batman\ud83e\udd87.eth",
+          "airport_count": 3
+        },
+        {
+          "address": "0xacf4c2950107ef9b1c37faa1f9a866c8f0da88b9",
+          "ens": "jamescarnley.eth",
+          "airport_count": 3
+        },
+        {
+          "address": "0x1019236722517506732d92dac0f7b9b4ed993d8d",
+          "ens": "forestkeeperio.eth",
+          "airport_count": 2
+        },
+        {
+          "address": "0x4c5f4f9df7968b0db448526162114a04f3462bad",
+          "ens": "erebels.eth",
+          "airport_count": 2
+        },
+        {
+          "address": "0x75a1e0a311a2486217d94c716d3f48861b54a753",
+          "ens": "brittintech.eth",
+          "airport_count": 2
+        },
+        {
+          "address": "0x9f000bfb33b0b63fce685b538b1a8af079b57d93",
+          "ens": "cryptobenthic\ud83d\udc20.eth",
+          "airport_count": 2
+        },
+        {
+          "address": "0xa5ae650aac0072d1ac714f27e1cdc954bfea6717",
+          "ens": "prbrody.eth",
+          "airport_count": 2
+        },
+        {
+          "address": "0xfe8e4f337b54c2afd370ae26675602c00bc8d702",
+          "ens": "armsves.poap.xyz",
+          "airport_count": 2
+        },
+        {
+          "address": "0x1df428833f2c9fb1ef098754e5d710432450d706",
+          "ens": "0xjoshua.eth",
+          "airport_count": 1
+        },
+        {
+          "address": "0x252eaf4e79410f7d67a3869585fc7b6336c825db",
+          "ens": "jonathanmeyer.eth",
+          "airport_count": 1
+        },
+        {
+          "address": "0x2f5040505477a46ba7049795ad95024da6720afa",
+          "ens": "ollo.eth",
+          "airport_count": 1
+        },
+        {
+          "address": "0x3442274bec1b794b06e3a240fa746ffd0416360b",
+          "ens": "wonderwoman.withpoap.eth",
+          "airport_count": 1
+        },
+        {
+          "address": "0x37ea434799b0ec581a073ed88e187cf4a22c5bce",
+          "ens": "",
+          "airport_count": 1
+        },
+        {
+          "address": "0x3ead295b10c55b0e243df789ad3ab1ace1cbbbf7",
+          "ens": "kitblake.eth",
+          "airport_count": 1
+        },
+        {
+          "address": "0x6d5f7beca81976fa363ffaa6d65171d66b5dee65",
+          "ens": "",
+          "airport_count": 1
+        },
+        {
+          "address": "0x72cc82900823c29310985decdd607a68f9bc8418",
+          "ens": "chaps.eth",
+          "airport_count": 1
+        },
+        {
+          "address": "0x967d1e5c987f1ecdb27179bcb4153b2fd0167c92",
+          "ens": "lilbirdy.eth",
+          "airport_count": 1
+        },
+        {
+          "address": "0xb5d599680af005d0dfb726ff474a9f79f0aaad80",
+          "ens": "twc.poap.xyz",
+          "airport_count": 1
+        },
+        {
+          "address": "0xf8afd3fb383a4822d2a6fe4c9e55273badfd861c",
+          "ens": "greyhound10.eth",
+          "airport_count": 1
+        },
+        {
+          "address": "0xfdbee3fba2f14d72bd1a6b2ccc860dc024f7bf14",
+          "ens": "yolantis.eth",
+          "airport_count": 1
+        }
+      ],
+      "member_count": 27,
+      "total_claims": 62,
+      "unique_airports": 34,
+      "airports": [
+        "AEP",
+        "AMS",
+        "ATH",
+        "AUS",
+        "CDG",
+        "CUN",
+        "DEN",
+        "DFW",
+        "EZE",
+        "FRA",
+        "HKG",
+        "HND",
+        "IAH",
+        "ICN",
+        "IST",
+        "JFK",
+        "LAX",
+        "LGA",
+        "LHR",
+        "MEX",
+        "MIA",
+        "MTY",
+        "NCE",
+        "NRT",
+        "ORD",
+        "SAN",
+        "SCL",
+        "SIN",
+        "VIE",
+        "WAW",
+        "YUL",
+        "YVR",
+        "YYZ",
+        "ZRH"
+      ]
+    },
+    {
       "id": "auto-anon",
       "name": "Team Anon",
       "type": "anon",
@@ -2524,6 +3151,30 @@
       "unique_airports": 52
     },
     {
+      "id": "poap-ethdenver-2026",
+      "name": "ETHDenver 2026",
+      "type": "poap_holders",
+      "member_count": 30,
+      "total_claims": 72,
+      "unique_airports": 34
+    },
+    {
+      "id": "poap-we-ve-met-patricio",
+      "name": "We've Met Patricio",
+      "type": "poap_holders",
+      "member_count": 32,
+      "total_claims": 72,
+      "unique_airports": 40
+    },
+    {
+      "id": "poap-ethdenver-2025",
+      "name": "ETHDenver 2025",
+      "type": "poap_holders",
+      "member_count": 27,
+      "total_claims": 62,
+      "unique_airports": 34
+    },
+    {
       "id": "month-2026-03",
       "name": "Started: March 2026",
       "type": "month_started",
@@ -2602,6 +3253,14 @@
       "member_count": 1,
       "total_claims": 11,
       "unique_airports": 11
+    },
+    {
+      "id": "poap-ethmumbai-2026",
+      "name": "ETHMumbai 2026",
+      "type": "poap_holders",
+      "member_count": 3,
+      "total_claims": 9,
+      "unique_airports": 7
     },
     {
       "id": "home-ewr",
