@@ -6,8 +6,24 @@ permalink: /teams/index.html
 ---
 
 {%- set visibleTeams = teams.leaderboard | filterHiddenTeams -%}
+{%- set poapTeams = [] -%}
+{%- set ensTeams = [] -%}
+{%- set homeTeams = [] -%}
+{%- set otherTeams = [] -%}
+{%- for t in visibleTeams -%}
+  {%- if t.type == "poap_holders" -%}
+    {%- set poapTeams = (poapTeams.push(t), poapTeams) -%}
+  {%- elif t.type == "ens_regex" -%}
+    {%- set ensTeams = (ensTeams.push(t), ensTeams) -%}
+  {%- elif t.type == "first_airport" and t.member_count > 1 -%}
+    {%- set homeTeams = (homeTeams.push(t), homeTeams) -%}
+  {%- elif t.type != "first_airport" -%}
+    {%- set otherTeams = (otherTeams.push(t), otherTeams) -%}
+  {%- endif -%}
+{%- endfor -%}
 
 <div class="page-scroll">
+  {%- macro teamTable(teamList) %}
   <table class="board-table">
     <thead>
       <tr>
@@ -19,7 +35,7 @@ permalink: /teams/index.html
       </tr>
     </thead>
     <tbody>
-      {%- for t in visibleTeams %}
+      {%- for t in teamList %}
       <tr>
         <td><span class="board-rank">{{ loop.index }}</span></td>
         <td>
@@ -35,4 +51,33 @@ permalink: /teams/index.html
       {%- endfor %}
     </tbody>
   </table>
+  {%- endmacro %}
+
+  {%- if poapTeams | length > 0 %}
+  <div class="teams-section">
+    <div class="teams-section-header"><h2>POAP Teams</h2></div>
+    {{ teamTable(poapTeams) }}
+  </div>
+  {%- endif %}
+
+  {%- if ensTeams | length > 0 %}
+  <div class="teams-section">
+    <div class="teams-section-header"><h2>ENS Teams</h2></div>
+    {{ teamTable(ensTeams) }}
+  </div>
+  {%- endif %}
+
+  {%- if homeTeams | length > 0 %}
+  <div class="teams-section">
+    <div class="teams-section-header"><h2>Home Airport</h2></div>
+    {{ teamTable(homeTeams) }}
+  </div>
+  {%- endif %}
+
+  {%- if otherTeams | length > 0 %}
+  <div class="teams-section">
+    <div class="teams-section-header"><h2>Other Teams</h2></div>
+    {{ teamTable(otherTeams) }}
+  </div>
+  {%- endif %}
 </div>
