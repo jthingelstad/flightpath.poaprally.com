@@ -1,6 +1,6 @@
 /* ============================================================
    Flight Path — POAP Airport Rally
-   Globe-centered layout with floating overlay UI
+   Board-first layout with split-flap aesthetic + globe view
    ============================================================ */
 
 :root {
@@ -25,8 +25,19 @@
   --shadow-hover: 0 8px 30px rgba(128, 118, 250, 0.25);
   --font-heading: 'Comfortaa', sans-serif;
   --font-body: 'Rubik', sans-serif;
+  --font-mono: 'Roboto Mono', monospace;
 
-  /* Overlay glass effect */
+  /* Board (split-flap) colors */
+  --board-bg: #0a0a2e;
+  --board-surface: #12123a;
+  --board-cell: #1a1a4a;
+  --board-text: #f0e6d3;
+  --board-text-muted: rgba(240, 230, 211, 0.5);
+  --board-split: rgba(0, 0, 0, 0.35);
+  --board-row-hover: rgba(128, 118, 250, 0.08);
+  --board-row-selected: rgba(128, 118, 250, 0.16);
+
+  /* Globe glass effect */
   --glass-bg: rgba(10, 10, 46, 0.75);
   --glass-border: rgba(128, 118, 250, 0.2);
   --glass-text: rgba(255, 255, 255, 0.92);
@@ -44,16 +55,16 @@
 html, body {
   width: 100%;
   height: 100%;
-  overflow: hidden;
 }
 
 body {
   font-family: var(--font-body);
   font-size: 16px;
-  color: var(--glass-text);
-  background: #0a0a2e;
+  color: var(--board-text);
+  background: var(--board-bg);
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
+  overflow: hidden;
 }
 
 a {
@@ -64,15 +75,466 @@ a:hover {
   color: var(--primary);
 }
 
-/* ---- Globe (full viewport) ---- */
+/* ============================================================
+   Board View — Split-Flap Leaderboard
+   ============================================================ */
 
-#globe-container {
+.board-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: var(--board-bg);
+}
+
+/* ---- Board Header ---- */
+
+.board-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+  flex-shrink: 0;
+  border-bottom: 1px solid rgba(128, 118, 250, 0.1);
+}
+
+.board-branding {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+}
+
+.board-title {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-light);
+  letter-spacing: -0.02em;
+}
+
+.board-subtitle {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--board-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.board-stats {
+  display: flex;
+  gap: 1.25rem;
+  font-size: 0.82rem;
+  color: var(--board-text-muted);
+}
+
+.board-stat strong {
+  color: var(--primary-light);
+  font-weight: 600;
+}
+
+/* ---- Board Tabs ---- */
+
+.board-tabs {
+  display: flex;
+  gap: 0;
+  padding: 0 1.5rem;
+  flex-shrink: 0;
+  border-bottom: 1px solid rgba(128, 118, 250, 0.1);
+  overflow-x: auto;
+}
+
+.board-tab {
+  padding: 0.7rem 1.25rem;
+  border: none;
+  background: none;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--board-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.board-tab:hover {
+  color: var(--board-text);
+}
+
+.board-tab.active {
+  color: var(--primary-light);
+  border-bottom-color: var(--primary-light);
+}
+
+/* ---- Board Content ---- */
+
+.board-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 0;
+}
+
+.board-content::-webkit-scrollbar {
+  width: 6px;
+}
+.board-content::-webkit-scrollbar-track {
+  background: transparent;
+}
+.board-content::-webkit-scrollbar-thumb {
+  background: rgba(128, 118, 250, 0.2);
+  border-radius: 3px;
+}
+
+.board-panel {
+  display: none;
+}
+
+.board-panel.active {
+  display: block;
+}
+
+/* ---- Board Table (Split-Flap Style) ---- */
+
+.board-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.board-table thead {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background: var(--board-surface);
+}
+
+.board-table th {
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-size: 0.7rem;
+  color: var(--board-text-muted);
+  text-align: left;
+  padding: 0.6rem 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  border-bottom: 1px solid rgba(128, 118, 250, 0.15);
+}
+
+.board-table th.col-rank {
+  width: 3rem;
+  text-align: center;
+}
+
+.board-table th.col-num {
+  width: 5.5rem;
+  text-align: right;
+}
+
+.board-table td {
+  padding: 0 1rem;
+  height: 2.75rem;
+  vertical-align: middle;
+  border-bottom: 1px solid rgba(128, 118, 250, 0.06);
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--board-text);
+  position: relative;
+}
+
+/* Split-flap cell effect */
+.board-table td::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  height: 1px;
+  background: var(--board-split);
+  pointer-events: none;
+}
+
+.board-table td.col-rank,
+.board-table td:first-child {
+  text-align: center;
+  color: var(--board-text-muted);
+  font-size: 0.78rem;
+  width: 3rem;
+}
+
+.board-table td.col-num {
+  text-align: right;
+  width: 5.5rem;
+}
+
+.board-table tbody tr {
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.board-table tbody tr:hover {
+  background: var(--board-row-hover);
+}
+
+.board-table tbody tr.selected {
+  background: var(--board-row-selected);
+}
+
+/* ---- Board Cell Content Styles ---- */
+
+.board-rank {
+  color: var(--board-text-muted);
+  font-size: 0.78rem;
+  font-weight: 500;
+}
+
+.board-team-name {
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.board-value {
+  font-weight: 500;
+  text-align: right;
+  display: block;
+}
+
+.board-value--highlight {
+  color: var(--primary-light);
+}
+
+.board-ens {
+  color: var(--primary-light);
+  font-weight: 500;
+}
+
+.board-address {
+  color: var(--board-text-muted);
+  font-size: 0.78rem;
+}
+
+.board-airport-code {
+  font-weight: 700;
+  color: var(--primary-light);
+  margin-right: 0.4rem;
+}
+
+.board-continent {
+  font-size: 0.75rem;
+  color: var(--board-text-muted);
+}
+
+/* ---- Team Type Badges ---- */
+
+.board-badge {
+  display: inline-block;
+  padding: 0.1rem 0.45rem;
+  border-radius: var(--radius-pill);
+  font-size: 0.65rem;
+  font-weight: 500;
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-left: 0.5rem;
+  vertical-align: middle;
+}
+
+.board-badge--ens_regex {
+  background: rgba(128, 118, 250, 0.25);
+  color: var(--primary-light);
+}
+
+.board-badge--poap_holders {
+  background: rgba(248, 117, 136, 0.25);
+  color: var(--secondary);
+}
+
+.board-badge--anon {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--board-text-muted);
+}
+
+.board-badge--first_airport {
+  background: rgba(15, 206, 173, 0.2);
+  color: var(--success);
+}
+
+.board-badge--month_started {
+  background: rgba(74, 144, 217, 0.2);
+  color: #6db3f8;
+}
+
+/* ---- Team Detail View ---- */
+
+.board-back-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  margin: 0.75rem 1rem;
+  border: 1px solid rgba(128, 118, 250, 0.2);
+  border-radius: var(--radius-pill);
+  background: none;
+  color: var(--board-text-muted);
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.board-back-btn:hover {
+  color: var(--primary-light);
+  border-color: var(--primary-light);
+  background: rgba(128, 118, 250, 0.1);
+}
+
+.team-detail-header {
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid rgba(128, 118, 250, 0.1);
+}
+
+.team-detail-name {
+  font-family: var(--font-mono);
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--board-text);
+  margin-bottom: 0.25rem;
+}
+
+.team-detail-desc {
+  font-size: 0.82rem;
+  color: var(--board-text-muted);
+  margin-bottom: 0.75rem;
+}
+
+.team-detail-stats {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.team-detail-stat {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--board-text-muted);
+}
+
+.team-detail-stat strong {
+  color: var(--primary-light);
+  font-size: 1.1rem;
+  display: block;
+  line-height: 1.2;
+}
+
+/* ---- Board Search ---- */
+
+.board-search {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  gap: 0.5rem;
+}
+
+.board-search input {
+  flex: 1;
+  max-width: 400px;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid rgba(128, 118, 250, 0.2);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  color: var(--board-text);
+  background: var(--board-surface);
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.board-search input:focus {
+  border-color: var(--primary-light);
+  box-shadow: 0 0 0 3px rgba(128, 118, 250, 0.15);
+}
+
+.board-search input::placeholder {
+  color: var(--board-text-muted);
+}
+
+.board-search-clear {
+  background: none;
+  border: none;
+  color: var(--board-text-muted);
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+}
+.board-search-clear:hover {
+  color: var(--board-text);
+}
+
+/* ---- Board Footer ---- */
+
+.board-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1.5rem;
+  flex-shrink: 0;
+  border-top: 1px solid rgba(128, 118, 250, 0.1);
+}
+
+.board-updated {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--board-text-muted);
+}
+
+.board-globe-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.45rem 1.1rem;
+  border: 1px solid var(--primary);
+  border-radius: var(--radius-pill);
+  background: rgba(128, 118, 250, 0.1);
+  color: var(--primary-light);
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.board-globe-btn:hover {
+  background: rgba(128, 118, 250, 0.2);
+  box-shadow: var(--shadow);
+}
+
+.globe-icon {
+  font-size: 1rem;
+}
+
+.board-link {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--board-text-muted);
+}
+
+/* ============================================================
+   Globe View
+   ============================================================ */
+
+.globe-view {
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  z-index: 0;
+  z-index: 500;
+  background: var(--board-bg);
+}
+
+#globe-container {
+  width: 100%;
+  height: 100%;
 }
 
 #globe-container canvas {
@@ -93,44 +555,21 @@ a:hover {
   border-radius: var(--radius-sm);
   box-shadow: var(--shadow);
   border: 1px solid var(--glass-border);
-  z-index: 200;
+  z-index: 600;
   max-width: 250px;
 }
 
-.tooltip .code {
-  font-family: var(--font-heading);
-  font-weight: 700;
-  color: var(--primary-light);
-  font-size: 1rem;
-}
-
-.tooltip .name {
-  color: var(--glass-text);
-  font-size: 0.8rem;
-}
-
-.tooltip .claims-count {
-  color: var(--glass-text-muted);
-  font-size: 0.75rem;
-  margin-top: 0.25rem;
-}
-
-/* ---- Overlay: shared glass style ---- */
+/* ---- Globe Overlays ---- */
 
 .overlay-title,
-.overlay-stats,
-.overlay-controls,
-.panel-toggle,
-.leaderboard-panel {
+.overlay-controls {
   position: fixed;
-  z-index: 100;
+  z-index: 510;
   background: var(--glass-bg);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border: 1px solid var(--glass-border);
 }
-
-/* ---- Overlay: Title (top-left) ---- */
 
 .overlay-title {
   top: 1.25rem;
@@ -154,26 +593,6 @@ a:hover {
   margin-top: 0.1rem;
 }
 
-/* ---- Overlay: Stats (top-right) ---- */
-
-.overlay-stats {
-  top: 1.25rem;
-  right: 1.25rem;
-  display: flex;
-  gap: 1rem;
-  padding: 0.6rem 1rem;
-  border-radius: var(--radius-pill);
-  font-size: 0.82rem;
-  color: var(--glass-text-muted);
-}
-
-.overlay-stats strong {
-  color: var(--primary-light);
-  font-weight: 600;
-}
-
-/* ---- Overlay: Controls (bottom center) ---- */
-
 .overlay-controls {
   bottom: 1.5rem;
   left: 50%;
@@ -190,7 +609,7 @@ a:hover {
   gap: 0.5rem;
 }
 
-#address-search {
+#globe-search {
   width: 260px;
   padding: 0.45rem 0.75rem;
   border: 1px solid var(--glass-border);
@@ -203,13 +622,13 @@ a:hover {
   transition: border-color 0.2s, background 0.2s;
 }
 
-#address-search:focus {
+#globe-search:focus {
   border-color: var(--primary-light);
   background: rgba(255, 255, 255, 0.12);
   box-shadow: 0 0 0 3px rgba(128, 118, 250, 0.2);
 }
 
-#address-search::placeholder {
+#globe-search::placeholder {
   color: var(--glass-text-muted);
 }
 
@@ -230,6 +649,17 @@ a:hover {
 #speed-slider {
   width: 80px;
   accent-color: var(--primary-light);
+}
+
+.overlay-globe-controls {
+  position: fixed;
+  bottom: 1.5rem;
+  left: 1.5rem;
+  z-index: 510;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
 }
 
 /* ---- Buttons ---- */
@@ -280,281 +710,39 @@ a:hover {
   background: rgba(128, 118, 250, 0.2);
 }
 
-.overlay-globe-controls {
-  position: fixed;
-  bottom: 1.5rem;
-  left: 1.5rem;
-  z-index: 100;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 0.35rem;
-}
-
-.last-updated {
-  font-size: 0.7rem;
-  color: rgba(255, 255, 255, 0.5);
-  font-family: "Rubik", sans-serif;
-  padding-left: 0.25rem;
-}
-
-/* ---- Panel toggle button (right edge) ---- */
-
-.panel-toggle {
-  top: 50%;
-  right: 0;
-  transform: translateY(-50%);
-  padding: 0.6rem 0.5rem;
-  border-radius: var(--radius-md) 0 0 var(--radius-md);
-  border-right: none;
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.4rem;
-  color: var(--glass-text-muted);
-  transition: all 0.2s;
-}
-
-.panel-toggle:hover {
-  background: rgba(128, 118, 250, 0.2);
-  color: var(--glass-text);
-}
-
-.panel-toggle.hidden {
-  display: none;
-}
-
-.toggle-icon {
-  font-size: 1.1rem;
-}
-
-.toggle-label {
-  writing-mode: vertical-rl;
-  text-orientation: mixed;
-  font-family: var(--font-heading);
-  font-size: 0.7rem;
-  font-weight: 600;
-  letter-spacing: 0.04em;
-}
-
-/* ---- Leaderboard panel (slide-out from right) ---- */
-
-.leaderboard-panel {
-  top: 0;
-  right: 0;
-  width: 420px;
-  height: 100vh;
-  border-radius: 0;
-  border-right: none;
-  display: flex;
-  flex-direction: column;
-  transform: translateX(100%);
-  transition: transform 0.3s ease;
-}
-
-.leaderboard-panel.open {
-  transform: translateX(0);
-}
-
-.panel-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1rem 1rem 0;
-  flex-shrink: 0;
-}
-
-.leaderboard-tabs {
-  display: flex;
-  gap: 0.15rem;
-}
-
-.tab {
-  padding: 0.5rem 0.9rem;
-  border: none;
-  background: none;
-  font-family: var(--font-heading);
-  font-size: 0.82rem;
-  font-weight: 600;
-  color: var(--glass-text-muted);
-  cursor: pointer;
-  border-bottom: 2px solid transparent;
-  transition: all 0.2s;
-}
-
-.tab:hover {
-  color: var(--primary-light);
-}
-
-.tab.active {
-  color: var(--primary-light);
-  border-bottom-color: var(--primary-light);
-}
-
-.panel-close {
-  background: none;
-  border: none;
-  color: var(--glass-text-muted);
-  font-size: 1.4rem;
-  cursor: pointer;
-  padding: 0.25rem 0.5rem;
-  border-radius: var(--radius-sm);
-  transition: all 0.2s;
-}
-.panel-close:hover {
-  color: var(--glass-text);
-  background: rgba(255, 255, 255, 0.1);
-}
-
-.panel-body {
-  flex: 1;
-  overflow-y: auto;
-  padding: 0.5rem 0;
-}
-
-.panel-body::-webkit-scrollbar {
-  width: 4px;
-}
-.panel-body::-webkit-scrollbar-track {
-  background: transparent;
-}
-.panel-body::-webkit-scrollbar-thumb {
-  background: var(--glass-border);
-  border-radius: 2px;
-}
-
-.panel-footer {
-  padding: 0.6rem 1rem;
-  text-align: center;
-  font-size: 0.8rem;
-  color: var(--glass-text-muted);
-  border-top: 1px solid var(--glass-border);
-  flex-shrink: 0;
-}
-
-/* ---- Leaderboard table ---- */
-
-.leaderboard-tab-panel {
-  display: none;
-}
-
-.leaderboard-tab-panel.active {
-  display: block;
-}
-
-.leaderboard-table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 0.85rem;
-}
-
-.leaderboard-table thead {
-  position: sticky;
-  top: 0;
-  z-index: 1;
-  background: var(--glass-bg);
-}
-
-.leaderboard-table th {
-  font-family: var(--font-heading);
-  font-weight: 600;
-  font-size: 0.72rem;
-  color: var(--glass-text-muted);
-  text-align: left;
-  padding: 0.5rem 0.65rem;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-}
-
-.leaderboard-table td {
-  padding: 0.5rem 0.65rem;
-  border-bottom: 1px solid rgba(128, 118, 250, 0.08);
-  color: var(--glass-text);
-}
-
-.leaderboard-table tbody tr {
-  cursor: pointer;
-  transition: background 0.15s;
-}
-
-.leaderboard-table tbody tr:hover {
-  background: rgba(128, 118, 250, 0.12);
-}
-
-.leaderboard-table tbody tr.selected {
-  background: rgba(128, 118, 250, 0.2);
-}
-
-.rank {
-  color: var(--glass-text-muted);
-  font-size: 0.78rem;
-  font-weight: 500;
-  min-width: 1.75rem;
-  display: inline-block;
-}
-
-.address-cell {
-  font-family: monospace;
-  font-size: 0.78rem;
-  color: var(--glass-text);
-}
-
-.ens-name {
-  font-family: var(--font-body);
-  font-weight: 500;
-  color: var(--primary-light);
-}
-
-.airport-code {
-  font-family: var(--font-heading);
-  font-weight: 700;
-  color: var(--primary-light);
-}
-
-.claims-badge {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(128, 118, 250, 0.2);
-  color: var(--primary-light);
-  font-weight: 600;
-  font-size: 0.78rem;
-  padding: 0.15rem 0.5rem;
-  border-radius: var(--radius-pill);
-  min-width: 2.2rem;
-}
-
-.continent-badge {
-  display: inline-block;
-  padding: 0.12rem 0.45rem;
-  border-radius: var(--radius-pill);
-  font-size: 0.72rem;
-  font-weight: 500;
-  background: rgba(255, 255, 255, 0.08);
-  color: var(--glass-text-muted);
-  border: 1px solid var(--glass-border);
-}
-
 /* ---- Responsive ---- */
 
 @media (max-width: 768px) {
-  .overlay-title {
-    top: 0.75rem;
-    left: 0.75rem;
-    padding: 0.5rem 0.9rem;
+  .board-header {
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0.75rem 1rem;
   }
 
-  .overlay-title h1 {
-    font-size: 1.1rem;
+  .board-stats {
+    gap: 0.75rem;
+    font-size: 0.75rem;
   }
 
-  .overlay-stats {
-    top: 0.75rem;
-    right: 0.75rem;
-    gap: 0.6rem;
-    padding: 0.45rem 0.75rem;
-    font-size: 0.72rem;
+  .board-tabs {
+    padding: 0 1rem;
+  }
+
+  .board-tab {
+    padding: 0.6rem 0.9rem;
+    font-size: 0.75rem;
+  }
+
+  .board-table td {
+    padding: 0 0.6rem;
+    font-size: 0.78rem;
+  }
+
+  .board-footer {
+    padding: 0.5rem 1rem;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
   }
 
   .overlay-controls {
@@ -566,17 +754,17 @@ a:hover {
     max-width: calc(100vw - 2rem);
   }
 
-  #address-search {
+  #globe-search {
     width: 200px;
   }
 
-  .leaderboard-panel {
-    width: 100vw;
+  .overlay-title {
+    top: 0.75rem;
+    left: 0.75rem;
+    padding: 0.5rem 0.9rem;
   }
 
-  .panel-toggle {
-    top: auto;
-    bottom: 5rem;
-    right: 0;
+  .overlay-title h1 {
+    font-size: 1.1rem;
   }
 }

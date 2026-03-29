@@ -36,7 +36,7 @@
     "country": "AR",
     "name": "Jorge Newbery Airpark",
     "image_url": "/img/poaps/aep.png",
-    "claims": 7
+    "claims": 9
   },
   {
     "event_id": 218112,
@@ -62,7 +62,7 @@
     "country": "NL",
     "name": "Amsterdam Airport Schiphol",
     "image_url": "/img/poaps/ams.png",
-    "claims": 3
+    "claims": 6
   },
   {
     "event_id": 218114,
@@ -75,7 +75,7 @@
     "country": "GR",
     "name": "Eleftherios Venizelos International Airport",
     "image_url": "/img/poaps/ath.png",
-    "claims": 0
+    "claims": 1
   },
   {
     "event_id": 214929,
@@ -88,7 +88,7 @@
     "country": "US",
     "name": "Hartsfield - Jackson Atlanta International Airport",
     "image_url": "/img/poaps/atl.png",
-    "claims": 1
+    "claims": 2
   },
   {
     "event_id": 216411,
@@ -127,7 +127,7 @@
     "country": "ES",
     "name": "Barcelona International Airport",
     "image_url": "/img/poaps/bcn.png",
-    "claims": 4
+    "claims": 8
   },
   {
     "event_id": 214904,
@@ -166,7 +166,7 @@
     "country": "TH",
     "name": "Suvarnabhumi Airport",
     "image_url": "/img/poaps/bkk.png",
-    "claims": 1
+    "claims": 3
   },
   {
     "event_id": 214886,
@@ -205,7 +205,7 @@
     "country": "CO",
     "name": "El Dorado International Airport",
     "image_url": "/img/poaps/bog.png",
-    "claims": 5
+    "claims": 6
   },
   {
     "event_id": 214887,
@@ -218,7 +218,7 @@
     "country": "IN",
     "name": "Chhatrapati Shivaji International Airport",
     "image_url": "/img/poaps/bom.png",
-    "claims": 0
+    "claims": 2
   },
   {
     "event_id": 218239,
@@ -270,7 +270,7 @@
     "country": "FR",
     "name": "Charles de Gaulle International Airport",
     "image_url": "/img/poaps/cdg.png",
-    "claims": 1
+    "claims": 3
   },
   {
     "event_id": 214919,
@@ -361,7 +361,7 @@
     "country": "MX",
     "name": "Cancun International Airport",
     "image_url": "/img/poaps/cun.png",
-    "claims": 3
+    "claims": 4
   },
   {
     "event_id": 216422,
@@ -400,7 +400,7 @@
     "country": "US",
     "name": "Denver International Airport",
     "image_url": "/img/poaps/den.png",
-    "claims": 23
+    "claims": 26
   },
   {
     "event_id": 214932,
@@ -452,7 +452,7 @@
     "country": "AE",
     "name": "Dubai International Airport",
     "image_url": "/img/poaps/dxb.png",
-    "claims": 1
+    "claims": 4
   },
   {
     "event_id": 214937,
@@ -478,7 +478,7 @@
     "country": "AR",
     "name": "Ministro Pistarini International Airport",
     "image_url": "/img/poaps/eze.png",
-    "claims": 14
+    "claims": 15
   },
   {
     "event_id": 214901,
@@ -491,7 +491,7 @@
     "country": "IT",
     "name": "Leonardo Da Vinci (Fiumicino) International Airport",
     "image_url": "/img/poaps/fco.png",
-    "claims": 1
+    "claims": 2
   },
   {
     "event_id": 214906,
@@ -621,7 +621,7 @@
     "country": "TR",
     "name": "Istanbul Airport",
     "image_url": "/img/poaps/ist.png",
-    "claims": 1
+    "claims": 3
   },
   {
     "event_id": 214938,
@@ -634,7 +634,7 @@
     "country": "US",
     "name": "John F Kennedy International Airport",
     "image_url": "/img/poaps/jfk.png",
-    "claims": 3
+    "claims": 5
   },
   {
     "event_id": 214871,
@@ -764,7 +764,7 @@
     "country": "PT",
     "name": "Lisbon Portela Airport",
     "image_url": "/img/poaps/lis.png",
-    "claims": 2
+    "claims": 3
   },
   {
     "event_id": 216408,
@@ -829,7 +829,7 @@
     "country": "CO",
     "name": "Jose Maria Cordova International Airport",
     "image_url": "/img/poaps/mde.png",
-    "claims": 3
+    "claims": 5
   },
   {
     "event_id": 216420,
@@ -868,7 +868,7 @@
     "country": "US",
     "name": "Miami International Airport",
     "image_url": "/img/poaps/mia.png",
-    "claims": 5
+    "claims": 7
   },
   {
     "event_id": 214877,
@@ -881,7 +881,7 @@
     "country": "PH",
     "name": "Ninoy Aquino International Airport",
     "image_url": "/img/poaps/mnl.png",
-    "claims": 3
+    "claims": 5
   },
   {
     "event_id": 214923,
@@ -946,7 +946,7 @@
     "country": "FR",
     "name": "Nice-Cote d'Azur Airport",
     "image_url": "/img/poaps/nce.png",
-    "claims": 0
+    "claims": 9
   },
   {
     "event_id": 216417,
@@ -959,7 +959,7 @@
     "country": "IN",
     "name": "Navi Mumbai International Airport",
     "image_url": "/img/poaps/nmi.png",
-    "claims": 0
+    "claims": 1
   },
   {
     "event_id": 214883,
@@ -972,7 +972,7 @@
     "country": "JP",
     "name": "Narita International Airport",
     "image_url": "/img/poaps/nrt.png",
-    "claims": 1
+    "claims": 3
   },
   {
     "event_id": 214930,
@@ -985,7 +985,7 @@
     "country": "US",
     "name": "Chicago O'Hare International Airport",
     "image_url": "/img/poaps/ord.png",
-    "claims": 6
+    "claims": 8
   },
   {
     "event_id": 214898,
@@ -1024,7 +1024,7 @@
     "country": "CZ",
     "name": "V\u00e1clav Havel Airport",
     "image_url": "/img/poaps/prg.png",
-    "claims": 0
+    "claims": 3
   },
   {
     "event_id": 214910,
@@ -1037,7 +1037,7 @@
     "country": "PA",
     "name": "Tocumen International Airport",
     "image_url": "/img/poaps/pty.png",
-    "claims": 2
+    "claims": 3
   },
   {
     "event_id": 214882,
@@ -1089,7 +1089,7 @@
     "country": "US",
     "name": "San Francisco International Airport",
     "image_url": "/img/poaps/sfo.png",
-    "claims": 3
+    "claims": 4
   },
   {
     "event_id": 218236,
@@ -1232,7 +1232,7 @@
     "country": "AT",
     "name": "Vienna International Airport",
     "image_url": "/img/poaps/vie.png",
-    "claims": 2
+    "claims": 4
   },
   {
     "event_id": 214902,
@@ -1258,7 +1258,7 @@
     "country": "CA",
     "name": "Montr\u00e9al-Pierre Elliott Trudeau International Airport",
     "image_url": "/img/poaps/yul.png",
-    "claims": 0
+    "claims": 1
   },
   {
     "event_id": 214926,
@@ -1297,7 +1297,7 @@
     "country": "CH",
     "name": "Zurich Airport",
     "image_url": "/img/poaps/zrh.png",
-    "claims": 3
+    "claims": 4
   },
   {
     "event_id": 221803,
@@ -1310,7 +1310,7 @@
     "country": "US",
     "name": "Minneapolis-St Paul International/Wold-Chamberlain Airport",
     "image_url": "/img/poaps/msp.png",
-    "claims": 5
+    "claims": 7
   },
   {
     "event_id": 221806,
@@ -1362,7 +1362,7 @@
     "country": "MY",
     "name": "Kuala Lumpur International Airport",
     "image_url": "/img/poaps/kul.png",
-    "claims": 0
+    "claims": 1
   },
   {
     "event_id": 222333,
@@ -1401,6 +1401,6 @@
     "country": "CL",
     "name": "Comodoro Arturo Merino Benitez International Airport",
     "image_url": "/img/poaps/scl.png",
-    "claims": 1
+    "claims": 2
   }
 ]
