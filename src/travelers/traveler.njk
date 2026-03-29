@@ -72,8 +72,8 @@ eleventyComputed:
             <span class="traveler-timeline-code">{{ c.airport }}</span>
             <span class="traveler-timeline-info">
               {{ ap.name if ap else c.airport }}
-              {%- if ap %} &middot; {{ ap.city }}, {{ ap.country }}
-              <span class="board-continent">{{ ap.continent }}</span>{% endif -%}
+              {%- if ap %}<span class="traveler-timeline-location"> &middot; {{ ap.city }}, {{ ap.country }}
+              <span class="board-continent">{{ ap.continent }}</span></span>{% endif -%}
             </span>
           </a>
         {%- endfor %}

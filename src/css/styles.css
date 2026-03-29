@@ -1758,9 +1758,27 @@ a:hover {
     width: 4rem;
   }
 
-  /* Airport filters */
+  .traveler-timeline-location {
+    display: none;
+  }
+
+  /* Hide columns marked for mobile hiding */
+  .col-hide-mobile {
+    display: none;
+  }
+
+  /* Airport filters — wrap on mobile */
   .airport-filters {
     padding: 0.5rem 0.75rem;
+    flex-wrap: wrap;
+  }
+
+  /* Airport table — hide City and Region columns on mobile */
+  .board-table--airports th:nth-child(3),
+  .board-table--airports td:nth-child(3),
+  .board-table--airports th:nth-child(4),
+  .board-table--airports td:nth-child(4) {
+    display: none;
   }
 
   /* Detail split */
@@ -1781,5 +1799,16 @@ a:hover {
   /* Gauges */
   .gauges-columns {
     grid-template-columns: 1fr;
+  }
+}
+
+/* Intermediate breakpoint — stat cards and home columns */
+@media (min-width: 769px) and (max-width: 960px) {
+  .home-hero {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .home-stat-value {
+    font-size: 1.5rem;
   }
 }

@@ -24,12 +24,12 @@ permalink: /teams/index.html
 
 <div class="page-scroll">
   {%- macro teamTable(teamList) %}
-  <table class="board-table">
+  <table class="board-table board-table--teams">
     <thead>
       <tr>
         <th class="col-rank">#</th>
         <th>Team</th>
-        <th class="col-num">Members</th>
+        <th class="col-num col-hide-mobile">Members</th>
         <th class="col-num">Airports</th>
         <th class="col-num">Score</th>
       </tr>
@@ -44,7 +44,7 @@ permalink: /teams/index.html
             <span class="board-badge board-badge--{{ t.type }}">{{ t.type | teamBadgeLabel }}</span>
           </a>
         </td>
-        <td class="col-num"><span class="board-value">{{ t.member_count }}</span></td>
+        <td class="col-num col-hide-mobile"><span class="board-value">{{ t.member_count }}</span></td>
         <td class="col-num"><span class="board-value">{{ t.unique_airports }}</span></td>
         <td class="col-num"><span class="board-value board-value--highlight">{{ t.total_claims }}</span></td>
       </tr>
