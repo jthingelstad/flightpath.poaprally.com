@@ -346,8 +346,12 @@ def process_claims(db, airports, token):
         for poap in poaps:
             owner = poap.get("owner", {})
             address = owner if isinstance(owner, str) else owner.get("id", "")
+            if not address:
+                continue
             ens = "" if isinstance(owner, str) else owner.get("ens", "") or ""
             created = poap.get("created", "")
+            if not created:
+                continue
 
             db.execute(
                 """INSERT OR REPLACE INTO claims
@@ -463,6 +467,8 @@ def fetch_team_event_holders(db, token):
             for poap in poaps:
                 owner = poap.get("owner", {})
                 address = owner if isinstance(owner, str) else owner.get("id", "")
+                if not address:
+                    continue
                 ens = "" if isinstance(owner, str) else owner.get("ens", "") or ""
                 db.execute(
                     """INSERT OR REPLACE INTO team_event_holders

@@ -3,13 +3,6 @@ layout: layout.njk
 activeTab: gauges
 pageTitle: Gauges
 permalink: /gauges/index.html
-extraScripts: |
-  <script>
-    const AIRPORTS = {{ airports | dump | safe }};
-    const CLAIMS = {{ claims | dump | safe }};
-    const LEADERBOARDS = {{ leaderboards | dump | safe }};
-  </script>
-  <script src="/js/gauges.js"></script>
 ---
 
 <div class="page-scroll">
@@ -17,7 +10,7 @@ extraScripts: |
     <div class="gauges-section-header">
       <h2>Cumulative Claims</h2>
     </div>
-    <div class="gauges-chart" id="gauge-cumulative"></div>
+    <div class="gauges-chart" id="gauge-cumulative"><div class="gauges-loading">Loading charts...</div></div>
   </div>
   <div class="gauges-columns">
     <div class="gauges-section">
@@ -48,3 +41,9 @@ extraScripts: |
     </div>
   </div>
 </div>
+<script>
+  const AIRPORTS = {{ airports | dump | safe }};
+  const CLAIMS = {{ claims | dump | safe }};
+  const LEADERBOARDS = {{ leaderboards | dump | safe }};
+</script>
+<script src="/js/gauges.js?v={{ meta.data_hash }}"></script>

@@ -3,7 +3,7 @@
 
   function buildAreaChart(data, container, opts) {
     opts = opts || {};
-    const w = opts.width || 700, h = opts.height || 160;
+    const w = opts.width || container.clientWidth || 700, h = opts.height || 160;
     const padL = opts.padL || 0, padR = opts.padR || 0, padT = 10, padB = 4;
     const chartW = w - padL - padR, chartH = h - padT - padB;
     const maxVal = Math.max.apply(null, data.map(function (d) { return d.value; }).concat([1]));

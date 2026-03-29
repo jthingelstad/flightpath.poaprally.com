@@ -153,9 +153,14 @@
   }
 
   // Init globe
+  var loadingEl = document.getElementById("globe-loading");
   const script = document.createElement("script");
   script.src = "https://unpkg.com/globe.gl";
+  script.onerror = function () {
+    if (loadingEl) loadingEl.innerHTML = '<div class="globe-error">Failed to load 3D globe.<br><button class="btn btn-primary" onclick="location.reload()">Retry</button></div>';
+  };
   script.onload = function () {
+    if (loadingEl) loadingEl.style.display = "none";
     const container = document.getElementById("globe-container");
     const unclaimedAirports = AIRPORTS.filter(function (a) { return a.claims === 0; });
     const maxC = mc();
@@ -220,6 +225,17 @@
       const ap = airportByCode[airportCode];
       if (ap) focusAirport(ap);
     }
+  };
+  // Timeout fallback if CDN is unresponsive
+  var globeTimeout = setTimeout(function () {
+    if (!state.globe && loadingEl) {
+      loadingEl.innerHTML = '<div class="globe-error">Globe is taking too long to load.<br><button class="btn btn-primary" onclick="location.reload()">Retry</button></div>';
+    }
+  }, 15000);
+  var origOnload = script.onload;
+  script.onload = function () {
+    clearTimeout(globeTimeout);
+    origOnload();
   };
   document.head.appendChild(script);
 

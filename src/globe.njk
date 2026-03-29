@@ -3,17 +3,11 @@ layout: layout.njk
 activeTab: globe
 pageTitle: Globe
 permalink: /globe/index.html
-extraScripts: |
-  <script>
-    const AIRPORTS = {{ airports | dump | safe }};
-    const CLAIMS = {{ claims | dump | safe }};
-    const LEADERBOARDS = {{ leaderboards | dump | safe }};
-  </script>
-  <script src="/js/globe.js"></script>
 ---
 
 <div class="tab-panel--globe active-globe">
   <div id="globe-container"></div>
+  <div id="globe-loading" class="globe-loading"><div class="globe-spinner"></div><span>Loading globe...</span></div>
   <div id="globe-tooltip" class="tooltip" style="display: none;"></div>
 
   <div class="globe-controls-top">
@@ -34,3 +28,9 @@ extraScripts: |
     </div>
   </div>
 </div>
+<script>
+  const AIRPORTS = {{ airports | dump | safe }};
+  const CLAIMS = {{ claims | dump | safe }};
+  const LEADERBOARDS = {{ leaderboards | dump | safe }};
+</script>
+<script src="/js/globe.js?v={{ meta.data_hash }}"></script>

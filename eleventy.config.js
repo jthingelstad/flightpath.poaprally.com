@@ -124,6 +124,13 @@ module.exports = function (eleventyConfig) {
     return Math.round((part / whole) * 100);
   });
 
+  eleventyConfig.addFilter("cacheBust", (url) => {
+    const meta = require("./_data/meta.json");
+    const v = meta.data_hash || Date.now();
+    const sep = url.includes("?") ? "&" : "?";
+    return url + sep + "v=" + v;
+  });
+
   return {
     dir: {
       input: "src",

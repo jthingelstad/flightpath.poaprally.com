@@ -3,8 +3,6 @@ layout: layout.njk
 activeTab: airports
 pageTitle: Airports
 permalink: /airports/index.html
-extraScripts: |
-  <script src="/js/airport-filters.js"></script>
 ---
 
 <div class="page-scroll">
@@ -62,3 +60,4 @@ extraScripts: |
     </div>
   </div>
 </div>
+<script src="/js/airport-filters.js?v={{ meta.data_hash }}"></script>

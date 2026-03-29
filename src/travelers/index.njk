@@ -3,8 +3,6 @@ layout: layout.njk
 activeTab: travelers
 pageTitle: Travelers
 permalink: /travelers/index.html
-extraScripts: |
-  <script src="/js/search.js"></script>
 ---
 
 <div class="page-scroll">
@@ -36,3 +34,4 @@ extraScripts: |
     </tbody>
   </table>
 </div>
+<script src="/js/search.js?v={{ meta.data_hash }}"></script>
