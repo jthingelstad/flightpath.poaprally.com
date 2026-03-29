@@ -421,7 +421,10 @@ def sync_team_config(db):
         )
 
     db.commit()
-    print(f"   Synced {len(records)} team configs from Airtable")
+    synced = db.execute("SELECT name, type, event_ids FROM team_config").fetchall()
+    for t in synced:
+        print(f"   → {t['name']} (type={t['type']}, event_ids={t['event_ids']!r})")
+    print(f"   Synced {len(synced)} team configs from Airtable")
 
 
 # ---------------------------------------------------------------------------
