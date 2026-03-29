@@ -34,6 +34,7 @@
         <a class="app-tab{% if activeTab == 'travelers' %} active{% endif %}" href="/travelers/">Travelers</a>
         <a class="app-tab{% if activeTab == 'airports' %} active{% endif %}" href="/airports/">Airports</a>
         <a class="app-tab{% if activeTab == 'gauges' %} active{% endif %}" href="/gauges/">Gauges</a>
+        <span class="app-tab-timestamp">Data as of {{ meta.last_updated | shortDate }}</span>
       </nav>
     </header>
 
@@ -41,10 +42,6 @@
       {{ content | safe }}
     </main>
 
-    <footer class="app-footer{% if activeTab == 'globe' %} hidden{% endif %}">
-      <span class="app-updated">Updated {{ meta.last_updated | formatDate }}</span>
-      <a href="https://poap.xyz" target="_blank" rel="noopener" class="app-link">poap.xyz</a>
-    </footer>
 
   </div>
 

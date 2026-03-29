@@ -681,12 +681,57 @@ def compute_teams(db):
 
 
 # ---------------------------------------------------------------------------
+# ENS avatars
+# ---------------------------------------------------------------------------
+
+
+def fetch_ens_avatars(db):
+    """Fetch ENS avatar images for addresses with ENS names."""
+    img_dir = ROOT / "src" / "img" / "avatars"
+    img_dir.mkdir(parents=True, exist_ok=True)
+
+    # Get all unique ENS names
+    rows = db.execute(
+        "SELECT DISTINCT address, ens FROM claims WHERE ens != ''"
+    ).fetchall()
+
+    avatars = {}  # address -> local path
+    for i, row in enumerate(rows):
+        ens = row["ens"]
+        address = row["address"]
+        filename = f"{address}.png"
+        local_path = img_dir / filename
+
+        if local_path.exists():
+            avatars[address] = f"/img/avatars/{filename}"
+            continue
+
+        # Try ENS metadata service
+        try:
+            url = f"https://metadata.ens.domains/mainnet/avatar/{ens}"
+            resp = requests.get(url, timeout=10, allow_redirects=True)
+            if resp.status_code == 200 and resp.headers.get("content-type", "").startswith("image"):
+                local_path.write_bytes(resp.content)
+                avatars[address] = f"/img/avatars/{filename}"
+                print(f"  [{i + 1}/{len(rows)}] {ens} → downloaded avatar")
+            else:
+                print(f"  [{i + 1}/{len(rows)}] {ens} → no avatar")
+        except Exception as e:
+            print(f"  [{i + 1}/{len(rows)}] {ens} → error: {e}")
+
+        time.sleep(REQUEST_DELAY)
+
+    return avatars
+
+
+# ---------------------------------------------------------------------------
 # Leaderboards (from SQLite)
 # ---------------------------------------------------------------------------
 
 
-def build_leaderboards(db):
+def build_leaderboards(db, avatars=None):
     """Compute leaderboard data from SQLite."""
+    avatars = avatars or {}
 
     # Address leaderboard
     rows = db.execute(
@@ -711,6 +756,7 @@ def build_leaderboards(db):
             "ens": address_ens.get(r["address"], ""),
             "airport_count": r["airport_count"],
             "airports": sorted(r["airports"].split(",")),
+            "avatar_url": avatars.get(r["address"], ""),
         }
         for r in rows
     ]
@@ -769,7 +815,7 @@ def build_leaderboards(db):
 # ---------------------------------------------------------------------------
 
 
-def export_json(db, airports, teams):
+def export_json(db, airports, teams, avatars=None):
     """Export all data to JSON files for 11ty consumption."""
     data_dir = ROOT / "_data"
     data_dir.mkdir(exist_ok=True)
@@ -797,7 +843,7 @@ def export_json(db, airports, teams):
     ]
 
     # Leaderboards
-    leaderboards = build_leaderboards(db)
+    leaderboards = build_leaderboards(db, avatars=avatars)
 
     # Teams
     teams_leaderboard = sorted(
@@ -901,12 +947,16 @@ def main():
     print("8. Fetching team event holders...")
     fetch_team_event_holders(db, token)
 
-    print("9. Computing teams...")
+    print("9. Fetching ENS avatars...")
+    avatars = fetch_ens_avatars(db)
+    print(f"   {len(avatars)} avatars cached")
+
+    print("10. Computing teams...")
     teams = compute_teams(db)
     print(f"   {len(teams)} teams computed")
 
-    print("10. Exporting JSON files...")
-    changed = export_json(db, airports, teams)
+    print("11. Exporting JSON files...")
+    changed = export_json(db, airports, teams, avatars=avatars)
 
     db.close()
 

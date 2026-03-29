@@ -12,45 +12,62 @@ eleventyComputed:
   pageTitle: "{{ team.name }}"
 ---
 
+{%- set teamAirportClaims = claims | airportClaimsForTeam(airports, team) -%}
+
 <div class="page-scroll">
   <a href="/teams/" class="board-back-btn">&larr; All Teams</a>
 
-  <div class="team-detail-header">
-    <div class="team-detail-name">
-      {{ team.name }}
-      <span class="board-badge board-badge--{{ team.type }}">{{ team.type | teamBadgeLabel }}</span>
+  <div class="detail-split">
+    <div class="detail-split-left">
+      <div class="team-detail-header">
+        <div class="team-detail-name">
+          {{ team.name }}
+          <span class="board-badge board-badge--{{ team.type }}">{{ team.type | teamBadgeLabel }}</span>
+        </div>
+        {%- if team.description %}
+        <div class="team-detail-desc">{{ team.description }}</div>
+        {%- endif %}
+        <div class="team-detail-stats">
+          <div class="team-detail-stat"><strong>{{ team.member_count }}</strong> members</div>
+          <div class="team-detail-stat"><strong>{{ team.total_claims }}</strong> claims</div>
+          <div class="team-detail-stat"><strong>{{ team.unique_airports }}</strong> airports</div>
+        </div>
+      </div>
+
+      <table class="board-table">
+        <thead>
+          <tr>
+            <th class="col-rank">#</th>
+            <th>Member</th>
+            <th class="col-num">Airports</th>
+          </tr>
+        </thead>
+        <tbody>
+          {%- for m in team.members %}
+          <tr>
+            <td><span class="board-rank">{{ loop.index }}</span></td>
+            <td>
+              <a href="/travelers/{{ m.address }}/">
+                {%- if m.ens %}<span class="board-ens">{{ m.ens }}</span>
+                {%- else %}<span class="board-address">{{ m.address | truncateAddress }}</span>{% endif -%}
+              </a>
+            </td>
+            <td class="col-num"><span class="board-value board-value--highlight">{{ m.airport_count }}</span></td>
+          </tr>
+          {%- endfor %}
+        </tbody>
+      </table>
     </div>
-    {%- if team.description %}
-    <div class="team-detail-desc">{{ team.description }}</div>
-    {%- endif %}
-    <div class="team-detail-stats">
-      <div class="team-detail-stat"><strong>{{ team.member_count }}</strong> members</div>
-      <div class="team-detail-stat"><strong>{{ team.total_claims }}</strong> claims</div>
-      <div class="team-detail-stat"><strong>{{ team.unique_airports }}</strong> airports</div>
+
+    <div class="detail-split-right">
+      <div id="detail-map"
+        data-airports="{{ team.airports | dump }}"
+        data-claims="{{ teamAirportClaims | dump }}">
+      </div>
     </div>
   </div>
-
-  <table class="board-table">
-    <thead>
-      <tr>
-        <th class="col-rank">#</th>
-        <th>Member</th>
-        <th class="col-num">Airports</th>
-      </tr>
-    </thead>
-    <tbody>
-      {%- for m in team.members %}
-      <tr>
-        <td><span class="board-rank">{{ loop.index }}</span></td>
-        <td>
-          <a href="/travelers/{{ m.address }}/">
-            {%- if m.ens %}<span class="board-ens">{{ m.ens }}</span>
-            {%- else %}<span class="board-address">{{ m.address | truncateAddress }}</span>{% endif -%}
-          </a>
-        </td>
-        <td class="col-num"><span class="board-value board-value--highlight">{{ m.airport_count }}</span></td>
-      </tr>
-      {%- endfor %}
-    </tbody>
-  </table>
 </div>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>var DETAIL_MAP_AIRPORTS = {{ airports | dump | safe }};</script>
+<script src="/js/detail-map.js?v={{ meta.data_hash }}"></script>

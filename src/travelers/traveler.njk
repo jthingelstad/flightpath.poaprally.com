@@ -15,61 +15,80 @@ eleventyComputed:
 {%- set countryCount = claims | countriesForAddress(airports, traveler.address) -%}
 {%- set continentCount = claims | continentsForAddress(airports, traveler.address) -%}
 {%- set lastIdx = travelerClaims.length - 1 -%}
+{%- set travelerAirportClaims = claims | airportClaimsForAddress(traveler.address) -%}
 
 <div class="page-scroll">
   <a href="/travelers/" class="board-back-btn">&larr; All Travelers</a>
 
-  <div class="traveler-detail-header">
-    <div class="traveler-detail-name">
-      {%- if traveler.ens %}<span class="board-ens">{{ traveler.ens }}</span>
-      {%- else %}{{ traveler.address | truncateAddress }}{% endif -%}
-    </div>
-    <div class="traveler-detail-full-address">{{ traveler.address }}</div>
-    <div class="traveler-detail-stats">
-      <div class="traveler-detail-stat"><strong>{{ traveler.airport_count }}</strong> airports</div>
-      <div class="traveler-detail-stat"><strong>{{ countryCount }}</strong> countries</div>
-      {%- if travelerClaims | length > 0 %}
-      <div class="traveler-detail-stat"><strong>{{ travelerClaims[0].created | shortDate }}</strong> first claim</div>
-      <div class="traveler-detail-stat"><strong>{{ travelerClaims[lastIdx].created | shortDate }}</strong> last claim</div>
-      {%- endif %}
-    </div>
-    <div class="traveler-detail-actions">
-      <a href="/globe/?address={{ traveler.address }}" class="btn-view-globe">&#127758; View on Globe</a>
-    </div>
-  </div>
-
-  {%- if travelerTeams | length > 0 %}
-  <div class="traveler-teams-section">
-    <h3>Teams</h3>
-    <div class="traveler-team-badges">
-      {%- for t in travelerTeams %}
-      <a class="traveler-team-badge" href="/teams/{{ t.id }}/">
-        {{ t.name }}
-        <span class="board-badge board-badge--{{ t.type }}">{{ t.type | teamBadgeLabel }}</span>
-      </a>
-      {%- endfor %}
-    </div>
-  </div>
-  {%- endif %}
-
-  <div class="traveler-timeline-section">
-    <h3>Flight Path</h3>
-    {%- for c in travelerClaims %}
-      {%- set ap = airports | findByCode(c.airport) %}
-      <a class="traveler-timeline-row" href="/airports/{{ c.airport | lower }}/">
-        {%- if ap and ap.image_url %}
-        <img class="traveler-timeline-img" src="{{ ap.image_url }}" alt="{{ c.airport }}">
-        {%- else %}
-        <div class="traveler-timeline-img" style="background:var(--card-bg-hover)"></div>
+  <div class="detail-split">
+    <div class="detail-split-left">
+      <div class="traveler-detail-header">
+        {%- if traveler.avatar_url %}
+        <img class="traveler-avatar" src="{{ traveler.avatar_url }}" alt="{{ traveler.ens }}">
         {%- endif %}
-        <span class="traveler-timeline-date">{{ c.created | shortDate }}</span>
-        <span class="traveler-timeline-code">{{ c.airport }}</span>
-        <span class="traveler-timeline-info">
-          {{ ap.name if ap else c.airport }}
-          {%- if ap %} &middot; {{ ap.city }}, {{ ap.country }}
-          <span class="board-continent">{{ ap.continent }}</span>{% endif -%}
-        </span>
-      </a>
-    {%- endfor %}
+        <div class="traveler-detail-name">
+          {%- if traveler.ens %}<span class="board-ens">{{ traveler.ens }}</span>
+          {%- else %}{{ traveler.address | truncateAddress }}{% endif -%}
+        </div>
+        <div class="traveler-detail-full-address">{{ traveler.address }}</div>
+        <div class="traveler-detail-stats">
+          <div class="traveler-detail-stat"><strong>{{ traveler.airport_count }}</strong> airports</div>
+          <div class="traveler-detail-stat"><strong>{{ countryCount }}</strong> countries</div>
+          {%- if travelerClaims | length > 0 %}
+          <div class="traveler-detail-stat"><strong>{{ travelerClaims[0].created | shortDate }}</strong> first claim</div>
+          <div class="traveler-detail-stat"><strong>{{ travelerClaims[lastIdx].created | shortDate }}</strong> last claim</div>
+          {%- endif %}
+        </div>
+        <div class="traveler-detail-actions">
+          <a href="/globe/?address={{ traveler.address }}" class="btn-view-globe">&#127758; View on Globe</a>
+        </div>
+      </div>
+
+      {%- if travelerTeams | length > 0 %}
+      <div class="traveler-teams-section">
+        <h3>Teams</h3>
+        <div class="traveler-team-badges">
+          {%- for t in travelerTeams %}
+          <a class="traveler-team-badge" href="/teams/{{ t.id }}/">
+            {{ t.name }}
+            <span class="board-badge board-badge--{{ t.type }}">{{ t.type | teamBadgeLabel }}</span>
+          </a>
+          {%- endfor %}
+        </div>
+      </div>
+      {%- endif %}
+
+      <div class="traveler-timeline-section">
+        <h3>Flight Path</h3>
+        {%- for c in travelerClaims %}
+          {%- set ap = airports | findByCode(c.airport) %}
+          <a class="traveler-timeline-row" href="/airports/{{ c.airport | lower }}/">
+            {%- if ap and ap.image_url %}
+            <img class="traveler-timeline-img" src="{{ ap.image_url }}" alt="{{ c.airport }}">
+            {%- else %}
+            <div class="traveler-timeline-img" style="background:var(--card-bg-hover)"></div>
+            {%- endif %}
+            <span class="traveler-timeline-date">{{ c.created | shortDate }}</span>
+            <span class="traveler-timeline-code">{{ c.airport }}</span>
+            <span class="traveler-timeline-info">
+              {{ ap.name if ap else c.airport }}
+              {%- if ap %} &middot; {{ ap.city }}, {{ ap.country }}
+              <span class="board-continent">{{ ap.continent }}</span>{% endif -%}
+            </span>
+          </a>
+        {%- endfor %}
+      </div>
+    </div>
+
+    <div class="detail-split-right">
+      <div id="detail-map"
+        data-airports="{{ traveler.airports | dump }}"
+        data-claims="{{ travelerAirportClaims | dump }}">
+      </div>
+    </div>
   </div>
 </div>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>var DETAIL_MAP_AIRPORTS = {{ airports | dump | safe }};</script>
+<script src="/js/detail-map.js?v={{ meta.data_hash }}"></script>

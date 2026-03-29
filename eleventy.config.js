@@ -124,6 +124,27 @@ module.exports = function (eleventyConfig) {
     return Math.round((part / whole) * 100);
   });
 
+  eleventyConfig.addFilter("airportClaimsForTeam", (claims, airports, team) => {
+    const memberAddrs = new Set((team.members || []).map((m) => m.address));
+    const counts = {};
+    (claims || []).forEach((c) => {
+      if (memberAddrs.has(c.address)) {
+        counts[c.airport] = (counts[c.airport] || 0) + 1;
+      }
+    });
+    return counts;
+  });
+
+  eleventyConfig.addFilter("airportClaimsForAddress", (claims, addr) => {
+    const counts = {};
+    (claims || []).forEach((c) => {
+      if (c.address === addr) {
+        counts[c.airport] = (counts[c.airport] || 0) + 1;
+      }
+    });
+    return counts;
+  });
+
   eleventyConfig.addFilter("cacheBust", (url) => {
     const meta = require("./_data/meta.json");
     const v = meta.data_hash || Date.now();

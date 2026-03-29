@@ -24,6 +24,7 @@ permalink: /travelers/index.html
         <td><span class="board-rank">{{ loop.index }}</span></td>
         <td>
           <a href="/travelers/{{ a.address }}/">
+            {%- if a.avatar_url %}<img class="board-avatar" src="{{ a.avatar_url }}" alt="">{% endif -%}
             {%- if a.ens %}<span class="board-ens">{{ a.ens }}</span>
             {%- else %}<span class="board-address">{{ a.address | truncateAddress }}</span>{% endif -%}
           </a>
