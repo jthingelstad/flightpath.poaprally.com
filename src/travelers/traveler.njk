@@ -88,7 +88,4 @@ eleventyComputed:
     </div>
   </div>
 </div>
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-<script>var DETAIL_MAP_AIRPORTS = {{ airports | dump | safe }};</script>
-<script src="/js/detail-map.js?v={{ meta.data_hash }}"></script>
+{% include "leaflet.njk" %}

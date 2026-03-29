@@ -133,8 +133,21 @@ def set_meta(db, key, value):
 # ---------------------------------------------------------------------------
 
 
-def get_access_token():
-    """Obtain a Bearer token via client_credentials grant."""
+def get_access_token(db=None):
+    """Obtain a Bearer token via client_credentials grant, with optional caching."""
+    # Check for cached token
+    if db:
+        cached = get_meta(db, "access_token")
+        expires = get_meta(db, "access_token_expires")
+        if cached and expires:
+            try:
+                exp_dt = datetime.fromisoformat(expires)
+                if datetime.now(timezone.utc) < exp_dt:
+                    print("   → Using cached token")
+                    return cached
+            except ValueError:
+                pass
+
     resp = requests.post(
         AUTH_URL,
         json={
@@ -147,7 +160,17 @@ def get_access_token():
         timeout=30,
     )
     resp.raise_for_status()
-    return resp.json()["access_token"]
+    data = resp.json()
+    token = data["access_token"]
+
+    # Cache token with 23h TTL (tokens last 24h, leave 1h buffer)
+    if db:
+        from datetime import timedelta
+        expires_at = datetime.now(timezone.utc) + timedelta(hours=23)
+        set_meta(db, "access_token", token)
+        set_meta(db, "access_token_expires", expires_at.isoformat())
+
+    return token
 
 
 def api_headers(token):
@@ -167,20 +190,40 @@ def api_key_headers():
 
 
 def api_request(method, url, retries=API_RETRIES, **kwargs):
-    """Make an API request with retry on transient failures."""
+    """Make an API request with retry on transient failures and rate limits."""
+    import random
+
     kwargs.setdefault("timeout", 30)
     for attempt in range(retries):
         try:
             resp = requests.request(method, url, **kwargs)
+            if resp.status_code == 429:
+                retry_after = int(resp.headers.get("Retry-After", 2 ** (attempt + 1)))
+                wait = retry_after + random.uniform(0, 1)
+                if attempt < retries - 1:
+                    print(f"    Rate limited, retry {attempt + 1}/{retries} after {wait:.1f}s")
+                    time.sleep(wait)
+                    continue
+                resp.raise_for_status()
             resp.raise_for_status()
             return resp
         except (requests.exceptions.ReadTimeout, requests.exceptions.ConnectionError) as e:
             if attempt < retries - 1:
-                wait = 2 ** (attempt + 1)
-                print(f"    Retry {attempt + 1}/{retries} after {wait}s: {e}")
+                wait = 2 ** (attempt + 1) + random.uniform(0, 1)
+                print(f"    Retry {attempt + 1}/{retries} after {wait:.1f}s: {e}")
                 time.sleep(wait)
             else:
                 raise
+
+
+def parse_poap_owner(poap):
+    """Extract address and ENS from a POAP owner field."""
+    owner = poap.get("owner", {})
+    if isinstance(owner, str):
+        return owner.lower(), ""
+    address = owner.get("id", "")
+    ens = owner.get("ens", "") or ""
+    return address.lower() if address else "", ens
 
 
 def fetch_event_poaps(event_id, token):
@@ -334,6 +377,7 @@ def fetch_event_images(airports, token):
 def process_claims(db, airports, token):
     """Fetch claims for all airports and upsert into SQLite."""
     total_new = 0
+    db.execute("BEGIN")
     for i, airport in enumerate(airports):
         eid = airport["event_id"]
         code = airport["code"]
@@ -344,11 +388,9 @@ def process_claims(db, airports, token):
         print(f"    → {count} claims")
 
         for poap in poaps:
-            owner = poap.get("owner", {})
-            address = owner if isinstance(owner, str) else owner.get("id", "")
+            address, ens = parse_poap_owner(poap)
             if not address:
                 continue
-            ens = "" if isinstance(owner, str) else owner.get("ens", "") or ""
             created = poap.get("created", "")
             if not created:
                 continue
@@ -358,7 +400,7 @@ def process_claims(db, airports, token):
                    (address, event_id, airport, ens, created, token_id)
                    VALUES (?, ?, ?, ?, ?, ?)""",
                 (
-                    address.lower(),
+                    address,
                     eid,
                     code,
                     ens,
@@ -393,12 +435,13 @@ def sync_team_config(db):
         resp.raise_for_status()
         records = resp.json().get("records", [])
     except Exception as e:
-        print(f"   WARNING: Airtable fetch failed: {e}")
+        print(f"   WARNING: Airtable fetch failed, keeping existing config: {e}")
         return
 
     now = datetime.now(timezone.utc).isoformat()
 
-    # Clear old config and insert fresh
+    # Clear old config and insert fresh (only after successful fetch)
+    db.execute("BEGIN")
     db.execute("DELETE FROM team_config")
     for record in records:
         fields = record.get("fields", {})
@@ -468,16 +511,14 @@ def fetch_team_event_holders(db, token):
             poaps = fetch_event_poaps(eid, token)
             now = datetime.now(timezone.utc).isoformat()
             for poap in poaps:
-                owner = poap.get("owner", {})
-                address = owner if isinstance(owner, str) else owner.get("id", "")
+                address, ens = parse_poap_owner(poap)
                 if not address:
                     continue
-                ens = "" if isinstance(owner, str) else owner.get("ens", "") or ""
                 db.execute(
                     """INSERT OR REPLACE INTO team_event_holders
                        (event_id, address, ens, fetched_at)
                        VALUES (?, ?, ?, ?)""",
-                    (eid, address.lower(), ens, now),
+                    (eid, address, ens, now),
                 )
             print(f"       → {len(poaps)} holders")
         except Exception as e:
@@ -568,6 +609,10 @@ def compute_teams(db):
     for tc in ens_teams:
         pattern = tc["pattern"]
         if not pattern:
+            continue
+        # Reject overly complex patterns (nested quantifiers, excessive length)
+        if len(pattern) > 200 or re.search(r"(\.\*){3,}", pattern):
+            print(f"   WARNING: Regex too complex for team '{tc['name']}': {pattern}")
             continue
         try:
             regex = re.compile(pattern, re.IGNORECASE)
@@ -686,9 +731,12 @@ def compute_teams(db):
 
 
 def fetch_ens_avatars(db):
-    """Fetch ENS avatar images for addresses with ENS names."""
+    """Fetch ENS avatar images for addresses with ENS names.
+    Skips re-fetching if the avatar file was modified within the last 7 days."""
     img_dir = ROOT / "src" / "img" / "avatars"
     img_dir.mkdir(parents=True, exist_ok=True)
+
+    avatar_max_age = 7 * 24 * 3600  # 7 days in seconds
 
     # Get all unique ENS names
     rows = db.execute(
@@ -696,6 +744,7 @@ def fetch_ens_avatars(db):
     ).fetchall()
 
     avatars = {}  # address -> local path
+    fetched = 0
     for i, row in enumerate(rows):
         ens = row["ens"]
         address = row["address"]
@@ -704,7 +753,10 @@ def fetch_ens_avatars(db):
 
         if local_path.exists():
             avatars[address] = f"/img/avatars/{filename}"
-            continue
+            # Skip re-fetch if file is recent enough
+            age = time.time() - local_path.stat().st_mtime
+            if age < avatar_max_age:
+                continue
 
         # Try ENS metadata service
         try:
@@ -713,6 +765,7 @@ def fetch_ens_avatars(db):
             if resp.status_code == 200 and resp.headers.get("content-type", "").startswith("image"):
                 local_path.write_bytes(resp.content)
                 avatars[address] = f"/img/avatars/{filename}"
+                fetched += 1
                 print(f"  [{i + 1}/{len(rows)}] {ens} → downloaded avatar")
             else:
                 print(f"  [{i + 1}/{len(rows)}] {ens} → no avatar")
@@ -720,6 +773,9 @@ def fetch_ens_avatars(db):
             print(f"  [{i + 1}/{len(rows)}] {ens} → error: {e}")
 
         time.sleep(REQUEST_DELAY)
+
+    if fetched:
+        print(f"   {fetched} new/refreshed avatars")
 
     return avatars
 
@@ -820,13 +876,13 @@ def export_json(db, airports, teams, avatars=None):
     data_dir = ROOT / "_data"
     data_dir.mkdir(exist_ok=True)
 
-    # Airports JSON (with claim counts from SQLite)
-    airports_out = []
-    for a in airports:
-        row = db.execute(
-            "SELECT COUNT(*) as cnt FROM claims WHERE airport = ?", (a["code"],)
-        ).fetchone()
-        airports_out.append({**a, "claims": row["cnt"]})
+    # Airports JSON (with claim counts from SQLite — single query)
+    claim_counts = {}
+    for row in db.execute(
+        "SELECT airport, COUNT(*) as cnt FROM claims GROUP BY airport"
+    ).fetchall():
+        claim_counts[row["airport"]] = row["cnt"]
+    airports_out = [{**a, "claims": claim_counts.get(a["code"], 0)} for a in airports]
 
     # Claims JSON
     claim_rows = db.execute("SELECT * FROM claims ORDER BY created ASC").fetchall()
@@ -918,52 +974,61 @@ def export_json(db, airports, teams, avatars=None):
 def main():
     print("Flight Path — POAP data fetch\n")
 
-    print("1. Initializing database...")
-    db = init_db()
-    print(f"   → {DB_PATH}")
+    db = None
+    try:
+        print("1. Initializing database...")
+        db = init_db()
+        print(f"   → {DB_PATH}")
 
-    print("2. Loading airports from Airtable...")
-    airports = load_airports_from_airtable()
-    print(f"   {len(airports)} airports loaded")
+        print("2. Loading airports from Airtable...")
+        airports = load_airports_from_airtable()
+        print(f"   {len(airports)} airports loaded")
 
-    print("3. Upserting airports into SQLite...")
-    upsert_airports(db, airports)
+        print("3. Upserting airports into SQLite...")
+        upsert_airports(db, airports)
 
-    print("4. Authenticating with POAP API...")
-    token = get_access_token()
-    print("   ✓ Token obtained")
+        print("4. Authenticating with POAP API...")
+        token = get_access_token(db)
+        print("   ✓ Token obtained")
 
-    print("5. Fetching event details (images)...")
-    fetch_event_images(airports, token)
+        print("5. Fetching event details (images)...")
+        fetch_event_images(airports, token)
 
-    print("6. Fetching claims → SQLite...")
-    total = process_claims(db, airports, token)
-    claim_count = db.execute("SELECT COUNT(*) as cnt FROM claims").fetchone()["cnt"]
-    print(f"   Total: {claim_count} claims in database")
+        print("6. Fetching claims → SQLite...")
+        total = process_claims(db, airports, token)
+        claim_count = db.execute("SELECT COUNT(*) as cnt FROM claims").fetchone()["cnt"]
+        print(f"   Total: {claim_count} claims in database")
 
-    print("7. Syncing team config from Airtable...")
-    sync_team_config(db)
+        print("7. Syncing team config from Airtable...")
+        sync_team_config(db)
 
-    print("8. Fetching team event holders...")
-    fetch_team_event_holders(db, token)
+        print("8. Fetching team event holders...")
+        fetch_team_event_holders(db, token)
 
-    print("9. Fetching ENS avatars...")
-    avatars = fetch_ens_avatars(db)
-    print(f"   {len(avatars)} avatars cached")
+        print("9. Fetching ENS avatars...")
+        avatars = fetch_ens_avatars(db)
+        print(f"   {len(avatars)} avatars cached")
 
-    print("10. Computing teams...")
-    teams = compute_teams(db)
-    print(f"   {len(teams)} teams computed")
+        print("10. Computing teams...")
+        teams = compute_teams(db)
+        print(f"   {len(teams)} teams computed")
 
-    print("11. Exporting JSON files...")
-    changed = export_json(db, airports, teams, avatars=avatars)
+        print("11. Exporting JSON files...")
+        changed = export_json(db, airports, teams, avatars=avatars)
 
-    db.close()
+        if changed:
+            print("\n✓ Done — data updated!")
+        else:
+            print("\n✓ Done — no changes detected.")
 
-    if changed:
-        print("\n✓ Done — data updated!")
-    else:
-        print("\n✓ Done — no changes detected.")
+    except Exception as e:
+        print(f"\n✗ FAILED at runtime: {e}")
+        if db:
+            db.rollback()
+        sys.exit(1)
+    finally:
+        if db:
+            db.close()
 
 
 if __name__ == "__main__":

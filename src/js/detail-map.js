@@ -1,18 +1,25 @@
 /* Detail map — Leaflet-based airport map for team/traveler pages */
 (function () {
-  var container = document.getElementById("detail-map");
+  const container = document.getElementById("detail-map");
   if (!container) return;
 
-  var airportCodes = JSON.parse(container.getAttribute("data-airports") || "[]");
-  var airportClaims = JSON.parse(container.getAttribute("data-claims") || "{}");
-  var allAirports = window.DETAIL_MAP_AIRPORTS || [];
+  let airportCodes, airportClaims;
+  try {
+    airportCodes = JSON.parse(container.getAttribute("data-airports") || "[]");
+    airportClaims = JSON.parse(container.getAttribute("data-claims") || "{}");
+  } catch (e) {
+    container.innerHTML = '<div style="display:flex;align-items:center;justify-content:center;height:100%;color:rgba(255,255,255,0.4);font-size:0.85rem;">Map data unavailable</div>';
+    return;
+  }
 
-  var airportByCode = {};
+  const allAirports = window.DETAIL_MAP_AIRPORTS || [];
+
+  const airportByCode = {};
   allAirports.forEach(function (a) { airportByCode[a.code] = a; });
 
-  var points = [];
+  const points = [];
   airportCodes.forEach(function (code) {
-    var ap = airportByCode[code];
+    const ap = airportByCode[code];
     if (ap && ap.lat && ap.lon) {
       points.push({ airport: ap, claims: airportClaims[code] || 0 });
     }
@@ -23,7 +30,7 @@
     return;
   }
 
-  var map = L.map(container, {
+  const map = L.map(container, {
     zoomControl: false,
     attributionControl: false,
     scrollWheelZoom: true,
@@ -35,11 +42,11 @@
     maxZoom: 18,
   }).addTo(map);
 
-  var maxClaims = Math.max.apply(null, points.map(function (p) { return p.claims; }).concat([1]));
+  const maxClaims = Math.max.apply(null, points.map(function (p) { return p.claims; }).concat([1]));
 
   points.forEach(function (p) {
-    var radius = 6 + (p.claims / maxClaims) * 14;
-    var marker = L.circleMarker([p.airport.lat, p.airport.lon], {
+    const radius = 6 + (p.claims / maxClaims) * 14;
+    const marker = L.circleMarker([p.airport.lat, p.airport.lon], {
       radius: radius,
       fillColor: "#8076FA",
       fillOpacity: 0.7,
@@ -47,7 +54,7 @@
       weight: 1.5,
     }).addTo(map);
 
-    var imageHtml = p.airport.image_url
+    const imageHtml = p.airport.image_url
       ? '<img src="' + p.airport.image_url + '" style="width:48px;height:48px;border-radius:50%;border:2px solid #8076FA;display:block;margin:0 auto 6px;">'
       : '';
     marker.bindPopup(
@@ -61,11 +68,10 @@
     );
   });
 
-  var group = L.featureGroup(map._layers ? Object.values(map._layers).filter(function (l) { return l.getLatLng; }) : []);
   if (points.length === 1) {
     map.setView([points[0].airport.lat, points[0].airport.lon], 5);
   } else {
-    var bounds = L.latLngBounds(points.map(function (p) { return [p.airport.lat, p.airport.lon]; }));
+    const bounds = L.latLngBounds(points.map(function (p) { return [p.airport.lat, p.airport.lon]; }));
     map.fitBounds(bounds, { padding: [30, 30] });
   }
 })();

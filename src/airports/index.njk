@@ -7,19 +7,19 @@ permalink: /airports/index.html
 
 <div class="page-scroll">
   <div class="airport-filters" id="airport-filters">
-    <button class="airport-filter-btn active" data-filter="all">All</button>
+    <button class="airport-filter-btn active" data-filter="all" aria-pressed="true">All</button>
     {%- for r in leaderboards.regions %}
-    <button class="airport-filter-btn" data-filter="{{ r.continent }}">{{ r.continent }}</button>
+    <button class="airport-filter-btn" data-filter="{{ r.continent }}" aria-pressed="false">{{ r.continent }}</button>
     {%- endfor %}
   </div>
   <table class="board-table board-table--airports">
     <thead>
       <tr>
-        <th class="col-rank">#</th>
-        <th>Airport</th>
-        <th>City</th>
-        <th>Region</th>
-        <th class="col-num">Claims</th>
+        <th class="col-rank" scope="col">#</th>
+        <th scope="col">Airport</th>
+        <th scope="col">City</th>
+        <th scope="col">Region</th>
+        <th class="col-num" scope="col">Claims</th>
       </tr>
     </thead>
     <tbody id="lb-airports">

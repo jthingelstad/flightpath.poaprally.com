@@ -7,15 +7,16 @@ permalink: /travelers/index.html
 
 <div class="page-scroll">
   <div class="board-search">
+    <label for="address-search" class="sr-only">Search address or ENS</label>
     <input type="text" id="address-search" placeholder="Search address or ENS..." autocomplete="off">
-    <button id="clear-search" class="board-search-clear" style="display: none;">&times;</button>
+    <button id="clear-search" class="board-search-clear" style="display: none;" aria-label="Clear search">&times;</button>
   </div>
   <table class="board-table">
     <thead>
       <tr>
-        <th class="col-rank">#</th>
-        <th>Address</th>
-        <th class="col-num">Airports</th>
+        <th class="col-rank" scope="col">#</th>
+        <th scope="col">Address</th>
+        <th class="col-num" scope="col">Airports</th>
       </tr>
     </thead>
     <tbody id="lb-travelers">

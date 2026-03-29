@@ -5,6 +5,11 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/CNAME");
   eleventyConfig.addPassthroughCopy("src/.nojekyll");
 
+  eleventyConfig.addFilter("isoDate", (isoString) => {
+    const d = new Date(isoString);
+    return d.toISOString().split("T")[0];
+  });
+
   eleventyConfig.addFilter("formatDate", (isoString) => {
     const d = new Date(isoString);
     return d.toLocaleDateString("en-US", {
@@ -54,6 +59,19 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter("filterHiddenTeams", (teams) => {
     const hidden = { month_started: true };
     return (teams || []).filter((t) => !hidden[t.type]);
+  });
+
+  eleventyConfig.addFilter("filterByType", (teams, type) => {
+    return (teams || []).filter((t) => t.type === type);
+  });
+
+  eleventyConfig.addFilter("filterHomeTeams", (teams) => {
+    return (teams || []).filter((t) => t.type === "first_airport" && t.member_count > 1);
+  });
+
+  eleventyConfig.addFilter("filterOtherTeams", (teams) => {
+    const special = { poap_holders: true, ens_regex: true, first_airport: true };
+    return (teams || []).filter((t) => !special[t.type]);
   });
 
   eleventyConfig.addFilter("limit", (arr, n) => {

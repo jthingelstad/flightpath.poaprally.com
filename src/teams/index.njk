@@ -6,32 +6,21 @@ permalink: /teams/index.html
 ---
 
 {%- set visibleTeams = teams.leaderboard | filterHiddenTeams -%}
-{%- set poapTeams = [] -%}
-{%- set ensTeams = [] -%}
-{%- set homeTeams = [] -%}
-{%- set otherTeams = [] -%}
-{%- for t in visibleTeams -%}
-  {%- if t.type == "poap_holders" -%}
-    {%- set poapTeams = (poapTeams.push(t), poapTeams) -%}
-  {%- elif t.type == "ens_regex" -%}
-    {%- set ensTeams = (ensTeams.push(t), ensTeams) -%}
-  {%- elif t.type == "first_airport" and t.member_count > 1 -%}
-    {%- set homeTeams = (homeTeams.push(t), homeTeams) -%}
-  {%- elif t.type != "first_airport" -%}
-    {%- set otherTeams = (otherTeams.push(t), otherTeams) -%}
-  {%- endif -%}
-{%- endfor -%}
+{%- set poapTeams = visibleTeams | filterByType("poap_holders") -%}
+{%- set ensTeams = visibleTeams | filterByType("ens_regex") -%}
+{%- set homeTeams = visibleTeams | filterHomeTeams -%}
+{%- set otherTeams = visibleTeams | filterOtherTeams -%}
 
 <div class="page-scroll">
   {%- macro teamTable(teamList) %}
   <table class="board-table board-table--teams">
     <thead>
       <tr>
-        <th class="col-rank">#</th>
-        <th>Team</th>
-        <th class="col-num col-hide-mobile">Members</th>
-        <th class="col-num">Airports</th>
-        <th class="col-num">Score</th>
+        <th class="col-rank" scope="col">#</th>
+        <th scope="col">Team</th>
+        <th class="col-num col-hide-mobile" scope="col">Members</th>
+        <th class="col-num" scope="col">Airports</th>
+        <th class="col-num" scope="col">Score</th>
       </tr>
     </thead>
     <tbody>

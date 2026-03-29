@@ -1,25 +1,28 @@
 /* Traveler search — Flight Path */
 (function () {
-  var input = document.getElementById("address-search");
-  var clearBtn = document.getElementById("clear-search");
-  var rows = document.querySelectorAll("#lb-travelers tr");
+  const input = document.getElementById("address-search");
+  const clearBtn = document.getElementById("clear-search");
+  const rows = document.querySelectorAll("#lb-travelers tr");
 
-  if (!input) return;
+  if (!input || !clearBtn) return;
+
+  let debounceTimer;
 
   function filter(query) {
     query = query.toLowerCase().trim();
     rows.forEach(function (row) {
       if (!query) { row.style.display = ""; return; }
-      var ens = row.getAttribute("data-ens") || "";
-      var addr = row.getAttribute("data-address") || "";
-      row.style.display = (ens.indexOf(query) !== -1 || addr.indexOf(query) !== -1) ? "" : "none";
+      const ens = row.getAttribute("data-ens") || "";
+      const addr = row.getAttribute("data-address") || "";
+      row.style.display = (ens.includes(query) || addr.includes(query)) ? "" : "none";
     });
   }
 
   input.addEventListener("input", function () {
-    var val = input.value;
+    const val = input.value;
     clearBtn.style.display = val ? "inline-flex" : "none";
-    filter(val);
+    clearTimeout(debounceTimer);
+    debounceTimer = setTimeout(function () { filter(val); }, 150);
   });
 
   clearBtn.addEventListener("click", function () {

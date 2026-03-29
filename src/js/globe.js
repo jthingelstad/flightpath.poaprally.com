@@ -1,5 +1,11 @@
 /* Globe page — Flight Path */
 (function () {
+  if (typeof AIRPORTS === "undefined" || typeof CLAIMS === "undefined" || typeof LEADERBOARDS === "undefined") {
+    var el = document.getElementById("globe-loading");
+    if (el) el.innerHTML = '<div class="globe-error">Globe data unavailable.</div>';
+    return;
+  }
+
   const airportByCode = {};
   AIRPORTS.forEach(function (a) { airportByCode[a.code] = a; });
 
@@ -235,7 +241,7 @@
   var origOnload = script.onload;
   script.onload = function () {
     clearTimeout(globeTimeout);
-    origOnload();
+    if (origOnload) origOnload();
   };
   document.head.appendChild(script);
 
