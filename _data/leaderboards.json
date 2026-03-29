@@ -150,6 +150,17 @@
       ]
     },
     {
+      "address": "0xbd19a3f0a9cace18513a1e2863d648d13975cb30",
+      "ens": "didierkrux.eth",
+      "airport_count": 4,
+      "airports": [
+        "BOM",
+        "DXB",
+        "LIS",
+        "NCE"
+      ]
+    },
+    {
       "address": "0xf58fe388d53e9542f0bddff2d1578b13675228fd",
       "ens": "catpix.eth",
       "airport_count": 4,
@@ -319,16 +330,6 @@
         "BOG",
         "GIG",
         "MIA"
-      ]
-    },
-    {
-      "address": "0xbd19a3f0a9cace18513a1e2863d648d13975cb30",
-      "ens": "didierkrux.eth",
-      "airport_count": 3,
-      "airports": [
-        "BOM",
-        "DXB",
-        "LIS"
       ]
     },
     {
@@ -964,6 +965,14 @@
       ]
     },
     {
+      "address": "0x854fb42b81b3a998e055db7c6dbf3ebe64dd7d43",
+      "ens": "",
+      "airport_count": 1,
+      "airports": [
+        "NCE"
+      ]
+    },
+    {
       "address": "0x8d56294d17af68da9504dac253ae16c76eb6d9f5",
       "ens": "cartegenaonchain.onpoap.eth",
       "airport_count": 1,
@@ -1140,17 +1149,17 @@
       "claims": 15
     },
     {
-      "code": "AEP",
-      "name": "Jorge Newbery Airpark",
-      "city": "Buenos Aires",
-      "continent": "South America",
-      "claims": 9
-    },
-    {
       "code": "NCE",
       "name": "Nice-Cote d'Azur Airport",
       "city": "Nice",
       "continent": "Europe",
+      "claims": 11
+    },
+    {
+      "code": "AEP",
+      "name": "Jorge Newbery Airpark",
+      "city": "Buenos Aires",
+      "continent": "South America",
       "claims": 9
     },
     {
@@ -1890,7 +1899,7 @@
     },
     {
       "continent": "Europe",
-      "claims": 66,
+      "claims": 68,
       "airport_count": 20
     },
     {

@@ -154,13 +154,18 @@
           "airport_count": 1
         },
         {
+          "address": "0x854fb42b81b3a998e055db7c6dbf3ebe64dd7d43",
+          "ens": "",
+          "airport_count": 1
+        },
+        {
           "address": "0xbef9d99c3c0ef74c13ae4bf69fcd40e1ff7207b1",
           "ens": "",
           "airport_count": 1
         }
       ],
-      "member_count": 10,
-      "total_claims": 24,
+      "member_count": 11,
+      "total_claims": 25,
       "unique_airports": 19,
       "airports": [
         "AEP",
@@ -1091,16 +1096,17 @@
         {
           "address": "0xbd19a3f0a9cace18513a1e2863d648d13975cb30",
           "ens": "didierkrux.eth",
-          "airport_count": 3
+          "airport_count": 4
         }
       ],
       "member_count": 1,
-      "total_claims": 3,
-      "unique_airports": 3,
+      "total_claims": 4,
+      "unique_airports": 4,
       "airports": [
         "BOM",
         "DXB",
-        "LIS"
+        "LIS",
+        "NCE"
       ]
     },
     {
@@ -1355,10 +1361,15 @@
           "address": "0x3e0cf03f718520f30300266dcf4db50ba12d3331",
           "ens": "valuecrypto.eth",
           "airport_count": 1
+        },
+        {
+          "address": "0x854fb42b81b3a998e055db7c6dbf3ebe64dd7d43",
+          "ens": "",
+          "airport_count": 1
         }
       ],
-      "member_count": 2,
-      "total_claims": 2,
+      "member_count": 3,
+      "total_claims": 3,
       "unique_airports": 1,
       "airports": [
         "NCE"
@@ -2330,6 +2341,11 @@
       "description": "Collectors who started in March 2026",
       "members": [
         {
+          "address": "0xbd19a3f0a9cace18513a1e2863d648d13975cb30",
+          "ens": "didierkrux.eth",
+          "airport_count": 4
+        },
+        {
           "address": "0xf58fe388d53e9542f0bddff2d1578b13675228fd",
           "ens": "catpix.eth",
           "airport_count": 4
@@ -2337,11 +2353,6 @@
         {
           "address": "0x6493db62998997134e0451cacd32360858f9a3d6",
           "ens": "tyler.thingelstad.eth",
-          "airport_count": 3
-        },
-        {
-          "address": "0xbd19a3f0a9cace18513a1e2863d648d13975cb30",
-          "ens": "didierkrux.eth",
           "airport_count": 3
         },
         {
@@ -2445,6 +2456,11 @@
           "airport_count": 1
         },
         {
+          "address": "0x854fb42b81b3a998e055db7c6dbf3ebe64dd7d43",
+          "ens": "",
+          "airport_count": 1
+        },
+        {
           "address": "0xa775c775feb740d15da78d572a1caccbccc7a0f6",
           "ens": "solyacuariana.eth",
           "airport_count": 1
@@ -2460,8 +2476,8 @@
           "airport_count": 1
         }
       ],
-      "member_count": 26,
-      "total_claims": 40,
+      "member_count": 27,
+      "total_claims": 42,
       "unique_airports": 23,
       "airports": [
         "AEP",
@@ -2511,16 +2527,16 @@
       "id": "month-2026-03",
       "name": "Started: March 2026",
       "type": "month_started",
-      "member_count": 26,
-      "total_claims": 40,
+      "member_count": 27,
+      "total_claims": 42,
       "unique_airports": 23
     },
     {
       "id": "auto-anon",
       "name": "Team Anon",
       "type": "anon",
-      "member_count": 10,
-      "total_claims": 24,
+      "member_count": 11,
+      "total_claims": 25,
       "unique_airports": 19
     },
     {
@@ -2684,6 +2700,14 @@
       "unique_airports": 1
     },
     {
+      "id": "home-lis",
+      "name": "Home: LIS",
+      "type": "first_airport",
+      "member_count": 1,
+      "total_claims": 4,
+      "unique_airports": 4
+    },
+    {
       "id": "home-tbs",
       "name": "Home: TBS",
       "type": "first_airport",
@@ -2748,20 +2772,20 @@
       "unique_airports": 3
     },
     {
-      "id": "home-lis",
-      "name": "Home: LIS",
-      "type": "first_airport",
-      "member_count": 1,
-      "total_claims": 3,
-      "unique_airports": 3
-    },
-    {
       "id": "home-mad",
       "name": "Home: MAD",
       "type": "first_airport",
       "member_count": 1,
       "total_claims": 3,
       "unique_airports": 3
+    },
+    {
+      "id": "home-nce",
+      "name": "Home: NCE",
+      "type": "first_airport",
+      "member_count": 3,
+      "total_claims": 3,
+      "unique_airports": 1
     },
     {
       "id": "home-sfo",
@@ -2866,14 +2890,6 @@
       "member_count": 1,
       "total_claims": 2,
       "unique_airports": 2
-    },
-    {
-      "id": "home-nce",
-      "name": "Home: NCE",
-      "type": "first_airport",
-      "member_count": 2,
-      "total_claims": 2,
-      "unique_airports": 1
     },
     {
       "id": "home-prg",
