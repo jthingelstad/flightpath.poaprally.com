@@ -11,38 +11,92 @@ eleventyComputed:
 ---
 
 {%- set airportClaims = claims | claimsForAirport(airport.code) -%}
+{%- set affinity = claims | airportAffinity(airports, airport.code) -%}
+{%- set affinityCodes = [] -%}
+{%- for a in affinity %}{%- set _ = affinityCodes.push(a.code) -%}{%- endfor -%}
+{%- set affinityClaimMap = affinity | affinityClaims -%}
+{%- set continentCount = affinity | affinityContinents -%}
 
 <div class="page-scroll">
   <a href="/airports/" class="board-back-btn">&larr; All Airports</a>
 
-  <div class="airport-detail-header">
-    {%- if airport.image_url %}
-    <img class="airport-detail-img" src="{{ airport.image_url }}" alt="{{ airport.code }}">
-    {%- endif %}
-    <div class="airport-detail-info">
-      <div class="airport-detail-code">{{ airport.code }}</div>
-      <div class="airport-detail-name">{{ airport.name }}</div>
-      <div class="airport-detail-location">{{ airport.city }}, {{ airport.country }} &middot; {{ airport.continent }}</div>
-      <div class="airport-detail-stats-row">
-        <div class="traveler-detail-stat"><strong>{{ airport.claims }}</strong> claims</div>
-        <div class="traveler-detail-stat"><strong>{{ airportClaims | countUnique("address") }}</strong> unique travelers</div>
+  <div class="detail-split">
+    <div class="detail-split-left">
+      <div class="airport-detail-header">
+        {%- if airport.image_url %}
+        <img class="airport-detail-img" src="{{ airport.image_url }}" alt="{{ airport.code }}">
+        {%- endif %}
+        <div class="airport-detail-info">
+          <div class="airport-detail-code">{{ airport.code }}</div>
+          <div class="airport-detail-name">{{ airport.name }}</div>
+          <div class="airport-detail-location">{{ airport.city }}, {{ airport.country }} &middot; {{ airport.continent }}</div>
+          <div class="airport-detail-stats-row">
+            <div class="traveler-detail-stat"><strong>{{ airport.claims }}</strong> collectors</div>
+            <div class="traveler-detail-stat"><strong>{{ affinity | length }}</strong> connected airports</div>
+            {%- if continentCount > 0 %}
+            <div class="traveler-detail-stat"><strong>{{ continentCount }}</strong> continents</div>
+            {%- endif %}
+          </div>
+          <a href="/globe/?airport={{ airport.code }}" class="btn-view-globe">&#127758; View on Globe</a>
+        </div>
       </div>
-      <a href="/globe/?airport={{ airport.code }}" class="btn-view-globe">&#127758; View on Globe</a>
+
+      {%- if affinity | length > 0 %}
+      <div class="affinity-section">
+        <h3>Also Collected</h3>
+        <p class="affinity-desc">Airports shared by collectors who also hold {{ airport.code }}</p>
+        <div class="affinity-list">
+          {%- for a in affinity %}
+          <a class="affinity-row" href="/airports/{{ a.code | lower }}/">
+            {%- if a.image_url %}
+            <img class="affinity-row-img" src="{{ a.image_url }}" alt="{{ a.code }}">
+            {%- else %}
+            <div class="affinity-row-img affinity-row-img--empty"></div>
+            {%- endif %}
+            <div class="affinity-row-info">
+              <span class="affinity-row-code">{{ a.code }}</span>
+              <span class="affinity-row-name">{{ a.city }}, {{ a.country }}</span>
+            </div>
+            <div class="affinity-row-stat">
+              <span class="affinity-row-count">{{ a.shared }}</span>
+              <span class="affinity-row-pct">{{ a.pct }}%</span>
+            </div>
+            <div class="affinity-bar-track">
+              <div class="affinity-bar-fill" style="width:{{ a.pct }}%"></div>
+            </div>
+          </a>
+          {%- endfor %}
+        </div>
+      </div>
+      {%- endif %}
+
+      {%- if airportClaims | length > 0 %}
+      <div class="traveler-timeline-section">
+        <h3>Collectors</h3>
+        {%- for c in airportClaims %}
+          {%- set cAvatar = leaderboards.addresses | avatarFor(c.address) %}
+          <a class="traveler-timeline-row" href="/travelers/{{ c.address }}/">
+            {%- if cAvatar %}
+            <img class="board-avatar" src="{{ cAvatar }}" alt="">
+            {%- endif %}
+            <span class="traveler-timeline-date">{{ c.created | shortDate }}</span>
+            <span class="traveler-timeline-code">
+              {%- if c.ens %}{{ c.ens }}{% else %}{{ c.address | truncateAddress }}{% endif -%}
+            </span>
+            <span class="traveler-timeline-info"></span>
+          </a>
+        {%- endfor %}
+      </div>
+      {%- endif %}
+    </div>
+
+    <div class="detail-split-right">
+      <div id="detail-map"
+        data-focal="{{ airport.code }}"
+        data-airports="{{ affinityCodes | dump }}"
+        data-claims="{{ affinityClaimMap | dump }}">
+      </div>
     </div>
   </div>
-
-  {%- if airportClaims | length > 0 %}
-  <div class="traveler-timeline-section">
-    <h3>Claims</h3>
-    {%- for c in airportClaims %}
-      <a class="traveler-timeline-row" href="/travelers/{{ c.address }}/">
-        <span class="traveler-timeline-date">{{ c.created | shortDate }}</span>
-        <span class="traveler-timeline-code">
-          {%- if c.ens %}{{ c.ens }}{% else %}{{ c.address | truncateAddress }}{% endif -%}
-        </span>
-        <span class="traveler-timeline-info"></span>
-      </a>
-    {%- endfor %}
-  </div>
-  {%- endif %}
 </div>
+{% include "leaflet.njk" %}

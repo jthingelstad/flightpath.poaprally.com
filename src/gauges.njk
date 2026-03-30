@@ -1,50 +1,146 @@
 ---
 layout: layout.njk
 activeTab: gauges
-pageTitle: Gauges
+pageTitle: Stats
 permalink: /gauges/index.html
 ---
 
+{%- set claimedCount = airports | claimedAirports | length -%}
+{%- set totalAirports = airports | length -%}
+{%- set travelerCount = leaderboards.addresses | length -%}
+{%- set claimCount = claims | length -%}
+
 <div class="page-scroll">
-  <noscript><div style="padding:2rem;color:rgba(255,255,255,0.5);text-align:center;">Charts require JavaScript to be enabled.</div></noscript>
+  <noscript><div style="padding:2rem;color:rgba(255,255,255,0.5);text-align:center;">Charts require JavaScript.</div></noscript>
+
+  {# ── Section 1: Year Progress ── #}
+  <div class="gauges-section gauges-game-clock">
+    <div class="gauges-section-header"><h2>Year Progress</h2></div>
+    <div class="gauges-year-bar">
+      <div class="gauges-year-months">
+        {%- for m in ["J","F","M","A","M","J","J","A","S","O","N","D"] %}
+        <span>{{ m }}</span>
+        {%- endfor %}
+      </div>
+      <div class="gauges-year-track">
+        <div class="gauges-year-fill" id="year-fill"></div>
+        <div class="gauges-year-marker" id="year-marker"></div>
+      </div>
+    </div>
+    <div class="gauges-hero-stats">
+      <div class="gauges-stat-card">
+        <div class="gauges-stat-value" id="stat-days"></div>
+        <div class="gauges-stat-label">days elapsed</div>
+      </div>
+      <div class="gauges-stat-card">
+        <div class="gauges-stat-value">{{ claimCount }}</div>
+        <div class="gauges-stat-label">claims</div>
+        <div class="gauges-stat-velocity" id="vel-claims"></div>
+      </div>
+      <div class="gauges-stat-card">
+        <div class="gauges-stat-value">{{ travelerCount }}</div>
+        <div class="gauges-stat-label">travelers</div>
+        <div class="gauges-stat-velocity" id="vel-travelers"></div>
+      </div>
+      <div class="gauges-stat-card">
+        <div class="gauges-stat-value">{{ claimedCount }} / {{ totalAirports }}</div>
+        <div class="gauges-stat-label">airports</div>
+        <div class="gauges-stat-velocity">{{ claimedCount | percentage(totalAirports) }}% coverage</div>
+      </div>
+    </div>
+  </div>
+
+  {# ── Section 2: Growth Trajectory ── #}
+  <div class="gauges-section">
+    <div class="gauges-section-header"><h2>Growth Trajectory</h2></div>
+    <div class="gauges-chart gauges-chart--tall" id="gauge-trajectory"></div>
+    <div class="gauges-legend" id="trajectory-legend"></div>
+  </div>
+
+  {# ── Section 3: Velocity ── #}
+  <div class="gauges-columns">
+    <div class="gauges-section">
+      <div class="gauges-section-header"><h2>Monthly Claims</h2></div>
+      <div class="gauges-chart" id="gauge-monthly"></div>
+    </div>
+    <div class="gauges-section">
+      <div class="gauges-section-header"><h2>Activity</h2></div>
+      <div class="gauges-chart" id="gauge-heatmap"></div>
+    </div>
+  </div>
+
+  {# ── Section 4: Airport Affinity Matrix ── #}
   <div class="gauges-section">
     <div class="gauges-section-header">
-      <h2>Cumulative Claims</h2>
+      <h2>Airport Affinity</h2>
+      <p class="gauges-section-desc">Shared collectors between top airports</p>
     </div>
-    <div class="gauges-chart" id="gauge-cumulative"><div class="gauges-loading">Loading charts...</div></div>
+    <div class="gauges-chart gauges-chart--matrix" id="gauge-matrix"></div>
   </div>
+
+  {# ── Section 5: Collector Profile ── #}
   <div class="gauges-columns">
     <div class="gauges-section">
-      <div class="gauges-section-header">
-        <h2>Claims by Month</h2>
-      </div>
-      <div class="gauges-chart" id="gauge-by-month"></div>
+      <div class="gauges-section-header"><h2>Collector Depth</h2></div>
+      <div class="gauges-chart" id="gauge-tiers"></div>
     </div>
     <div class="gauges-section">
-      <div class="gauges-section-header">
-        <h2>Claims by Day</h2>
-      </div>
-      <div class="gauges-chart" id="gauge-by-day"></div>
+      <div class="gauges-section-header"><h2>Geographic Reach</h2></div>
+      <div class="gauges-chart" id="gauge-reach"></div>
     </div>
   </div>
+
+  {# ── Section 6: Continental Race ── #}
+  <div class="gauges-section">
+    <div class="gauges-section-header"><h2>Continental Race</h2></div>
+    <div class="gauges-chart" id="gauge-continents"></div>
+  </div>
+
+  {# ── Section 7: Team Snapshot ── #}
   <div class="gauges-columns">
     <div class="gauges-section">
-      <div class="gauges-section-header">
-        <h2>Claims by Region</h2>
-      </div>
-      <div class="gauges-chart" id="gauge-by-region"></div>
+      <div class="gauges-section-header"><h2>Top Teams by Claims</h2></div>
+      <div class="gauges-chart" id="gauge-teams-claims"></div>
     </div>
     <div class="gauges-section">
-      <div class="gauges-section-header">
-        <h2>Top Airports</h2>
-      </div>
-      <div class="gauges-chart" id="gauge-top-airports"></div>
+      <div class="gauges-section-header"><h2>Top Teams by Coverage</h2></div>
+      <div class="gauges-chart" id="gauge-teams-coverage"></div>
     </div>
   </div>
+
+  {# ── Section 8: Milestones ── #}
+  <div class="gauges-section">
+    <div class="gauges-section-header"><h2>Milestones</h2></div>
+    <div class="gauges-chart gauges-chart--milestones" id="gauge-milestones"></div>
+  </div>
+
+  {# ── Section 9: Unclaimed Frontiers ── #}
+  <div class="gauges-section">
+    <div class="gauges-section-header">
+      <h2>Unclaimed Frontiers</h2>
+      <p class="gauges-section-desc">{{ totalAirports - claimedCount }} airports waiting for their first collector</p>
+    </div>
+    <div class="gauges-frontiers">
+      {%- set continentAirports = {} -%}
+      {%- for a in airports -%}
+        {%- if a.claims == 0 -%}
+          {%- if not continentAirports[a.continent] -%}
+            {%- set _ = continentAirports.__proto__.constructor(continentAirports, a.continent, []) -%}
+          {%- endif -%}
+        {%- endif -%}
+      {%- endfor -%}
+      <div id="gauge-frontiers"></div>
+    </div>
+  </div>
+
 </div>
 <script>
-  const AIRPORTS = {{ airports | dump | safe }};
-  const CLAIMS = {{ claims | dump | safe }};
-  const LEADERBOARDS = {{ leaderboards | dump | safe }};
+  var AIRPORTS = {{ airports | dump | safe }};
+  var CLAIMS = {{ claims | dump | safe }};
+  var LEADERBOARDS = {{ leaderboards | dump | safe }};
+  var TEAMS = {{ teams | dump | safe }};
+  var GAME_START = "2026-01-01";
+  var GAME_END = "2026-12-31";
+  var LAST_UPDATED = "{{ meta.last_updated }}";
 </script>
 <script src="/js/gauges.js?v={{ meta.data_hash }}"></script>

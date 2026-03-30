@@ -48,6 +48,8 @@ eleventyComputed:
             <td><span class="board-rank">{{ loop.index }}</span></td>
             <td>
               <a href="/travelers/{{ m.address }}/">
+                {%- set mAvatar = leaderboards.addresses | avatarFor(m.address) -%}
+                {%- if mAvatar %}<img class="board-avatar" src="{{ mAvatar }}" alt="">{% endif -%}
                 {%- if m.ens %}<span class="board-ens">{{ m.ens }}</span>
                 {%- else %}<span class="board-address">{{ m.address | truncateAddress }}</span>{% endif -%}
               </a>

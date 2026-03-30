@@ -47,9 +47,10 @@ pageTitle: Home
         <div class="home-activity">
           {%- for c in claims | sortByCreatedDesc | limit(12) %}
             {%- set ap = airports | findByCode(c.airport) %}
+            {%- set actAvatar = leaderboards.addresses | avatarFor(c.address) %}
             <a class="home-activity-row" href="/travelers/{{ c.address }}/">
               <span class="home-activity-date">{{ c.created | relativeDate }}</span>
-              <span class="home-activity-traveler">{{ c.ens or (c.address | truncateAddress) }}</span>
+              <span class="home-activity-traveler">{%- if actAvatar %}<img class="board-avatar" src="{{ actAvatar }}" alt="">{% endif -%}{{ c.ens or (c.address | truncateAddress) }}</span>
               <span class="home-activity-arrow">&rarr;</span>
               <span class="home-activity-airport">
                 <span class="home-activity-code">{{ c.airport }}</span>
@@ -79,6 +80,7 @@ pageTitle: Home
             <tr>
               <td><span class="board-rank">{{ loop.index }}</span></td>
               <td><a href="/travelers/{{ a.address }}/">
+                {%- if a.avatar_url %}<img class="board-avatar" src="{{ a.avatar_url }}" alt="">{% endif -%}
                 {%- if a.ens %}<span class="board-ens">{{ a.ens }}</span>
                 {%- else %}<span class="board-address">{{ a.address | truncateAddress }}</span>{% endif -%}
               </a></td>

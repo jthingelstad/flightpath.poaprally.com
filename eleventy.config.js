@@ -153,6 +153,62 @@ module.exports = function (eleventyConfig) {
     return counts;
   });
 
+  eleventyConfig.addFilter("avatarFor", (leaderboardAddresses, addr) => {
+    const entry = (leaderboardAddresses || []).find((a) => a.address === addr);
+    return entry ? entry.avatar_url || "" : "";
+  });
+
+  eleventyConfig.addFilter("airportAffinity", (claims, airports, code) => {
+    // Find all addresses that claimed this airport
+    const collectors = new Set();
+    (claims || []).forEach((c) => {
+      if (c.airport === code) collectors.add(c.address);
+    });
+    if (collectors.size === 0) return [];
+
+    // Count how many of those addresses also claimed each other airport
+    const shared = {};
+    (claims || []).forEach((c) => {
+      if (c.airport !== code && collectors.has(c.address)) {
+        shared[c.airport] = (shared[c.airport] || 0) + 1;
+      }
+    });
+
+    // Build sorted array with airport details
+    const airportMap = {};
+    (airports || []).forEach((a) => (airportMap[a.code] = a));
+    const total = collectors.size;
+
+    return Object.entries(shared)
+      .map(([apCode, count]) => {
+        const ap = airportMap[apCode];
+        return {
+          code: apCode,
+          name: ap ? ap.name : apCode,
+          city: ap ? ap.city : "",
+          country: ap ? ap.country : "",
+          continent: ap ? ap.continent : "",
+          image_url: ap ? ap.image_url : "",
+          lat: ap ? ap.lat : null,
+          lon: ap ? ap.lon : null,
+          shared: count,
+          pct: Math.round((count / total) * 100),
+        };
+      })
+      .sort((a, b) => b.shared - a.shared);
+  });
+
+  eleventyConfig.addFilter("affinityContinents", (affinity) => {
+    return new Set((affinity || []).map((a) => a.continent).filter(Boolean)).size;
+  });
+
+  eleventyConfig.addFilter("affinityClaims", (affinity) => {
+    // Convert affinity array to {code: shared} map for detail-map.js
+    const counts = {};
+    (affinity || []).forEach((a) => { counts[a.code] = a.shared; });
+    return counts;
+  });
+
   eleventyConfig.addFilter("airportClaimsForAddress", (claims, addr) => {
     const counts = {};
     (claims || []).forEach((c) => {
