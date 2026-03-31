@@ -75,7 +75,7 @@
     "country": "PL",
     "name": "Warsaw Chopin Airport",
     "image_url": "/img/poaps/waw.png",
-    "claims": 1
+    "claims": 2
   },
   {
     "event_id": 222336,
@@ -556,7 +556,7 @@
     "country": "VN",
     "name": "Tan Son Nhat International Airport",
     "image_url": "/img/poaps/sgn.png",
-    "claims": 0
+    "claims": 1
   },
   {
     "event_id": 214873,

@@ -319,6 +319,17 @@
       "avatar_url": "/img/avatars/0x914a7f893c3f7a7c0067fad1312c1bd630009159.png"
     },
     {
+      "address": "0x9cab0bd57e308daff28011d6c6d9b45867afe33e",
+      "ens": "0xahmet.eth",
+      "airport_count": 3,
+      "airports": [
+        "BKK",
+        "IST",
+        "SGN"
+      ],
+      "avatar_url": "/img/avatars/0x9cab0bd57e308daff28011d6c6d9b45867afe33e.png"
+    },
+    {
       "address": "0xa42278025aa3dd3db54e99a242bc6d2c7c7890a1",
       "ens": "btorralba.eth",
       "airport_count": 3,
@@ -414,6 +425,17 @@
         "BOS",
         "MIA",
         "MSP"
+      ],
+      "avatar_url": ""
+    },
+    {
+      "address": "0xfe8e4f337b54c2afd370ae26675602c00bc8d702",
+      "ens": "armsves.poap.xyz",
+      "airport_count": 3,
+      "airports": [
+        "LAX",
+        "MIA",
+        "WAW"
       ],
       "avatar_url": ""
     },
@@ -588,16 +610,6 @@
       "avatar_url": "/img/avatars/0x8e484b34356111a9f642eff09b2635311600ad65.png"
     },
     {
-      "address": "0x9cab0bd57e308daff28011d6c6d9b45867afe33e",
-      "ens": "0xahmet.eth",
-      "airport_count": 2,
-      "airports": [
-        "BKK",
-        "IST"
-      ],
-      "avatar_url": "/img/avatars/0x9cab0bd57e308daff28011d6c6d9b45867afe33e.png"
-    },
-    {
       "address": "0x9ecc835b3487d3cd8b1fa03b251ee51e1ac10859",
       "ens": "rossalejandro.eth",
       "airport_count": 2,
@@ -704,16 +716,6 @@
       "airports": [
         "BOG",
         "MDE"
-      ],
-      "avatar_url": ""
-    },
-    {
-      "address": "0xfe8e4f337b54c2afd370ae26675602c00bc8d702",
-      "ens": "armsves.poap.xyz",
-      "airport_count": 2,
-      "airports": [
-        "LAX",
-        "MIA"
       ],
       "avatar_url": ""
     },
@@ -1610,6 +1612,13 @@
       "claims": 2
     },
     {
+      "code": "WAW",
+      "name": "Warsaw Chopin Airport",
+      "city": "Warsaw",
+      "continent": "Europe",
+      "claims": 2
+    },
+    {
       "code": "YVR",
       "name": "Vancouver International Airport",
       "city": "Richmond",
@@ -1722,6 +1731,13 @@
       "claims": 1
     },
     {
+      "code": "SGN",
+      "name": "Tan Son Nhat International Airport",
+      "city": "Ho Chi Minh City",
+      "continent": "Asia",
+      "claims": 1
+    },
+    {
       "code": "SOF",
       "name": "Sofia Airport",
       "city": "Sofia",
@@ -1733,13 +1749,6 @@
       "name": "Sydney Kingsford Smith International Airport",
       "city": "Sydney",
       "continent": "Oceania",
-      "claims": 1
-    },
-    {
-      "code": "WAW",
-      "name": "Warsaw Chopin Airport",
-      "city": "Warsaw",
-      "continent": "Europe",
       "claims": 1
     },
     {
@@ -1981,13 +1990,6 @@
       "claims": 0
     },
     {
-      "code": "SGN",
-      "name": "Tan Son Nhat International Airport",
-      "city": "Ho Chi Minh City",
-      "continent": "Asia",
-      "claims": 0
-    },
-    {
       "code": "SHA",
       "name": "Shanghai Hongqiao International Airport",
       "city": "Shanghai",
@@ -2024,7 +2026,7 @@
     },
     {
       "continent": "Europe",
-      "claims": 68,
+      "claims": 69,
       "airport_count": 20
     },
     {
@@ -2034,8 +2036,8 @@
     },
     {
       "continent": "Asia",
-      "claims": 35,
-      "airport_count": 13
+      "claims": 36,
+      "airport_count": 14
     },
     {
       "continent": "Oceania",
