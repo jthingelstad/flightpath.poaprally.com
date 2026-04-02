@@ -918,6 +918,15 @@
       "avatar_url": "/img/avatars/0x3f22f740d41518f5017b76eed3a63eb14d2e1b07.png"
     },
     {
+      "address": "0x44b99561cbbf699a440efa22e42b91bb72d0ed9f",
+      "ens": "errmac.poap.xyz",
+      "airport_count": 1,
+      "airports": [
+        "CUN"
+      ],
+      "avatar_url": ""
+    },
+    {
       "address": "0x4c1ad7e34f927acb530974914cc4e2d14138be04",
       "ens": "vanesa.poap.xyz",
       "airport_count": 1,
@@ -1346,6 +1355,13 @@
       "claims": 6
     },
     {
+      "code": "CUN",
+      "name": "Cancun International Airport",
+      "city": "Cancun",
+      "continent": "North America",
+      "claims": 5
+    },
+    {
       "code": "DFW",
       "name": "Dallas-Fort Worth International Airport",
       "city": "Dallas-Fort Worth",
@@ -1379,13 +1395,6 @@
       "city": "Manila",
       "continent": "Asia",
       "claims": 5
-    },
-    {
-      "code": "CUN",
-      "name": "Cancun International Airport",
-      "city": "Cancun",
-      "continent": "North America",
-      "claims": 4
     },
     {
       "code": "DXB",
@@ -2021,7 +2030,7 @@
   "regions": [
     {
       "continent": "North America",
-      "claims": 99,
+      "claims": 100,
       "airport_count": 23
     },
     {
