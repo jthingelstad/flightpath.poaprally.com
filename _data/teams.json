@@ -1323,14 +1323,15 @@
         {
           "address": "0x0007001c4dcf37494e536bd8e3202e9c9fa16f9f",
           "ens": "baer.eth",
-          "airport_count": 1
+          "airport_count": 2
         }
       ],
       "member_count": 1,
-      "total_claims": 1,
-      "unique_airports": 1,
+      "total_claims": 2,
+      "unique_airports": 2,
       "airports": [
-        "DXB"
+        "DXB",
+        "FRA"
       ]
     },
     {
@@ -3000,6 +3001,11 @@
           "airport_count": 3
         },
         {
+          "address": "0x0007001c4dcf37494e536bd8e3202e9c9fa16f9f",
+          "ens": "baer.eth",
+          "airport_count": 2
+        },
+        {
           "address": "0x0040daac32d83c78546ae36da42a496b28ab09e1",
           "ens": "gaurang.eth",
           "airport_count": 2
@@ -3018,11 +3024,6 @@
           "address": "0x9ecc835b3487d3cd8b1fa03b251ee51e1ac10859",
           "ens": "rossalejandro.eth",
           "airport_count": 2
-        },
-        {
-          "address": "0x0007001c4dcf37494e536bd8e3202e9c9fa16f9f",
-          "ens": "baer.eth",
-          "airport_count": 1
         },
         {
           "address": "0x04c0cd38b8c203b14ef2b7b8d736d69b938aff71",
@@ -3111,8 +3112,8 @@
         }
       ],
       "member_count": 27,
-      "total_claims": 43,
-      "unique_airports": 24,
+      "total_claims": 44,
+      "unique_airports": 25,
       "airports": [
         "AEP",
         "AMS",
@@ -3124,6 +3125,7 @@
         "CUN",
         "DEN",
         "DXB",
+        "FRA",
         "IST",
         "KUL",
         "LIS",
@@ -3206,8 +3208,8 @@
       "name": "Started: March 2026",
       "type": "month_started",
       "member_count": 27,
-      "total_claims": 43,
-      "unique_airports": 24
+      "total_claims": 44,
+      "unique_airports": 25
     },
     {
       "id": "auto-anon",
@@ -3546,6 +3548,14 @@
       "unique_airports": 2
     },
     {
+      "id": "home-dxb",
+      "name": "Home: DXB",
+      "type": "first_airport",
+      "member_count": 1,
+      "total_claims": 2,
+      "unique_airports": 2
+    },
+    {
       "id": "home-fco",
       "name": "Home: FCO",
       "type": "first_airport",
@@ -3644,14 +3654,6 @@
     {
       "id": "home-clj",
       "name": "Home: CLJ",
-      "type": "first_airport",
-      "member_count": 1,
-      "total_claims": 1,
-      "unique_airports": 1
-    },
-    {
-      "id": "home-dxb",
-      "name": "Home: DXB",
       "type": "first_airport",
       "member_count": 1,
       "total_claims": 1,

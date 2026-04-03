@@ -2078,5 +2078,13 @@
     "event_id": 214924,
     "created": "2026-04-01 17:01:10",
     "token_id": ""
+  },
+  {
+    "address": "0x0007001c4dcf37494e536bd8e3202e9c9fa16f9f",
+    "ens": "baer.eth",
+    "airport": "FRA",
+    "event_id": 214906,
+    "created": "2026-04-02 12:06:55",
+    "token_id": ""
   }
 ]

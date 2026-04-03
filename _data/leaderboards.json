@@ -440,6 +440,16 @@
       "avatar_url": ""
     },
     {
+      "address": "0x0007001c4dcf37494e536bd8e3202e9c9fa16f9f",
+      "ens": "baer.eth",
+      "airport_count": 2,
+      "airports": [
+        "DXB",
+        "FRA"
+      ],
+      "avatar_url": "/img/avatars/0x0007001c4dcf37494e536bd8e3202e9c9fa16f9f.png"
+    },
+    {
       "address": "0x0040daac32d83c78546ae36da42a496b28ab09e1",
       "ens": "gaurang.eth",
       "airport_count": 2,
@@ -718,15 +728,6 @@
         "MDE"
       ],
       "avatar_url": ""
-    },
-    {
-      "address": "0x0007001c4dcf37494e536bd8e3202e9c9fa16f9f",
-      "ens": "baer.eth",
-      "airport_count": 1,
-      "airports": [
-        "DXB"
-      ],
-      "avatar_url": "/img/avatars/0x0007001c4dcf37494e536bd8e3202e9c9fa16f9f.png"
     },
     {
       "address": "0x04c0cd38b8c203b14ef2b7b8d736d69b938aff71",
@@ -1306,18 +1307,18 @@
       "claims": 8
     },
     {
+      "code": "FRA",
+      "name": "Frankfurt am Main International Airport",
+      "city": "Frankfurt am Main",
+      "continent": "Europe",
+      "claims": 8
+    },
+    {
       "code": "ORD",
       "name": "Chicago O'Hare International Airport",
       "city": "Chicago",
       "continent": "North America",
       "claims": 8
-    },
-    {
-      "code": "FRA",
-      "name": "Frankfurt am Main International Airport",
-      "city": "Frankfurt am Main",
-      "continent": "Europe",
-      "claims": 7
     },
     {
       "code": "MIA",
@@ -2035,7 +2036,7 @@
     },
     {
       "continent": "Europe",
-      "claims": 69,
+      "claims": 70,
       "airport_count": 20
     },
     {
