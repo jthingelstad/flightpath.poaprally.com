@@ -218,7 +218,7 @@
     "country": "JP",
     "name": "Narita International Airport",
     "image_url": "/img/poaps/nrt.png",
-    "claims": 3
+    "claims": 4
   },
   {
     "event_id": 214908,
@@ -582,7 +582,7 @@
     "country": "PA",
     "name": "Tocumen International Airport",
     "image_url": "/img/poaps/pty.png",
-    "claims": 3
+    "claims": 4
   },
   {
     "event_id": 214890,
@@ -634,7 +634,7 @@
     "country": "FR",
     "name": "Nice-Cote d'Azur Airport",
     "image_url": "/img/poaps/nce.png",
-    "claims": 11
+    "claims": 13
   },
   {
     "event_id": 214876,
