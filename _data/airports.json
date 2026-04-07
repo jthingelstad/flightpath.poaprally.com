@@ -166,7 +166,7 @@
     "country": "US",
     "name": "San Diego International Airport",
     "image_url": "/img/poaps/san.png",
-    "claims": 1
+    "claims": 2
   },
   {
     "event_id": 214901,
@@ -634,7 +634,7 @@
     "country": "FR",
     "name": "Nice-Cote d'Azur Airport",
     "image_url": "/img/poaps/nce.png",
-    "claims": 13
+    "claims": 14
   },
   {
     "event_id": 214876,

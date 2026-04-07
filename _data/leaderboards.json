@@ -512,6 +512,16 @@
       "avatar_url": "/img/avatars/0x1ae601d54a8df8216208b5e070393c933f991581.png"
     },
     {
+      "address": "0x20309eb9080288e31ab1161366af6639f04d593e",
+      "ens": "skas.eth",
+      "airport_count": 2,
+      "airports": [
+        "NCE",
+        "PRG"
+      ],
+      "avatar_url": "/img/avatars/0x20309eb9080288e31ab1161366af6639f04d593e.png"
+    },
+    {
       "address": "0x4263df45b2958650542edc7abdf89ef7994d317a",
       "ens": "danimonclou.eth",
       "airport_count": 2,
@@ -805,15 +815,6 @@
       "avatar_url": ""
     },
     {
-      "address": "0x20309eb9080288e31ab1161366af6639f04d593e",
-      "ens": "skas.eth",
-      "airport_count": 1,
-      "airports": [
-        "PRG"
-      ],
-      "avatar_url": "/img/avatars/0x20309eb9080288e31ab1161366af6639f04d593e.png"
-    },
-    {
       "address": "0x2117bf88b4cb0186eaa87500a045fc998290e42a",
       "ens": "gramajo.eth",
       "airport_count": 1,
@@ -1008,6 +1009,15 @@
       "airport_count": 1,
       "airports": [
         "AMS"
+      ],
+      "avatar_url": ""
+    },
+    {
+      "address": "0x6210477b3025bf5ea50a35d39e7d2875dc11661c",
+      "ens": "noah.savedsouls.eth",
+      "airport_count": 1,
+      "airports": [
+        "SAN"
       ],
       "avatar_url": ""
     },
@@ -1302,7 +1312,7 @@
       "name": "Nice-Cote d'Azur Airport",
       "city": "Nice",
       "continent": "Europe",
-      "claims": 13
+      "claims": 14
     },
     {
       "code": "AEP",
@@ -1620,6 +1630,13 @@
       "claims": 2
     },
     {
+      "code": "SAN",
+      "name": "San Diego International Airport",
+      "city": "San Diego",
+      "continent": "North America",
+      "claims": 2
+    },
+    {
       "code": "SCL",
       "name": "Comodoro Arturo Merino Benitez International Airport",
       "city": "Santiago",
@@ -1743,13 +1760,6 @@
       "name": "Navi Mumbai International Airport",
       "city": "Navi Mumbai",
       "continent": "Asia",
-      "claims": 1
-    },
-    {
-      "code": "SAN",
-      "name": "San Diego International Airport",
-      "city": "San Diego",
-      "continent": "North America",
       "claims": 1
     },
     {
@@ -2043,12 +2053,12 @@
   "regions": [
     {
       "continent": "North America",
-      "claims": 101,
+      "claims": 102,
       "airport_count": 23
     },
     {
       "continent": "Europe",
-      "claims": 72,
+      "claims": 73,
       "airport_count": 20
     },
     {
