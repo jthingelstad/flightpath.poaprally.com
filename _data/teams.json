@@ -179,6 +179,11 @@
           "airport_count": 3
         },
         {
+          "address": "0x3ab1530d7fd660262d25d53c8dd7f60b5a880181",
+          "ens": "seabiscuit747.eth",
+          "airport_count": 2
+        },
+        {
           "address": "0x4c5f4f9df7968b0db448526162114a04f3462bad",
           "ens": "erebels.eth",
           "airport_count": 2
@@ -196,11 +201,6 @@
         {
           "address": "0x2117bf88b4cb0186eaa87500a045fc998290e42a",
           "ens": "gramajo.eth",
-          "airport_count": 1
-        },
-        {
-          "address": "0x3ab1530d7fd660262d25d53c8dd7f60b5a880181",
-          "ens": "seabiscuit747.eth",
           "airport_count": 1
         },
         {
@@ -260,7 +260,7 @@
         }
       ],
       "member_count": 30,
-      "total_claims": 75,
+      "total_claims": 76,
       "unique_airports": 34,
       "airports": [
         "AEP",
@@ -411,6 +411,11 @@
           "airport_count": 3
         },
         {
+          "address": "0x3ab1530d7fd660262d25d53c8dd7f60b5a880181",
+          "ens": "seabiscuit747.eth",
+          "airport_count": 2
+        },
+        {
           "address": "0x77e2e22055b915ba0244933e8459ba73f0571883",
           "ens": "fabit.eth",
           "airport_count": 2
@@ -456,11 +461,6 @@
           "airport_count": 1
         },
         {
-          "address": "0x3ab1530d7fd660262d25d53c8dd7f60b5a880181",
-          "ens": "seabiscuit747.eth",
-          "airport_count": 1
-        },
-        {
           "address": "0x3f22f740d41518f5017b76eed3a63eb14d2e1b07",
           "ens": "shutterblock.eth",
           "airport_count": 1
@@ -502,7 +502,7 @@
         }
       ],
       "member_count": 32,
-      "total_claims": 73,
+      "total_claims": 74,
       "unique_airports": 40,
       "airports": [
         "AEP",
@@ -1226,6 +1226,11 @@
           "airport_count": 3
         },
         {
+          "address": "0x3ab1530d7fd660262d25d53c8dd7f60b5a880181",
+          "ens": "seabiscuit747.eth",
+          "airport_count": 2
+        },
+        {
           "address": "0x04c0cd38b8c203b14ef2b7b8d736d69b938aff71",
           "ens": "nixorokish.eth",
           "airport_count": 1
@@ -1248,11 +1253,6 @@
         {
           "address": "0x37ea434799b0ec581a073ed88e187cf4a22c5bce",
           "ens": "",
-          "airport_count": 1
-        },
-        {
-          "address": "0x3ab1530d7fd660262d25d53c8dd7f60b5a880181",
-          "ens": "seabiscuit747.eth",
           "airport_count": 1
         },
         {
@@ -1287,7 +1287,7 @@
         }
       ],
       "member_count": 15,
-      "total_claims": 22,
+      "total_claims": 23,
       "unique_airports": 8,
       "airports": [
         "ATL",
@@ -3045,6 +3045,11 @@
           "airport_count": 2
         },
         {
+          "address": "0x3ab1530d7fd660262d25d53c8dd7f60b5a880181",
+          "ens": "seabiscuit747.eth",
+          "airport_count": 2
+        },
+        {
           "address": "0x6ead98ac60771343a361cf7558e8493b32fc8304",
           "ens": "terezabb.eth",
           "airport_count": 2
@@ -3082,11 +3087,6 @@
         {
           "address": "0x38525db2154ac44f08a67bbbb9844ad97c76269e",
           "ens": "",
-          "airport_count": 1
-        },
-        {
-          "address": "0x3ab1530d7fd660262d25d53c8dd7f60b5a880181",
-          "ens": "seabiscuit747.eth",
           "airport_count": 1
         },
         {
@@ -3131,7 +3131,7 @@
         }
       ],
       "member_count": 27,
-      "total_claims": 46,
+      "total_claims": 47,
       "unique_airports": 25,
       "airports": [
         "AEP",
@@ -3215,7 +3215,7 @@
       "name": "ETHDenver 2026",
       "type": "poap_holders",
       "member_count": 30,
-      "total_claims": 75,
+      "total_claims": 76,
       "unique_airports": 34
     },
     {
@@ -3223,7 +3223,7 @@
       "name": "We've Met Patricio",
       "type": "poap_holders",
       "member_count": 32,
-      "total_claims": 73,
+      "total_claims": 74,
       "unique_airports": 40
     },
     {
@@ -3239,7 +3239,7 @@
       "name": "Started: March 2026",
       "type": "month_started",
       "member_count": 27,
-      "total_claims": 46,
+      "total_claims": 47,
       "unique_airports": 25
     },
     {
@@ -3255,7 +3255,7 @@
       "name": "Home: DEN",
       "type": "first_airport",
       "member_count": 15,
-      "total_claims": 22,
+      "total_claims": 23,
       "unique_airports": 8
     },
     {

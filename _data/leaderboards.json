@@ -522,6 +522,16 @@
       "avatar_url": "/img/avatars/0x20309eb9080288e31ab1161366af6639f04d593e.png"
     },
     {
+      "address": "0x3ab1530d7fd660262d25d53c8dd7f60b5a880181",
+      "ens": "seabiscuit747.eth",
+      "airport_count": 2,
+      "airports": [
+        "DEN",
+        "NCE"
+      ],
+      "avatar_url": ""
+    },
+    {
       "address": "0x4263df45b2958650542edc7abdf89ef7994d317a",
       "ens": "danimonclou.eth",
       "airport_count": 2,
@@ -883,15 +893,6 @@
       "airport_count": 1,
       "airports": [
         "AEP"
-      ],
-      "avatar_url": ""
-    },
-    {
-      "address": "0x3ab1530d7fd660262d25d53c8dd7f60b5a880181",
-      "ens": "seabiscuit747.eth",
-      "airport_count": 1,
-      "airports": [
-        "DEN"
       ],
       "avatar_url": ""
     },
@@ -1312,7 +1313,7 @@
       "name": "Nice-Cote d'Azur Airport",
       "city": "Nice",
       "continent": "Europe",
-      "claims": 14
+      "claims": 15
     },
     {
       "code": "AEP",
@@ -2058,7 +2059,7 @@
     },
     {
       "continent": "Europe",
-      "claims": 73,
+      "claims": 74,
       "airport_count": 20
     },
     {
