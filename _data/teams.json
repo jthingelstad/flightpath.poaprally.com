@@ -2146,15 +2146,16 @@
         {
           "address": "0x6210477b3025bf5ea50a35d39e7d2875dc11661c",
           "ens": "noah.savedsouls.eth",
-          "airport_count": 1
+          "airport_count": 2
         }
       ],
       "member_count": 2,
-      "total_claims": 3,
-      "unique_airports": 2,
+      "total_claims": 4,
+      "unique_airports": 3,
       "airports": [
         "DEN",
-        "SAN"
+        "SAN",
+        "SFO"
       ]
     },
     {
@@ -3168,13 +3169,13 @@
       "description": "Collectors who started in April 2026",
       "members": [
         {
-          "address": "0x44b99561cbbf699a440efa22e42b91bb72d0ed9f",
-          "ens": "errmac.poap.xyz",
-          "airport_count": 1
-        },
-        {
           "address": "0x6210477b3025bf5ea50a35d39e7d2875dc11661c",
           "ens": "noah.savedsouls.eth",
+          "airport_count": 2
+        },
+        {
+          "address": "0x44b99561cbbf699a440efa22e42b91bb72d0ed9f",
+          "ens": "errmac.poap.xyz",
           "airport_count": 1
         },
         {
@@ -3184,12 +3185,13 @@
         }
       ],
       "member_count": 3,
-      "total_claims": 3,
-      "unique_airports": 3,
+      "total_claims": 4,
+      "unique_airports": 4,
       "airports": [
         "CUN",
         "NCE",
-        "SAN"
+        "SAN",
+        "SFO"
       ]
     }
   ],
@@ -3451,12 +3453,28 @@
       "unique_airports": 1
     },
     {
+      "id": "home-san",
+      "name": "Home: SAN",
+      "type": "first_airport",
+      "member_count": 2,
+      "total_claims": 4,
+      "unique_airports": 3
+    },
+    {
       "id": "home-tbs",
       "name": "Home: TBS",
       "type": "first_airport",
       "member_count": 2,
       "total_claims": 4,
       "unique_airports": 2
+    },
+    {
+      "id": "month-2026-04",
+      "name": "Started: April 2026",
+      "type": "month_started",
+      "member_count": 3,
+      "total_claims": 4,
+      "unique_airports": 4
     },
     {
       "id": "home-blr",
@@ -3531,14 +3549,6 @@
       "unique_airports": 2
     },
     {
-      "id": "home-san",
-      "name": "Home: SAN",
-      "type": "first_airport",
-      "member_count": 2,
-      "total_claims": 3,
-      "unique_airports": 2
-    },
-    {
       "id": "home-sfo",
       "name": "Home: SFO",
       "type": "first_airport",
@@ -3561,14 +3571,6 @@
       "member_count": 2,
       "total_claims": 3,
       "unique_airports": 2
-    },
-    {
-      "id": "month-2026-04",
-      "name": "Started: April 2026",
-      "type": "month_started",
-      "member_count": 3,
-      "total_claims": 3,
-      "unique_airports": 3
     },
     {
       "id": "home-ams",

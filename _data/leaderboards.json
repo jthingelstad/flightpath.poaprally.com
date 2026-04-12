@@ -582,6 +582,16 @@
       "avatar_url": ""
     },
     {
+      "address": "0x6210477b3025bf5ea50a35d39e7d2875dc11661c",
+      "ens": "noah.savedsouls.eth",
+      "airport_count": 2,
+      "airports": [
+        "SAN",
+        "SFO"
+      ],
+      "avatar_url": ""
+    },
+    {
       "address": "0x647786b54298ca888eccb5e3d16de5979e77b98b",
       "ens": "",
       "airport_count": 2,
@@ -1014,15 +1024,6 @@
       "avatar_url": ""
     },
     {
-      "address": "0x6210477b3025bf5ea50a35d39e7d2875dc11661c",
-      "ens": "noah.savedsouls.eth",
-      "airport_count": 1,
-      "airports": [
-        "SAN"
-      ],
-      "avatar_url": ""
-    },
-    {
       "address": "0x63c3774531ef83631111fe2cf01520fb3f5a68f7",
       "ens": "jistro.eth",
       "airport_count": 1,
@@ -1421,6 +1422,13 @@
       "claims": 5
     },
     {
+      "code": "SFO",
+      "name": "San Francisco International Airport",
+      "city": "San Francisco",
+      "continent": "North America",
+      "claims": 5
+    },
+    {
       "code": "DXB",
       "name": "Dubai International Airport",
       "city": "Dubai",
@@ -1452,13 +1460,6 @@
       "code": "PTY",
       "name": "Tocumen International Airport",
       "city": "Tocumen",
-      "continent": "North America",
-      "claims": 4
-    },
-    {
-      "code": "SFO",
-      "name": "San Francisco International Airport",
-      "city": "San Francisco",
       "continent": "North America",
       "claims": 4
     },
@@ -2054,7 +2055,7 @@
   "regions": [
     {
       "continent": "North America",
-      "claims": 102,
+      "claims": 103,
       "airport_count": 23
     },
     {
