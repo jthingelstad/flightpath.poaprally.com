@@ -163,6 +163,18 @@
       "avatar_url": "/img/avatars/0x8f51dc0791cddddce08052fff939eb7cf0c17856.png"
     },
     {
+      "address": "0xa42278025aa3dd3db54e99a242bc6d2c7c7890a1",
+      "ens": "btorralba.eth",
+      "airport_count": 4,
+      "airports": [
+        "BKK",
+        "MNL",
+        "NRT",
+        "TPE"
+      ],
+      "avatar_url": ""
+    },
+    {
       "address": "0xbd19a3f0a9cace18513a1e2863d648d13975cb30",
       "ens": "didierkrux.eth",
       "airport_count": 4,
@@ -331,6 +343,17 @@
       "avatar_url": "/img/avatars/0x9cab0bd57e308daff28011d6c6d9b45867afe33e.png"
     },
     {
+      "address": "0x9ecc835b3487d3cd8b1fa03b251ee51e1ac10859",
+      "ens": "rossalejandro.eth",
+      "airport_count": 3,
+      "airports": [
+        "BKK",
+        "MNL",
+        "NRT"
+      ],
+      "avatar_url": "/img/avatars/0x9ecc835b3487d3cd8b1fa03b251ee51e1ac10859.png"
+    },
+    {
       "address": "0x9f000bfb33b0b63fce685b538b1a8af079b57d93",
       "ens": "cryptobenthic\ud83d\udc20.eth",
       "airport_count": 3,
@@ -338,17 +361,6 @@
         "CUN",
         "DEN",
         "PTY"
-      ],
-      "avatar_url": ""
-    },
-    {
-      "address": "0xa42278025aa3dd3db54e99a242bc6d2c7c7890a1",
-      "ens": "btorralba.eth",
-      "airport_count": 3,
-      "airports": [
-        "MNL",
-        "NRT",
-        "TPE"
       ],
       "avatar_url": ""
     },
@@ -670,16 +682,6 @@
         "EZE"
       ],
       "avatar_url": "/img/avatars/0x8e484b34356111a9f642eff09b2635311600ad65.png"
-    },
-    {
-      "address": "0x9ecc835b3487d3cd8b1fa03b251ee51e1ac10859",
-      "ens": "rossalejandro.eth",
-      "airport_count": 2,
-      "airports": [
-        "MNL",
-        "NRT"
-      ],
-      "avatar_url": "/img/avatars/0x9ecc835b3487d3cd8b1fa03b251ee51e1ac10859.png"
     },
     {
       "address": "0xa5ae650aac0072d1ac714f27e1cdc954bfea6717",
@@ -1380,6 +1382,13 @@
       "claims": 6
     },
     {
+      "code": "BKK",
+      "name": "Suvarnabhumi Airport",
+      "city": "Bangkok",
+      "continent": "Asia",
+      "claims": 5
+    },
+    {
       "code": "CUN",
       "name": "Cancun International Airport",
       "city": "Cancun",
@@ -1503,13 +1512,6 @@
       "name": "Austin-Bergstrom International Airport",
       "city": "Austin",
       "continent": "North America",
-      "claims": 3
-    },
-    {
-      "code": "BKK",
-      "name": "Suvarnabhumi Airport",
-      "city": "Bangkok",
-      "continent": "Asia",
       "claims": 3
     },
     {
@@ -2070,7 +2072,7 @@
     },
     {
       "continent": "Asia",
-      "claims": 37,
+      "claims": 39,
       "airport_count": 14
     },
     {
