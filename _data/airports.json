@@ -231,7 +231,7 @@
     "country": "FR",
     "name": "Charles de Gaulle International Airport",
     "image_url": "/img/poaps/cdg.png",
-    "claims": 3
+    "claims": 4
   },
   {
     "event_id": 221806,
@@ -1024,7 +1024,7 @@
     "country": "MX",
     "name": "Licenciado Benito Juarez International Airport",
     "image_url": "/img/poaps/mex.png",
-    "claims": 3
+    "claims": 4
   },
   {
     "event_id": 216416,

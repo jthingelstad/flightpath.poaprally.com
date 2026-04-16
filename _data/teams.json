@@ -234,6 +234,11 @@
           "airport_count": 1
         },
         {
+          "address": "0x7d70253e702954ef9ac2c0d74f9be35f15524821",
+          "ens": "devcristobalvc.eth",
+          "airport_count": 1
+        },
+        {
           "address": "0x967d1e5c987f1ecdb27179bcb4153b2fd0167c92",
           "ens": "lilbirdy.eth",
           "airport_count": 1
@@ -259,9 +264,9 @@
           "airport_count": 1
         }
       ],
-      "member_count": 30,
-      "total_claims": 76,
-      "unique_airports": 34,
+      "member_count": 31,
+      "total_claims": 77,
+      "unique_airports": 35,
       "airports": [
         "AEP",
         "ATH",
@@ -284,6 +289,7 @@
         "LGA",
         "LHR",
         "MDE",
+        "MEX",
         "MIA",
         "NCE",
         "NRT",
@@ -1822,13 +1828,18 @@
           "airport_count": 1
         },
         {
+          "address": "0x7d70253e702954ef9ac2c0d74f9be35f15524821",
+          "ens": "devcristobalvc.eth",
+          "airport_count": 1
+        },
+        {
           "address": "0xc0a59bb117d39019ecab6bfc83e72454d06621ac",
           "ens": "accour.onpoap.eth",
           "airport_count": 1
         }
       ],
-      "member_count": 2,
-      "total_claims": 2,
+      "member_count": 3,
+      "total_claims": 3,
       "unique_airports": 1,
       "airports": [
         "MEX"
@@ -2140,20 +2151,21 @@
       "description": "First airport claimed: San Diego International Airport",
       "members": [
         {
-          "address": "0x4c5f4f9df7968b0db448526162114a04f3462bad",
-          "ens": "erebels.eth",
-          "airport_count": 2
-        },
-        {
           "address": "0x6210477b3025bf5ea50a35d39e7d2875dc11661c",
           "ens": "noah.savedsouls.eth",
+          "airport_count": 3
+        },
+        {
+          "address": "0x4c5f4f9df7968b0db448526162114a04f3462bad",
+          "ens": "erebels.eth",
           "airport_count": 2
         }
       ],
       "member_count": 2,
-      "total_claims": 4,
-      "unique_airports": 3,
+      "total_claims": 5,
+      "unique_airports": 4,
       "airports": [
+        "CDG",
         "DEN",
         "SAN",
         "SFO"
@@ -3172,11 +3184,16 @@
         {
           "address": "0x6210477b3025bf5ea50a35d39e7d2875dc11661c",
           "ens": "noah.savedsouls.eth",
-          "airport_count": 2
+          "airport_count": 3
         },
         {
           "address": "0x44b99561cbbf699a440efa22e42b91bb72d0ed9f",
           "ens": "errmac.poap.xyz",
+          "airport_count": 1
+        },
+        {
+          "address": "0x7d70253e702954ef9ac2c0d74f9be35f15524821",
+          "ens": "devcristobalvc.eth",
           "airport_count": 1
         },
         {
@@ -3185,11 +3202,13 @@
           "airport_count": 1
         }
       ],
-      "member_count": 3,
-      "total_claims": 4,
-      "unique_airports": 4,
+      "member_count": 4,
+      "total_claims": 6,
+      "unique_airports": 6,
       "airports": [
+        "CDG",
         "CUN",
+        "MEX",
         "NCE",
         "SAN",
         "SFO"
@@ -3217,9 +3236,9 @@
       "id": "poap-ethdenver-2026",
       "name": "ETHDenver 2026",
       "type": "poap_holders",
-      "member_count": 30,
-      "total_claims": 76,
-      "unique_airports": 34
+      "member_count": 31,
+      "total_claims": 77,
+      "unique_airports": 35
     },
     {
       "id": "poap-we-ve-met-patricio",
@@ -3390,6 +3409,14 @@
       "unique_airports": 4
     },
     {
+      "id": "month-2026-04",
+      "name": "Started: April 2026",
+      "type": "month_started",
+      "member_count": 4,
+      "total_claims": 6,
+      "unique_airports": 6
+    },
+    {
       "id": "home-ctg",
       "name": "Home: CTG",
       "type": "first_airport",
@@ -3412,6 +3439,14 @@
       "member_count": 1,
       "total_claims": 5,
       "unique_airports": 5
+    },
+    {
+      "id": "home-san",
+      "name": "Home: SAN",
+      "type": "first_airport",
+      "member_count": 2,
+      "total_claims": 5,
+      "unique_airports": 4
     },
     {
       "id": "home-bog",
@@ -3454,28 +3489,12 @@
       "unique_airports": 1
     },
     {
-      "id": "home-san",
-      "name": "Home: SAN",
-      "type": "first_airport",
-      "member_count": 2,
-      "total_claims": 4,
-      "unique_airports": 3
-    },
-    {
       "id": "home-tbs",
       "name": "Home: TBS",
       "type": "first_airport",
       "member_count": 2,
       "total_claims": 4,
       "unique_airports": 2
-    },
-    {
-      "id": "month-2026-04",
-      "name": "Started: April 2026",
-      "type": "month_started",
-      "member_count": 3,
-      "total_claims": 4,
-      "unique_airports": 4
     },
     {
       "id": "home-blr",
@@ -3540,6 +3559,14 @@
       "member_count": 1,
       "total_claims": 3,
       "unique_airports": 3
+    },
+    {
+      "id": "home-mex",
+      "name": "Home: MEX",
+      "type": "first_airport",
+      "member_count": 3,
+      "total_claims": 3,
+      "unique_airports": 1
     },
     {
       "id": "home-prg",
@@ -3624,14 +3651,6 @@
     {
       "id": "home-iad",
       "name": "Home: IAD",
-      "type": "first_airport",
-      "member_count": 2,
-      "total_claims": 2,
-      "unique_airports": 1
-    },
-    {
-      "id": "home-mex",
-      "name": "Home: MEX",
       "type": "first_airport",
       "member_count": 2,
       "total_claims": 2,
