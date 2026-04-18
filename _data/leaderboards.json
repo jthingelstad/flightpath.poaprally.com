@@ -3,9 +3,10 @@
     {
       "address": "0x8f37ed67014c38d5ebe794daa878b55a62e3ac76",
       "ens": "",
-      "airport_count": 11,
+      "airport_count": 12,
       "airports": [
         "ATH",
+        "CDG",
         "DEN",
         "HKG",
         "MIA",
@@ -231,6 +232,17 @@
         "NCE"
       ],
       "avatar_url": "/img/avatars/0x14fc0be8e90ab768226cccf952506ce00bde5029.png"
+    },
+    {
+      "address": "0x4cc93ebb24bc1660d5b41ff9ec8ca480a0a94c36",
+      "ens": "fabioanaya.eth",
+      "airport_count": 3,
+      "airports": [
+        "BOG",
+        "CTG",
+        "PTY"
+      ],
+      "avatar_url": "/img/avatars/0x4cc93ebb24bc1660d5b41ff9ec8ca480a0a94c36.png"
     },
     {
       "address": "0x4df83971f6f1bfd8d33a2e79584bdfde75f4df60",
@@ -583,16 +595,6 @@
         "SAN"
       ],
       "avatar_url": ""
-    },
-    {
-      "address": "0x4cc93ebb24bc1660d5b41ff9ec8ca480a0a94c36",
-      "ens": "fabioanaya.eth",
-      "airport_count": 2,
-      "airports": [
-        "CTG",
-        "PTY"
-      ],
-      "avatar_url": "/img/avatars/0x4cc93ebb24bc1660d5b41ff9ec8ca480a0a94c36.png"
     },
     {
       "address": "0x4e76245544a8e40501eaf0eba307249ab80bbbe4",
@@ -1357,6 +1359,13 @@
       "claims": 8
     },
     {
+      "code": "BOG",
+      "name": "El Dorado International Airport",
+      "city": "Bogota",
+      "continent": "South America",
+      "claims": 7
+    },
+    {
       "code": "MIA",
       "name": "Miami International Airport",
       "city": "Miami",
@@ -1378,13 +1387,6 @@
       "claims": 6
     },
     {
-      "code": "BOG",
-      "name": "El Dorado International Airport",
-      "city": "Bogota",
-      "continent": "South America",
-      "claims": 6
-    },
-    {
       "code": "CTG",
       "name": "Rafael Nunez International Airport",
       "city": "Cartagena",
@@ -1396,6 +1398,13 @@
       "name": "Suvarnabhumi Airport",
       "city": "Bangkok",
       "continent": "Asia",
+      "claims": 5
+    },
+    {
+      "code": "CDG",
+      "name": "Charles de Gaulle International Airport",
+      "city": "Paris",
+      "continent": "Europe",
       "claims": 5
     },
     {
@@ -1446,13 +1455,6 @@
       "city": "San Francisco",
       "continent": "North America",
       "claims": 5
-    },
-    {
-      "code": "CDG",
-      "name": "Charles de Gaulle International Airport",
-      "city": "Paris",
-      "continent": "Europe",
-      "claims": 4
     },
     {
       "code": "DXB",
@@ -2072,12 +2074,12 @@
     },
     {
       "continent": "Europe",
-      "claims": 75,
+      "claims": 76,
       "airport_count": 20
     },
     {
       "continent": "South America",
-      "claims": 52,
+      "claims": 53,
       "airport_count": 11
     },
     {

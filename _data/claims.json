@@ -2182,5 +2182,21 @@
     "event_id": 214925,
     "created": "2026-04-15 23:44:20",
     "token_id": ""
+  },
+  {
+    "address": "0x8f37ed67014c38d5ebe794daa878b55a62e3ac76",
+    "ens": "",
+    "airport": "CDG",
+    "event_id": 214908,
+    "created": "2026-04-17 08:50:25",
+    "token_id": ""
+  },
+  {
+    "address": "0x4cc93ebb24bc1660d5b41ff9ec8ca480a0a94c36",
+    "ens": "fabioanaya.eth",
+    "airport": "BOG",
+    "event_id": 214914,
+    "created": "2026-04-17 18:22:15",
+    "token_id": ""
   }
 ]

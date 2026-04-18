@@ -114,7 +114,7 @@
     "country": "CO",
     "name": "El Dorado International Airport",
     "image_url": "/img/poaps/bog.png",
-    "claims": 6
+    "claims": 7
   },
   {
     "event_id": 216408,
@@ -231,7 +231,7 @@
     "country": "FR",
     "name": "Charles de Gaulle International Airport",
     "image_url": "/img/poaps/cdg.png",
-    "claims": 4
+    "claims": 5
   },
   {
     "event_id": 221806,
