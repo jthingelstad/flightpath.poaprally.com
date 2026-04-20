@@ -128,6 +128,19 @@
       "avatar_url": "/img/avatars/0x895c5a67168ab29d5e8e96a55f933ad7c948c612.png"
     },
     {
+      "address": "0x8f51dc0791cddddce08052fff939eb7cf0c17856",
+      "ens": "personal.0xj4an.eth",
+      "airport_count": 5,
+      "airports": [
+        "ATL",
+        "DEN",
+        "MDE",
+        "PTY",
+        "SFO"
+      ],
+      "avatar_url": "/img/avatars/0x8f51dc0791cddddce08052fff939eb7cf0c17856.png"
+    },
+    {
       "address": "0x664936a6aa22170221495f14450b891e7267ad0c",
       "ens": "partyjudge.eth",
       "airport_count": 4,
@@ -150,18 +163,6 @@
         "MEX"
       ],
       "avatar_url": "/img/avatars/0x7d76020b5519176a2366d1b0b3b3ab2f9fe1d553.png"
-    },
-    {
-      "address": "0x8f51dc0791cddddce08052fff939eb7cf0c17856",
-      "ens": "personal.0xj4an.eth",
-      "airport_count": 4,
-      "airports": [
-        "ATL",
-        "DEN",
-        "MDE",
-        "PTY"
-      ],
-      "avatar_url": "/img/avatars/0x8f51dc0791cddddce08052fff939eb7cf0c17856.png"
     },
     {
       "address": "0xa42278025aa3dd3db54e99a242bc6d2c7c7890a1",
@@ -1394,6 +1395,13 @@
       "claims": 6
     },
     {
+      "code": "SFO",
+      "name": "San Francisco International Airport",
+      "city": "San Francisco",
+      "continent": "North America",
+      "claims": 6
+    },
+    {
       "code": "BKK",
       "name": "Suvarnabhumi Airport",
       "city": "Bangkok",
@@ -1447,13 +1455,6 @@
       "name": "Ninoy Aquino International Airport",
       "city": "Manila",
       "continent": "Asia",
-      "claims": 5
-    },
-    {
-      "code": "SFO",
-      "name": "San Francisco International Airport",
-      "city": "San Francisco",
-      "continent": "North America",
       "claims": 5
     },
     {
@@ -2069,7 +2070,7 @@
   "regions": [
     {
       "continent": "North America",
-      "claims": 104,
+      "claims": 105,
       "airport_count": 23
     },
     {

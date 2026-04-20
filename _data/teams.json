@@ -126,7 +126,7 @@
         {
           "address": "0x8f51dc0791cddddce08052fff939eb7cf0c17856",
           "ens": "personal.0xj4an.eth",
-          "airport_count": 4
+          "airport_count": 5
         },
         {
           "address": "0xf6b6f07862a02c85628b3a9688beae07fea9c863",
@@ -265,8 +265,8 @@
         }
       ],
       "member_count": 31,
-      "total_claims": 78,
-      "unique_airports": 35,
+      "total_claims": 79,
+      "unique_airports": 36,
       "airports": [
         "AEP",
         "ATH",
@@ -296,6 +296,7 @@
         "ORD",
         "PTY",
         "SAN",
+        "SFO",
         "SIN",
         "VIE",
         "WAW",
@@ -357,13 +358,13 @@
           "airport_count": 5
         },
         {
-          "address": "0x7d76020b5519176a2366d1b0b3b3ab2f9fe1d553",
-          "ens": "liszy.eth",
-          "airport_count": 4
-        },
-        {
           "address": "0x8f51dc0791cddddce08052fff939eb7cf0c17856",
           "ens": "personal.0xj4an.eth",
+          "airport_count": 5
+        },
+        {
+          "address": "0x7d76020b5519176a2366d1b0b3b3ab2f9fe1d553",
+          "ens": "liszy.eth",
           "airport_count": 4
         },
         {
@@ -508,7 +509,7 @@
         }
       ],
       "member_count": 32,
-      "total_claims": 74,
+      "total_claims": 75,
       "unique_airports": 40,
       "airports": [
         "AEP",
@@ -1221,7 +1222,7 @@
         {
           "address": "0x8f51dc0791cddddce08052fff939eb7cf0c17856",
           "ens": "personal.0xj4an.eth",
-          "airport_count": 4
+          "airport_count": 5
         },
         {
           "address": "0x14fc0be8e90ab768226cccf952506ce00bde5029",
@@ -1295,8 +1296,8 @@
         }
       ],
       "member_count": 15,
-      "total_claims": 23,
-      "unique_airports": 8,
+      "total_claims": 24,
+      "unique_airports": 9,
       "airports": [
         "ATL",
         "CDG",
@@ -1305,6 +1306,7 @@
         "MDE",
         "NCE",
         "PTY",
+        "SFO",
         "WAW"
       ]
     },
@@ -2737,13 +2739,13 @@
           "airport_count": 5
         },
         {
-          "address": "0x7d76020b5519176a2366d1b0b3b3ab2f9fe1d553",
-          "ens": "liszy.eth",
-          "airport_count": 4
-        },
-        {
           "address": "0x8f51dc0791cddddce08052fff939eb7cf0c17856",
           "ens": "personal.0xj4an.eth",
+          "airport_count": 5
+        },
+        {
+          "address": "0x7d76020b5519176a2366d1b0b3b3ab2f9fe1d553",
+          "ens": "liszy.eth",
           "airport_count": 4
         },
         {
@@ -2948,7 +2950,7 @@
         }
       ],
       "member_count": 46,
-      "total_claims": 102,
+      "total_claims": 103,
       "unique_airports": 52,
       "airports": [
         "ADD",
@@ -3232,7 +3234,7 @@
       "name": "Started: February 2026",
       "type": "month_started",
       "member_count": 46,
-      "total_claims": 102,
+      "total_claims": 103,
       "unique_airports": 52
     },
     {
@@ -3240,15 +3242,15 @@
       "name": "ETHDenver 2026",
       "type": "poap_holders",
       "member_count": 31,
-      "total_claims": 78,
-      "unique_airports": 35
+      "total_claims": 79,
+      "unique_airports": 36
     },
     {
       "id": "poap-we-ve-met-patricio",
       "name": "We've Met Patricio",
       "type": "poap_holders",
       "member_count": 32,
-      "total_claims": 74,
+      "total_claims": 75,
       "unique_airports": 40
     },
     {
@@ -3280,8 +3282,8 @@
       "name": "Home: DEN",
       "type": "first_airport",
       "member_count": 15,
-      "total_claims": 23,
-      "unique_airports": 8
+      "total_claims": 24,
+      "unique_airports": 9
     },
     {
       "id": "home-eze",
