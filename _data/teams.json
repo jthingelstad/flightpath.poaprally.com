@@ -1485,7 +1485,7 @@
         {
           "address": "0x708ac82707b1b8ddcc0bb8c50c75c38e786cbece",
           "ens": "achimh.eth",
-          "airport_count": 5
+          "airport_count": 6
         },
         {
           "address": "0x5ffd23b1b0350debb17a2cb668929ac5f76d0e18",
@@ -1494,11 +1494,12 @@
         }
       ],
       "member_count": 2,
-      "total_claims": 6,
-      "unique_airports": 5,
+      "total_claims": 7,
+      "unique_airports": 6,
       "airports": [
         "FRA",
         "JFK",
+        "LHR",
         "PRG",
         "SFO",
         "VIE"
@@ -2724,6 +2725,11 @@
           "airport_count": 12
         },
         {
+          "address": "0x708ac82707b1b8ddcc0bb8c50c75c38e786cbece",
+          "ens": "achimh.eth",
+          "airport_count": 6
+        },
+        {
           "address": "0x03f11c7a45ba8219c87f312eecb07287c2095302",
           "ens": "0xtangle.eth",
           "airport_count": 5
@@ -2731,11 +2737,6 @@
         {
           "address": "0x111accebf9d70d9c06de2d38f9392522e82ecf29",
           "ens": "poap.thingelstad.eth",
-          "airport_count": 5
-        },
-        {
-          "address": "0x708ac82707b1b8ddcc0bb8c50c75c38e786cbece",
-          "ens": "achimh.eth",
           "airport_count": 5
         },
         {
@@ -2950,7 +2951,7 @@
         }
       ],
       "member_count": 46,
-      "total_claims": 103,
+      "total_claims": 104,
       "unique_airports": 52,
       "airports": [
         "ADD",
@@ -3234,7 +3235,7 @@
       "name": "Started: February 2026",
       "type": "month_started",
       "member_count": 46,
-      "total_claims": 103,
+      "total_claims": 104,
       "unique_airports": 52
     },
     {
@@ -3374,6 +3375,14 @@
       "unique_airports": 4
     },
     {
+      "id": "home-fra",
+      "name": "Home: FRA",
+      "type": "first_airport",
+      "member_count": 2,
+      "total_claims": 7,
+      "unique_airports": 6
+    },
+    {
       "id": "home-zrh",
       "name": "Home: ZRH",
       "type": "first_airport",
@@ -3396,14 +3405,6 @@
       "member_count": 4,
       "total_claims": 6,
       "unique_airports": 3
-    },
-    {
-      "id": "home-fra",
-      "name": "Home: FRA",
-      "type": "first_airport",
-      "member_count": 2,
-      "total_claims": 6,
-      "unique_airports": 5
     },
     {
       "id": "home-hkg",

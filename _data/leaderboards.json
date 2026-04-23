@@ -36,6 +36,20 @@
       "avatar_url": ""
     },
     {
+      "address": "0x708ac82707b1b8ddcc0bb8c50c75c38e786cbece",
+      "ens": "achimh.eth",
+      "airport_count": 6,
+      "airports": [
+        "FRA",
+        "JFK",
+        "LHR",
+        "PRG",
+        "SFO",
+        "VIE"
+      ],
+      "avatar_url": "/img/avatars/0x708ac82707b1b8ddcc0bb8c50c75c38e786cbece.png"
+    },
+    {
       "address": "0x74dbbcb9c08c51b38510d130d928e1e8c68eda7c",
       "ens": "mazie.thingelstad.eth",
       "airport_count": 6,
@@ -87,19 +101,6 @@
         "NCE"
       ],
       "avatar_url": ""
-    },
-    {
-      "address": "0x708ac82707b1b8ddcc0bb8c50c75c38e786cbece",
-      "ens": "achimh.eth",
-      "airport_count": 5,
-      "airports": [
-        "FRA",
-        "JFK",
-        "PRG",
-        "SFO",
-        "VIE"
-      ],
-      "avatar_url": "/img/avatars/0x708ac82707b1b8ddcc0bb8c50c75c38e786cbece.png"
     },
     {
       "address": "0x82345d3c717710a29674665df4a5325c1b0b4a28",
@@ -1444,6 +1445,13 @@
       "claims": 5
     },
     {
+      "code": "LHR",
+      "name": "London Heathrow Airport",
+      "city": "London",
+      "continent": "Europe",
+      "claims": 5
+    },
+    {
       "code": "MDE",
       "name": "Jose Maria Cordova International Airport",
       "city": "Rionegro",
@@ -1469,13 +1477,6 @@
       "name": "Newark Liberty International Airport",
       "city": "Newark",
       "continent": "North America",
-      "claims": 4
-    },
-    {
-      "code": "LHR",
-      "name": "London Heathrow Airport",
-      "city": "London",
-      "continent": "Europe",
       "claims": 4
     },
     {
@@ -2075,7 +2076,7 @@
     },
     {
       "continent": "Europe",
-      "claims": 76,
+      "claims": 77,
       "airport_count": 20
     },
     {
