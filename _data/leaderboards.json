@@ -236,6 +236,17 @@
       "avatar_url": "/img/avatars/0x14fc0be8e90ab768226cccf952506ce00bde5029.png"
     },
     {
+      "address": "0x1ae601d54a8df8216208b5e070393c933f991581",
+      "ens": "rebilander.eth",
+      "airport_count": 3,
+      "airports": [
+        "KUL",
+        "MNL",
+        "NRT"
+      ],
+      "avatar_url": "/img/avatars/0x1ae601d54a8df8216208b5e070393c933f991581.png"
+    },
+    {
       "address": "0x4cc93ebb24bc1660d5b41ff9ec8ca480a0a94c36",
       "ens": "fabioanaya.eth",
       "airport_count": 3,
@@ -548,16 +559,6 @@
         "MTY"
       ],
       "avatar_url": ""
-    },
-    {
-      "address": "0x1ae601d54a8df8216208b5e070393c933f991581",
-      "ens": "rebilander.eth",
-      "airport_count": 2,
-      "airports": [
-        "MNL",
-        "NRT"
-      ],
-      "avatar_url": "/img/avatars/0x1ae601d54a8df8216208b5e070393c933f991581.png"
     },
     {
       "address": "0x20309eb9080288e31ab1161366af6639f04d593e",
@@ -1649,6 +1650,13 @@
       "claims": 2
     },
     {
+      "code": "KUL",
+      "name": "Kuala Lumpur International Airport",
+      "city": "Kuala Lumpur",
+      "continent": "Asia",
+      "claims": 2
+    },
+    {
       "code": "LGA",
       "name": "Laguardia Airport",
       "city": "New York",
@@ -1778,13 +1786,6 @@
       "code": "ICN",
       "name": "Incheon International Airport",
       "city": "Seoul",
-      "continent": "Asia",
-      "claims": 1
-    },
-    {
-      "code": "KUL",
-      "name": "Kuala Lumpur International Airport",
-      "city": "Kuala Lumpur",
       "continent": "Asia",
       "claims": 1
     },
@@ -2115,7 +2116,7 @@
     },
     {
       "continent": "Asia",
-      "claims": 39,
+      "claims": 40,
       "airport_count": 14
     },
     {

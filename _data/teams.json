@@ -1914,14 +1914,14 @@
           "airport_count": 4
         },
         {
-          "address": "0x9ecc835b3487d3cd8b1fa03b251ee51e1ac10859",
-          "ens": "rossalejandro.eth",
+          "address": "0x1ae601d54a8df8216208b5e070393c933f991581",
+          "ens": "rebilander.eth",
           "airport_count": 3
         },
         {
-          "address": "0x1ae601d54a8df8216208b5e070393c933f991581",
-          "ens": "rebilander.eth",
-          "airport_count": 2
+          "address": "0x9ecc835b3487d3cd8b1fa03b251ee51e1ac10859",
+          "ens": "rossalejandro.eth",
+          "airport_count": 3
         },
         {
           "address": "0x7472c7d360c47b02ae90e0770997bda0b11a4f30",
@@ -1930,7 +1930,7 @@
         }
       ],
       "member_count": 5,
-      "total_claims": 15,
+      "total_claims": 16,
       "unique_airports": 7,
       "airports": [
         "BCN",
@@ -3053,6 +3053,11 @@
           "airport_count": 4
         },
         {
+          "address": "0x1ae601d54a8df8216208b5e070393c933f991581",
+          "ens": "rebilander.eth",
+          "airport_count": 3
+        },
+        {
           "address": "0x6493db62998997134e0451cacd32360858f9a3d6",
           "ens": "tyler.thingelstad.eth",
           "airport_count": 3
@@ -3085,11 +3090,6 @@
         {
           "address": "0x1019236722517506732d92dac0f7b9b4ed993d8d",
           "ens": "forestkeeperio.eth",
-          "airport_count": 2
-        },
-        {
-          "address": "0x1ae601d54a8df8216208b5e070393c933f991581",
-          "ens": "rebilander.eth",
           "airport_count": 2
         },
         {
@@ -3179,7 +3179,7 @@
         }
       ],
       "member_count": 27,
-      "total_claims": 48,
+      "total_claims": 49,
       "unique_airports": 25,
       "airports": [
         "AEP",
@@ -3310,7 +3310,7 @@
       "name": "Started: March 2026",
       "type": "month_started",
       "member_count": 27,
-      "total_claims": 48,
+      "total_claims": 49,
       "unique_airports": 25
     },
     {
@@ -3358,7 +3358,7 @@
       "name": "Home: MNL",
       "type": "first_airport",
       "member_count": 5,
-      "total_claims": 15,
+      "total_claims": 16,
       "unique_airports": 7
     },
     {
