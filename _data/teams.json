@@ -812,11 +812,16 @@
           "address": "0xbef9d99c3c0ef74c13ae4bf69fcd40e1ff7207b1",
           "ens": "",
           "airport_count": 1
+        },
+        {
+          "address": "0xfea34bb94426991791c02ca77567a8863c071b6f",
+          "ens": "",
+          "airport_count": 1
         }
       ],
-      "member_count": 14,
-      "total_claims": 29,
-      "unique_airports": 21,
+      "member_count": 15,
+      "total_claims": 30,
+      "unique_airports": 22,
       "airports": [
         "AEP",
         "ATH",
@@ -831,6 +836,7 @@
         "MEX",
         "MIA",
         "NCE",
+        "SFO",
         "SIN",
         "SOF",
         "TBS",
@@ -2234,10 +2240,15 @@
           "address": "0x56d389c4e07a48d429035532402301310b8143a0",
           "ens": "colfax.eth",
           "airport_count": 3
+        },
+        {
+          "address": "0xfea34bb94426991791c02ca77567a8863c071b6f",
+          "ens": "",
+          "airport_count": 1
         }
       ],
-      "member_count": 1,
-      "total_claims": 3,
+      "member_count": 2,
+      "total_claims": 4,
       "unique_airports": 3,
       "airports": [
         "BOS",
@@ -3249,10 +3260,15 @@
           "address": "0xae84bd39bf326c95ab1e90037df2b6e485072e4b",
           "ens": "",
           "airport_count": 1
+        },
+        {
+          "address": "0xfea34bb94426991791c02ca77567a8863c071b6f",
+          "ens": "",
+          "airport_count": 1
         }
       ],
-      "member_count": 7,
-      "total_claims": 9,
+      "member_count": 8,
+      "total_claims": 10,
       "unique_airports": 6,
       "airports": [
         "CDG",
@@ -3317,9 +3333,9 @@
       "id": "auto-anon",
       "name": "Team Anon",
       "type": "anon",
-      "member_count": 14,
-      "total_claims": 29,
-      "unique_airports": 21
+      "member_count": 15,
+      "total_claims": 30,
+      "unique_airports": 22
     },
     {
       "id": "home-den",
@@ -3394,20 +3410,20 @@
       "unique_airports": 8
     },
     {
+      "id": "month-2026-04",
+      "name": "Started: April 2026",
+      "type": "month_started",
+      "member_count": 8,
+      "total_claims": 10,
+      "unique_airports": 6
+    },
+    {
       "id": "poap-ethmumbai-2026",
       "name": "ETHMumbai 2026",
       "type": "poap_holders",
       "member_count": 3,
       "total_claims": 9,
       "unique_airports": 7
-    },
-    {
-      "id": "month-2026-04",
-      "name": "Started: April 2026",
-      "type": "month_started",
-      "member_count": 7,
-      "total_claims": 9,
-      "unique_airports": 6
     },
     {
       "id": "home-mde",
@@ -3546,6 +3562,14 @@
       "unique_airports": 1
     },
     {
+      "id": "home-sfo",
+      "name": "Home: SFO",
+      "type": "first_airport",
+      "member_count": 2,
+      "total_claims": 4,
+      "unique_airports": 3
+    },
+    {
       "id": "home-tbs",
       "name": "Home: TBS",
       "type": "first_airport",
@@ -3624,14 +3648,6 @@
       "member_count": 2,
       "total_claims": 3,
       "unique_airports": 2
-    },
-    {
-      "id": "home-sfo",
-      "name": "Home: SFO",
-      "type": "first_airport",
-      "member_count": 1,
-      "total_claims": 3,
-      "unique_airports": 3
     },
     {
       "id": "home-tpe",

@@ -1338,6 +1338,15 @@
         "DEN"
       ],
       "avatar_url": "/img/avatars/0xfdbee3fba2f14d72bd1a6b2ccc860dc024f7bf14.png"
+    },
+    {
+      "address": "0xfea34bb94426991791c02ca77567a8863c071b6f",
+      "ens": "",
+      "airport_count": 1,
+      "airports": [
+        "SFO"
+      ],
+      "avatar_url": ""
     }
   ],
   "airports": [
@@ -1419,6 +1428,13 @@
       "claims": 7
     },
     {
+      "code": "SFO",
+      "name": "San Francisco International Airport",
+      "city": "San Francisco",
+      "continent": "North America",
+      "claims": 7
+    },
+    {
       "code": "AMS",
       "name": "Amsterdam Airport Schiphol",
       "city": "Amsterdam",
@@ -1444,13 +1460,6 @@
       "name": "London Heathrow Airport",
       "city": "London",
       "continent": "Europe",
-      "claims": 6
-    },
-    {
-      "code": "SFO",
-      "name": "San Francisco International Airport",
-      "city": "San Francisco",
-      "continent": "North America",
       "claims": 6
     },
     {
@@ -2101,7 +2110,7 @@
   "regions": [
     {
       "continent": "North America",
-      "claims": 108,
+      "claims": 109,
       "airport_count": 23
     },
     {
