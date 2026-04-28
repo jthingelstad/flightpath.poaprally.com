@@ -36,6 +36,20 @@
       "avatar_url": ""
     },
     {
+      "address": "0x03f11c7a45ba8219c87f312eecb07287c2095302",
+      "ens": "0xtangle.eth",
+      "airport_count": 6,
+      "airports": [
+        "DEN",
+        "HND",
+        "ICN",
+        "LAS",
+        "NRT",
+        "YVR"
+      ],
+      "avatar_url": "/img/avatars/0x03f11c7a45ba8219c87f312eecb07287c2095302.png"
+    },
+    {
       "address": "0x708ac82707b1b8ddcc0bb8c50c75c38e786cbece",
       "ens": "achimh.eth",
       "airport_count": 6,
@@ -62,19 +76,6 @@
         "ZRH"
       ],
       "avatar_url": ""
-    },
-    {
-      "address": "0x03f11c7a45ba8219c87f312eecb07287c2095302",
-      "ens": "0xtangle.eth",
-      "airport_count": 5,
-      "airports": [
-        "DEN",
-        "HND",
-        "ICN",
-        "NRT",
-        "YVR"
-      ],
-      "avatar_url": "/img/avatars/0x03f11c7a45ba8219c87f312eecb07287c2095302.png"
     },
     {
       "address": "0x111accebf9d70d9c06de2d38f9392522e82ecf29",
@@ -1799,6 +1800,13 @@
       "claims": 1
     },
     {
+      "code": "LAS",
+      "name": "Harry Reid International Airport",
+      "city": "Las Vegas",
+      "continent": "North America",
+      "claims": 1
+    },
+    {
       "code": "LAX",
       "name": "Los Angeles International Airport",
       "city": "Los Angeles",
@@ -1974,13 +1982,6 @@
       "claims": 0
     },
     {
-      "code": "LAS",
-      "name": "Harry Reid International Airport",
-      "city": "Las Vegas",
-      "continent": "North America",
-      "claims": 0
-    },
-    {
       "code": "LCG",
       "name": "A Coruna Airport",
       "city": "Culleredo",
@@ -2110,8 +2111,8 @@
   "regions": [
     {
       "continent": "North America",
-      "claims": 109,
-      "airport_count": 23
+      "claims": 110,
+      "airport_count": 24
     },
     {
       "continent": "Europe",
