@@ -78,6 +78,20 @@
       "avatar_url": ""
     },
     {
+      "address": "0x8f51dc0791cddddce08052fff939eb7cf0c17856",
+      "ens": "personal.0xj4an.eth",
+      "airport_count": 6,
+      "airports": [
+        "ATL",
+        "DEN",
+        "IAD",
+        "MDE",
+        "PTY",
+        "SFO"
+      ],
+      "avatar_url": "/img/avatars/0x8f51dc0791cddddce08052fff939eb7cf0c17856.png"
+    },
+    {
       "address": "0x111accebf9d70d9c06de2d38f9392522e82ecf29",
       "ens": "poap.thingelstad.eth",
       "airport_count": 5,
@@ -128,19 +142,6 @@
         "SFO"
       ],
       "avatar_url": "/img/avatars/0x895c5a67168ab29d5e8e96a55f933ad7c948c612.png"
-    },
-    {
-      "address": "0x8f51dc0791cddddce08052fff939eb7cf0c17856",
-      "ens": "personal.0xj4an.eth",
-      "airport_count": 5,
-      "airports": [
-        "ATL",
-        "DEN",
-        "MDE",
-        "PTY",
-        "SFO"
-      ],
-      "avatar_url": "/img/avatars/0x8f51dc0791cddddce08052fff939eb7cf0c17856.png"
     },
     {
       "address": "0x664936a6aa22170221495f14450b891e7267ad0c",
@@ -1583,6 +1584,13 @@
       "claims": 3
     },
     {
+      "code": "IAD",
+      "name": "Washington Dulles International Airport",
+      "city": "Washington",
+      "continent": "North America",
+      "claims": 3
+    },
+    {
       "code": "IST",
       "name": "Istanbul Airport",
       "city": "Istanbul",
@@ -1643,13 +1651,6 @@
       "name": "Guarulhos - Governador Andre Franco Montoro International Airport",
       "city": "Sao Paulo",
       "continent": "South America",
-      "claims": 2
-    },
-    {
-      "code": "IAD",
-      "name": "Washington Dulles International Airport",
-      "city": "Washington",
-      "continent": "North America",
       "claims": 2
     },
     {
@@ -2111,7 +2112,7 @@
   "regions": [
     {
       "continent": "North America",
-      "claims": 110,
+      "claims": 111,
       "airport_count": 24
     },
     {
