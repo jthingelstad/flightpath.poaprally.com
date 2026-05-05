@@ -595,7 +595,7 @@
     "country": "TR",
     "name": "Istanbul Airport",
     "image_url": "/img/poaps/ist.png",
-    "claims": 3
+    "claims": 4
   },
   {
     "event_id": 214900,
@@ -868,7 +868,7 @@
     "country": "DE",
     "name": "Berlin Brandenburg Airport",
     "image_url": "/img/poaps/ber.png",
-    "claims": 1
+    "claims": 3
   },
   {
     "event_id": 214875,

@@ -793,6 +793,16 @@
       "avatar_url": ""
     },
     {
+      "address": "0xfdf6576e21641a65bccea63b576b3d29ffc2d12f",
+      "ens": "hugom.eth",
+      "airport_count": 2,
+      "airports": [
+        "BER",
+        "IST"
+      ],
+      "avatar_url": "/img/avatars/0xfdf6576e21641a65bccea63b576b3d29ffc2d12f.png"
+    },
+    {
       "address": "0x04c0cd38b8c203b14ef2b7b8d736d69b938aff71",
       "ens": "nixorokish.eth",
       "airport_count": 1,
@@ -1297,6 +1307,15 @@
       "avatar_url": ""
     },
     {
+      "address": "0xf3e0e1cfa49a2e202b5c4a9e940ea3603cfb3dbf",
+      "ens": "",
+      "airport_count": 1,
+      "airports": [
+        "BER"
+      ],
+      "avatar_url": ""
+    },
+    {
       "address": "0xf683094c6b247acfd2db6c294aa020622813ebbf",
       "ens": "reobin.eth",
       "airport_count": 1,
@@ -1528,6 +1547,13 @@
       "claims": 4
     },
     {
+      "code": "IST",
+      "name": "Istanbul Airport",
+      "city": "Istanbul",
+      "continent": "Europe",
+      "claims": 4
+    },
+    {
       "code": "NRT",
       "name": "Narita International Airport",
       "city": "Tokyo",
@@ -1584,17 +1610,17 @@
       "claims": 3
     },
     {
+      "code": "BER",
+      "name": "Berlin Brandenburg Airport",
+      "city": "Berlin",
+      "continent": "Europe",
+      "claims": 3
+    },
+    {
       "code": "IAD",
       "name": "Washington Dulles International Airport",
       "city": "Washington",
       "continent": "North America",
-      "claims": 3
-    },
-    {
-      "code": "IST",
-      "name": "Istanbul Airport",
-      "city": "Istanbul",
-      "continent": "Europe",
       "claims": 3
     },
     {
@@ -1755,13 +1781,6 @@
       "code": "BEG",
       "name": "Belgrade Nikola Tesla Airport",
       "city": "Belgrad",
-      "continent": "Europe",
-      "claims": 1
-    },
-    {
-      "code": "BER",
-      "name": "Berlin Brandenburg Airport",
-      "city": "Berlin",
       "continent": "Europe",
       "claims": 1
     },
@@ -2117,7 +2136,7 @@
     },
     {
       "continent": "Europe",
-      "claims": 79,
+      "claims": 82,
       "airport_count": 20
     },
     {

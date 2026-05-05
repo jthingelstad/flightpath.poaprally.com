@@ -449,6 +449,11 @@
           "airport_count": 2
         },
         {
+          "address": "0xfdf6576e21641a65bccea63b576b3d29ffc2d12f",
+          "ens": "hugom.eth",
+          "airport_count": 2
+        },
+        {
           "address": "0x04c0cd38b8c203b14ef2b7b8d736d69b938aff71",
           "ens": "nixorokish.eth",
           "airport_count": 1
@@ -504,20 +509,26 @@
           "airport_count": 1
         },
         {
+          "address": "0xf3e0e1cfa49a2e202b5c4a9e940ea3603cfb3dbf",
+          "ens": "",
+          "airport_count": 1
+        },
+        {
           "address": "0xfa731c3f64bf97f528292b137faf0abb14da3b42",
           "ens": "greywizard.eth",
           "airport_count": 1
         }
       ],
-      "member_count": 32,
-      "total_claims": 77,
-      "unique_airports": 42,
+      "member_count": 34,
+      "total_claims": 80,
+      "unique_airports": 44,
       "airports": [
         "AEP",
         "AMS",
         "ATL",
         "AUS",
         "BCN",
+        "BER",
         "BOG",
         "BOM",
         "BOS",
@@ -537,6 +548,7 @@
         "IAD",
         "IAH",
         "ICN",
+        "IST",
         "JFK",
         "LAS",
         "LGA",
@@ -818,18 +830,24 @@
           "airport_count": 1
         },
         {
+          "address": "0xf3e0e1cfa49a2e202b5c4a9e940ea3603cfb3dbf",
+          "ens": "",
+          "airport_count": 1
+        },
+        {
           "address": "0xfea34bb94426991791c02ca77567a8863c071b6f",
           "ens": "",
           "airport_count": 1
         }
       ],
-      "member_count": 15,
-      "total_claims": 30,
-      "unique_airports": 22,
+      "member_count": 16,
+      "total_claims": 31,
+      "unique_airports": 23,
       "airports": [
         "AEP",
         "ATH",
         "BEG",
+        "BER",
         "CDG",
         "DEN",
         "EZE",
@@ -1019,10 +1037,15 @@
           "address": "0xc2f3f03fd3b2e0ef7990013efe9f29296ffbd533",
           "ens": "wiegimania.eth",
           "airport_count": 2
+        },
+        {
+          "address": "0xf3e0e1cfa49a2e202b5c4a9e940ea3603cfb3dbf",
+          "ens": "",
+          "airport_count": 1
         }
       ],
-      "member_count": 1,
-      "total_claims": 2,
+      "member_count": 2,
+      "total_claims": 3,
       "unique_airports": 2,
       "airports": [
         "BER",
@@ -1654,15 +1677,21 @@
           "airport_count": 3
         },
         {
+          "address": "0xfdf6576e21641a65bccea63b576b3d29ffc2d12f",
+          "ens": "hugom.eth",
+          "airport_count": 2
+        },
+        {
           "address": "0x63c3774531ef83631111fe2cf01520fb3f5a68f7",
           "ens": "jistro.eth",
           "airport_count": 1
         }
       ],
-      "member_count": 2,
-      "total_claims": 4,
-      "unique_airports": 3,
+      "member_count": 3,
+      "total_claims": 6,
+      "unique_airports": 4,
       "airports": [
+        "BER",
         "BKK",
         "IST",
         "SGN"
@@ -3285,6 +3314,31 @@
         "SAN",
         "SFO"
       ]
+    },
+    {
+      "id": "month-2026-05",
+      "name": "Started: May 2026",
+      "type": "month_started",
+      "description": "Collectors who started in May 2026",
+      "members": [
+        {
+          "address": "0xfdf6576e21641a65bccea63b576b3d29ffc2d12f",
+          "ens": "hugom.eth",
+          "airport_count": 2
+        },
+        {
+          "address": "0xf3e0e1cfa49a2e202b5c4a9e940ea3603cfb3dbf",
+          "ens": "",
+          "airport_count": 1
+        }
+      ],
+      "member_count": 2,
+      "total_claims": 3,
+      "unique_airports": 2,
+      "airports": [
+        "BER",
+        "IST"
+      ]
     }
   ],
   "leaderboard": [
@@ -3316,9 +3370,9 @@
       "id": "poap-we-ve-met-patricio",
       "name": "We've Met Patricio",
       "type": "poap_holders",
-      "member_count": 32,
-      "total_claims": 77,
-      "unique_airports": 42
+      "member_count": 34,
+      "total_claims": 80,
+      "unique_airports": 44
     },
     {
       "id": "poap-ethdenver-2025",
@@ -3340,9 +3394,9 @@
       "id": "auto-anon",
       "name": "Team Anon",
       "type": "anon",
-      "member_count": 15,
-      "total_claims": 30,
-      "unique_airports": 22
+      "member_count": 16,
+      "total_claims": 31,
+      "unique_airports": 23
     },
     {
       "id": "home-den",
@@ -3497,6 +3551,14 @@
       "unique_airports": 5
     },
     {
+      "id": "home-ist",
+      "name": "Home: IST",
+      "type": "first_airport",
+      "member_count": 3,
+      "total_claims": 6,
+      "unique_airports": 4
+    },
+    {
       "id": "home-lhr",
       "name": "Home: LHR",
       "type": "first_airport",
@@ -3545,14 +3607,6 @@
       "unique_airports": 3
     },
     {
-      "id": "home-ist",
-      "name": "Home: IST",
-      "type": "first_airport",
-      "member_count": 2,
-      "total_claims": 4,
-      "unique_airports": 3
-    },
-    {
       "id": "home-lis",
       "name": "Home: LIS",
       "type": "first_airport",
@@ -3582,6 +3636,14 @@
       "type": "first_airport",
       "member_count": 2,
       "total_claims": 4,
+      "unique_airports": 2
+    },
+    {
+      "id": "home-ber",
+      "name": "Home: BER",
+      "type": "first_airport",
+      "member_count": 2,
+      "total_claims": 3,
       "unique_airports": 2
     },
     {
@@ -3673,6 +3735,14 @@
       "unique_airports": 2
     },
     {
+      "id": "month-2026-05",
+      "name": "Started: May 2026",
+      "type": "month_started",
+      "member_count": 2,
+      "total_claims": 3,
+      "unique_airports": 2
+    },
+    {
       "id": "home-ams",
       "name": "Home: AMS",
       "type": "first_airport",
@@ -3683,14 +3753,6 @@
     {
       "id": "home-beg",
       "name": "Home: BEG",
-      "type": "first_airport",
-      "member_count": 1,
-      "total_claims": 2,
-      "unique_airports": 2
-    },
-    {
-      "id": "home-ber",
-      "name": "Home: BER",
       "type": "first_airport",
       "member_count": 1,
       "total_claims": 2,
