@@ -179,7 +179,7 @@
     "country": "IT",
     "name": "Leonardo Da Vinci (Fiumicino) International Airport",
     "image_url": "/img/poaps/fco.png",
-    "claims": 2
+    "claims": 3
   },
   {
     "event_id": 214881,
@@ -309,7 +309,7 @@
     "country": "US",
     "name": "Los Angeles International Airport",
     "image_url": "/img/poaps/lax.png",
-    "claims": 1
+    "claims": 2
   },
   {
     "event_id": 218112,
@@ -595,7 +595,7 @@
     "country": "TR",
     "name": "Istanbul Airport",
     "image_url": "/img/poaps/ist.png",
-    "claims": 4
+    "claims": 5
   },
   {
     "event_id": 214900,
@@ -1037,7 +1037,7 @@
     "country": "CZ",
     "name": "V\u00e1clav Havel Airport",
     "image_url": "/img/poaps/prg.png",
-    "claims": 3
+    "claims": 4
   },
   {
     "event_id": 216424,
