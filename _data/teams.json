@@ -590,6 +590,11 @@
           "airport_count": 6
         },
         {
+          "address": "0x72cc82900823c29310985decdd607a68f9bc8418",
+          "ens": "chaps.eth",
+          "airport_count": 4
+        },
+        {
           "address": "0xf6b6f07862a02c85628b3a9688beae07fea9c863",
           "ens": "poap.eth",
           "airport_count": 4
@@ -607,11 +612,6 @@
         {
           "address": "0x5bd18902e2ea470c3dba572fde02b5ab236ddd76",
           "ens": "stoczek.eth",
-          "airport_count": 3
-        },
-        {
-          "address": "0x72cc82900823c29310985decdd607a68f9bc8418",
-          "ens": "chaps.eth",
           "airport_count": 3
         },
         {
@@ -716,7 +716,7 @@
         }
       ],
       "member_count": 27,
-      "total_claims": 69,
+      "total_claims": 70,
       "unique_airports": 37,
       "airports": [
         "AEP",
@@ -1890,7 +1890,7 @@
         {
           "address": "0x72cc82900823c29310985decdd607a68f9bc8418",
           "ens": "chaps.eth",
-          "airport_count": 3
+          "airport_count": 4
         },
         {
           "address": "0x5de80314ddb070e44f8b806db6f6b789ea283095",
@@ -1919,10 +1919,11 @@
         }
       ],
       "member_count": 6,
-      "total_claims": 8,
-      "unique_airports": 3,
+      "total_claims": 9,
+      "unique_airports": 4,
       "airports": [
         "CDG",
+        "FCO",
         "LHR",
         "MEX"
       ]
@@ -2513,6 +2514,11 @@
           "airport_count": 4
         },
         {
+          "address": "0x72cc82900823c29310985decdd607a68f9bc8418",
+          "ens": "chaps.eth",
+          "airport_count": 4
+        },
+        {
           "address": "0xa42278025aa3dd3db54e99a242bc6d2c7c7890a1",
           "ens": "btorralba.eth",
           "airport_count": 4
@@ -2545,11 +2551,6 @@
         {
           "address": "0x599abe13e88f1045e3aefe02a07f7bafc0c76b76",
           "ens": "shufro.eth",
-          "airport_count": 3
-        },
-        {
-          "address": "0x72cc82900823c29310985decdd607a68f9bc8418",
-          "ens": "chaps.eth",
           "airport_count": 3
         },
         {
@@ -2744,7 +2745,7 @@
         }
       ],
       "member_count": 52,
-      "total_claims": 121,
+      "total_claims": 122,
       "unique_airports": 49,
       "airports": [
         "AEP",
@@ -3360,7 +3361,7 @@
       "name": "Started: January 2026",
       "type": "month_started",
       "member_count": 52,
-      "total_claims": 121,
+      "total_claims": 122,
       "unique_airports": 49
     },
     {
@@ -3392,7 +3393,7 @@
       "name": "ETHDenver 2025",
       "type": "poap_holders",
       "member_count": 27,
-      "total_claims": 69,
+      "total_claims": 70,
       "unique_airports": 37
     },
     {
@@ -3500,20 +3501,20 @@
       "unique_airports": 7
     },
     {
+      "id": "home-mex",
+      "name": "Home: MEX",
+      "type": "first_airport",
+      "member_count": 6,
+      "total_claims": 9,
+      "unique_airports": 4
+    },
+    {
       "id": "home-mde",
       "name": "Home: MDE",
       "type": "first_airport",
       "member_count": 4,
       "total_claims": 8,
       "unique_airports": 4
-    },
-    {
-      "id": "home-mex",
-      "name": "Home: MEX",
-      "type": "first_airport",
-      "member_count": 6,
-      "total_claims": 8,
-      "unique_airports": 3
     },
     {
       "id": "home-ord",

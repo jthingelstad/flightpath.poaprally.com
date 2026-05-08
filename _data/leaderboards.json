@@ -159,6 +159,18 @@
       "avatar_url": ""
     },
     {
+      "address": "0x72cc82900823c29310985decdd607a68f9bc8418",
+      "ens": "chaps.eth",
+      "airport_count": 4,
+      "airports": [
+        "CDG",
+        "FCO",
+        "LHR",
+        "MEX"
+      ],
+      "avatar_url": "/img/avatars/0x72cc82900823c29310985decdd607a68f9bc8418.png"
+    },
+    {
       "address": "0x7d76020b5519176a2366d1b0b3b3ab2f9fe1d553",
       "ens": "liszy.eth",
       "airport_count": 4,
@@ -338,17 +350,6 @@
         "SYD"
       ],
       "avatar_url": "/img/avatars/0x6f0e489bf330bbda917d23bdc1f584b49f42322d.png"
-    },
-    {
-      "address": "0x72cc82900823c29310985decdd607a68f9bc8418",
-      "ens": "chaps.eth",
-      "airport_count": 3,
-      "airports": [
-        "CDG",
-        "LHR",
-        "MEX"
-      ],
-      "avatar_url": "/img/avatars/0x72cc82900823c29310985decdd607a68f9bc8418.png"
     },
     {
       "address": "0x896c20da40c2a4df9b7c98b16a8d5a95129161a5",
@@ -1558,6 +1559,13 @@
       "claims": 4
     },
     {
+      "code": "FCO",
+      "name": "Leonardo Da Vinci (Fiumicino) International Airport",
+      "city": "Rome",
+      "continent": "Europe",
+      "claims": 4
+    },
+    {
       "code": "NRT",
       "name": "Narita International Airport",
       "city": "Tokyo",
@@ -1624,13 +1632,6 @@
       "code": "BER",
       "name": "Berlin Brandenburg Airport",
       "city": "Berlin",
-      "continent": "Europe",
-      "claims": 3
-    },
-    {
-      "code": "FCO",
-      "name": "Leonardo Da Vinci (Fiumicino) International Airport",
-      "city": "Rome",
       "continent": "Europe",
       "claims": 3
     },
@@ -2140,7 +2141,7 @@
     },
     {
       "continent": "Europe",
-      "claims": 85,
+      "claims": 86,
       "airport_count": 20
     },
     {
