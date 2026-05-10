@@ -1612,7 +1612,7 @@
         {
           "address": "0x82345d3c717710a29674665df4a5325c1b0b4a28",
           "ens": "artpilot.eth",
-          "airport_count": 5
+          "airport_count": 6
         },
         {
           "address": "0xbd6f210a624a792e7d30a2f7591dc7abce2f3c48",
@@ -1621,10 +1621,11 @@
         }
       ],
       "member_count": 2,
-      "total_claims": 6,
-      "unique_airports": 5,
+      "total_claims": 7,
+      "unique_airports": 6,
       "airports": [
         "DFW",
+        "FRA",
         "HKG",
         "ORD",
         "SIN",
@@ -2494,13 +2495,13 @@
           "airport_count": 6
         },
         {
-          "address": "0x4fd6b3204a6ab48978018b25821682f090840333",
-          "ens": "cryptochica.eth",
-          "airport_count": 5
-        },
-        {
           "address": "0x82345d3c717710a29674665df4a5325c1b0b4a28",
           "ens": "artpilot.eth",
+          "airport_count": 6
+        },
+        {
+          "address": "0x4fd6b3204a6ab48978018b25821682f090840333",
+          "ens": "cryptochica.eth",
           "airport_count": 5
         },
         {
@@ -2745,7 +2746,7 @@
         }
       ],
       "member_count": 52,
-      "total_claims": 122,
+      "total_claims": 123,
       "unique_airports": 49,
       "airports": [
         "AEP",
@@ -3361,7 +3362,7 @@
       "name": "Started: January 2026",
       "type": "month_started",
       "member_count": 52,
-      "total_claims": 122,
+      "total_claims": 123,
       "unique_airports": 49
     },
     {
@@ -3533,6 +3534,14 @@
       "unique_airports": 6
     },
     {
+      "id": "home-hkg",
+      "name": "Home: HKG",
+      "type": "first_airport",
+      "member_count": 2,
+      "total_claims": 7,
+      "unique_airports": 6
+    },
+    {
       "id": "home-zrh",
       "name": "Home: ZRH",
       "type": "first_airport",
@@ -3555,14 +3564,6 @@
       "member_count": 4,
       "total_claims": 6,
       "unique_airports": 3
-    },
-    {
-      "id": "home-hkg",
-      "name": "Home: HKG",
-      "type": "first_airport",
-      "member_count": 2,
-      "total_claims": 6,
-      "unique_airports": 5
     },
     {
       "id": "home-ist",

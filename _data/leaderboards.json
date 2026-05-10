@@ -95,6 +95,20 @@
       "avatar_url": ""
     },
     {
+      "address": "0x82345d3c717710a29674665df4a5325c1b0b4a28",
+      "ens": "artpilot.eth",
+      "airport_count": 6,
+      "airports": [
+        "DFW",
+        "FRA",
+        "HKG",
+        "ORD",
+        "SIN",
+        "TPE"
+      ],
+      "avatar_url": ""
+    },
+    {
       "address": "0x111accebf9d70d9c06de2d38f9392522e82ecf29",
       "ens": "poap.thingelstad.eth",
       "airport_count": 5,
@@ -119,19 +133,6 @@
         "NCE"
       ],
       "avatar_url": "/img/avatars/0x4fd6b3204a6ab48978018b25821682f090840333.png"
-    },
-    {
-      "address": "0x82345d3c717710a29674665df4a5325c1b0b4a28",
-      "ens": "artpilot.eth",
-      "airport_count": 5,
-      "airports": [
-        "DFW",
-        "HKG",
-        "ORD",
-        "SIN",
-        "TPE"
-      ],
-      "avatar_url": ""
     },
     {
       "address": "0x895c5a67168ab29d5e8e96a55f933ad7c948c612",
@@ -1405,16 +1406,16 @@
       "claims": 9
     },
     {
-      "code": "BCN",
-      "name": "Barcelona International Airport",
-      "city": "Barcelona",
-      "continent": "Europe",
-      "claims": 8
-    },
-    {
       "code": "FRA",
       "name": "Frankfurt am Main International Airport",
       "city": "Frankfurt am Main",
+      "continent": "Europe",
+      "claims": 9
+    },
+    {
+      "code": "BCN",
+      "name": "Barcelona International Airport",
+      "city": "Barcelona",
       "continent": "Europe",
       "claims": 8
     },
@@ -2141,7 +2142,7 @@
     },
     {
       "continent": "Europe",
-      "claims": 86,
+      "claims": 87,
       "airport_count": 20
     },
     {
