@@ -1024,7 +1024,7 @@
     "country": "MX",
     "name": "Licenciado Benito Juarez International Airport",
     "image_url": "/img/poaps/mex.png",
-    "claims": 7
+    "claims": 8
   },
   {
     "event_id": 216416,
@@ -1037,7 +1037,7 @@
     "country": "CZ",
     "name": "V\u00e1clav Havel Airport",
     "image_url": "/img/poaps/prg.png",
-    "claims": 4
+    "claims": 5
   },
   {
     "event_id": 216424,
