@@ -504,7 +504,7 @@
     "country": "US",
     "name": "George Bush Intcntl/Houston Airport",
     "image_url": "/img/poaps/iah.png",
-    "claims": 2
+    "claims": 4
   },
   {
     "event_id": 214870,
@@ -1102,7 +1102,7 @@
     "country": "MX",
     "name": "Puerto Escondido International Airport",
     "image_url": "/img/poaps/pxm.png",
-    "claims": 0
+    "claims": 1
   },
   {
     "event_id": 216423,

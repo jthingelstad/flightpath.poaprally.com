@@ -38,6 +38,21 @@
       "avatar_url": "/img/avatars/0x8f51dc0791cddddce08052fff939eb7cf0c17856.png"
     },
     {
+      "address": "0x03f11c7a45ba8219c87f312eecb07287c2095302",
+      "ens": "0xtangle.eth",
+      "airport_count": 7,
+      "airports": [
+        "DEN",
+        "HND",
+        "IAH",
+        "ICN",
+        "LAS",
+        "NRT",
+        "YVR"
+      ],
+      "avatar_url": "/img/avatars/0x03f11c7a45ba8219c87f312eecb07287c2095302.png"
+    },
+    {
       "address": "0x4124cf34f56fa151e05c91ace550ada0dd5aabd7",
       "ens": "isabel.eth",
       "airport_count": 7,
@@ -51,20 +66,6 @@
         "ORD"
       ],
       "avatar_url": ""
-    },
-    {
-      "address": "0x03f11c7a45ba8219c87f312eecb07287c2095302",
-      "ens": "0xtangle.eth",
-      "airport_count": 6,
-      "airports": [
-        "DEN",
-        "HND",
-        "ICN",
-        "LAS",
-        "NRT",
-        "YVR"
-      ],
-      "avatar_url": "/img/avatars/0x03f11c7a45ba8219c87f312eecb07287c2095302.png"
     },
     {
       "address": "0x708ac82707b1b8ddcc0bb8c50c75c38e786cbece",
@@ -818,6 +819,15 @@
       "avatar_url": ""
     },
     {
+      "address": "0x04bef5bf293bb01d4946dbcfaaec9a5140316217",
+      "ens": "criptounam.eth",
+      "airport_count": 1,
+      "airports": [
+        "PXM"
+      ],
+      "avatar_url": "/img/avatars/0x04bef5bf293bb01d4946dbcfaaec9a5140316217.png"
+    },
+    {
       "address": "0x04c0cd38b8c203b14ef2b7b8d736d69b938aff71",
       "ens": "nixorokish.eth",
       "airport_count": 1,
@@ -1340,6 +1350,15 @@
       "avatar_url": ""
     },
     {
+      "address": "0xc965d46b04eaea6fe7f31a4f88bb7398a30241e5",
+      "ens": "\u00e9llie.eth",
+      "airport_count": 1,
+      "airports": [
+        "IAH"
+      ],
+      "avatar_url": ""
+    },
+    {
       "address": "0xf3e0e1cfa49a2e202b5c4a9e940ea3603cfb3dbf",
       "ens": "",
       "airport_count": 1,
@@ -1592,6 +1611,13 @@
       "claims": 4
     },
     {
+      "code": "IAH",
+      "name": "George Bush Intcntl/Houston Airport",
+      "city": "Houston",
+      "continent": "North America",
+      "claims": 4
+    },
+    {
       "code": "NRT",
       "name": "Narita International Airport",
       "city": "Tokyo",
@@ -1701,13 +1727,6 @@
       "name": "Guarulhos - Governador Andre Franco Montoro International Airport",
       "city": "Sao Paulo",
       "continent": "South America",
-      "claims": 2
-    },
-    {
-      "code": "IAH",
-      "name": "George Bush Intcntl/Houston Airport",
-      "city": "Houston",
-      "continent": "North America",
       "claims": 2
     },
     {
@@ -1869,6 +1888,13 @@
       "name": "Navi Mumbai International Airport",
       "city": "Navi Mumbai",
       "continent": "Asia",
+      "claims": 1
+    },
+    {
+      "code": "PXM",
+      "name": "Puerto Escondido International Airport",
+      "city": "Puerto Escondido",
+      "continent": "North America",
       "claims": 1
     },
     {
@@ -2103,13 +2129,6 @@
       "claims": 0
     },
     {
-      "code": "PXM",
-      "name": "Puerto Escondido International Airport",
-      "city": "Puerto Escondido",
-      "continent": "North America",
-      "claims": 0
-    },
-    {
       "code": "SDU",
       "name": "Santos Dumont Airport",
       "city": "Rio De Janeiro",
@@ -2155,8 +2174,8 @@
   "regions": [
     {
       "continent": "North America",
-      "claims": 113,
-      "airport_count": 24
+      "claims": 116,
+      "airport_count": 25
     },
     {
       "continent": "Europe",
