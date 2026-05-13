@@ -140,7 +140,7 @@
     "country": "CH",
     "name": "Zurich Airport",
     "image_url": "/img/poaps/zrh.png",
-    "claims": 4
+    "claims": 5
   },
   {
     "event_id": 214921,
@@ -1011,7 +1011,7 @@
     "country": "RO",
     "name": "Cluj-Napoca International Airport",
     "image_url": "/img/poaps/clj.png",
-    "claims": 1
+    "claims": 2
   },
   {
     "event_id": 214925,

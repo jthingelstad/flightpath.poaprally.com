@@ -116,7 +116,7 @@
         {
           "address": "0x8f51dc0791cddddce08052fff939eb7cf0c17856",
           "ens": "personal.0xj4an.eth",
-          "airport_count": 8
+          "airport_count": 10
         },
         {
           "address": "0x03f11c7a45ba8219c87f312eecb07287c2095302",
@@ -265,14 +265,15 @@
         }
       ],
       "member_count": 31,
-      "total_claims": 85,
-      "unique_airports": 40,
+      "total_claims": 87,
+      "unique_airports": 41,
       "airports": [
         "AEP",
         "ATH",
         "ATL",
         "AUS",
         "CDG",
+        "CLJ",
         "CUN",
         "DEN",
         "DFW",
@@ -354,7 +355,7 @@
         {
           "address": "0x8f51dc0791cddddce08052fff939eb7cf0c17856",
           "ens": "personal.0xj4an.eth",
-          "airport_count": 8
+          "airport_count": 10
         },
         {
           "address": "0x03f11c7a45ba8219c87f312eecb07287c2095302",
@@ -523,8 +524,8 @@
         }
       ],
       "member_count": 34,
-      "total_claims": 83,
-      "unique_airports": 45,
+      "total_claims": 85,
+      "unique_airports": 46,
       "airports": [
         "AEP",
         "AMS",
@@ -537,6 +538,7 @@
         "BOS",
         "CDG",
         "CGH",
+        "CLJ",
         "CTG",
         "CUN",
         "DEN",
@@ -1279,7 +1281,7 @@
         {
           "address": "0x8f51dc0791cddddce08052fff939eb7cf0c17856",
           "ens": "personal.0xj4an.eth",
-          "airport_count": 8
+          "airport_count": 10
         },
         {
           "address": "0x14fc0be8e90ab768226cccf952506ce00bde5029",
@@ -1353,11 +1355,12 @@
         }
       ],
       "member_count": 15,
-      "total_claims": 27,
-      "unique_airports": 12,
+      "total_claims": 29,
+      "unique_airports": 14,
       "airports": [
         "ATL",
         "CDG",
+        "CLJ",
         "DEN",
         "FRA",
         "IAD",
@@ -1367,7 +1370,8 @@
         "PRG",
         "PTY",
         "SFO",
-        "WAW"
+        "WAW",
+        "ZRH"
       ]
     },
     {
@@ -2855,7 +2859,7 @@
         {
           "address": "0x8f51dc0791cddddce08052fff939eb7cf0c17856",
           "ens": "personal.0xj4an.eth",
-          "airport_count": 8
+          "airport_count": 10
         },
         {
           "address": "0x03f11c7a45ba8219c87f312eecb07287c2095302",
@@ -3079,7 +3083,7 @@
         }
       ],
       "member_count": 46,
-      "total_claims": 110,
+      "total_claims": 112,
       "unique_airports": 54,
       "airports": [
         "ADD",
@@ -3435,7 +3439,7 @@
       "name": "Started: February 2026",
       "type": "month_started",
       "member_count": 46,
-      "total_claims": 110,
+      "total_claims": 112,
       "unique_airports": 54
     },
     {
@@ -3443,16 +3447,16 @@
       "name": "ETHDenver 2026",
       "type": "poap_holders",
       "member_count": 31,
-      "total_claims": 85,
-      "unique_airports": 40
+      "total_claims": 87,
+      "unique_airports": 41
     },
     {
       "id": "poap-we-ve-met-patricio",
       "name": "We've Met Patricio",
       "type": "poap_holders",
       "member_count": 34,
-      "total_claims": 83,
-      "unique_airports": 45
+      "total_claims": 85,
+      "unique_airports": 46
     },
     {
       "id": "poap-ethdenver-2025",
@@ -3483,8 +3487,8 @@
       "name": "Home: DEN",
       "type": "first_airport",
       "member_count": 15,
-      "total_claims": 27,
-      "unique_airports": 12
+      "total_claims": 29,
+      "unique_airports": 14
     },
     {
       "id": "home-eze",

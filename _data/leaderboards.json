@@ -24,16 +24,18 @@
     {
       "address": "0x8f51dc0791cddddce08052fff939eb7cf0c17856",
       "ens": "personal.0xj4an.eth",
-      "airport_count": 8,
+      "airport_count": 10,
       "airports": [
         "ATL",
+        "CLJ",
         "DEN",
         "IAD",
         "IST",
         "MDE",
         "PRG",
         "PTY",
-        "SFO"
+        "SFO",
+        "ZRH"
       ],
       "avatar_url": "/img/avatars/0x8f51dc0791cddddce08052fff939eb7cf0c17856.png"
     },
@@ -536,7 +538,7 @@
         "BOM",
         "NCE"
       ],
-      "avatar_url": ""
+      "avatar_url": "/img/avatars/0x0040daac32d83c78546ae36da42a496b28ab09e1.png"
     },
     {
       "address": "0x0779da4f7aa9b6db7948162c482d80c2f4975399",
@@ -1590,6 +1592,13 @@
       "claims": 5
     },
     {
+      "code": "ZRH",
+      "name": "Zurich Airport",
+      "city": "Zurich",
+      "continent": "Europe",
+      "claims": 5
+    },
+    {
       "code": "DXB",
       "name": "Dubai International Airport",
       "city": "Dubai",
@@ -1660,13 +1669,6 @@
       "claims": 4
     },
     {
-      "code": "ZRH",
-      "name": "Zurich Airport",
-      "city": "Zurich",
-      "continent": "Europe",
-      "claims": 4
-    },
-    {
       "code": "AUS",
       "name": "Austin-Bergstrom International Airport",
       "city": "Austin",
@@ -1720,6 +1722,13 @@
       "name": "Congonhas Airport",
       "city": "Sao Paulo",
       "continent": "South America",
+      "claims": 2
+    },
+    {
+      "code": "CLJ",
+      "name": "Cluj-Napoca International Airport",
+      "city": "Cluj-Napoca",
+      "continent": "Europe",
       "claims": 2
     },
     {
@@ -1839,13 +1848,6 @@
       "name": "Bengaluru International Airport",
       "city": "Bangalore",
       "continent": "Asia",
-      "claims": 1
-    },
-    {
-      "code": "CLJ",
-      "name": "Cluj-Napoca International Airport",
-      "city": "Cluj-Napoca",
-      "continent": "Europe",
       "claims": 1
     },
     {
@@ -2179,7 +2181,7 @@
     },
     {
       "continent": "Europe",
-      "claims": 88,
+      "claims": 90,
       "airport_count": 20
     },
     {
