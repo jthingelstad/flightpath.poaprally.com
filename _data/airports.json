@@ -10,7 +10,7 @@
     "country": "US",
     "name": "Minneapolis-St Paul International/Wold-Chamberlain Airport",
     "image_url": "/img/poaps/msp.png",
-    "claims": 7
+    "claims": 8
   },
   {
     "event_id": 214919,
@@ -75,7 +75,7 @@
     "country": "PL",
     "name": "Warsaw Chopin Airport",
     "image_url": "/img/poaps/waw.png",
-    "claims": 2
+    "claims": 3
   },
   {
     "event_id": 222336,
@@ -1011,7 +1011,7 @@
     "country": "RO",
     "name": "Cluj-Napoca International Airport",
     "image_url": "/img/poaps/clj.png",
-    "claims": 2
+    "claims": 3
   },
   {
     "event_id": 214925,
