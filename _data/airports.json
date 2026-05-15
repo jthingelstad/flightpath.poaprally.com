@@ -153,7 +153,7 @@
     "country": "AR",
     "name": "Jorge Newbery Airpark",
     "image_url": "/img/poaps/aep.png",
-    "claims": 9
+    "claims": 10
   },
   {
     "event_id": 214935,
@@ -478,7 +478,7 @@
     "country": "ES",
     "name": "Madrid Barajas International Airport",
     "image_url": "/img/poaps/mad.png",
-    "claims": 2
+    "claims": 3
   },
   {
     "event_id": 214880,
@@ -816,7 +816,7 @@
     "country": "US",
     "name": "John F Kennedy International Airport",
     "image_url": "/img/poaps/jfk.png",
-    "claims": 5
+    "claims": 6
   },
   {
     "event_id": 214904,
