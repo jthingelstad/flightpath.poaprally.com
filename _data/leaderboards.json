@@ -214,6 +214,18 @@
       "avatar_url": "/img/avatars/0x7d76020b5519176a2366d1b0b3b3ab2f9fe1d553.png"
     },
     {
+      "address": "0x9cab0bd57e308daff28011d6c6d9b45867afe33e",
+      "ens": "0xahmet.eth",
+      "airport_count": 4,
+      "airports": [
+        "BKK",
+        "IST",
+        "SGN",
+        "SOF"
+      ],
+      "avatar_url": "/img/avatars/0x9cab0bd57e308daff28011d6c6d9b45867afe33e.png"
+    },
+    {
       "address": "0xa42278025aa3dd3db54e99a242bc6d2c7c7890a1",
       "ens": "btorralba.eth",
       "airport_count": 4,
@@ -391,17 +403,6 @@
         "SCL"
       ],
       "avatar_url": "/img/avatars/0x914a7f893c3f7a7c0067fad1312c1bd630009159.png"
-    },
-    {
-      "address": "0x9cab0bd57e308daff28011d6c6d9b45867afe33e",
-      "ens": "0xahmet.eth",
-      "airport_count": 3,
-      "airports": [
-        "BKK",
-        "IST",
-        "SGN"
-      ],
-      "avatar_url": "/img/avatars/0x9cab0bd57e308daff28011d6c6d9b45867afe33e.png"
     },
     {
       "address": "0x9ecc835b3487d3cd8b1fa03b251ee51e1ac10859",
@@ -764,6 +765,16 @@
         "TBS"
       ],
       "avatar_url": ""
+    },
+    {
+      "address": "0xd71fac9368ac952f8b4cc0c090351d723b453dfd",
+      "ens": "dotrego.eth",
+      "airport_count": 2,
+      "airports": [
+        "AMS",
+        "PRG"
+      ],
+      "avatar_url": "/img/avatars/0xd71fac9368ac952f8b4cc0c090351d723b453dfd.png"
     },
     {
       "address": "0xd84bb42b831aeae73e97346714b663ef8d694b64",
@@ -1494,6 +1505,13 @@
       "claims": 8
     },
     {
+      "code": "AMS",
+      "name": "Amsterdam Airport Schiphol",
+      "city": "Amsterdam",
+      "continent": "Europe",
+      "claims": 7
+    },
+    {
       "code": "BOG",
       "name": "El Dorado International Airport",
       "city": "Bogota",
@@ -1513,13 +1531,6 @@
       "city": "San Francisco",
       "continent": "North America",
       "claims": 7
-    },
-    {
-      "code": "AMS",
-      "name": "Amsterdam Airport Schiphol",
-      "city": "Amsterdam",
-      "continent": "Europe",
-      "claims": 6
     },
     {
       "code": "CDG",
@@ -1546,6 +1557,13 @@
       "code": "LHR",
       "name": "London Heathrow Airport",
       "city": "London",
+      "continent": "Europe",
+      "claims": 6
+    },
+    {
+      "code": "PRG",
+      "name": "V\u00e1clav Havel Airport",
+      "city": "Prague",
       "continent": "Europe",
       "claims": 6
     },
@@ -1596,13 +1614,6 @@
       "name": "Ninoy Aquino International Airport",
       "city": "Manila",
       "continent": "Asia",
-      "claims": 5
-    },
-    {
-      "code": "PRG",
-      "name": "V\u00e1clav Havel Airport",
-      "city": "Prague",
-      "continent": "Europe",
       "claims": 5
     },
     {
@@ -1816,6 +1827,13 @@
       "claims": 2
     },
     {
+      "code": "SOF",
+      "name": "Sofia Airport",
+      "city": "Sofia",
+      "continent": "Europe",
+      "claims": 2
+    },
+    {
       "code": "TBS",
       "name": "Tbilisi International Airport",
       "city": "Tbilisi",
@@ -1918,13 +1936,6 @@
       "name": "Tan Son Nhat International Airport",
       "city": "Ho Chi Minh City",
       "continent": "Asia",
-      "claims": 1
-    },
-    {
-      "code": "SOF",
-      "name": "Sofia Airport",
-      "city": "Sofia",
-      "continent": "Europe",
       "claims": 1
     },
     {
@@ -2195,7 +2206,7 @@
     },
     {
       "continent": "Europe",
-      "claims": 93,
+      "claims": 96,
       "airport_count": 20
     },
     {
