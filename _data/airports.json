@@ -114,7 +114,7 @@
     "country": "CO",
     "name": "El Dorado International Airport",
     "image_url": "/img/poaps/bog.png",
-    "claims": 7
+    "claims": 8
   },
   {
     "event_id": 216408,
@@ -504,7 +504,7 @@
     "country": "US",
     "name": "George Bush Intcntl/Houston Airport",
     "image_url": "/img/poaps/iah.png",
-    "claims": 4
+    "claims": 5
   },
   {
     "event_id": 214870,
@@ -634,7 +634,7 @@
     "country": "FR",
     "name": "Nice-Cote d'Azur Airport",
     "image_url": "/img/poaps/nce.png",
-    "claims": 15
+    "claims": 16
   },
   {
     "event_id": 214876,
