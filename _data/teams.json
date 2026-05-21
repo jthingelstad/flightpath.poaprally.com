@@ -2316,7 +2316,7 @@
         {
           "address": "0x6210477b3025bf5ea50a35d39e7d2875dc11661c",
           "ens": "noah.savedsouls.eth",
-          "airport_count": 4
+          "airport_count": 5
         },
         {
           "address": "0x4c5f4f9df7968b0db448526162114a04f3462bad",
@@ -2325,12 +2325,13 @@
         }
       ],
       "member_count": 2,
-      "total_claims": 6,
-      "unique_airports": 5,
+      "total_claims": 7,
+      "unique_airports": 6,
       "airports": [
         "CDG",
         "DEN",
         "MSP",
+        "ORD",
         "SAN",
         "SFO"
       ]
@@ -3362,7 +3363,7 @@
         {
           "address": "0x6210477b3025bf5ea50a35d39e7d2875dc11661c",
           "ens": "noah.savedsouls.eth",
-          "airport_count": 4
+          "airport_count": 5
         },
         {
           "address": "0xfea34bb94426991791c02ca77567a8863c071b6f",
@@ -3401,8 +3402,8 @@
         }
       ],
       "member_count": 8,
-      "total_claims": 12,
-      "unique_airports": 8,
+      "total_claims": 13,
+      "unique_airports": 9,
       "airports": [
         "CDG",
         "CUN",
@@ -3410,6 +3411,7 @@
         "MEX",
         "MSP",
         "NCE",
+        "ORD",
         "SAN",
         "SFO"
       ]
@@ -3608,8 +3610,8 @@
       "name": "Started: April 2026",
       "type": "month_started",
       "member_count": 8,
-      "total_claims": 12,
-      "unique_airports": 8
+      "total_claims": 13,
+      "unique_airports": 9
     },
     {
       "id": "month-2026-05",
@@ -3692,6 +3694,14 @@
       "unique_airports": 7
     },
     {
+      "id": "home-san",
+      "name": "Home: SAN",
+      "type": "first_airport",
+      "member_count": 2,
+      "total_claims": 7,
+      "unique_airports": 6
+    },
+    {
       "id": "home-zrh",
       "name": "Home: ZRH",
       "type": "first_airport",
@@ -3730,14 +3740,6 @@
       "member_count": 4,
       "total_claims": 6,
       "unique_airports": 3
-    },
-    {
-      "id": "home-san",
-      "name": "Home: SAN",
-      "type": "first_airport",
-      "member_count": 2,
-      "total_claims": 6,
-      "unique_airports": 5
     },
     {
       "id": "home-gru",

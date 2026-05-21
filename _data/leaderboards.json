@@ -142,6 +142,19 @@
       "avatar_url": "/img/avatars/0x4fd6b3204a6ab48978018b25821682f090840333.png"
     },
     {
+      "address": "0x6210477b3025bf5ea50a35d39e7d2875dc11661c",
+      "ens": "noah.savedsouls.eth",
+      "airport_count": 5,
+      "airports": [
+        "CDG",
+        "MSP",
+        "ORD",
+        "SAN",
+        "SFO"
+      ],
+      "avatar_url": ""
+    },
+    {
       "address": "0x895c5a67168ab29d5e8e96a55f933ad7c948c612",
       "ens": "simone.dev",
       "airport_count": 5,
@@ -166,18 +179,6 @@
         "NCE"
       ],
       "avatar_url": "/img/avatars/0xbd19a3f0a9cace18513a1e2863d648d13975cb30.png"
-    },
-    {
-      "address": "0x6210477b3025bf5ea50a35d39e7d2875dc11661c",
-      "ens": "noah.savedsouls.eth",
-      "airport_count": 4,
-      "airports": [
-        "CDG",
-        "MSP",
-        "SAN",
-        "SFO"
-      ],
-      "avatar_url": ""
     },
     {
       "address": "0x664936a6aa22170221495f14450b891e7267ad0c",
@@ -1488,6 +1489,13 @@
       "claims": 9
     },
     {
+      "code": "ORD",
+      "name": "Chicago O'Hare International Airport",
+      "city": "Chicago",
+      "continent": "North America",
+      "claims": 9
+    },
+    {
       "code": "BCN",
       "name": "Barcelona International Airport",
       "city": "Barcelona",
@@ -1512,13 +1520,6 @@
       "code": "MSP",
       "name": "Minneapolis-St Paul International/Wold-Chamberlain Airport",
       "city": "Minneapolis",
-      "continent": "North America",
-      "claims": 8
-    },
-    {
-      "code": "ORD",
-      "name": "Chicago O'Hare International Airport",
-      "city": "Chicago",
       "continent": "North America",
       "claims": 8
     },
@@ -2212,7 +2213,7 @@
   "regions": [
     {
       "continent": "North America",
-      "claims": 119,
+      "claims": 120,
       "airport_count": 25
     },
     {
