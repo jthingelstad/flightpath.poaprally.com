@@ -600,6 +600,16 @@
       "avatar_url": "/img/avatars/0x20309eb9080288e31ab1161366af6639f04d593e.png"
     },
     {
+      "address": "0x3a71104cd980a2cc7dda67dec446c097362ba454",
+      "ens": "driade1.eth",
+      "airport_count": 2,
+      "airports": [
+        "MEX",
+        "PXM"
+      ],
+      "avatar_url": ""
+    },
+    {
       "address": "0x3ab1530d7fd660262d25d53c8dd7f60b5a880181",
       "ens": "seabiscuit747.eth",
       "airport_count": 2,
@@ -980,15 +990,6 @@
       "airport_count": 1,
       "airports": [
         "AEP"
-      ],
-      "avatar_url": ""
-    },
-    {
-      "address": "0x3a71104cd980a2cc7dda67dec446c097362ba454",
-      "ens": "driade1.eth",
-      "airport_count": 1,
-      "airports": [
-        "MEX"
       ],
       "avatar_url": ""
     },
@@ -1825,6 +1826,13 @@
       "claims": 2
     },
     {
+      "code": "PXM",
+      "name": "Puerto Escondido International Airport",
+      "city": "Puerto Escondido",
+      "continent": "North America",
+      "claims": 2
+    },
+    {
       "code": "SAN",
       "name": "San Diego International Airport",
       "city": "San Diego",
@@ -1934,13 +1942,6 @@
       "name": "Navi Mumbai International Airport",
       "city": "Navi Mumbai",
       "continent": "Asia",
-      "claims": 1
-    },
-    {
-      "code": "PXM",
-      "name": "Puerto Escondido International Airport",
-      "city": "Puerto Escondido",
-      "continent": "North America",
       "claims": 1
     },
     {
@@ -2213,7 +2214,7 @@
   "regions": [
     {
       "continent": "North America",
-      "claims": 120,
+      "claims": 121,
       "airport_count": 25
     },
     {

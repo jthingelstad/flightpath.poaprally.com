@@ -1933,7 +1933,7 @@
         {
           "address": "0x3a71104cd980a2cc7dda67dec446c097362ba454",
           "ens": "driade1.eth",
-          "airport_count": 1
+          "airport_count": 2
         },
         {
           "address": "0x5de80314ddb070e44f8b806db6f6b789ea283095",
@@ -1962,13 +1962,14 @@
         }
       ],
       "member_count": 7,
-      "total_claims": 10,
-      "unique_airports": 4,
+      "total_claims": 11,
+      "unique_airports": 5,
       "airports": [
         "CDG",
         "FCO",
         "LHR",
-        "MEX"
+        "MEX",
+        "PXM"
       ]
     },
     {
@@ -3423,6 +3424,11 @@
       "description": "Collectors who started in May 2026",
       "members": [
         {
+          "address": "0x3a71104cd980a2cc7dda67dec446c097362ba454",
+          "ens": "driade1.eth",
+          "airport_count": 2
+        },
+        {
           "address": "0xd71fac9368ac952f8b4cc0c090351d723b453dfd",
           "ens": "dotrego.eth",
           "airport_count": 2
@@ -3435,11 +3441,6 @@
         {
           "address": "0x04bef5bf293bb01d4946dbcfaaec9a5140316217",
           "ens": "criptounam.eth",
-          "airport_count": 1
-        },
-        {
-          "address": "0x3a71104cd980a2cc7dda67dec446c097362ba454",
-          "ens": "driade1.eth",
           "airport_count": 1
         },
         {
@@ -3469,7 +3470,7 @@
         }
       ],
       "member_count": 9,
-      "total_claims": 11,
+      "total_claims": 12,
       "unique_airports": 9,
       "airports": [
         "AEP",
@@ -3618,8 +3619,16 @@
       "name": "Started: May 2026",
       "type": "month_started",
       "member_count": 9,
-      "total_claims": 11,
+      "total_claims": 12,
       "unique_airports": 9
+    },
+    {
+      "id": "home-mex",
+      "name": "Home: MEX",
+      "type": "first_airport",
+      "member_count": 7,
+      "total_claims": 11,
+      "unique_airports": 5
     },
     {
       "id": "poap-ethmumbai-2026",
@@ -3636,14 +3645,6 @@
       "member_count": 2,
       "total_claims": 10,
       "unique_airports": 8
-    },
-    {
-      "id": "home-mex",
-      "name": "Home: MEX",
-      "type": "first_airport",
-      "member_count": 7,
-      "total_claims": 10,
-      "unique_airports": 4
     },
     {
       "id": "home-hkg",
