@@ -787,6 +787,11 @@
           "airport_count": 2
         },
         {
+          "address": "0x7a2efc8d0a2fd1fbe40163171f89dd54078f6067",
+          "ens": "",
+          "airport_count": 2
+        },
+        {
           "address": "0x8d54e26c004b63f76463e1c4a29843877dc4d6b6",
           "ens": "",
           "airport_count": 2
@@ -832,11 +837,6 @@
           "airport_count": 1
         },
         {
-          "address": "0x7a2efc8d0a2fd1fbe40163171f89dd54078f6067",
-          "ens": "",
-          "airport_count": 1
-        },
-        {
           "address": "0x854fb42b81b3a998e055db7c6dbf3ebe64dd7d43",
           "ens": "",
           "airport_count": 1
@@ -863,8 +863,8 @@
         }
       ],
       "member_count": 17,
-      "total_claims": 36,
-      "unique_airports": 28,
+      "total_claims": 37,
+      "unique_airports": 29,
       "airports": [
         "AEP",
         "ATH",
@@ -884,6 +884,7 @@
         "MIA",
         "NCE",
         "PRG",
+        "PXM",
         "SFO",
         "SIN",
         "SOF",
@@ -1936,13 +1937,13 @@
           "airport_count": 2
         },
         {
-          "address": "0x5de80314ddb070e44f8b806db6f6b789ea283095",
-          "ens": "kanemsenpai.eth",
-          "airport_count": 1
-        },
-        {
           "address": "0x7a2efc8d0a2fd1fbe40163171f89dd54078f6067",
           "ens": "",
+          "airport_count": 2
+        },
+        {
+          "address": "0x5de80314ddb070e44f8b806db6f6b789ea283095",
+          "ens": "kanemsenpai.eth",
           "airport_count": 1
         },
         {
@@ -1962,7 +1963,7 @@
         }
       ],
       "member_count": 7,
-      "total_claims": 11,
+      "total_claims": 12,
       "unique_airports": 5,
       "airports": [
         "CDG",
@@ -3367,6 +3368,11 @@
           "airport_count": 5
         },
         {
+          "address": "0x7a2efc8d0a2fd1fbe40163171f89dd54078f6067",
+          "ens": "",
+          "airport_count": 2
+        },
+        {
           "address": "0xfea34bb94426991791c02ca77567a8863c071b6f",
           "ens": "",
           "airport_count": 2
@@ -3379,11 +3385,6 @@
         {
           "address": "0x5de80314ddb070e44f8b806db6f6b789ea283095",
           "ens": "kanemsenpai.eth",
-          "airport_count": 1
-        },
-        {
-          "address": "0x7a2efc8d0a2fd1fbe40163171f89dd54078f6067",
-          "ens": "",
           "airport_count": 1
         },
         {
@@ -3403,8 +3404,8 @@
         }
       ],
       "member_count": 8,
-      "total_claims": 13,
-      "unique_airports": 9,
+      "total_claims": 14,
+      "unique_airports": 10,
       "airports": [
         "CDG",
         "CUN",
@@ -3413,6 +3414,7 @@
         "MSP",
         "NCE",
         "ORD",
+        "PXM",
         "SAN",
         "SFO"
       ]
@@ -3539,8 +3541,8 @@
       "name": "Team Anon",
       "type": "anon",
       "member_count": 17,
-      "total_claims": 36,
-      "unique_airports": 28
+      "total_claims": 37,
+      "unique_airports": 29
     },
     {
       "id": "home-den",
@@ -3611,8 +3613,16 @@
       "name": "Started: April 2026",
       "type": "month_started",
       "member_count": 8,
-      "total_claims": 13,
-      "unique_airports": 9
+      "total_claims": 14,
+      "unique_airports": 10
+    },
+    {
+      "id": "home-mex",
+      "name": "Home: MEX",
+      "type": "first_airport",
+      "member_count": 7,
+      "total_claims": 12,
+      "unique_airports": 5
     },
     {
       "id": "month-2026-05",
@@ -3621,14 +3631,6 @@
       "member_count": 9,
       "total_claims": 12,
       "unique_airports": 9
-    },
-    {
-      "id": "home-mex",
-      "name": "Home: MEX",
-      "type": "first_airport",
-      "member_count": 7,
-      "total_claims": 11,
-      "unique_airports": 5
     },
     {
       "id": "poap-ethmumbai-2026",
