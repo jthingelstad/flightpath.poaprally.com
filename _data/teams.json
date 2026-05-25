@@ -1569,7 +1569,7 @@
         {
           "address": "0x708ac82707b1b8ddcc0bb8c50c75c38e786cbece",
           "ens": "achimh.eth",
-          "airport_count": 6
+          "airport_count": 7
         },
         {
           "address": "0x5ffd23b1b0350debb17a2cb668929ac5f76d0e18",
@@ -1578,9 +1578,10 @@
         }
       ],
       "member_count": 2,
-      "total_claims": 7,
-      "unique_airports": 6,
+      "total_claims": 8,
+      "unique_airports": 7,
       "airports": [
+        "EWR",
         "FRA",
         "JFK",
         "LHR",
@@ -2908,7 +2909,7 @@
         {
           "address": "0x708ac82707b1b8ddcc0bb8c50c75c38e786cbece",
           "ens": "achimh.eth",
-          "airport_count": 6
+          "airport_count": 7
         },
         {
           "address": "0x111accebf9d70d9c06de2d38f9392522e82ecf29",
@@ -3122,7 +3123,7 @@
         }
       ],
       "member_count": 46,
-      "total_claims": 116,
+      "total_claims": 117,
       "unique_airports": 54,
       "airports": [
         "ADD",
@@ -3501,7 +3502,7 @@
       "name": "Started: February 2026",
       "type": "month_started",
       "member_count": 46,
-      "total_claims": 116,
+      "total_claims": 117,
       "unique_airports": 54
     },
     {
@@ -3649,6 +3650,14 @@
       "unique_airports": 8
     },
     {
+      "id": "home-fra",
+      "name": "Home: FRA",
+      "type": "first_airport",
+      "member_count": 2,
+      "total_claims": 8,
+      "unique_airports": 7
+    },
+    {
       "id": "home-hkg",
       "name": "Home: HKG",
       "type": "first_airport",
@@ -3671,14 +3680,6 @@
       "member_count": 5,
       "total_claims": 8,
       "unique_airports": 4
-    },
-    {
-      "id": "home-fra",
-      "name": "Home: FRA",
-      "type": "first_airport",
-      "member_count": 2,
-      "total_claims": 7,
-      "unique_airports": 6
     },
     {
       "id": "home-ist",
