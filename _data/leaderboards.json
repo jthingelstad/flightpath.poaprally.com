@@ -3,9 +3,10 @@
     {
       "address": "0x8f37ed67014c38d5ebe794daa878b55a62e3ac76",
       "ens": "",
-      "airport_count": 15,
+      "airport_count": 16,
       "airports": [
         "ATH",
+        "BNE",
         "CDG",
         "CLJ",
         "DEN",
@@ -1905,6 +1906,13 @@
       "claims": 1
     },
     {
+      "code": "BNE",
+      "name": "Brisbane International Airport",
+      "city": "Brisbane",
+      "continent": "Oceania",
+      "claims": 1
+    },
+    {
       "code": "GIG",
       "name": "Galeao - Antonio Carlos Jobim International Airport",
       "city": "Rio De Janeiro",
@@ -1979,13 +1987,6 @@
       "name": "Antalya International Airport",
       "city": "Antalya",
       "continent": "Europe",
-      "claims": 0
-    },
-    {
-      "code": "BNE",
-      "name": "Brisbane International Airport",
-      "city": "Brisbane",
-      "continent": "Oceania",
       "claims": 0
     },
     {
@@ -2236,8 +2237,8 @@
     },
     {
       "continent": "Oceania",
-      "claims": 2,
-      "airport_count": 2
+      "claims": 3,
+      "airport_count": 3
     },
     {
       "continent": "Africa",

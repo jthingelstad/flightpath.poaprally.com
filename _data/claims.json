@@ -2542,5 +2542,13 @@
     "event_id": 214937,
     "created": "2026-05-24 21:29:50",
     "token_id": ""
+  },
+  {
+    "address": "0x8f37ed67014c38d5ebe794daa878b55a62e3ac76",
+    "ens": "",
+    "airport": "BNE",
+    "event_id": 216414,
+    "created": "2026-05-26 20:15:10",
+    "token_id": ""
   }
 ]

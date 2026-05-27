@@ -117,7 +117,7 @@
         {
           "address": "0x8f37ed67014c38d5ebe794daa878b55a62e3ac76",
           "ens": "",
-          "airport_count": 15
+          "airport_count": 16
         },
         {
           "address": "0x8f51dc0791cddddce08052fff939eb7cf0c17856",
@@ -271,13 +271,14 @@
         }
       ],
       "member_count": 31,
-      "total_claims": 90,
-      "unique_airports": 42,
+      "total_claims": 91,
+      "unique_airports": 43,
       "airports": [
         "AEP",
         "ATH",
         "ATL",
         "AUS",
+        "BNE",
         "BOG",
         "CDG",
         "CLJ",
@@ -593,7 +594,7 @@
         {
           "address": "0x8f37ed67014c38d5ebe794daa878b55a62e3ac76",
           "ens": "",
-          "airport_count": 15
+          "airport_count": 16
         },
         {
           "address": "0x03f11c7a45ba8219c87f312eecb07287c2095302",
@@ -727,13 +728,14 @@
         }
       ],
       "member_count": 27,
-      "total_claims": 73,
-      "unique_airports": 38,
+      "total_claims": 74,
+      "unique_airports": 39,
       "airports": [
         "AEP",
         "AMS",
         "ATH",
         "AUS",
+        "BNE",
         "CDG",
         "CLJ",
         "CUN",
@@ -779,7 +781,7 @@
         {
           "address": "0x8f37ed67014c38d5ebe794daa878b55a62e3ac76",
           "ens": "",
-          "airport_count": 15
+          "airport_count": 16
         },
         {
           "address": "0x647786b54298ca888eccb5e3d16de5979e77b98b",
@@ -863,13 +865,14 @@
         }
       ],
       "member_count": 17,
-      "total_claims": 37,
-      "unique_airports": 29,
+      "total_claims": 38,
+      "unique_airports": 30,
       "airports": [
         "AEP",
         "ATH",
         "BEG",
         "BER",
+        "BNE",
         "CDG",
         "CLJ",
         "DEN",
@@ -2485,14 +2488,15 @@
         {
           "address": "0x8f37ed67014c38d5ebe794daa878b55a62e3ac76",
           "ens": "",
-          "airport_count": 15
+          "airport_count": 16
         }
       ],
       "member_count": 1,
-      "total_claims": 15,
-      "unique_airports": 15,
+      "total_claims": 16,
+      "unique_airports": 16,
       "airports": [
         "ATH",
+        "BNE",
         "CDG",
         "CLJ",
         "DEN",
@@ -2894,7 +2898,7 @@
         {
           "address": "0x8f37ed67014c38d5ebe794daa878b55a62e3ac76",
           "ens": "",
-          "airport_count": 15
+          "airport_count": 16
         },
         {
           "address": "0x8f51dc0791cddddce08052fff939eb7cf0c17856",
@@ -3123,8 +3127,8 @@
         }
       ],
       "member_count": 46,
-      "total_claims": 117,
-      "unique_airports": 54,
+      "total_claims": 118,
+      "unique_airports": 55,
       "airports": [
         "ADD",
         "AKL",
@@ -3135,6 +3139,7 @@
         "BEG",
         "BER",
         "BKK",
+        "BNE",
         "BOG",
         "BOS",
         "CDG",
@@ -3502,16 +3507,16 @@
       "name": "Started: February 2026",
       "type": "month_started",
       "member_count": 46,
-      "total_claims": 117,
-      "unique_airports": 54
+      "total_claims": 118,
+      "unique_airports": 55
     },
     {
       "id": "poap-ethdenver-2026",
       "name": "ETHDenver 2026",
       "type": "poap_holders",
       "member_count": 31,
-      "total_claims": 90,
-      "unique_airports": 42
+      "total_claims": 91,
+      "unique_airports": 43
     },
     {
       "id": "poap-we-ve-met-patricio",
@@ -3526,8 +3531,8 @@
       "name": "ETHDenver 2025",
       "type": "poap_holders",
       "member_count": 27,
-      "total_claims": 73,
-      "unique_airports": 38
+      "total_claims": 74,
+      "unique_airports": 39
     },
     {
       "id": "month-2026-03",
@@ -3542,8 +3547,8 @@
       "name": "Team Anon",
       "type": "anon",
       "member_count": 17,
-      "total_claims": 37,
-      "unique_airports": 29
+      "total_claims": 38,
+      "unique_airports": 30
     },
     {
       "id": "home-den",
@@ -3590,8 +3595,8 @@
       "name": "Home: YVR",
       "type": "first_airport",
       "member_count": 1,
-      "total_claims": 15,
-      "unique_airports": 15
+      "total_claims": 16,
+      "unique_airports": 16
     },
     {
       "id": "ens-on-poap",
