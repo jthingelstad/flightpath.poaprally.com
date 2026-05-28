@@ -114,7 +114,7 @@
     "country": "CO",
     "name": "El Dorado International Airport",
     "image_url": "/img/poaps/bog.png",
-    "claims": 8
+    "claims": 9
   },
   {
     "event_id": 216408,
@@ -920,7 +920,7 @@
     "country": "AR",
     "name": "Ministro Pistarini International Airport",
     "image_url": "/img/poaps/eze.png",
-    "claims": 15
+    "claims": 16
   },
   {
     "event_id": 214892,

@@ -377,6 +377,17 @@
       "avatar_url": "/img/avatars/0x6f0e489bf330bbda917d23bdc1f584b49f42322d.png"
     },
     {
+      "address": "0x7a2efc8d0a2fd1fbe40163171f89dd54078f6067",
+      "ens": "",
+      "airport_count": 3,
+      "airports": [
+        "EZE",
+        "MEX",
+        "PXM"
+      ],
+      "avatar_url": ""
+    },
+    {
       "address": "0x896c20da40c2a4df9b7c98b16a8d5a95129161a5",
       "ens": "player1taco.eth",
       "airport_count": 3,
@@ -652,6 +663,16 @@
       "avatar_url": ""
     },
     {
+      "address": "0x4ccc2acdd43811ce928cef7371fc95daf7418631",
+      "ens": "guide42.eth",
+      "airport_count": 2,
+      "airports": [
+        "AEP",
+        "BOG"
+      ],
+      "avatar_url": ""
+    },
+    {
       "address": "0x4e76245544a8e40501eaf0eba307249ab80bbbe4",
       "ens": "gomox.eth",
       "airport_count": 2,
@@ -708,16 +729,6 @@
       "airports": [
         "MVD",
         "SCL"
-      ],
-      "avatar_url": ""
-    },
-    {
-      "address": "0x7a2efc8d0a2fd1fbe40163171f89dd54078f6067",
-      "ens": "",
-      "airport_count": 2,
-      "airports": [
-        "MEX",
-        "PXM"
       ],
       "avatar_url": ""
     },
@@ -1053,15 +1064,6 @@
     {
       "address": "0x4c1ad7e34f927acb530974914cc4e2d14138be04",
       "ens": "vanesa.poap.xyz",
-      "airport_count": 1,
-      "airports": [
-        "AEP"
-      ],
-      "avatar_url": ""
-    },
-    {
-      "address": "0x4ccc2acdd43811ce928cef7371fc95daf7418631",
-      "ens": "guide42.eth",
       "airport_count": 1,
       "airports": [
         "AEP"
@@ -1465,6 +1467,13 @@
       "claims": 26
     },
     {
+      "code": "EZE",
+      "name": "Ministro Pistarini International Airport",
+      "city": "Ezeiza",
+      "continent": "South America",
+      "claims": 16
+    },
+    {
       "code": "NCE",
       "name": "Nice-Cote d'Azur Airport",
       "city": "Nice",
@@ -1472,18 +1481,18 @@
       "claims": 16
     },
     {
-      "code": "EZE",
-      "name": "Ministro Pistarini International Airport",
-      "city": "Ezeiza",
-      "continent": "South America",
-      "claims": 15
-    },
-    {
       "code": "AEP",
       "name": "Jorge Newbery Airpark",
       "city": "Buenos Aires",
       "continent": "South America",
       "claims": 10
+    },
+    {
+      "code": "BOG",
+      "name": "El Dorado International Airport",
+      "city": "Bogota",
+      "continent": "South America",
+      "claims": 9
     },
     {
       "code": "FRA",
@@ -1504,13 +1513,6 @@
       "name": "Barcelona International Airport",
       "city": "Barcelona",
       "continent": "Europe",
-      "claims": 8
-    },
-    {
-      "code": "BOG",
-      "name": "El Dorado International Airport",
-      "city": "Bogota",
-      "continent": "South America",
       "claims": 8
     },
     {
@@ -2227,7 +2229,7 @@
     },
     {
       "continent": "South America",
-      "claims": 55,
+      "claims": 57,
       "airport_count": 11
     },
     {
