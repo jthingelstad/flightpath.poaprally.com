@@ -170,6 +170,19 @@
       "avatar_url": "/img/avatars/0x895c5a67168ab29d5e8e96a55f933ad7c948c612.png"
     },
     {
+      "address": "0x9cab0bd57e308daff28011d6c6d9b45867afe33e",
+      "ens": "0xahmet.eth",
+      "airport_count": 5,
+      "airports": [
+        "BKK",
+        "IST",
+        "SGN",
+        "SKG",
+        "SOF"
+      ],
+      "avatar_url": "/img/avatars/0x9cab0bd57e308daff28011d6c6d9b45867afe33e.png"
+    },
+    {
       "address": "0xbd19a3f0a9cace18513a1e2863d648d13975cb30",
       "ens": "didierkrux.eth",
       "airport_count": 5,
@@ -217,18 +230,6 @@
         "MEX"
       ],
       "avatar_url": "/img/avatars/0x7d76020b5519176a2366d1b0b3b3ab2f9fe1d553.png"
-    },
-    {
-      "address": "0x9cab0bd57e308daff28011d6c6d9b45867afe33e",
-      "ens": "0xahmet.eth",
-      "airport_count": 4,
-      "airports": [
-        "BKK",
-        "IST",
-        "SGN",
-        "SOF"
-      ],
-      "avatar_url": "/img/avatars/0x9cab0bd57e308daff28011d6c6d9b45867afe33e.png"
     },
     {
       "address": "0xa42278025aa3dd3db54e99a242bc6d2c7c7890a1",
@@ -1964,6 +1965,13 @@
       "claims": 1
     },
     {
+      "code": "SKG",
+      "name": "Thessaloniki Macedonia International Airport",
+      "city": "Thessaloniki",
+      "continent": "Europe",
+      "claims": 1
+    },
+    {
       "code": "SYD",
       "name": "Sydney Kingsford Smith International Airport",
       "city": "Sydney",
@@ -2202,13 +2210,6 @@
       "claims": 0
     },
     {
-      "code": "SKG",
-      "name": "Thessaloniki Macedonia International Airport",
-      "city": "Thessaloniki",
-      "continent": "Europe",
-      "claims": 0
-    },
-    {
       "code": "TLV",
       "name": "Ben Gurion International Airport",
       "city": "Tel Aviv",
@@ -2224,8 +2225,8 @@
     },
     {
       "continent": "Europe",
-      "claims": 97,
-      "airport_count": 20
+      "claims": 98,
+      "airport_count": 21
     },
     {
       "continent": "South America",
