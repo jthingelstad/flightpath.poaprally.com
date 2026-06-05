@@ -413,7 +413,7 @@
     "country": "JP",
     "name": "Kansai International Airport",
     "image_url": "/img/poaps/kix.png",
-    "claims": 0
+    "claims": 1
   },
   {
     "event_id": 214939,
@@ -816,7 +816,7 @@
     "country": "US",
     "name": "John F Kennedy International Airport",
     "image_url": "/img/poaps/jfk.png",
-    "claims": 6
+    "claims": 7
   },
   {
     "event_id": 214904,

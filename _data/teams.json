@@ -135,6 +135,11 @@
           "airport_count": 7
         },
         {
+          "address": "0x599abe13e88f1045e3aefe02a07f7bafc0c76b76",
+          "ens": "shufro.eth",
+          "airport_count": 4
+        },
+        {
           "address": "0xf6b6f07862a02c85628b3a9688beae07fea9c863",
           "ens": "poap.eth",
           "airport_count": 4
@@ -142,11 +147,6 @@
         {
           "address": "0x14fc0be8e90ab768226cccf952506ce00bde5029",
           "ens": "gourm.eth",
-          "airport_count": 3
-        },
-        {
-          "address": "0x599abe13e88f1045e3aefe02a07f7bafc0c76b76",
-          "ens": "shufro.eth",
           "airport_count": 3
         },
         {
@@ -271,7 +271,7 @@
         }
       ],
       "member_count": 31,
-      "total_claims": 91,
+      "total_claims": 92,
       "unique_airports": 43,
       "airports": [
         "AEP",
@@ -382,6 +382,11 @@
           "airport_count": 5
         },
         {
+          "address": "0x599abe13e88f1045e3aefe02a07f7bafc0c76b76",
+          "ens": "shufro.eth",
+          "airport_count": 4
+        },
+        {
           "address": "0x7d76020b5519176a2366d1b0b3b3ab2f9fe1d553",
           "ens": "liszy.eth",
           "airport_count": 4
@@ -399,11 +404,6 @@
         {
           "address": "0x56d389c4e07a48d429035532402301310b8143a0",
           "ens": "colfax.eth",
-          "airport_count": 3
-        },
-        {
-          "address": "0x599abe13e88f1045e3aefe02a07f7bafc0c76b76",
-          "ens": "shufro.eth",
           "airport_count": 3
         },
         {
@@ -533,7 +533,7 @@
         }
       ],
       "member_count": 34,
-      "total_claims": 88,
+      "total_claims": 89,
       "unique_airports": 47,
       "airports": [
         "AEP",
@@ -602,6 +602,11 @@
           "airport_count": 7
         },
         {
+          "address": "0x599abe13e88f1045e3aefe02a07f7bafc0c76b76",
+          "ens": "shufro.eth",
+          "airport_count": 4
+        },
+        {
           "address": "0x72cc82900823c29310985decdd607a68f9bc8418",
           "ens": "chaps.eth",
           "airport_count": 4
@@ -614,11 +619,6 @@
         {
           "address": "0x14fc0be8e90ab768226cccf952506ce00bde5029",
           "ens": "gourm.eth",
-          "airport_count": 3
-        },
-        {
-          "address": "0x599abe13e88f1045e3aefe02a07f7bafc0c76b76",
-          "ens": "shufro.eth",
           "airport_count": 3
         },
         {
@@ -728,7 +728,7 @@
         }
       ],
       "member_count": 27,
-      "total_claims": 74,
+      "total_claims": 75,
       "unique_airports": 39,
       "airports": [
         "AEP",
@@ -1801,14 +1801,15 @@
         {
           "address": "0x599abe13e88f1045e3aefe02a07f7bafc0c76b76",
           "ens": "shufro.eth",
-          "airport_count": 3
+          "airport_count": 4
         }
       ],
       "member_count": 1,
-      "total_claims": 3,
-      "unique_airports": 3,
+      "total_claims": 4,
+      "unique_airports": 4,
       "airports": [
         "DEN",
+        "JFK",
         "LGA",
         "ORD"
       ]
@@ -2006,6 +2007,11 @@
       "description": "First airport claimed: Ninoy Aquino International Airport",
       "members": [
         {
+          "address": "0x1ae601d54a8df8216208b5e070393c933f991581",
+          "ens": "rebilander.eth",
+          "airport_count": 4
+        },
+        {
           "address": "0xa42278025aa3dd3db54e99a242bc6d2c7c7890a1",
           "ens": "btorralba.eth",
           "airport_count": 4
@@ -2014,11 +2020,6 @@
           "address": "0xf58fe388d53e9542f0bddff2d1578b13675228fd",
           "ens": "catpix.eth",
           "airport_count": 4
-        },
-        {
-          "address": "0x1ae601d54a8df8216208b5e070393c933f991581",
-          "ens": "rebilander.eth",
-          "airport_count": 3
         },
         {
           "address": "0x9ecc835b3487d3cd8b1fa03b251ee51e1ac10859",
@@ -2032,12 +2033,13 @@
         }
       ],
       "member_count": 5,
-      "total_claims": 16,
-      "unique_airports": 7,
+      "total_claims": 17,
+      "unique_airports": 8,
       "airports": [
         "BCN",
         "BKK",
         "DXB",
+        "KIX",
         "KUL",
         "MNL",
         "NRT",
@@ -2602,6 +2604,11 @@
           "airport_count": 5
         },
         {
+          "address": "0x599abe13e88f1045e3aefe02a07f7bafc0c76b76",
+          "ens": "shufro.eth",
+          "airport_count": 4
+        },
+        {
           "address": "0x664936a6aa22170221495f14450b891e7267ad0c",
           "ens": "partyjudge.eth",
           "airport_count": 4
@@ -2639,11 +2646,6 @@
         {
           "address": "0x56d389c4e07a48d429035532402301310b8143a0",
           "ens": "colfax.eth",
-          "airport_count": 3
-        },
-        {
-          "address": "0x599abe13e88f1045e3aefe02a07f7bafc0c76b76",
-          "ens": "shufro.eth",
           "airport_count": 3
         },
         {
@@ -2838,7 +2840,7 @@
         }
       ],
       "member_count": 52,
-      "total_claims": 125,
+      "total_claims": 126,
       "unique_airports": 49,
       "airports": [
         "AEP",
@@ -3207,14 +3209,14 @@
           "airport_count": 5
         },
         {
-          "address": "0xf58fe388d53e9542f0bddff2d1578b13675228fd",
-          "ens": "catpix.eth",
+          "address": "0x1ae601d54a8df8216208b5e070393c933f991581",
+          "ens": "rebilander.eth",
           "airport_count": 4
         },
         {
-          "address": "0x1ae601d54a8df8216208b5e070393c933f991581",
-          "ens": "rebilander.eth",
-          "airport_count": 3
+          "address": "0xf58fe388d53e9542f0bddff2d1578b13675228fd",
+          "ens": "catpix.eth",
+          "airport_count": 4
         },
         {
           "address": "0x6493db62998997134e0451cacd32360858f9a3d6",
@@ -3333,8 +3335,8 @@
         }
       ],
       "member_count": 27,
-      "total_claims": 52,
-      "unique_airports": 28,
+      "total_claims": 53,
+      "unique_airports": 29,
       "airports": [
         "AEP",
         "AMS",
@@ -3348,6 +3350,7 @@
         "DXB",
         "FRA",
         "IST",
+        "KIX",
         "KUL",
         "LIS",
         "MAD",
@@ -3504,7 +3507,7 @@
       "name": "Started: January 2026",
       "type": "month_started",
       "member_count": 52,
-      "total_claims": 125,
+      "total_claims": 126,
       "unique_airports": 49
     },
     {
@@ -3520,7 +3523,7 @@
       "name": "ETHDenver 2026",
       "type": "poap_holders",
       "member_count": 31,
-      "total_claims": 91,
+      "total_claims": 92,
       "unique_airports": 43
     },
     {
@@ -3528,7 +3531,7 @@
       "name": "We've Met Patricio",
       "type": "poap_holders",
       "member_count": 34,
-      "total_claims": 88,
+      "total_claims": 89,
       "unique_airports": 47
     },
     {
@@ -3536,7 +3539,7 @@
       "name": "ETHDenver 2025",
       "type": "poap_holders",
       "member_count": 27,
-      "total_claims": 74,
+      "total_claims": 75,
       "unique_airports": 39
     },
     {
@@ -3544,8 +3547,8 @@
       "name": "Started: March 2026",
       "type": "month_started",
       "member_count": 27,
-      "total_claims": 52,
-      "unique_airports": 28
+      "total_claims": 53,
+      "unique_airports": 29
     },
     {
       "id": "auto-anon",
@@ -3592,8 +3595,8 @@
       "name": "Home: MNL",
       "type": "first_airport",
       "member_count": 5,
-      "total_claims": 16,
-      "unique_airports": 7
+      "total_claims": 17,
+      "unique_airports": 8
     },
     {
       "id": "home-yvr",
@@ -3812,6 +3815,14 @@
       "unique_airports": 3
     },
     {
+      "id": "home-lga",
+      "name": "Home: LGA",
+      "type": "first_airport",
+      "member_count": 1,
+      "total_claims": 4,
+      "unique_airports": 4
+    },
+    {
       "id": "home-tbs",
       "name": "Home: TBS",
       "type": "first_airport",
@@ -3862,14 +3873,6 @@
     {
       "id": "home-lax",
       "name": "Home: LAX",
-      "type": "first_airport",
-      "member_count": 1,
-      "total_claims": 3,
-      "unique_airports": 3
-    },
-    {
-      "id": "home-lga",
-      "name": "Home: LGA",
       "type": "first_airport",
       "member_count": 1,
       "total_claims": 3,

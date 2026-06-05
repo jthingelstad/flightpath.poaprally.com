@@ -196,6 +196,30 @@
       "avatar_url": "/img/avatars/0xbd19a3f0a9cace18513a1e2863d648d13975cb30.png"
     },
     {
+      "address": "0x1ae601d54a8df8216208b5e070393c933f991581",
+      "ens": "rebilander.eth",
+      "airport_count": 4,
+      "airports": [
+        "KIX",
+        "KUL",
+        "MNL",
+        "NRT"
+      ],
+      "avatar_url": "/img/avatars/0x1ae601d54a8df8216208b5e070393c933f991581.png"
+    },
+    {
+      "address": "0x599abe13e88f1045e3aefe02a07f7bafc0c76b76",
+      "ens": "shufro.eth",
+      "airport_count": 4,
+      "airports": [
+        "DEN",
+        "JFK",
+        "LGA",
+        "ORD"
+      ],
+      "avatar_url": "/img/avatars/0x599abe13e88f1045e3aefe02a07f7bafc0c76b76.png"
+    },
+    {
       "address": "0x664936a6aa22170221495f14450b891e7267ad0c",
       "ens": "partyjudge.eth",
       "airport_count": 4,
@@ -290,17 +314,6 @@
       "avatar_url": "/img/avatars/0x14fc0be8e90ab768226cccf952506ce00bde5029.png"
     },
     {
-      "address": "0x1ae601d54a8df8216208b5e070393c933f991581",
-      "ens": "rebilander.eth",
-      "airport_count": 3,
-      "airports": [
-        "KUL",
-        "MNL",
-        "NRT"
-      ],
-      "avatar_url": "/img/avatars/0x1ae601d54a8df8216208b5e070393c933f991581.png"
-    },
-    {
       "address": "0x4cc93ebb24bc1660d5b41ff9ec8ca480a0a94c36",
       "ens": "fabioanaya.eth",
       "airport_count": 3,
@@ -332,17 +345,6 @@
         "SFO"
       ],
       "avatar_url": "/img/avatars/0x56d389c4e07a48d429035532402301310b8143a0.png"
-    },
-    {
-      "address": "0x599abe13e88f1045e3aefe02a07f7bafc0c76b76",
-      "ens": "shufro.eth",
-      "airport_count": 3,
-      "airports": [
-        "DEN",
-        "LGA",
-        "ORD"
-      ],
-      "avatar_url": "/img/avatars/0x599abe13e88f1045e3aefe02a07f7bafc0c76b76.png"
     },
     {
       "address": "0x5bd18902e2ea470c3dba572fde02b5ab236ddd76",
@@ -1538,6 +1540,13 @@
       "claims": 7
     },
     {
+      "code": "JFK",
+      "name": "John F Kennedy International Airport",
+      "city": "New York",
+      "continent": "North America",
+      "claims": 7
+    },
+    {
       "code": "MIA",
       "name": "Miami International Airport",
       "city": "Miami",
@@ -1563,13 +1572,6 @@
       "name": "Rafael Nunez International Airport",
       "city": "Cartagena",
       "continent": "South America",
-      "claims": 6
-    },
-    {
-      "code": "JFK",
-      "name": "John F Kennedy International Airport",
-      "city": "New York",
-      "continent": "North America",
       "claims": 6
     },
     {
@@ -1937,6 +1939,13 @@
       "claims": 1
     },
     {
+      "code": "KIX",
+      "name": "Kansai International Airport",
+      "city": "Osaka",
+      "continent": "Asia",
+      "claims": 1
+    },
+    {
       "code": "LAS",
       "name": "Harry Reid International Airport",
       "city": "Las Vegas",
@@ -2091,13 +2100,6 @@
       "claims": 0
     },
     {
-      "code": "KIX",
-      "name": "Kansai International Airport",
-      "city": "Osaka",
-      "continent": "Asia",
-      "claims": 0
-    },
-    {
       "code": "KLU",
       "name": "Klagenfurt Airport",
       "city": "Klagenfurt am Worthersee",
@@ -2220,7 +2222,7 @@
   "regions": [
     {
       "continent": "North America",
-      "claims": 123,
+      "claims": 124,
       "airport_count": 25
     },
     {
@@ -2235,8 +2237,8 @@
     },
     {
       "continent": "Asia",
-      "claims": 40,
-      "airport_count": 14
+      "claims": 41,
+      "airport_count": 15
     },
     {
       "continent": "Oceania",
