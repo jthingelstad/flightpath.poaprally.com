@@ -44,6 +44,22 @@
       "avatar_url": "/img/avatars/0x8f51dc0791cddddce08052fff939eb7cf0c17856.png"
     },
     {
+      "address": "0x82345d3c717710a29674665df4a5325c1b0b4a28",
+      "ens": "artpilot.eth",
+      "airport_count": 8,
+      "airports": [
+        "DFW",
+        "FRA",
+        "HKG",
+        "IAH",
+        "ICN",
+        "ORD",
+        "SIN",
+        "TPE"
+      ],
+      "avatar_url": ""
+    },
+    {
       "address": "0x03f11c7a45ba8219c87f312eecb07287c2095302",
       "ens": "0xtangle.eth",
       "airport_count": 7,
@@ -87,21 +103,6 @@
         "VIE"
       ],
       "avatar_url": "/img/avatars/0x708ac82707b1b8ddcc0bb8c50c75c38e786cbece.png"
-    },
-    {
-      "address": "0x82345d3c717710a29674665df4a5325c1b0b4a28",
-      "ens": "artpilot.eth",
-      "airport_count": 7,
-      "airports": [
-        "DFW",
-        "FRA",
-        "HKG",
-        "IAH",
-        "ORD",
-        "SIN",
-        "TPE"
-      ],
-      "avatar_url": ""
     },
     {
       "address": "0x74dbbcb9c08c51b38510d130d928e1e8c68eda7c",
@@ -1806,6 +1807,13 @@
       "claims": 2
     },
     {
+      "code": "ICN",
+      "name": "Incheon International Airport",
+      "city": "Seoul",
+      "continent": "Asia",
+      "claims": 2
+    },
+    {
       "code": "KUL",
       "name": "Kuala Lumpur International Airport",
       "city": "Kuala Lumpur",
@@ -1928,13 +1936,6 @@
       "code": "HND",
       "name": "Tokyo International Airport",
       "city": "Tokyo",
-      "continent": "Asia",
-      "claims": 1
-    },
-    {
-      "code": "ICN",
-      "name": "Incheon International Airport",
-      "city": "Seoul",
       "continent": "Asia",
       "claims": 1
     },
@@ -2237,7 +2238,7 @@
     },
     {
       "continent": "Asia",
-      "claims": 41,
+      "claims": 42,
       "airport_count": 15
     },
     {
