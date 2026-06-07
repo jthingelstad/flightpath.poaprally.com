@@ -374,7 +374,7 @@
         {
           "address": "0x895c5a67168ab29d5e8e96a55f933ad7c948c612",
           "ens": "simone.dev",
-          "airport_count": 5
+          "airport_count": 6
         },
         {
           "address": "0xbd19a3f0a9cace18513a1e2863d648d13975cb30",
@@ -533,7 +533,7 @@
         }
       ],
       "member_count": 34,
-      "total_claims": 89,
+      "total_claims": 90,
       "unique_airports": 47,
       "airports": [
         "AEP",
@@ -1195,7 +1195,7 @@
         {
           "address": "0x895c5a67168ab29d5e8e96a55f933ad7c948c612",
           "ens": "simone.dev",
-          "airport_count": 5
+          "airport_count": 6
         },
         {
           "address": "0x14ae683317d9d27957f56c78e9308e7d54bc3b36",
@@ -1204,12 +1204,13 @@
         }
       ],
       "member_count": 2,
-      "total_claims": 6,
-      "unique_airports": 5,
+      "total_claims": 7,
+      "unique_airports": 6,
       "airports": [
         "AUS",
         "CGH",
         "GRU",
+        "JFK",
         "MIA",
         "SFO"
       ]
@@ -2595,13 +2596,13 @@
           "airport_count": 6
         },
         {
-          "address": "0x4fd6b3204a6ab48978018b25821682f090840333",
-          "ens": "cryptochica.eth",
-          "airport_count": 5
-        },
-        {
           "address": "0x895c5a67168ab29d5e8e96a55f933ad7c948c612",
           "ens": "simone.dev",
+          "airport_count": 6
+        },
+        {
+          "address": "0x4fd6b3204a6ab48978018b25821682f090840333",
+          "ens": "cryptochica.eth",
           "airport_count": 5
         },
         {
@@ -2841,7 +2842,7 @@
         }
       ],
       "member_count": 52,
-      "total_claims": 127,
+      "total_claims": 128,
       "unique_airports": 50,
       "airports": [
         "AEP",
@@ -3509,7 +3510,7 @@
       "name": "Started: January 2026",
       "type": "month_started",
       "member_count": 52,
-      "total_claims": 127,
+      "total_claims": 128,
       "unique_airports": 50
     },
     {
@@ -3533,7 +3534,7 @@
       "name": "We've Met Patricio",
       "type": "poap_holders",
       "member_count": 34,
-      "total_claims": 89,
+      "total_claims": 90,
       "unique_airports": 47
     },
     {
@@ -3705,6 +3706,14 @@
       "unique_airports": 4
     },
     {
+      "id": "home-cgh",
+      "name": "Home: CGH",
+      "type": "first_airport",
+      "member_count": 2,
+      "total_claims": 7,
+      "unique_airports": 6
+    },
+    {
       "id": "home-nrt",
       "name": "Home: NRT",
       "type": "first_airport",
@@ -3727,14 +3736,6 @@
       "member_count": 2,
       "total_claims": 7,
       "unique_airports": 6
-    },
-    {
-      "id": "home-cgh",
-      "name": "Home: CGH",
-      "type": "first_airport",
-      "member_count": 2,
-      "total_claims": 6,
-      "unique_airports": 5
     },
     {
       "id": "home-ctg",

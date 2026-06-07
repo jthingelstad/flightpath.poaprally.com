@@ -119,6 +119,20 @@
       "avatar_url": ""
     },
     {
+      "address": "0x895c5a67168ab29d5e8e96a55f933ad7c948c612",
+      "ens": "simone.dev",
+      "airport_count": 6,
+      "airports": [
+        "AUS",
+        "CGH",
+        "GRU",
+        "JFK",
+        "MIA",
+        "SFO"
+      ],
+      "avatar_url": "/img/avatars/0x895c5a67168ab29d5e8e96a55f933ad7c948c612.png"
+    },
+    {
       "address": "0x111accebf9d70d9c06de2d38f9392522e82ecf29",
       "ens": "poap.thingelstad.eth",
       "airport_count": 5,
@@ -156,19 +170,6 @@
         "SFO"
       ],
       "avatar_url": ""
-    },
-    {
-      "address": "0x895c5a67168ab29d5e8e96a55f933ad7c948c612",
-      "ens": "simone.dev",
-      "airport_count": 5,
-      "airports": [
-        "AUS",
-        "CGH",
-        "GRU",
-        "MIA",
-        "SFO"
-      ],
-      "avatar_url": "/img/avatars/0x895c5a67168ab29d5e8e96a55f933ad7c948c612.png"
     },
     {
       "address": "0x9cab0bd57e308daff28011d6c6d9b45867afe33e",
@@ -1520,6 +1521,13 @@
       "claims": 8
     },
     {
+      "code": "JFK",
+      "name": "John F Kennedy International Airport",
+      "city": "New York",
+      "continent": "North America",
+      "claims": 8
+    },
+    {
       "code": "MEX",
       "name": "Licenciado Benito Juarez International Airport",
       "city": "Mexico City",
@@ -1538,13 +1546,6 @@
       "name": "Amsterdam Airport Schiphol",
       "city": "Amsterdam",
       "continent": "Europe",
-      "claims": 7
-    },
-    {
-      "code": "JFK",
-      "name": "John F Kennedy International Airport",
-      "city": "New York",
-      "continent": "North America",
       "claims": 7
     },
     {
@@ -2223,7 +2224,7 @@
   "regions": [
     {
       "continent": "North America",
-      "claims": 124,
+      "claims": 125,
       "airport_count": 25
     },
     {

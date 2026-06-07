@@ -2598,5 +2598,13 @@
     "event_id": 214885,
     "created": "2026-06-05 18:52:25",
     "token_id": ""
+  },
+  {
+    "address": "0x895c5a67168ab29d5e8e96a55f933ad7c948c612",
+    "ens": "simone.dev",
+    "airport": "JFK",
+    "event_id": 214938,
+    "created": "2026-06-06 23:11:30",
+    "token_id": ""
   }
 ]
