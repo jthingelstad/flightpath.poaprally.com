@@ -717,6 +717,11 @@
           "airport_count": 1
         },
         {
+          "address": "0xe3665c89e0195246901c77423098ef2b379e43fb",
+          "ens": "hqueue.uni.eth",
+          "airport_count": 1
+        },
+        {
           "address": "0xf8afd3fb383a4822d2a6fe4c9e55273badfd861c",
           "ens": "greyhound10.eth",
           "airport_count": 1
@@ -727,8 +732,8 @@
           "airport_count": 1
         }
       ],
-      "member_count": 27,
-      "total_claims": 75,
+      "member_count": 28,
+      "total_claims": 76,
       "unique_airports": 39,
       "airports": [
         "AEP",
@@ -1574,7 +1579,7 @@
         {
           "address": "0x708ac82707b1b8ddcc0bb8c50c75c38e786cbece",
           "ens": "achimh.eth",
-          "airport_count": 7
+          "airport_count": 8
         },
         {
           "address": "0x5ffd23b1b0350debb17a2cb668929ac5f76d0e18",
@@ -1583,11 +1588,12 @@
         }
       ],
       "member_count": 2,
-      "total_claims": 8,
-      "unique_airports": 7,
+      "total_claims": 9,
+      "unique_airports": 8,
       "airports": [
         "EWR",
         "FRA",
+        "IAD",
         "JFK",
         "LHR",
         "PRG",
@@ -1762,10 +1768,15 @@
           "address": "0x6f0e489bf330bbda917d23bdc1f584b49f42322d",
           "ens": "electrodiva.eth",
           "airport_count": 3
+        },
+        {
+          "address": "0xe3665c89e0195246901c77423098ef2b379e43fb",
+          "ens": "hqueue.uni.eth",
+          "airport_count": 1
         }
       ],
-      "member_count": 1,
-      "total_claims": 3,
+      "member_count": 2,
+      "total_claims": 4,
       "unique_airports": 3,
       "airports": [
         "AKL",
@@ -2914,13 +2925,13 @@
           "airport_count": 11
         },
         {
-          "address": "0x03f11c7a45ba8219c87f312eecb07287c2095302",
-          "ens": "0xtangle.eth",
-          "airport_count": 7
-        },
-        {
           "address": "0x708ac82707b1b8ddcc0bb8c50c75c38e786cbece",
           "ens": "achimh.eth",
+          "airport_count": 8
+        },
+        {
+          "address": "0x03f11c7a45ba8219c87f312eecb07287c2095302",
+          "ens": "0xtangle.eth",
           "airport_count": 7
         },
         {
@@ -3135,7 +3146,7 @@
         }
       ],
       "member_count": 46,
-      "total_claims": 118,
+      "total_claims": 119,
       "unique_airports": 55,
       "airports": [
         "ADD",
@@ -3502,6 +3513,25 @@
         "PRG",
         "PXM"
       ]
+    },
+    {
+      "id": "month-2026-06",
+      "name": "Started: June 2026",
+      "type": "month_started",
+      "description": "Collectors who started in June 2026",
+      "members": [
+        {
+          "address": "0xe3665c89e0195246901c77423098ef2b379e43fb",
+          "ens": "hqueue.uni.eth",
+          "airport_count": 1
+        }
+      ],
+      "member_count": 1,
+      "total_claims": 1,
+      "unique_airports": 1,
+      "airports": [
+        "JFK"
+      ]
     }
   ],
   "leaderboard": [
@@ -3518,7 +3548,7 @@
       "name": "Started: February 2026",
       "type": "month_started",
       "member_count": 46,
-      "total_claims": 118,
+      "total_claims": 119,
       "unique_airports": 55
     },
     {
@@ -3541,8 +3571,8 @@
       "id": "poap-ethdenver-2025",
       "name": "ETHDenver 2025",
       "type": "poap_holders",
-      "member_count": 27,
-      "total_claims": 75,
+      "member_count": 28,
+      "total_claims": 76,
       "unique_airports": 39
     },
     {
@@ -3666,20 +3696,20 @@
       "unique_airports": 8
     },
     {
-      "id": "home-hkg",
-      "name": "Home: HKG",
+      "id": "home-fra",
+      "name": "Home: FRA",
       "type": "first_airport",
       "member_count": 2,
       "total_claims": 9,
       "unique_airports": 8
     },
     {
-      "id": "home-fra",
-      "name": "Home: FRA",
+      "id": "home-hkg",
+      "name": "Home: HKG",
       "type": "first_airport",
       "member_count": 2,
-      "total_claims": 8,
-      "unique_airports": 7
+      "total_claims": 9,
+      "unique_airports": 8
     },
     {
       "id": "home-ist",
@@ -3818,6 +3848,14 @@
       "unique_airports": 3
     },
     {
+      "id": "home-jfk",
+      "name": "Home: JFK",
+      "type": "first_airport",
+      "member_count": 2,
+      "total_claims": 4,
+      "unique_airports": 3
+    },
+    {
       "id": "home-lga",
       "name": "Home: LGA",
       "type": "first_airport",
@@ -3860,14 +3898,6 @@
     {
       "id": "home-gig",
       "name": "Home: GIG",
-      "type": "first_airport",
-      "member_count": 1,
-      "total_claims": 3,
-      "unique_airports": 3
-    },
-    {
-      "id": "home-jfk",
-      "name": "Home: JFK",
       "type": "first_airport",
       "member_count": 1,
       "total_claims": 3,
@@ -4053,6 +4083,14 @@
       "id": "home-pxm",
       "name": "Home: PXM",
       "type": "first_airport",
+      "member_count": 1,
+      "total_claims": 1,
+      "unique_airports": 1
+    },
+    {
+      "id": "month-2026-06",
+      "name": "Started: June 2026",
+      "type": "month_started",
       "member_count": 1,
       "total_claims": 1,
       "unique_airports": 1

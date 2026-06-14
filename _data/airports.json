@@ -426,7 +426,7 @@
     "country": "US",
     "name": "Washington Dulles International Airport",
     "image_url": "/img/poaps/iad.png",
-    "claims": 3
+    "claims": 4
   },
   {
     "event_id": 216406,
@@ -816,7 +816,7 @@
     "country": "US",
     "name": "John F Kennedy International Airport",
     "image_url": "/img/poaps/jfk.png",
-    "claims": 8
+    "claims": 9
   },
   {
     "event_id": 214904,
