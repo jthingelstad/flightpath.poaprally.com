@@ -790,7 +790,7 @@
     "country": "IN",
     "name": "Chhatrapati Shivaji International Airport",
     "image_url": "/img/poaps/bom.png",
-    "claims": 2
+    "claims": 3
   },
   {
     "event_id": 214926,
@@ -1388,7 +1388,7 @@
     "country": "IT",
     "name": "Napoli / Capodichino International Airport",
     "image_url": "/img/poaps/nap.png",
-    "claims": 0
+    "claims": 1
   },
   {
     "event_id": 214917,

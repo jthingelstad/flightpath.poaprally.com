@@ -361,6 +361,17 @@
       "avatar_url": "/img/avatars/0x5bd18902e2ea470c3dba572fde02b5ab236ddd76.png"
     },
     {
+      "address": "0x647786b54298ca888eccb5e3d16de5979e77b98b",
+      "ens": "",
+      "airport_count": 3,
+      "airports": [
+        "BEG",
+        "NAP",
+        "SOF"
+      ],
+      "avatar_url": ""
+    },
+    {
       "address": "0x6493db62998997134e0451cacd32360858f9a3d6",
       "ens": "tyler.thingelstad.eth",
       "airport_count": 3,
@@ -685,16 +696,6 @@
       "airports": [
         "AUS",
         "MSP"
-      ],
-      "avatar_url": ""
-    },
-    {
-      "address": "0x647786b54298ca888eccb5e3d16de5979e77b98b",
-      "ens": "",
-      "airport_count": 2,
-      "airports": [
-        "BEG",
-        "SOF"
       ],
       "avatar_url": ""
     },
@@ -1064,6 +1065,15 @@
       "airport_count": 1,
       "airports": [
         "CUN"
+      ],
+      "avatar_url": ""
+    },
+    {
+      "address": "0x4a0962949beac41d4f7f81f96d510e0e1465b5fa",
+      "ens": "nigotiya.eth",
+      "airport_count": 1,
+      "airports": [
+        "BOM"
       ],
       "avatar_url": ""
     },
@@ -1748,6 +1758,13 @@
       "claims": 3
     },
     {
+      "code": "BOM",
+      "name": "Chhatrapati Shivaji International Airport",
+      "city": "Mumbai",
+      "continent": "Asia",
+      "claims": 3
+    },
+    {
       "code": "CLJ",
       "name": "Cluj-Napoca International Airport",
       "city": "Cluj-Napoca",
@@ -1787,13 +1804,6 @@
       "name": "Hartsfield - Jackson Atlanta International Airport",
       "city": "Atlanta",
       "continent": "North America",
-      "claims": 2
-    },
-    {
-      "code": "BOM",
-      "name": "Chhatrapati Shivaji International Airport",
-      "city": "Mumbai",
-      "continent": "Asia",
       "claims": 2
     },
     {
@@ -1969,6 +1979,13 @@
       "name": "General Mariano Escobedo International Airport",
       "city": "Monterrey",
       "continent": "North America",
+      "claims": 1
+    },
+    {
+      "code": "NAP",
+      "name": "Napoli / Capodichino International Airport",
+      "city": "Napoli",
+      "continent": "Europe",
       "claims": 1
     },
     {
@@ -2154,13 +2171,6 @@
       "claims": 0
     },
     {
-      "code": "NAP",
-      "name": "Napoli / Capodichino International Airport",
-      "city": "Napoli",
-      "continent": "Europe",
-      "claims": 0
-    },
-    {
       "code": "NBO",
       "name": "Jomo Kenyatta International Airport",
       "city": "Nairobi",
@@ -2239,8 +2249,8 @@
     },
     {
       "continent": "Europe",
-      "claims": 98,
-      "airport_count": 21
+      "claims": 99,
+      "airport_count": 22
     },
     {
       "continent": "South America",
@@ -2249,7 +2259,7 @@
     },
     {
       "continent": "Asia",
-      "claims": 42,
+      "claims": 43,
       "airport_count": 15
     },
     {
