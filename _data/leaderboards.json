@@ -670,6 +670,16 @@
       "avatar_url": "/img/avatars/0x43f330d94486b5581369a477ea85a01f177dc6fd.png"
     },
     {
+      "address": "0x4a0962949beac41d4f7f81f96d510e0e1465b5fa",
+      "ens": "nigotiya.eth",
+      "airport_count": 2,
+      "airports": [
+        "BOM",
+        "GRU"
+      ],
+      "avatar_url": ""
+    },
+    {
       "address": "0x4c5f4f9df7968b0db448526162114a04f3462bad",
       "ens": "erebels.eth",
       "airport_count": 2,
@@ -1065,15 +1075,6 @@
       "airport_count": 1,
       "airports": [
         "CUN"
-      ],
-      "avatar_url": ""
-    },
-    {
-      "address": "0x4a0962949beac41d4f7f81f96d510e0e1465b5fa",
-      "ens": "nigotiya.eth",
-      "airport_count": 1,
-      "airports": [
-        "BOM"
       ],
       "avatar_url": ""
     },
@@ -1772,6 +1773,13 @@
       "claims": 3
     },
     {
+      "code": "GRU",
+      "name": "Guarulhos - Governador Andre Franco Montoro International Airport",
+      "city": "Sao Paulo",
+      "continent": "South America",
+      "claims": 3
+    },
+    {
       "code": "LIS",
       "name": "Lisbon Portela Airport",
       "city": "Lisbon",
@@ -1816,13 +1824,6 @@
     {
       "code": "CGH",
       "name": "Congonhas Airport",
-      "city": "Sao Paulo",
-      "continent": "South America",
-      "claims": 2
-    },
-    {
-      "code": "GRU",
-      "name": "Guarulhos - Governador Andre Franco Montoro International Airport",
       "city": "Sao Paulo",
       "continent": "South America",
       "claims": 2
@@ -2254,7 +2255,7 @@
     },
     {
       "continent": "South America",
-      "claims": 57,
+      "claims": 58,
       "airport_count": 11
     },
     {

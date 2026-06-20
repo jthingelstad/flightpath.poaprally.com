@@ -343,17 +343,18 @@
         {
           "address": "0x4a0962949beac41d4f7f81f96d510e0e1465b5fa",
           "ens": "nigotiya.eth",
-          "airport_count": 1
+          "airport_count": 2
         }
       ],
       "member_count": 4,
-      "total_claims": 11,
-      "unique_airports": 8,
+      "total_claims": 12,
+      "unique_airports": 9,
       "airports": [
         "BKK",
         "BLR",
         "BOM",
         "DXB",
+        "GRU",
         "LIS",
         "MAD",
         "NCE",
@@ -1171,14 +1172,15 @@
         {
           "address": "0x4a0962949beac41d4f7f81f96d510e0e1465b5fa",
           "ens": "nigotiya.eth",
-          "airport_count": 1
+          "airport_count": 2
         }
       ],
       "member_count": 2,
-      "total_claims": 3,
-      "unique_airports": 2,
+      "total_claims": 4,
+      "unique_airports": 3,
       "airports": [
         "BOM",
+        "GRU",
         "NCE"
       ]
     },
@@ -3536,7 +3538,7 @@
         {
           "address": "0x4a0962949beac41d4f7f81f96d510e0e1465b5fa",
           "ens": "nigotiya.eth",
-          "airport_count": 1
+          "airport_count": 2
         },
         {
           "address": "0xe3665c89e0195246901c77423098ef2b379e43fb",
@@ -3545,10 +3547,11 @@
         }
       ],
       "member_count": 2,
-      "total_claims": 2,
-      "unique_airports": 2,
+      "total_claims": 3,
+      "unique_airports": 3,
       "airports": [
         "BOM",
+        "GRU",
         "JFK"
       ]
     }
@@ -3691,20 +3694,20 @@
       "unique_airports": 6
     },
     {
+      "id": "poap-ethmumbai-2026",
+      "name": "ETHMumbai 2026",
+      "type": "poap_holders",
+      "member_count": 4,
+      "total_claims": 12,
+      "unique_airports": 9
+    },
+    {
       "id": "month-2026-05",
       "name": "Started: May 2026",
       "type": "month_started",
       "member_count": 9,
       "total_claims": 12,
       "unique_airports": 9
-    },
-    {
-      "id": "poap-ethmumbai-2026",
-      "name": "ETHMumbai 2026",
-      "type": "poap_holders",
-      "member_count": 4,
-      "total_claims": 11,
-      "unique_airports": 8
     },
     {
       "id": "home-ewr",
@@ -3859,6 +3862,14 @@
       "unique_airports": 1
     },
     {
+      "id": "home-bom",
+      "name": "Home: BOM",
+      "type": "first_airport",
+      "member_count": 2,
+      "total_claims": 4,
+      "unique_airports": 3
+    },
+    {
       "id": "home-cun",
       "name": "Home: CUN",
       "type": "first_airport",
@@ -3905,14 +3916,6 @@
       "member_count": 1,
       "total_claims": 3,
       "unique_airports": 3
-    },
-    {
-      "id": "home-bom",
-      "name": "Home: BOM",
-      "type": "first_airport",
-      "member_count": 2,
-      "total_claims": 3,
-      "unique_airports": 2
     },
     {
       "id": "home-bos",
@@ -3969,6 +3972,14 @@
       "member_count": 2,
       "total_claims": 3,
       "unique_airports": 2
+    },
+    {
+      "id": "month-2026-06",
+      "name": "Started: June 2026",
+      "type": "month_started",
+      "member_count": 2,
+      "total_claims": 3,
+      "unique_airports": 3
     },
     {
       "id": "home-ams",
@@ -4039,14 +4050,6 @@
       "name": "Home: VIE",
       "type": "first_airport",
       "member_count": 1,
-      "total_claims": 2,
-      "unique_airports": 2
-    },
-    {
-      "id": "month-2026-06",
-      "name": "Started: June 2026",
-      "type": "month_started",
-      "member_count": 2,
       "total_claims": 2,
       "unique_airports": 2
     },
