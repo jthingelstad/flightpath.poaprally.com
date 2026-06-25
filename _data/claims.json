@@ -2646,5 +2646,13 @@
     "event_id": 214920,
     "created": "2026-06-19 20:13:30",
     "token_id": ""
+  },
+  {
+    "address": "0x9b8d59544e53f692a4023cb6651a4df39b969944",
+    "ens": "feru.base.eth",
+    "airport": "MEX",
+    "event_id": 214925,
+    "created": "2026-06-24 08:21:45",
+    "token_id": ""
   }
 ]

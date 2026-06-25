@@ -1304,6 +1304,15 @@
       "avatar_url": "/img/avatars/0x9b29b5fc995b7f724f6fe0b0f78b78767d32dca4.png"
     },
     {
+      "address": "0x9b8d59544e53f692a4023cb6651a4df39b969944",
+      "ens": "feru.base.eth",
+      "airport_count": 1,
+      "airports": [
+        "MEX"
+      ],
+      "avatar_url": ""
+    },
+    {
       "address": "0x9ee87dcc706d08d588c99b8a02ce711178110b45",
       "ens": "deeza.eth",
       "airport_count": 1,
@@ -1535,6 +1544,13 @@
       "claims": 9
     },
     {
+      "code": "MEX",
+      "name": "Licenciado Benito Juarez International Airport",
+      "city": "Mexico City",
+      "continent": "North America",
+      "claims": 9
+    },
+    {
       "code": "ORD",
       "name": "Chicago O'Hare International Airport",
       "city": "Chicago",
@@ -1546,13 +1562,6 @@
       "name": "Barcelona International Airport",
       "city": "Barcelona",
       "continent": "Europe",
-      "claims": 8
-    },
-    {
-      "code": "MEX",
-      "name": "Licenciado Benito Juarez International Airport",
-      "city": "Mexico City",
-      "continent": "North America",
       "claims": 8
     },
     {
@@ -2245,7 +2254,7 @@
   "regions": [
     {
       "continent": "North America",
-      "claims": 127,
+      "claims": 128,
       "airport_count": 25
     },
     {

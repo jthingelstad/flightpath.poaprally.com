@@ -718,6 +718,11 @@
           "airport_count": 1
         },
         {
+          "address": "0x9b8d59544e53f692a4023cb6651a4df39b969944",
+          "ens": "feru.base.eth",
+          "airport_count": 1
+        },
+        {
           "address": "0xb5d599680af005d0dfb726ff474a9f79f0aaad80",
           "ens": "twc.poap.xyz",
           "airport_count": 1
@@ -738,8 +743,8 @@
           "airport_count": 1
         }
       ],
-      "member_count": 28,
-      "total_claims": 76,
+      "member_count": 29,
+      "total_claims": 77,
       "unique_airports": 39,
       "airports": [
         "AEP",
@@ -1986,6 +1991,11 @@
           "airport_count": 1
         },
         {
+          "address": "0x9b8d59544e53f692a4023cb6651a4df39b969944",
+          "ens": "feru.base.eth",
+          "airport_count": 1
+        },
+        {
           "address": "0xae84bd39bf326c95ab1e90037df2b6e485072e4b",
           "ens": "",
           "airport_count": 1
@@ -1996,8 +2006,8 @@
           "airport_count": 1
         }
       ],
-      "member_count": 7,
-      "total_claims": 13,
+      "member_count": 8,
+      "total_claims": 14,
       "unique_airports": 6,
       "airports": [
         "CDG",
@@ -3541,18 +3551,24 @@
           "airport_count": 2
         },
         {
+          "address": "0x9b8d59544e53f692a4023cb6651a4df39b969944",
+          "ens": "feru.base.eth",
+          "airport_count": 1
+        },
+        {
           "address": "0xe3665c89e0195246901c77423098ef2b379e43fb",
           "ens": "hqueue.uni.eth",
           "airport_count": 1
         }
       ],
-      "member_count": 2,
-      "total_claims": 3,
-      "unique_airports": 3,
+      "member_count": 3,
+      "total_claims": 4,
+      "unique_airports": 4,
       "airports": [
         "BOM",
         "GRU",
-        "JFK"
+        "JFK",
+        "MEX"
       ]
     }
   ],
@@ -3593,8 +3609,8 @@
       "id": "poap-ethdenver-2025",
       "name": "ETHDenver 2025",
       "type": "poap_holders",
-      "member_count": 28,
-      "total_claims": 76,
+      "member_count": 29,
+      "total_claims": 77,
       "unique_airports": 39
     },
     {
@@ -3689,8 +3705,8 @@
       "id": "home-mex",
       "name": "Home: MEX",
       "type": "first_airport",
-      "member_count": 7,
-      "total_claims": 13,
+      "member_count": 8,
+      "total_claims": 14,
       "unique_airports": 6
     },
     {
@@ -3902,6 +3918,14 @@
       "unique_airports": 2
     },
     {
+      "id": "month-2026-06",
+      "name": "Started: June 2026",
+      "type": "month_started",
+      "member_count": 3,
+      "total_claims": 4,
+      "unique_airports": 4
+    },
+    {
       "id": "home-beg",
       "name": "Home: BEG",
       "type": "first_airport",
@@ -3972,14 +3996,6 @@
       "member_count": 2,
       "total_claims": 3,
       "unique_airports": 2
-    },
-    {
-      "id": "month-2026-06",
-      "name": "Started: June 2026",
-      "type": "month_started",
-      "member_count": 2,
-      "total_claims": 3,
-      "unique_airports": 3
     },
     {
       "id": "home-ams",
