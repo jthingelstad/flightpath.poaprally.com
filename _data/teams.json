@@ -331,6 +331,11 @@
           "airport_count": 5
         },
         {
+          "address": "0x4a0962949beac41d4f7f81f96d510e0e1465b5fa",
+          "ens": "nigotiya.eth",
+          "airport_count": 3
+        },
+        {
           "address": "0x4df83971f6f1bfd8d33a2e79584bdfde75f4df60",
           "ens": "salmanneedsajob.eth",
           "airport_count": 3
@@ -339,21 +344,17 @@
           "address": "0x0040daac32d83c78546ae36da42a496b28ab09e1",
           "ens": "gaurang.eth",
           "airport_count": 2
-        },
-        {
-          "address": "0x4a0962949beac41d4f7f81f96d510e0e1465b5fa",
-          "ens": "nigotiya.eth",
-          "airport_count": 2
         }
       ],
       "member_count": 4,
-      "total_claims": 12,
-      "unique_airports": 9,
+      "total_claims": 13,
+      "unique_airports": 10,
       "airports": [
         "BKK",
         "BLR",
         "BOM",
         "DXB",
+        "GIG",
         "GRU",
         "LIS",
         "MAD",
@@ -1170,21 +1171,22 @@
       "description": "First airport claimed: Chhatrapati Shivaji International Airport",
       "members": [
         {
-          "address": "0x0040daac32d83c78546ae36da42a496b28ab09e1",
-          "ens": "gaurang.eth",
-          "airport_count": 2
-        },
-        {
           "address": "0x4a0962949beac41d4f7f81f96d510e0e1465b5fa",
           "ens": "nigotiya.eth",
+          "airport_count": 3
+        },
+        {
+          "address": "0x0040daac32d83c78546ae36da42a496b28ab09e1",
+          "ens": "gaurang.eth",
           "airport_count": 2
         }
       ],
       "member_count": 2,
-      "total_claims": 4,
-      "unique_airports": 3,
+      "total_claims": 5,
+      "unique_airports": 4,
       "airports": [
         "BOM",
+        "GIG",
         "GRU",
         "NCE"
       ]
@@ -3548,7 +3550,7 @@
         {
           "address": "0x4a0962949beac41d4f7f81f96d510e0e1465b5fa",
           "ens": "nigotiya.eth",
-          "airport_count": 2
+          "airport_count": 3
         },
         {
           "address": "0x9b8d59544e53f692a4023cb6651a4df39b969944",
@@ -3562,10 +3564,11 @@
         }
       ],
       "member_count": 3,
-      "total_claims": 4,
-      "unique_airports": 4,
+      "total_claims": 5,
+      "unique_airports": 5,
       "airports": [
         "BOM",
+        "GIG",
         "GRU",
         "JFK",
         "MEX"
@@ -3714,8 +3717,8 @@
       "name": "ETHMumbai 2026",
       "type": "poap_holders",
       "member_count": 4,
-      "total_claims": 12,
-      "unique_airports": 9
+      "total_claims": 13,
+      "unique_airports": 10
     },
     {
       "id": "month-2026-05",
@@ -3830,6 +3833,14 @@
       "unique_airports": 3
     },
     {
+      "id": "home-bom",
+      "name": "Home: BOM",
+      "type": "first_airport",
+      "member_count": 2,
+      "total_claims": 5,
+      "unique_airports": 4
+    },
+    {
       "id": "home-gru",
       "name": "Home: GRU",
       "type": "first_airport",
@@ -3862,6 +3873,14 @@
       "unique_airports": 4
     },
     {
+      "id": "month-2026-06",
+      "name": "Started: June 2026",
+      "type": "month_started",
+      "member_count": 3,
+      "total_claims": 5,
+      "unique_airports": 5
+    },
+    {
       "id": "home-ber",
       "name": "Home: BER",
       "type": "first_airport",
@@ -3876,14 +3895,6 @@
       "member_count": 4,
       "total_claims": 4,
       "unique_airports": 1
-    },
-    {
-      "id": "home-bom",
-      "name": "Home: BOM",
-      "type": "first_airport",
-      "member_count": 2,
-      "total_claims": 4,
-      "unique_airports": 3
     },
     {
       "id": "home-cun",
@@ -3916,14 +3927,6 @@
       "member_count": 2,
       "total_claims": 4,
       "unique_airports": 2
-    },
-    {
-      "id": "month-2026-06",
-      "name": "Started: June 2026",
-      "type": "month_started",
-      "member_count": 3,
-      "total_claims": 4,
-      "unique_airports": 4
     },
     {
       "id": "home-beg",

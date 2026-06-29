@@ -317,6 +317,17 @@
       "avatar_url": "/img/avatars/0x14fc0be8e90ab768226cccf952506ce00bde5029.png"
     },
     {
+      "address": "0x4a0962949beac41d4f7f81f96d510e0e1465b5fa",
+      "ens": "nigotiya.eth",
+      "airport_count": 3,
+      "airports": [
+        "BOM",
+        "GIG",
+        "GRU"
+      ],
+      "avatar_url": ""
+    },
+    {
       "address": "0x4cc93ebb24bc1660d5b41ff9ec8ca480a0a94c36",
       "ens": "fabioanaya.eth",
       "airport_count": 3,
@@ -668,16 +679,6 @@
         "YYZ"
       ],
       "avatar_url": "/img/avatars/0x43f330d94486b5581369a477ea85a01f177dc6fd.png"
-    },
-    {
-      "address": "0x4a0962949beac41d4f7f81f96d510e0e1465b5fa",
-      "ens": "nigotiya.eth",
-      "airport_count": 2,
-      "airports": [
-        "BOM",
-        "GRU"
-      ],
-      "avatar_url": ""
     },
     {
       "address": "0x4c5f4f9df7968b0db448526162114a04f3462bad",
@@ -1838,6 +1839,13 @@
       "claims": 2
     },
     {
+      "code": "GIG",
+      "name": "Galeao - Antonio Carlos Jobim International Airport",
+      "city": "Rio De Janeiro",
+      "continent": "South America",
+      "claims": 2
+    },
+    {
       "code": "ICN",
       "name": "Incheon International Airport",
       "city": "Seoul",
@@ -1954,13 +1962,6 @@
       "name": "Brisbane International Airport",
       "city": "Brisbane",
       "continent": "Oceania",
-      "claims": 1
-    },
-    {
-      "code": "GIG",
-      "name": "Galeao - Antonio Carlos Jobim International Airport",
-      "city": "Rio De Janeiro",
-      "continent": "South America",
       "claims": 1
     },
     {
@@ -2264,7 +2265,7 @@
     },
     {
       "continent": "South America",
-      "claims": 58,
+      "claims": 59,
       "airport_count": 11
     },
     {
