@@ -339,6 +339,17 @@
       "avatar_url": "/img/avatars/0x4cc93ebb24bc1660d5b41ff9ec8ca480a0a94c36.png"
     },
     {
+      "address": "0x4ccc2acdd43811ce928cef7371fc95daf7418631",
+      "ens": "guide42.eth",
+      "airport_count": 3,
+      "airports": [
+        "AEP",
+        "BOG",
+        "LIS"
+      ],
+      "avatar_url": ""
+    },
+    {
       "address": "0x4df83971f6f1bfd8d33a2e79584bdfde75f4df60",
       "ens": "salmanneedsajob.eth",
       "airport_count": 3,
@@ -687,16 +698,6 @@
       "airports": [
         "DEN",
         "SAN"
-      ],
-      "avatar_url": ""
-    },
-    {
-      "address": "0x4ccc2acdd43811ce928cef7371fc95daf7418631",
-      "ens": "guide42.eth",
-      "airport_count": 2,
-      "airports": [
-        "AEP",
-        "BOG"
       ],
       "avatar_url": ""
     },
@@ -1713,6 +1714,13 @@
       "claims": 4
     },
     {
+      "code": "LIS",
+      "name": "Lisbon Portela Airport",
+      "city": "Lisbon",
+      "continent": "Europe",
+      "claims": 4
+    },
+    {
       "code": "NRT",
       "name": "Narita International Airport",
       "city": "Tokyo",
@@ -1787,13 +1795,6 @@
       "name": "Guarulhos - Governador Andre Franco Montoro International Airport",
       "city": "Sao Paulo",
       "continent": "South America",
-      "claims": 3
-    },
-    {
-      "code": "LIS",
-      "name": "Lisbon Portela Airport",
-      "city": "Lisbon",
-      "continent": "Europe",
       "claims": 3
     },
     {
@@ -2260,7 +2261,7 @@
     },
     {
       "continent": "Europe",
-      "claims": 99,
+      "claims": 100,
       "airport_count": 22
     },
     {

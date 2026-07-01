@@ -409,6 +409,11 @@
           "airport_count": 3
         },
         {
+          "address": "0x4ccc2acdd43811ce928cef7371fc95daf7418631",
+          "ens": "guide42.eth",
+          "airport_count": 3
+        },
+        {
           "address": "0x56d389c4e07a48d429035532402301310b8143a0",
           "ens": "colfax.eth",
           "airport_count": 3
@@ -441,11 +446,6 @@
         {
           "address": "0x3ab1530d7fd660262d25d53c8dd7f60b5a880181",
           "ens": "seabiscuit747.eth",
-          "airport_count": 2
-        },
-        {
-          "address": "0x4ccc2acdd43811ce928cef7371fc95daf7418631",
-          "ens": "guide42.eth",
           "airport_count": 2
         },
         {
@@ -540,7 +540,7 @@
         }
       ],
       "member_count": 34,
-      "total_claims": 90,
+      "total_claims": 91,
       "unique_airports": 47,
       "airports": [
         "AEP",
@@ -951,7 +951,7 @@
         {
           "address": "0x4ccc2acdd43811ce928cef7371fc95daf7418631",
           "ens": "guide42.eth",
-          "airport_count": 2
+          "airport_count": 3
         },
         {
           "address": "0x8e484b34356111a9f642eff09b2635311600ad65",
@@ -990,14 +990,15 @@
         }
       ],
       "member_count": 9,
-      "total_claims": 15,
-      "unique_airports": 5,
+      "total_claims": 16,
+      "unique_airports": 6,
       "airports": [
         "AEP",
         "BOG",
         "DEN",
         "EZE",
-        "IAH"
+        "IAH",
+        "LIS"
       ]
     },
     {
@@ -2678,6 +2679,11 @@
           "airport_count": 3
         },
         {
+          "address": "0x4ccc2acdd43811ce928cef7371fc95daf7418631",
+          "ens": "guide42.eth",
+          "airport_count": 3
+        },
+        {
           "address": "0x4df83971f6f1bfd8d33a2e79584bdfde75f4df60",
           "ens": "salmanneedsajob.eth",
           "airport_count": 3
@@ -2730,11 +2736,6 @@
         {
           "address": "0x4c5f4f9df7968b0db448526162114a04f3462bad",
           "ens": "erebels.eth",
-          "airport_count": 2
-        },
-        {
-          "address": "0x4ccc2acdd43811ce928cef7371fc95daf7418631",
-          "ens": "guide42.eth",
           "airport_count": 2
         },
         {
@@ -2879,7 +2880,7 @@
         }
       ],
       "member_count": 52,
-      "total_claims": 128,
+      "total_claims": 129,
       "unique_airports": 50,
       "airports": [
         "AEP",
@@ -3581,7 +3582,7 @@
       "name": "Started: January 2026",
       "type": "month_started",
       "member_count": 52,
-      "total_claims": 128,
+      "total_claims": 129,
       "unique_airports": 50
     },
     {
@@ -3605,7 +3606,7 @@
       "name": "We've Met Patricio",
       "type": "poap_holders",
       "member_count": 34,
-      "total_claims": 90,
+      "total_claims": 91,
       "unique_airports": 47
     },
     {
@@ -3673,20 +3674,20 @@
       "unique_airports": 8
     },
     {
+      "id": "home-aep",
+      "name": "Home: AEP",
+      "type": "first_airport",
+      "member_count": 9,
+      "total_claims": 16,
+      "unique_airports": 6
+    },
+    {
       "id": "home-yvr",
       "name": "Home: YVR",
       "type": "first_airport",
       "member_count": 1,
       "total_claims": 16,
       "unique_airports": 16
-    },
-    {
-      "id": "home-aep",
-      "name": "Home: AEP",
-      "type": "first_airport",
-      "member_count": 9,
-      "total_claims": 15,
-      "unique_airports": 5
     },
     {
       "id": "month-2026-04",
