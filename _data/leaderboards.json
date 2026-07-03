@@ -147,6 +147,19 @@
       "avatar_url": "/img/avatars/0x111accebf9d70d9c06de2d38f9392522e82ecf29.png"
     },
     {
+      "address": "0x4a0962949beac41d4f7f81f96d510e0e1465b5fa",
+      "ens": "nigotiya.eth",
+      "airport_count": 5,
+      "airports": [
+        "BOG",
+        "BOM",
+        "GIG",
+        "GRU",
+        "JFK"
+      ],
+      "avatar_url": ""
+    },
+    {
       "address": "0x4fd6b3204a6ab48978018b25821682f090840333",
       "ens": "cryptochica.eth",
       "airport_count": 5,
@@ -315,17 +328,6 @@
         "NCE"
       ],
       "avatar_url": "/img/avatars/0x14fc0be8e90ab768226cccf952506ce00bde5029.png"
-    },
-    {
-      "address": "0x4a0962949beac41d4f7f81f96d510e0e1465b5fa",
-      "ens": "nigotiya.eth",
-      "airport_count": 3,
-      "airports": [
-        "BOM",
-        "GIG",
-        "GRU"
-      ],
-      "avatar_url": ""
     },
     {
       "address": "0x4cc93ebb24bc1660d5b41ff9ec8ca480a0a94c36",
@@ -1529,20 +1531,20 @@
       "name": "El Dorado International Airport",
       "city": "Bogota",
       "continent": "South America",
-      "claims": 9
-    },
-    {
-      "code": "FRA",
-      "name": "Frankfurt am Main International Airport",
-      "city": "Frankfurt am Main",
-      "continent": "Europe",
-      "claims": 9
+      "claims": 10
     },
     {
       "code": "JFK",
       "name": "John F Kennedy International Airport",
       "city": "New York",
       "continent": "North America",
+      "claims": 10
+    },
+    {
+      "code": "FRA",
+      "name": "Frankfurt am Main International Airport",
+      "city": "Frankfurt am Main",
+      "continent": "Europe",
       "claims": 9
     },
     {
@@ -2256,7 +2258,7 @@
   "regions": [
     {
       "continent": "North America",
-      "claims": 128,
+      "claims": 129,
       "airport_count": 25
     },
     {
@@ -2266,7 +2268,7 @@
     },
     {
       "continent": "South America",
-      "claims": 59,
+      "claims": 60,
       "airport_count": 11
     },
     {

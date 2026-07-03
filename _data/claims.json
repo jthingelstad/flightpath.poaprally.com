@@ -2670,5 +2670,21 @@
     "event_id": 214900,
     "created": "2026-06-30 08:24:05",
     "token_id": ""
+  },
+  {
+    "address": "0x4a0962949beac41d4f7f81f96d510e0e1465b5fa",
+    "ens": "nigotiya.eth",
+    "airport": "BOG",
+    "event_id": 214914,
+    "created": "2026-07-02 10:51:05",
+    "token_id": ""
+  },
+  {
+    "address": "0x4a0962949beac41d4f7f81f96d510e0e1465b5fa",
+    "ens": "nigotiya.eth",
+    "airport": "JFK",
+    "event_id": 214938,
+    "created": "2026-07-02 18:16:40",
+    "token_id": ""
   }
 ]

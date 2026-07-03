@@ -114,7 +114,7 @@
     "country": "CO",
     "name": "El Dorado International Airport",
     "image_url": "/img/poaps/bog.png",
-    "claims": 9
+    "claims": 10
   },
   {
     "event_id": 216408,
@@ -816,7 +816,7 @@
     "country": "US",
     "name": "John F Kennedy International Airport",
     "image_url": "/img/poaps/jfk.png",
-    "claims": 9
+    "claims": 10
   },
   {
     "event_id": 214904,
