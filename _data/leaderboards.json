@@ -1291,12 +1291,12 @@
     },
     {
       "address": "0x971d1eeea92a0a4709caeeb487effbce4c1c9369",
-      "ens": "cryptozyzz.eth",
+      "ens": "",
       "airport_count": 1,
       "airports": [
         "CTG"
       ],
-      "avatar_url": "/img/avatars/0x971d1eeea92a0a4709caeeb487effbce4c1c9369.png"
+      "avatar_url": ""
     },
     {
       "address": "0x9b29b5fc995b7f724f6fe0b0f78b78767d32dca4",
