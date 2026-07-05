@@ -137,7 +137,7 @@
         {
           "address": "0x599abe13e88f1045e3aefe02a07f7bafc0c76b76",
           "ens": "shufro.eth",
-          "airport_count": 4
+          "airport_count": 5
         },
         {
           "address": "0xf6b6f07862a02c85628b3a9688beae07fea9c863",
@@ -271,7 +271,7 @@
         }
       ],
       "member_count": 31,
-      "total_claims": 92,
+      "total_claims": 93,
       "unique_airports": 43,
       "airports": [
         "AEP",
@@ -386,14 +386,14 @@
           "airport_count": 6
         },
         {
-          "address": "0xbd19a3f0a9cace18513a1e2863d648d13975cb30",
-          "ens": "didierkrux.eth",
+          "address": "0x599abe13e88f1045e3aefe02a07f7bafc0c76b76",
+          "ens": "shufro.eth",
           "airport_count": 5
         },
         {
-          "address": "0x599abe13e88f1045e3aefe02a07f7bafc0c76b76",
-          "ens": "shufro.eth",
-          "airport_count": 4
+          "address": "0xbd19a3f0a9cace18513a1e2863d648d13975cb30",
+          "ens": "didierkrux.eth",
+          "airport_count": 5
         },
         {
           "address": "0x7d76020b5519176a2366d1b0b3b3ab2f9fe1d553",
@@ -542,7 +542,7 @@
         }
       ],
       "member_count": 34,
-      "total_claims": 91,
+      "total_claims": 92,
       "unique_airports": 47,
       "airports": [
         "AEP",
@@ -613,7 +613,7 @@
         {
           "address": "0x599abe13e88f1045e3aefe02a07f7bafc0c76b76",
           "ens": "shufro.eth",
-          "airport_count": 4
+          "airport_count": 5
         },
         {
           "address": "0x72cc82900823c29310985decdd607a68f9bc8418",
@@ -747,8 +747,8 @@
         }
       ],
       "member_count": 29,
-      "total_claims": 77,
-      "unique_airports": 39,
+      "total_claims": 78,
+      "unique_airports": 40,
       "airports": [
         "AEP",
         "AMS",
@@ -760,6 +760,7 @@
         "CUN",
         "DEN",
         "DFW",
+        "EWR",
         "EZE",
         "FCO",
         "FRA",
@@ -1846,14 +1847,15 @@
         {
           "address": "0x599abe13e88f1045e3aefe02a07f7bafc0c76b76",
           "ens": "shufro.eth",
-          "airport_count": 4
+          "airport_count": 5
         }
       ],
       "member_count": 1,
-      "total_claims": 4,
-      "unique_airports": 4,
+      "total_claims": 5,
+      "unique_airports": 5,
       "airports": [
         "DEN",
+        "EWR",
         "JFK",
         "LGA",
         "ORD"
@@ -2656,7 +2658,7 @@
         {
           "address": "0x599abe13e88f1045e3aefe02a07f7bafc0c76b76",
           "ens": "shufro.eth",
-          "airport_count": 4
+          "airport_count": 5
         },
         {
           "address": "0x664936a6aa22170221495f14450b891e7267ad0c",
@@ -2890,7 +2892,7 @@
         }
       ],
       "member_count": 52,
-      "total_claims": 129,
+      "total_claims": 130,
       "unique_airports": 50,
       "airports": [
         "AEP",
@@ -3593,7 +3595,7 @@
       "name": "Started: January 2026",
       "type": "month_started",
       "member_count": 52,
-      "total_claims": 129,
+      "total_claims": 130,
       "unique_airports": 50
     },
     {
@@ -3609,7 +3611,7 @@
       "name": "ETHDenver 2026",
       "type": "poap_holders",
       "member_count": 31,
-      "total_claims": 92,
+      "total_claims": 93,
       "unique_airports": 43
     },
     {
@@ -3617,7 +3619,7 @@
       "name": "We've Met Patricio",
       "type": "poap_holders",
       "member_count": 34,
-      "total_claims": 91,
+      "total_claims": 92,
       "unique_airports": 47
     },
     {
@@ -3625,8 +3627,8 @@
       "name": "ETHDenver 2025",
       "type": "poap_holders",
       "member_count": 29,
-      "total_claims": 77,
-      "unique_airports": 39
+      "total_claims": 78,
+      "unique_airports": 40
     },
     {
       "id": "month-2026-03",
@@ -3869,6 +3871,14 @@
       "unique_airports": 5
     },
     {
+      "id": "home-lga",
+      "name": "Home: LGA",
+      "type": "first_airport",
+      "member_count": 1,
+      "total_claims": 5,
+      "unique_airports": 5
+    },
+    {
       "id": "home-lis",
       "name": "Home: LIS",
       "type": "first_airport",
@@ -3923,14 +3933,6 @@
       "member_count": 2,
       "total_claims": 4,
       "unique_airports": 3
-    },
-    {
-      "id": "home-lga",
-      "name": "Home: LGA",
-      "type": "first_airport",
-      "member_count": 1,
-      "total_claims": 4,
-      "unique_airports": 4
     },
     {
       "id": "home-tbs",

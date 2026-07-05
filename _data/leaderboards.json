@@ -173,6 +173,19 @@
       "avatar_url": "/img/avatars/0x4fd6b3204a6ab48978018b25821682f090840333.png"
     },
     {
+      "address": "0x599abe13e88f1045e3aefe02a07f7bafc0c76b76",
+      "ens": "shufro.eth",
+      "airport_count": 5,
+      "airports": [
+        "DEN",
+        "EWR",
+        "JFK",
+        "LGA",
+        "ORD"
+      ],
+      "avatar_url": "/img/avatars/0x599abe13e88f1045e3aefe02a07f7bafc0c76b76.png"
+    },
+    {
       "address": "0x6210477b3025bf5ea50a35d39e7d2875dc11661c",
       "ens": "noah.savedsouls.eth",
       "airport_count": 5,
@@ -222,18 +235,6 @@
         "NRT"
       ],
       "avatar_url": "/img/avatars/0x1ae601d54a8df8216208b5e070393c933f991581.png"
-    },
-    {
-      "address": "0x599abe13e88f1045e3aefe02a07f7bafc0c76b76",
-      "ens": "shufro.eth",
-      "airport_count": 4,
-      "airports": [
-        "DEN",
-        "JFK",
-        "LGA",
-        "ORD"
-      ],
-      "avatar_url": "/img/avatars/0x599abe13e88f1045e3aefe02a07f7bafc0c76b76.png"
     },
     {
       "address": "0x664936a6aa22170221495f14450b891e7267ad0c",
@@ -1611,6 +1612,13 @@
       "claims": 6
     },
     {
+      "code": "EWR",
+      "name": "Newark Liberty International Airport",
+      "city": "Newark",
+      "continent": "North America",
+      "claims": 6
+    },
+    {
       "code": "LHR",
       "name": "London Heathrow Airport",
       "city": "London",
@@ -1642,13 +1650,6 @@
       "code": "DFW",
       "name": "Dallas-Fort Worth International Airport",
       "city": "Dallas-Fort Worth",
-      "continent": "North America",
-      "claims": 5
-    },
-    {
-      "code": "EWR",
-      "name": "Newark Liberty International Airport",
-      "city": "Newark",
       "continent": "North America",
       "claims": 5
     },
@@ -2258,7 +2259,7 @@
   "regions": [
     {
       "continent": "North America",
-      "claims": 129,
+      "claims": 130,
       "airport_count": 25
     },
     {
