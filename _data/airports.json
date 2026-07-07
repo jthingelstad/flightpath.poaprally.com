@@ -88,7 +88,7 @@
     "country": "US",
     "name": "Seattle-Tacoma International Airport",
     "image_url": "/img/poaps/sea.png",
-    "claims": 0
+    "claims": 2
   },
   {
     "event_id": 214937,
@@ -1089,7 +1089,7 @@
     "country": "MX",
     "name": "General Mariano Escobedo International Airport",
     "image_url": "/img/poaps/mty.png",
-    "claims": 1
+    "claims": 2
   },
   {
     "event_id": 222333,

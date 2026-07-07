@@ -7,19 +7,19 @@
       "description": "The Thingelstad family",
       "members": [
         {
+          "address": "0x111accebf9d70d9c06de2d38f9392522e82ecf29",
+          "ens": "poap.thingelstad.eth",
+          "airport_count": 6
+        },
+        {
           "address": "0x74dbbcb9c08c51b38510d130d928e1e8c68eda7c",
           "ens": "mazie.thingelstad.eth",
           "airport_count": 6
         },
         {
-          "address": "0x111accebf9d70d9c06de2d38f9392522e82ecf29",
-          "ens": "poap.thingelstad.eth",
-          "airport_count": 5
-        },
-        {
           "address": "0x6493db62998997134e0451cacd32360858f9a3d6",
           "ens": "tyler.thingelstad.eth",
-          "airport_count": 3
+          "airport_count": 4
         },
         {
           "address": "0xf1c562ebc3ab6221a1f0e10a94a1e484efd1508e",
@@ -28,8 +28,8 @@
         }
       ],
       "member_count": 4,
-      "total_claims": 17,
-      "unique_airports": 9,
+      "total_claims": 19,
+      "unique_airports": 10,
       "airports": [
         "AMS",
         "BCN",
@@ -38,6 +38,7 @@
         "LGA",
         "LIS",
         "MSP",
+        "SEA",
         "YYZ",
         "ZRH"
       ]
@@ -2105,19 +2106,19 @@
       "description": "First airport claimed: Minneapolis-St Paul International/Wold-Chamberlain Airport",
       "members": [
         {
+          "address": "0x111accebf9d70d9c06de2d38f9392522e82ecf29",
+          "ens": "poap.thingelstad.eth",
+          "airport_count": 6
+        },
+        {
           "address": "0x74dbbcb9c08c51b38510d130d928e1e8c68eda7c",
           "ens": "mazie.thingelstad.eth",
           "airport_count": 6
         },
         {
-          "address": "0x111accebf9d70d9c06de2d38f9392522e82ecf29",
-          "ens": "poap.thingelstad.eth",
-          "airport_count": 5
-        },
-        {
           "address": "0x6493db62998997134e0451cacd32360858f9a3d6",
           "ens": "tyler.thingelstad.eth",
-          "airport_count": 3
+          "airport_count": 4
         },
         {
           "address": "0xf1c562ebc3ab6221a1f0e10a94a1e484efd1508e",
@@ -2136,8 +2137,8 @@
         }
       ],
       "member_count": 6,
-      "total_claims": 20,
-      "unique_airports": 10,
+      "total_claims": 22,
+      "unique_airports": 11,
       "airports": [
         "AMS",
         "AUS",
@@ -2147,6 +2148,7 @@
         "LGA",
         "LIS",
         "MSP",
+        "SEA",
         "YYZ",
         "ZRH"
       ]
@@ -2161,10 +2163,15 @@
           "address": "0x1019236722517506732d92dac0f7b9b4ed993d8d",
           "ens": "forestkeeperio.eth",
           "airport_count": 2
+        },
+        {
+          "address": "0x9fb91a8d688d6524e730faf1e893035bcff57705",
+          "ens": "val.withpoap.eth",
+          "airport_count": 1
         }
       ],
-      "member_count": 1,
-      "total_claims": 2,
+      "member_count": 2,
+      "total_claims": 3,
       "unique_airports": 2,
       "airports": [
         "CUN",
@@ -2976,7 +2983,7 @@
         {
           "address": "0x111accebf9d70d9c06de2d38f9392522e82ecf29",
           "ens": "poap.thingelstad.eth",
-          "airport_count": 5
+          "airport_count": 6
         },
         {
           "address": "0x7d76020b5519176a2366d1b0b3b3ab2f9fe1d553",
@@ -3185,8 +3192,8 @@
         }
       ],
       "member_count": 46,
-      "total_claims": 120,
-      "unique_airports": 56,
+      "total_claims": 121,
+      "unique_airports": 57,
       "airports": [
         "ADD",
         "AKL",
@@ -3233,6 +3240,7 @@
         "NRT",
         "PRG",
         "PTY",
+        "SEA",
         "SFO",
         "SIN",
         "SOF",
@@ -3268,14 +3276,14 @@
           "airport_count": 4
         },
         {
-          "address": "0xf58fe388d53e9542f0bddff2d1578b13675228fd",
-          "ens": "catpix.eth",
+          "address": "0x6493db62998997134e0451cacd32360858f9a3d6",
+          "ens": "tyler.thingelstad.eth",
           "airport_count": 4
         },
         {
-          "address": "0x6493db62998997134e0451cacd32360858f9a3d6",
-          "ens": "tyler.thingelstad.eth",
-          "airport_count": 3
+          "address": "0xf58fe388d53e9542f0bddff2d1578b13675228fd",
+          "ens": "catpix.eth",
+          "airport_count": 4
         },
         {
           "address": "0x9ecc835b3487d3cd8b1fa03b251ee51e1ac10859",
@@ -3389,8 +3397,8 @@
         }
       ],
       "member_count": 27,
-      "total_claims": 53,
-      "unique_airports": 29,
+      "total_claims": 54,
+      "unique_airports": 30,
       "airports": [
         "AEP",
         "AMS",
@@ -3417,6 +3425,7 @@
         "NRT",
         "ORD",
         "PRG",
+        "SEA",
         "SFO",
         "SGN",
         "SKG",
@@ -3587,6 +3596,25 @@
         "JFK",
         "MEX"
       ]
+    },
+    {
+      "id": "month-2026-07",
+      "name": "Started: July 2026",
+      "type": "month_started",
+      "description": "Collectors who started in July 2026",
+      "members": [
+        {
+          "address": "0x9fb91a8d688d6524e730faf1e893035bcff57705",
+          "ens": "val.withpoap.eth",
+          "airport_count": 1
+        }
+      ],
+      "member_count": 1,
+      "total_claims": 1,
+      "unique_airports": 1,
+      "airports": [
+        "MTY"
+      ]
     }
   ],
   "leaderboard": [
@@ -3603,8 +3631,8 @@
       "name": "Started: February 2026",
       "type": "month_started",
       "member_count": 46,
-      "total_claims": 120,
-      "unique_airports": 56
+      "total_claims": 121,
+      "unique_airports": 57
     },
     {
       "id": "poap-ethdenver-2026",
@@ -3635,8 +3663,8 @@
       "name": "Started: March 2026",
       "type": "month_started",
       "member_count": 27,
-      "total_claims": 53,
-      "unique_airports": 29
+      "total_claims": 54,
+      "unique_airports": 30
     },
     {
       "id": "auto-anon",
@@ -3655,6 +3683,14 @@
       "unique_airports": 15
     },
     {
+      "id": "home-msp",
+      "name": "Home: MSP",
+      "type": "first_airport",
+      "member_count": 6,
+      "total_claims": 22,
+      "unique_airports": 11
+    },
+    {
       "id": "home-eze",
       "name": "Home: EZE",
       "type": "first_airport",
@@ -3663,20 +3699,12 @@
       "unique_airports": 11
     },
     {
-      "id": "home-msp",
-      "name": "Home: MSP",
-      "type": "first_airport",
-      "member_count": 6,
-      "total_claims": 20,
-      "unique_airports": 10
-    },
-    {
       "id": "ens-team-thingelstad",
       "name": "Team Thingelstad",
       "type": "ens_regex",
       "member_count": 4,
-      "total_claims": 17,
-      "unique_airports": 9
+      "total_claims": 19,
+      "unique_airports": 10
     },
     {
       "id": "home-mnl",
@@ -3999,6 +4027,14 @@
       "unique_airports": 3
     },
     {
+      "id": "home-mty",
+      "name": "Home: MTY",
+      "type": "first_airport",
+      "member_count": 2,
+      "total_claims": 3,
+      "unique_airports": 2
+    },
+    {
       "id": "home-tpe",
       "name": "Home: TPE",
       "type": "first_airport",
@@ -4053,14 +4089,6 @@
       "member_count": 2,
       "total_claims": 2,
       "unique_airports": 1
-    },
-    {
-      "id": "home-mty",
-      "name": "Home: MTY",
-      "type": "first_airport",
-      "member_count": 1,
-      "total_claims": 2,
-      "unique_airports": 2
     },
     {
       "id": "home-scl",
@@ -4146,6 +4174,14 @@
       "id": "home-pxm",
       "name": "Home: PXM",
       "type": "first_airport",
+      "member_count": 1,
+      "total_claims": 1,
+      "unique_airports": 1
+    },
+    {
+      "id": "month-2026-07",
+      "name": "Started: July 2026",
+      "type": "month_started",
       "member_count": 1,
       "total_claims": 1,
       "unique_airports": 1
