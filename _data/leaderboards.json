@@ -787,6 +787,16 @@
       "avatar_url": "/img/avatars/0x8e484b34356111a9f642eff09b2635311600ad65.png"
     },
     {
+      "address": "0x9fb91a8d688d6524e730faf1e893035bcff57705",
+      "ens": "val.withpoap.eth",
+      "airport_count": 2,
+      "airports": [
+        "CUN",
+        "MTY"
+      ],
+      "avatar_url": ""
+    },
+    {
       "address": "0xa5ae650aac0072d1ac714f27e1cdc954bfea6717",
       "ens": "prbrody.eth",
       "airport_count": 2,
@@ -1329,15 +1339,6 @@
       "avatar_url": "/img/avatars/0x9ee87dcc706d08d588c99b8a02ce711178110b45.png"
     },
     {
-      "address": "0x9fb91a8d688d6524e730faf1e893035bcff57705",
-      "ens": "val.withpoap.eth",
-      "airport_count": 1,
-      "airports": [
-        "MTY"
-      ],
-      "avatar_url": ""
-    },
-    {
       "address": "0xa775c775feb740d15da78d572a1caccbccc7a0f6",
       "ens": "solyacuariana.eth",
       "airport_count": 1,
@@ -1623,6 +1624,13 @@
       "claims": 6
     },
     {
+      "code": "CUN",
+      "name": "Cancun International Airport",
+      "city": "Cancun",
+      "continent": "North America",
+      "claims": 6
+    },
+    {
       "code": "EWR",
       "name": "Newark Liberty International Airport",
       "city": "Newark",
@@ -1648,13 +1656,6 @@
       "name": "Suvarnabhumi Airport",
       "city": "Bangkok",
       "continent": "Asia",
-      "claims": 5
-    },
-    {
-      "code": "CUN",
-      "name": "Cancun International Airport",
-      "city": "Cancun",
-      "continent": "North America",
       "claims": 5
     },
     {
@@ -2270,7 +2271,7 @@
   "regions": [
     {
       "continent": "North America",
-      "claims": 133,
+      "claims": 134,
       "airport_count": 26
     },
     {

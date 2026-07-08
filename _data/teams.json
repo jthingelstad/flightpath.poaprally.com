@@ -2167,11 +2167,11 @@
         {
           "address": "0x9fb91a8d688d6524e730faf1e893035bcff57705",
           "ens": "val.withpoap.eth",
-          "airport_count": 1
+          "airport_count": 2
         }
       ],
       "member_count": 2,
-      "total_claims": 3,
+      "total_claims": 4,
       "unique_airports": 2,
       "airports": [
         "CUN",
@@ -3606,13 +3606,14 @@
         {
           "address": "0x9fb91a8d688d6524e730faf1e893035bcff57705",
           "ens": "val.withpoap.eth",
-          "airport_count": 1
+          "airport_count": 2
         }
       ],
       "member_count": 1,
-      "total_claims": 1,
-      "unique_airports": 1,
+      "total_claims": 2,
+      "unique_airports": 2,
       "airports": [
+        "CUN",
         "MTY"
       ]
     }
@@ -3963,6 +3964,14 @@
       "unique_airports": 3
     },
     {
+      "id": "home-mty",
+      "name": "Home: MTY",
+      "type": "first_airport",
+      "member_count": 2,
+      "total_claims": 4,
+      "unique_airports": 2
+    },
+    {
       "id": "home-tbs",
       "name": "Home: TBS",
       "type": "first_airport",
@@ -4025,14 +4034,6 @@
       "member_count": 1,
       "total_claims": 3,
       "unique_airports": 3
-    },
-    {
-      "id": "home-mty",
-      "name": "Home: MTY",
-      "type": "first_airport",
-      "member_count": 2,
-      "total_claims": 3,
-      "unique_airports": 2
     },
     {
       "id": "home-tpe",
@@ -4115,6 +4116,14 @@
       "unique_airports": 2
     },
     {
+      "id": "month-2026-07",
+      "name": "Started: July 2026",
+      "type": "month_started",
+      "member_count": 1,
+      "total_claims": 2,
+      "unique_airports": 2
+    },
+    {
       "id": "home-add",
       "name": "Home: ADD",
       "type": "first_airport",
@@ -4174,14 +4183,6 @@
       "id": "home-pxm",
       "name": "Home: PXM",
       "type": "first_airport",
-      "member_count": 1,
-      "total_claims": 1,
-      "unique_airports": 1
-    },
-    {
-      "id": "month-2026-07",
-      "name": "Started: July 2026",
-      "type": "month_started",
       "member_count": 1,
       "total_claims": 1,
       "unique_airports": 1
