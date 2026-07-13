@@ -226,6 +226,18 @@
       "avatar_url": "/img/avatars/0xbd19a3f0a9cace18513a1e2863d648d13975cb30.png"
     },
     {
+      "address": "0x015ba73b866c0facfecc84fe90d72ed1f4598380",
+      "ens": "gotoalberto.eth",
+      "airport_count": 4,
+      "airports": [
+        "MAD",
+        "MIA",
+        "NCE",
+        "NRT"
+      ],
+      "avatar_url": "/img/avatars/0x015ba73b866c0facfecc84fe90d72ed1f4598380.png"
+    },
+    {
       "address": "0x1ae601d54a8df8216208b5e070393c933f991581",
       "ens": "rebilander.eth",
       "airport_count": 4,
@@ -320,17 +332,6 @@
         "IAH"
       ],
       "avatar_url": "/img/avatars/0xf6b6f07862a02c85628b3a9688beae07fea9c863.png"
-    },
-    {
-      "address": "0x015ba73b866c0facfecc84fe90d72ed1f4598380",
-      "ens": "gotoalberto.eth",
-      "airport_count": 3,
-      "airports": [
-        "MAD",
-        "MIA",
-        "NCE"
-      ],
-      "avatar_url": "/img/avatars/0x015ba73b866c0facfecc84fe90d72ed1f4598380.png"
     },
     {
       "address": "0x14fc0be8e90ab768226cccf952506ce00bde5029",
@@ -452,6 +453,17 @@
         "EZE"
       ],
       "avatar_url": "/img/avatars/0x8c775808fffbb99208452698bc619cf9d07d8b2e.png"
+    },
+    {
+      "address": "0x8d54e26c004b63f76463e1c4a29843877dc4d6b6",
+      "ens": "",
+      "airport_count": 3,
+      "airports": [
+        "EZE",
+        "MAD",
+        "NRT"
+      ],
+      "avatar_url": ""
     },
     {
       "address": "0x914a7f893c3f7a7c0067fad1312c1bd630009159",
@@ -763,16 +775,6 @@
       "airports": [
         "EZE",
         "LIM"
-      ],
-      "avatar_url": ""
-    },
-    {
-      "address": "0x8d54e26c004b63f76463e1c4a29843877dc4d6b6",
-      "ens": "",
-      "airport_count": 2,
-      "airports": [
-        "EZE",
-        "MAD"
       ],
       "avatar_url": ""
     },
@@ -1645,6 +1647,13 @@
       "claims": 6
     },
     {
+      "code": "NRT",
+      "name": "Narita International Airport",
+      "city": "Tokyo",
+      "continent": "Asia",
+      "claims": 6
+    },
+    {
       "code": "PRG",
       "name": "V\u00e1clav Havel Airport",
       "city": "Prague",
@@ -1733,13 +1742,6 @@
       "name": "Lisbon Portela Airport",
       "city": "Lisbon",
       "continent": "Europe",
-      "claims": 4
-    },
-    {
-      "code": "NRT",
-      "name": "Narita International Airport",
-      "city": "Tokyo",
-      "continent": "Asia",
       "claims": 4
     },
     {
@@ -2286,7 +2288,7 @@
     },
     {
       "continent": "Asia",
-      "claims": 43,
+      "claims": 45,
       "airport_count": 15
     },
     {
