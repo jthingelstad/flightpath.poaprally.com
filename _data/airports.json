@@ -101,7 +101,7 @@
     "country": "US",
     "name": "Newark Liberty International Airport",
     "image_url": "/img/poaps/ewr.png",
-    "claims": 6
+    "claims": 7
   },
   {
     "event_id": 214914,
@@ -1206,7 +1206,7 @@
     "country": "NL",
     "name": "Amsterdam Airport Schiphol",
     "image_url": "/img/poaps/ams.png",
-    "claims": 7
+    "claims": 8
   },
   {
     "event_id": 214889,

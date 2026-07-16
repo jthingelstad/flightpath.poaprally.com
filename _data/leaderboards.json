@@ -44,6 +44,22 @@
       "avatar_url": "/img/avatars/0x8f51dc0791cddddce08052fff939eb7cf0c17856.png"
     },
     {
+      "address": "0x03f11c7a45ba8219c87f312eecb07287c2095302",
+      "ens": "0xtangle.eth",
+      "airport_count": 8,
+      "airports": [
+        "DEN",
+        "EWR",
+        "HND",
+        "IAH",
+        "ICN",
+        "LAS",
+        "NRT",
+        "YVR"
+      ],
+      "avatar_url": "/img/avatars/0x03f11c7a45ba8219c87f312eecb07287c2095302.png"
+    },
+    {
       "address": "0x708ac82707b1b8ddcc0bb8c50c75c38e786cbece",
       "ens": "achimh.eth",
       "airport_count": 8,
@@ -76,21 +92,6 @@
       "avatar_url": ""
     },
     {
-      "address": "0x03f11c7a45ba8219c87f312eecb07287c2095302",
-      "ens": "0xtangle.eth",
-      "airport_count": 7,
-      "airports": [
-        "DEN",
-        "HND",
-        "IAH",
-        "ICN",
-        "LAS",
-        "NRT",
-        "YVR"
-      ],
-      "avatar_url": "/img/avatars/0x03f11c7a45ba8219c87f312eecb07287c2095302.png"
-    },
-    {
       "address": "0x4124cf34f56fa151e05c91ace550ada0dd5aabd7",
       "ens": "isabel.eth",
       "airport_count": 7,
@@ -120,6 +121,20 @@
       "avatar_url": "/img/avatars/0x111accebf9d70d9c06de2d38f9392522e82ecf29.png"
     },
     {
+      "address": "0x4a0962949beac41d4f7f81f96d510e0e1465b5fa",
+      "ens": "nigotiya.eth",
+      "airport_count": 6,
+      "airports": [
+        "AMS",
+        "BOG",
+        "BOM",
+        "GIG",
+        "GRU",
+        "JFK"
+      ],
+      "avatar_url": ""
+    },
+    {
       "address": "0x74dbbcb9c08c51b38510d130d928e1e8c68eda7c",
       "ens": "mazie.thingelstad.eth",
       "airport_count": 6,
@@ -146,19 +161,6 @@
         "SFO"
       ],
       "avatar_url": "/img/avatars/0x895c5a67168ab29d5e8e96a55f933ad7c948c612.png"
-    },
-    {
-      "address": "0x4a0962949beac41d4f7f81f96d510e0e1465b5fa",
-      "ens": "nigotiya.eth",
-      "airport_count": 5,
-      "airports": [
-        "BOG",
-        "BOM",
-        "GIG",
-        "GRU",
-        "JFK"
-      ],
-      "avatar_url": ""
     },
     {
       "address": "0x4fd6b3204a6ab48978018b25821682f090840333",
@@ -1577,6 +1579,13 @@
       "claims": 9
     },
     {
+      "code": "AMS",
+      "name": "Amsterdam Airport Schiphol",
+      "city": "Amsterdam",
+      "continent": "Europe",
+      "claims": 8
+    },
+    {
       "code": "BCN",
       "name": "Barcelona International Airport",
       "city": "Barcelona",
@@ -1591,10 +1600,10 @@
       "claims": 8
     },
     {
-      "code": "AMS",
-      "name": "Amsterdam Airport Schiphol",
-      "city": "Amsterdam",
-      "continent": "Europe",
+      "code": "EWR",
+      "name": "Newark Liberty International Airport",
+      "city": "Newark",
+      "continent": "North America",
       "claims": 7
     },
     {
@@ -1629,13 +1638,6 @@
       "code": "CUN",
       "name": "Cancun International Airport",
       "city": "Cancun",
-      "continent": "North America",
-      "claims": 6
-    },
-    {
-      "code": "EWR",
-      "name": "Newark Liberty International Airport",
-      "city": "Newark",
       "continent": "North America",
       "claims": 6
     },
@@ -2273,12 +2275,12 @@
   "regions": [
     {
       "continent": "North America",
-      "claims": 134,
+      "claims": 135,
       "airport_count": 26
     },
     {
       "continent": "Europe",
-      "claims": 100,
+      "claims": 101,
       "airport_count": 22
     },
     {
