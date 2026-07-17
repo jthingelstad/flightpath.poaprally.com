@@ -49,7 +49,6 @@ HOLDER_REFRESH_DAYS = 7  # days between team event holder refreshes
 API_RETRIES = 3  # retries on transient failures
 
 
-
 # ---------------------------------------------------------------------------
 # SQLite
 # ---------------------------------------------------------------------------
@@ -122,9 +121,7 @@ def get_meta(db, key):
 
 
 def set_meta(db, key, value):
-    db.execute(
-        "INSERT OR REPLACE INTO meta (key, value) VALUES (?, ?)", (key, str(value))
-    )
+    db.execute("INSERT OR REPLACE INTO meta (key, value) VALUES (?, ?)", (key, str(value)))
     db.commit()
 
 
@@ -166,6 +163,7 @@ def get_access_token(db=None):
     # Cache token with 23h TTL (tokens last 24h, leave 1h buffer)
     if db:
         from datetime import timedelta
+
         expires_at = datetime.now(timezone.utc) + timedelta(hours=23)
         set_meta(db, "access_token", token)
         set_meta(db, "access_token_expires", expires_at.isoformat())
@@ -233,9 +231,7 @@ def fetch_event_poaps(event_id, token):
     while True:
         url = f"{API_BASE}/event/{event_id}/poaps"
         params = {"offset": offset, "limit": PAGE_SIZE}
-        resp = api_request(
-            "get", url, headers=api_headers(token), params=params
-        )
+        resp = api_request("get", url, headers=api_headers(token), params=params)
         data = resp.json()
 
         tokens = data.get("tokens", data) if isinstance(data, dict) else data
@@ -366,7 +362,7 @@ def fetch_event_images(airports, token):
                     print(f"    → {filename} (cached)")
                 airport["image_url"] = f"/img/poaps/{filename}"
             else:
-                print(f"    → no image")
+                print("    → no image")
                 airport["image_url"] = ""
         except Exception as e:
             print(f"    WARNING: Could not fetch event image: {e}")
@@ -479,12 +475,11 @@ def fetch_team_event_holders(db, token):
     """Fetch holders for POAP-based team events. Refreshes weekly."""
     last_refresh = get_meta(db, "last_holder_refresh")
     if last_refresh:
-        days_since = (
-            datetime.now(timezone.utc)
-            - datetime.fromisoformat(last_refresh)
-        ).days
+        days_since = (datetime.now(timezone.utc) - datetime.fromisoformat(last_refresh)).days
         if days_since < HOLDER_REFRESH_DAYS:
-            print(f"   Holder cache is {days_since}d old (refresh at {HOLDER_REFRESH_DAYS}d) — skipping")
+            print(
+                f"   Holder cache is {days_since}d old (refresh at {HOLDER_REFRESH_DAYS}d) — skipping"
+            )
             return
 
     # Collect all event IDs from poap_holders teams
@@ -642,9 +637,7 @@ def compute_teams(db):
     for tc in poap_teams:
         if not tc["event_ids"]:
             continue
-        event_ids = [
-            int(e.strip()) for e in tc["event_ids"].split(",") if e.strip().isdigit()
-        ]
+        event_ids = [int(e.strip()) for e in tc["event_ids"].split(",") if e.strip().isdigit()]
         if not event_ids:
             continue
 
@@ -739,9 +732,7 @@ def fetch_ens_avatars(db):
     avatar_max_age = 7 * 24 * 3600  # 7 days in seconds
 
     # Get all unique ENS names
-    rows = db.execute(
-        "SELECT DISTINCT address, ens FROM claims WHERE ens != ''"
-    ).fetchall()
+    rows = db.execute("SELECT DISTINCT address, ens FROM claims WHERE ens != ''").fetchall()
 
     avatars = {}  # address -> local path
     fetched = 0
@@ -951,7 +942,7 @@ def export_json(db, airports, teams, avatars=None):
 
     with open(data_dir / "leaderboards.json", "w") as f:
         json.dump(leaderboards, f, indent=2)
-    print(f"   → _data/leaderboards.json")
+    print("   → _data/leaderboards.json")
 
     with open(data_dir / "teams.json", "w") as f:
         json.dump(teams_out, f, indent=2)
@@ -960,7 +951,7 @@ def export_json(db, airports, teams, avatars=None):
     meta["data_hash"] = data_hash
     with open(data_dir / "meta.json", "w") as f:
         json.dump(meta, f, indent=2)
-    print(f"   → _data/meta.json")
+    print("   → _data/meta.json")
 
     set_meta(db, "data_hash", data_hash)
     return True
@@ -995,7 +986,7 @@ def main():
         fetch_event_images(airports, token)
 
         print("6. Fetching claims → SQLite...")
-        total = process_claims(db, airports, token)
+        process_claims(db, airports, token)
         claim_count = db.execute("SELECT COUNT(*) as cnt FROM claims").fetchone()["cnt"]
         print(f"   Total: {claim_count} claims in database")
 

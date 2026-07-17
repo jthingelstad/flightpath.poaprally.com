@@ -20,12 +20,13 @@ jobs:
     steps:
       - uses: actions/checkout@v7
 
-      - uses: actions/setup-python@v6
+      - uses: astral-sh/setup-uv@v7
         with:
           python-version: "3.14"
+          enable-cache: true
 
       - name: Install Python dependencies
-        run: pip install -r scripts/requirements.txt
+        run: uv sync --locked --no-dev
 
       - name: Fetch latest data
         env:
@@ -36,7 +37,7 @@ jobs:
           AIRTABLE_BASE_ID: ${{ secrets.AIRTABLE_BASE_ID }}
           AIRTABLE_TEAMS_TABLE: Teams
           AIRTABLE_AIRPORTS_TABLE: Airports
-        run: python scripts/fetch_data.py
+        run: uv run --locked --no-dev python scripts/fetch_data.py
 
       - name: Commit updated data
         run: |
