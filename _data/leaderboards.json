@@ -135,6 +135,20 @@
       "avatar_url": ""
     },
     {
+      "address": "0x6210477b3025bf5ea50a35d39e7d2875dc11661c",
+      "ens": "noah.savedsouls.eth",
+      "airport_count": 6,
+      "airports": [
+        "CDG",
+        "MSP",
+        "ORD",
+        "PHX",
+        "SAN",
+        "SFO"
+      ],
+      "avatar_url": ""
+    },
+    {
       "address": "0x74dbbcb9c08c51b38510d130d928e1e8c68eda7c",
       "ens": "mazie.thingelstad.eth",
       "airport_count": 6,
@@ -187,19 +201,6 @@
         "ORD"
       ],
       "avatar_url": "/img/avatars/0x599abe13e88f1045e3aefe02a07f7bafc0c76b76.png"
-    },
-    {
-      "address": "0x6210477b3025bf5ea50a35d39e7d2875dc11661c",
-      "ens": "noah.savedsouls.eth",
-      "airport_count": 5,
-      "airports": [
-        "CDG",
-        "MSP",
-        "ORD",
-        "SAN",
-        "SFO"
-      ],
-      "avatar_url": ""
     },
     {
       "address": "0x9cab0bd57e308daff28011d6c6d9b45867afe33e",
@@ -2034,6 +2035,13 @@
       "claims": 1
     },
     {
+      "code": "PHX",
+      "name": "Phoenix Sky Harbor International Airport",
+      "city": "Phoenix",
+      "continent": "North America",
+      "claims": 1
+    },
+    {
       "code": "SGN",
       "name": "Tan Son Nhat International Airport",
       "city": "Ho Chi Minh City",
@@ -2230,13 +2238,6 @@
       "claims": 0
     },
     {
-      "code": "PHX",
-      "name": "Phoenix Sky Harbor International Airport",
-      "city": "Phoenix",
-      "continent": "North America",
-      "claims": 0
-    },
-    {
       "code": "PVG",
       "name": "Shanghai Pudong International Airport",
       "city": "Shanghai",
@@ -2275,8 +2276,8 @@
   "regions": [
     {
       "continent": "North America",
-      "claims": 135,
-      "airport_count": 26
+      "claims": 136,
+      "airport_count": 27
     },
     {
       "continent": "Europe",
