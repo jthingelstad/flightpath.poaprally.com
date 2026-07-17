@@ -7,8 +7,6 @@ on:
 
 permissions:
   contents: write
-  pages: write
-  id-token: write
 
 concurrency:
   group: pages
@@ -17,6 +15,7 @@ concurrency:
 jobs:
   update:
     runs-on: ubuntu-latest
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v7
 
@@ -26,7 +25,13 @@ jobs:
           enable-cache: true
 
       - name: Install Python dependencies
-        run: uv sync --locked --no-dev
+        run: uv sync --locked
+
+      - name: Verify Python quality
+        run: |
+          uv run --locked ruff check scripts tests
+          uv run --locked ruff format --check scripts tests
+          uv run --locked python -m unittest discover -s tests -q
 
       - name: Fetch latest data
         env:
@@ -54,6 +59,7 @@ jobs:
   build:
     needs: update
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v7
         with:
@@ -61,10 +67,11 @@ jobs:
 
       - uses: actions/setup-node@v7
         with:
-          node-version: 22
+          node-version: 24
           cache: npm
 
       - run: npm ci
+      - run: npm audit --audit-level=high
       - run: npx @11ty/eleventy
 
       - uses: actions/upload-pages-artifact@v5
@@ -74,6 +81,10 @@ jobs:
   deploy:
     needs: build
     runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      pages: write
+      id-token: write
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}

@@ -2,6 +2,9 @@
   "name": "flightpath-poaprally",
   "version": "1.0.0",
   "description": "Flight Path - POAP Airport Rally visualization",
+  "engines": {
+    "node": ">=24 <25"
+  },
   "scripts": {
     "dev": "npx @11ty/eleventy --serve",
     "build": "npx @11ty/eleventy"
