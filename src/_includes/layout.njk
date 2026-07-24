@@ -3,48 +3,48 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ pageTitle or "Flight Path" }} — POAP Airport Rally</title>
+  <title>Flight Path — POAP Airport Rally has ended</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;600;700&family=Roboto+Mono:wght@400;500;700&family=Rubik:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="{{ '/css/styles.css' | cacheBust }}">
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;600;700&family=Rubik:wght@400;500;600&display=swap" rel="stylesheet">
   <script src="https://tinylytics.app/embed/wzwsuAffTZQwyzBouNms.js?events" defer></script>
+  <style>
+    :root { --gold: #FFE44D; --purple: #8076FA; --ink: #2D2D2D; }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; min-height: 100vh;
+      font-family: "Rubik", system-ui, sans-serif; color: var(--ink);
+      background: linear-gradient(160deg, #7ED8F0 0%, #FFE9A8 42%, #FBBF9E 72%, #F87588 100%);
+      display: flex; align-items: center; justify-content: center; padding: 2rem;
+    }
+    .notice {
+      max-width: 40rem; background: rgba(255,255,255,0.86); backdrop-filter: blur(6px);
+      border-radius: 20px; padding: 2.75rem 2.5rem; box-shadow: 0 18px 50px rgba(45,45,45,0.18);
+    }
+    h1 { font-family: "Comfortaa", cursive; margin: 0; font-size: 2.4rem; }
+    .subtitle { color: var(--purple); font-weight: 600; margin: 0.15rem 0 1.75rem; letter-spacing: 0.02em; }
+    h2 { font-family: "Comfortaa", cursive; font-size: 1.35rem; margin: 0 0 1rem; }
+    p { line-height: 1.6; margin: 0 0 1rem; }
+    a { color: var(--purple); font-weight: 500; }
+    .archive { display: inline-block; margin-top: 0.25rem; padding: 0.6rem 1.1rem;
+      background: var(--gold); color: var(--ink); border-radius: 999px; text-decoration: none; font-weight: 600; }
+    .sig { color: #6b6b6b; font-size: 0.9rem; margin-top: 1.75rem; }
+  </style>
 </head>
 <body>
+  <main class="notice">
+    <h1>Flight Path</h1>
+    <p class="subtitle">POAP Airport Rally 2026</p>
 
-  <div class="app-shell">
+    <h2>This rally has landed for good.</h2>
+    <p>On July 31, 2026, the creators of <a href="https://poap.xyz">POAP</a> (the Proof of Attendance Protocol) wound down the platform. Flight Path visualized the POAP Airport Rally — the teams, travelers, and airports, and every flight path between them — using live POAP claim data. With POAP gone, the rally has ended and this site is now retired.</p>
+    <p>Thank you to every traveler who collected an airport POAP and helped fill the globe. It was a genuine delight to watch it come together.</p>
 
-    <header class="app-header">
-      <div class="app-header-top">
-        <div class="app-branding">
-          <a href="/" class="app-title-link"><h1 class="app-title">Flight Path</h1></a>
-          <span class="app-subtitle">POAP Airport Rally 2026</span>
-        </div>
-        <div class="app-stats">
-          {%- set claimedCount = airports | claimedAirports | length -%}
-          <span class="app-stat"><strong>{{ claimedCount }}/{{ airports | length }}</strong> airports</span>
-          <span class="app-stat"><strong>{{ claims | length }}</strong> claims</span>
-          <span class="app-stat"><strong>{{ leaderboards.addresses | length }}</strong> travelers</span>
-        </div>
-      </div>
-      <nav class="app-tabs">
-        <a class="app-tab{% if activeTab == 'home' %} active{% endif %}" href="/">Home</a>
-        <a class="app-tab{% if activeTab == 'globe' %} active{% endif %}" href="/globe/">Globe</a>
-        <a class="app-tab{% if activeTab == 'teams' %} active{% endif %}" href="/teams/">Teams</a>
-        <a class="app-tab{% if activeTab == 'travelers' %} active{% endif %}" href="/travelers/">Travelers</a>
-        <a class="app-tab{% if activeTab == 'airports' %} active{% endif %}" href="/airports/">Airports</a>
-        <a class="app-tab{% if activeTab == 'gauges' %} active{% endif %}" href="/gauges/">Gauges</a>
-        <span class="app-tab-timestamp">Data as of {{ meta.last_updated | shortDate }}</span>
-      </nav>
-    </header>
+    <h2>Looking for POAP history?</h2>
+    <p>Historical POAP data — drops, artwork, and addresses — is being preserved by the POAP team.</p>
+    <p><a class="archive" href="https://poaparchive.com">Visit poaparchive.com &#8599;</a></p>
 
-    <main class="app-content">
-      {{ content | safe }}
-    </main>
-
-
-  </div>
-
-  {{ extraScripts | safe if extraScripts }}
+    <p class="sig">With gratitude to Isabel, Patricio, and the whole POAP team. — Jamie</p>
+  </main>
 </body>
 </html>
